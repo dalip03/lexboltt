@@ -4,32 +4,70 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import Image from "next/image";
 
 const menuItems = [
   { label: "Home", href: "/" },
-  { label: "About us", href: "/about" },
-  { label: "Product", href: "/product" },
+  { label: "Process", href: "/process" },
+  { label: "Features", href: "/features" },
+  // keep user's original route spelling to avoid 404s
+  { label: "Testomonials", href: "/testomonials" },
 ];
+
+// Variants (static objects only — TS safe)
+const overlayVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 0.4 },
+  exit: { opacity: 0 },
+};
+
+const drawerVariants: Variants = {
+  hidden: { x: "100%" },
+  visible: {
+    x: 0,
+    transition: { type: "spring", stiffness: 300, damping: 30 },
+  },
+  exit: { x: "100%" },
+};
+
+const listVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+  exit: {
+    transition: { staggerChildren: 0.06, staggerDirection: -1 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 250, damping: 20 },
+  },
+  exit: { opacity: 0, y: 18 },
+};
 
 const Header = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white  sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-10 py-3 flex items-center justify-between">
+    <header className="w-full bg-white sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-10 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="inline-block">
             <Image
-              src="/img/LOGO.svg"
+              src="/img/lexbolttLogo.svg"
               alt="IIPWorks Logo"
-              width={200} // increase from 120
-              height={80} // increase from 40
+              width={200}
+              height={80}
               priority
-              className="w-[60px] h-auto" // override any limits and control width manually
+              className="w-[100px] h-auto"
             />
           </Link>
         </div>
@@ -37,35 +75,48 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-4">
           {menuItems.map((item) => (
-            <Link
+            <motion.div
               key={item.href}
-              href={item.href}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-                pathname === item.href
-                  ? "bg-primary text-white"
-                  : "text-black hover:bg-primary"
-              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {item.label}
-            </Link>
+              <Link
+                href={item.href}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                  pathname === item.href
+                    ? "bg-primary text-white"
+                    : "text-black hover:bg-primary hover:text-white"
+                }`}
+              >
+                {item.label}
+              </Link>
+            </motion.div>
           ))}
         </nav>
 
         {/* Contact Button */}
-        <div className="hidden md:block">
+        <motion.div
+          className="hidden md:block"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <Link
             href="#"
             className="text-sm font-semibold bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-full transition"
           >
             Contact Us
           </Link>
-        </div>
+        </motion.div>
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(true)} aria-label="Open Menu">
+          <motion.button
+            onClick={() => setIsOpen(true)}
+            aria-label="Open Menu"
+            whileTap={{ scale: 0.9 }}
+          >
             <Menu size={24} color="black" />
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -75,68 +126,88 @@ const Header = () => {
           <>
             {/* Overlay */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
-              exit={{ opacity: 0 }}
+              variants={overlayVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
               className="fixed inset-0 bg-black z-40"
               onClick={() => setIsOpen(false)}
             />
 
             {/* Drawer */}
             <motion.aside
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              variants={drawerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
               className="fixed top-0 right-0 w-72 h-full bg-white z-50 shadow-lg p-6"
             >
               {/* Close Button */}
               <div className="flex justify-end mb-6">
-                <button
+                <motion.button
                   onClick={() => setIsOpen(false)}
                   aria-label="Close Menu"
+                  whileTap={{ scale: 0.9, rotate: 90 }}
                 >
                   <X size={24} color="black" />
-                </button>
+                </motion.button>
               </div>
 
-              {/* Menu Items */}
+              {/* Drawer Content */}
               <nav className="flex flex-col gap-3">
-                {/* Logo */}
-                <div className="flex items-center">
+                {/* Drawer Logo */}
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                  className="flex items-center"
+                >
                   <Link href="/" className="inline-block">
                     <Image
-                      src="/img/LogoMain.png"
-                      alt="IIPWorks Logo"
+                      src="/img/lexbolttLogo.svg"
+                      alt="Logo"
                       width={120}
                       height={40}
                       priority
-                      className="h-auto w-auto max-h-40"
+                      className="h-auto w-auto max-h-40 mb-10"
                     />
                   </Link>
-                </div>
+                </motion.div>
 
-                {menuItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-2 rounded-md text-sm font-medium transition ${
-                      pathname === item.href
-                        ? "bg-gray-200 text-black"
-                        : "text-gray-600 hover:bg-gray-100"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="mt-4 block text-sm font-semibold bg-[#3686FD] hover:bg-[#2e76e4] text-white px-4 py-3 rounded-full transition"
+                {/* Staggered Menu Items */}
+                <motion.div
+                  variants={listVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="flex flex-col gap-3"
                 >
-                  Contact Us
-                </Link>
+                  {menuItems.map((item) => (
+                    <motion.div key={item.href} variants={itemVariants}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`block px-4 py-2 rounded-md text-sm font-medium transition ${
+                          pathname === item.href
+                            ? "bg-gray-200 text-black"
+                            : "text-gray-600 hover:bg-gray-100"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.div>
+                  ))}
+
+                  <motion.div variants={itemVariants}>
+                    <Link
+                      href="/contact"
+                      onClick={() => setIsOpen(false)}
+                      className="mt-4 block text-sm font-semibold bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-full transition"
+                    >
+                      Contact Us
+                    </Link>
+                  </motion.div>
+                </motion.div>
               </nav>
             </motion.aside>
           </>

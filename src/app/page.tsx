@@ -1,10 +1,18 @@
 import Image from "next/image";
 import HeroSection from "./components/HeroSection";
+import ComplianceSplitSection from "./components/ComplianceSplitSection";
+import ProcessStepsSection from "./components/ProcessStepsSection";
+import FeaturesTabsSection from "./components/FeaturesTabsSection";
+import TestimonialSection from "./components/TestimonialSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden">
+    <div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden mb-10">
     <HeroSection/>
+    <ProcessStepsSection/>
+    <FeaturesTabsSection/>
+    <TestimonialSection/>
+    <ComplianceSplitSection/>
    </div>
   );
 }

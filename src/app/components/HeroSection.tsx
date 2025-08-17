@@ -1,85 +1,64 @@
-// components/HeroSection.jsx
+"use client";
+import React from "react";
+import { motion, easeOut } from "framer-motion";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.7, ease: easeOut },
+};
+
 export default function HeroSection() {
   return (
-    <section className="min-w-[1240px] min-h-[700px] flex flex-col items-center justify-center bg-gradient-to-b from-[#FF875F] to-[#FFB394] rounded-[32px]  py-16 px-4 ">
-      <div className="max-w-4xl w-full mx-auto text-center relative">
-        <h1 className="font-sans font-bold text-white text-5xl md:text-6xl leading-tight mb-6 relative">
+    <section
+      className="min-w-full h-full flex flex-col items-center justify-center rounded-[24px] px-4 mt-4"
+      style={{
+        background: "linear-gradient(180deg, #F35418 -28.38%, #FFF 133.01%)",
+      }}
+    >
+      <motion.div
+        className="max-w-4xl w-full mx-auto text-center relative mt-12 px-2 sm:px-4"
+        initial={fadeUp.initial}
+        whileInView={fadeUp.whileInView}
+        viewport={fadeUp.viewport}
+        transition={fadeUp.transition}
+      >
+        <h1 className="font-sans font-bold text-white text-3xl sm:text-4xl leading-tight mb-6 relative">
           Stay Ahead of Every
           <br />
           Regulation, Effortlessly
-          {/* Blue 'V' badge */}
-          <span className="absolute right-[-30px] top-[38px] bg-[#2B77F6] text-white font-bold rounded-full w-8 h-8 flex items-center justify-center text-lg border-4 border-white shadow-lg select-none">
-            V
-          </span>
         </h1>
-        <p className="font-sans text-white/80 text-lg md:text-xl mb-8">
+        <p className="font-sans text-white/80 text-sm sm:text-base mb-4">
           LexBolt Transforms Complex Automotive Regulations Into Clear,
           Structured Requirements
-          <br />— So Your Team Can Act Faster, Stay Compliant, And Never Miss A
-          Change.
+          <br />
+          — So Your Team Can Act Faster, Stay Compliant, And Never Miss A Change.
         </p>
-        <button className="bg-[#FF6C3D] hover:bg-[#ff4e06] text-white font-semibold font-sans rounded-full px-8 py-3 text-lg shadow-lg transition-colors mb-2">
-          Get a Demo
-        </button>
-      </div>
+        <motion.button
+          className="bg-primary hover:bg-[#ff4e06] cursor-pointer text-white font-medium font-sans rounded-full px-8 py-3 text-lg shadow-lg transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          Request Demo
+        </motion.button>
+      </motion.div>
 
       {/* Dashboard image + Card overlay */}
-      <div className="relative flex justify-center w-full mt-12">
+      <motion.div
+        className="relative flex justify-center w-full mt-6 px-2 sm:px-0"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: easeOut }}
+      >
         <img
-          src="/dashboard.png" // update with your actual image file path
+          src="/img/herobg.png"
           alt="Dashboard Screenshot"
-          className="w-[800px] max-w-full rounded-xl shadow-2xl border-4 border-white"
+          className="w-full max-w-[900px] object-contain"
         />
-
-        {/* Document Reviews card */}
-        <div className="absolute right-24 top-10 bg-white rounded-xl shadow-2xl p-5 w-56 flex flex-col items-center">
-          <div className="flex justify-between items-center w-full mb-2">
-            <span className="font-sans font-semibold text-gray-900">
-              Document Reviews
-            </span>
-            <span className="font-sans text-xs text-gray-400 ml-2">Today</span>
-          </div>
-          {/* Circular chart */}
-          <svg viewBox="0 0 40 40" width="60" height="60" className="my-2">
-            <circle
-              cx="20"
-              cy="20"
-              r="16"
-              fill="none"
-              stroke="#FFB394"
-              strokeWidth="7"
-              strokeDasharray="125"
-              strokeDashoffset="60"
-            />
-            <circle
-              cx="20"
-              cy="20"
-              r="16"
-              fill="none"
-              stroke="#FF6C3D"
-              strokeWidth="7"
-              strokeDasharray="125"
-              strokeDashoffset="0"
-            />
-          </svg>
-          <div className="flex flex-col gap-1 w-full mt-2">
-            <div className="flex items-center text-sm text-gray-700 font-medium">
-              <span
-                className="inline-block w-2 h-2 rounded-full mr-1"
-                style={{ background: "#FF6C3D" }}
-              ></span>
-              Approved: 500
-            </div>
-            <div className="flex items-center text-sm text-gray-700 font-medium">
-              <span
-                className="inline-block w-2 h-2 rounded-full mr-1"
-                style={{ background: "#FFB394" }}
-              ></span>
-              Pending: 300
-            </div>
-          </div>
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
