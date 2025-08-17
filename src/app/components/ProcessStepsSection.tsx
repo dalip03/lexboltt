@@ -6,25 +6,25 @@ const steps = [
   {
     title: "Upload Any Regulation",
     desc: "Drop in documents from applicable regulatory bodies or relevant authorities.",
-    icon: "/icons/file.svg",
+    icon: "/img/file.svg",
     image: "/img/process1.svg",
   },
   {
     title: "AI Parses Key Requirements",
     desc: "We extract obligations, test procedures, effective dates, and more down to the clause level.",
-    icon: "/icons/search.svg",
+    icon: "/img/search.svg",
     image: "/img/process1.svg",
   },
   {
     title: "Track What’s Changed",
     desc: "Compare versions side by side. Get notified of new amendments, deleted text, and reworded requirements.",
-    icon: "/icons/doc.svg",
+    icon: "/img/doc.svg",
     image: "/img/process1.svg",
   },
   {
     title: "Export & Assign",
     desc: "Push structured requirements directly into your workflows PLM, ALM, spreadsheets, or tickets.",
-    icon: "/icons/doc.svg",
+    icon: "/img/doc.svg",
     image: "/img/process1.svg",
   },
 ];

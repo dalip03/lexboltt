@@ -5,7 +5,7 @@ import { motion, easeOut } from "framer-motion";
 const features = [
   {
     label: "Regulations",
-    icon: "/icons/file.svg",
+    icon: "/img/file.svg",
     title: "Upload Any Regulation",
     desc: "Simply drop in documents from regulatory bodies or relevant authorities — Lexbolt automatically parses them and generates a detailed list of all compliance requirements your project must meet, from the smallest procedural rules to major legal mandates.",
     bullets: [
@@ -19,7 +19,7 @@ const features = [
   },
   {
     label: "Control",
-    icon: "/icons/file.svg",
+    icon: "/img/file.svg",
     title: "Total Control",
     desc: "Take charge of your regulatory process end-to-end with full visibility.",
     bullets: [
@@ -31,7 +31,7 @@ const features = [
   },
   {
     label: "Compliance",
-    icon: "/icons/file.svg",
+    icon: "/img/file.svg",
     title: "Ensure Compliance",
     desc: "Stay compliant with continuous updates and AI validation.",
     bullets: [
@@ -42,7 +42,7 @@ const features = [
   },
   {
     label: "Compatible",
-    icon: "/icons/file.svg",
+    icon: "/img/file.svg",
     title: "Compatible Workflows",
     desc: "Push requirements into your ALM, PLM, workflow and spreadsheet tools.",
     bullets: ["Seamless integrations", "Exports to tickets and sheets"],
@@ -50,7 +50,7 @@ const features = [
   },
   {
     label: "Security",
-    icon: "/icons/file.svg",
+    icon: "/img/file.svg",
     title: "Enterprise-grade Security",
     desc: "Your data is fully secure, encrypted at rest and in transit.",
     bullets: ["SOC2, HIPAA ready", "Role-based access"],
@@ -58,7 +58,7 @@ const features = [
   },
   {
     label: "Shipping",
-    icon: "/icons/file.svg",
+    icon: "/img/file.svg",
     title: "Fast Shipping",
     desc: "Deliver projects faster and ensure requirements never block launches.",
     bullets: ["Accelerated launches", "No missed requirements"],
@@ -166,7 +166,7 @@ const FeaturesTabsSection: React.FC = () => {
                 className="flex items-center gap-2 text-gray-400 text-base justify-center md:justify-start"
               >
                 <img
-                  src="/icons/star.svg"
+                  src="/img/star.svg"
                   alt="*"
                   className="w-4 h-4 opacity-40"
                 />

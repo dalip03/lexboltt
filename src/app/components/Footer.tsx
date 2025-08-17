@@ -35,21 +35,21 @@ const Footer: React.FC = () => {
             />
           </Link>
 
-          {/* Social Icons */}
+          {/* Social img */}
           <div className="flex gap-4">
             <img
-              src="/icons/twitter.svg"
+              src="/img/twitter.svg"
               alt="Twitter"
               className="w-10 h-10 cursor-pointer hover:opacity-80"
             />
             
             <img
-              src="/icons/instagram.svg"
+              src="/img/instagram.svg"
               alt="Instagram"
               className="w-10 h-10 cursor-pointer hover:opacity-80"
             />
             <img
-              src="/icons/linkedin.svg"
+              src="/img/linkedin.svg"
               alt="LinkedIn"
               className="w-10 h-10 cursor-pointer hover:opacity-80"
             />
