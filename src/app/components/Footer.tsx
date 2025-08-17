@@ -42,6 +42,7 @@ const Footer: React.FC = () => {
               alt="Twitter"
               className="w-10 h-10 cursor-pointer hover:opacity-80"
             />
+            
             <img
               src="/icons/Instagram.svg"
               alt="Instagram"
