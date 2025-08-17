@@ -1,7 +1,9 @@
-// components/AboutSubHero.tsx
+'use client';
+
+import { motion } from "framer-motion";
 
 export default function AboutSubHero() {
-      const cards = [
+  const cards = [
     {
       heading: "Our Journey",
       text:
@@ -41,10 +43,17 @@ export default function AboutSubHero() {
           At LexBolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward—efficiently and compliantly.
         </p>
       </div>
-     {/* Cards Grid: divs only, heading/text below each */}
+      {/* Cards Grid with scroll-fade in animation */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mb-8">
         {cards.map((card, i) => (
-          <div key={i} className="flex flex-col items-start">
+          <motion.div
+            key={i}
+            className="flex flex-col items-start"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: i * 0.15 }}
+          >
             {/* Card div only */}
             <div className="bg-[#F8F2F1] rounded-2xl min-h-[180px] w-full" />
             {/* Text and Heading below the card */}
@@ -54,7 +63,7 @@ export default function AboutSubHero() {
             <p className="text-gray-700 text-xs leading-relaxed mb-1">
               {card.text}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

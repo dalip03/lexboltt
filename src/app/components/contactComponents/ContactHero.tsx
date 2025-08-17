@@ -42,36 +42,67 @@ export default function ContactHero() {
   const rightIndex = (current + 1) % slides.length;
 
   return (
-    <section className="w-full  mx-auto py-12 px-4 overflow-x-hidden">
+    <section className="w-full mx-auto py-12 px-2 overflow-x-hidden">
       {/* Header */}
-      <div className="grid grid-cols-1 md:grid-cols-8 gap-0 items-center px-20">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-8 gap-0 items-center px-0 md:px-20 mb-6"
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="md:col-span-3 flex flex-col justify-center">
-          <span className="text-xs text-gray-500 mb-2">Contact Us</span>
-          <h1 className="text-black font-bold text-3xl md:text-5xl leading-tight mb-1">
+          <motion.span
+            className="text-xs text-gray-500 mb-2"
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            Contact Us
+          </motion.span>
+          <motion.h1
+            className="text-black font-bold text-3xl md:text-5xl leading-tight mb-1"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.17 }}
+            viewport={{ once: true }}
+          >
             Streamlining
             <br />
             Your Regulations
-          </h1>
+          </motion.h1>
         </div>
-        <div className="md:col-span-5 flex flex-col items-end justify-start">
+        <motion.div
+          className="md:col-span-5 flex flex-col items-end justify-start"
+          initial={{ opacity: 0, x: 25 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.22 }}
+          viewport={{ once: true }}
+        >
           <p className="text-gray-700 text-sm md:text-base max-w-md text-right ml-auto mb-7">
             We deliver tailored AI compliance solutions designed to scale your
             regulatory workflows and drive measurable operational results.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Carousel */}
-      <div className="flex items-center justify-center mt-2 gap-4 relative z-0 ">
+      <div className="flex items-center justify-center mt-2 gap-2 relative z-0 w-full">
         {/* Left thumbnail */}
-        <div className="hidden md:flex flex-shrink-0 w-[370px] h-[260px] rounded-2xl overflow-hidden opacity-90">
+        <motion.div
+          className="hidden md:flex flex-shrink-0 w-[44vw] max-w-[370px] h-[33vw] max-h-[260px] rounded-2xl overflow-hidden opacity-90"
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.55, delay: 0.15 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <img
             src={slides[leftIndex].img}
             alt=""
             className="w-full h-full object-cover"
           />
-        </div>
-
+        </motion.div>
         {/* Left arrow */}
         <button
           onClick={prevSlide}
@@ -88,11 +119,11 @@ export default function ContactHero() {
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            initial={{ opacity: 0, scale: 0.92, y: 28 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="relative w-[470px] md:w-[600px] h-[320px] md:h-[360px] rounded-2xl overflow-hidden flex-shrink-0 shadow-lg flex flex-col z-10 bg-white"
+            exit={{ opacity: 0, scale: 0.89, y: -18 }}
+            transition={{ duration: 0.43 }}
+            className="relative w-[96vw] max-w-[470px] md:max-w-[600px] h-[53vw] max-h-[320px] md:max-h-[360px] rounded-2xl overflow-hidden flex-shrink-0 shadow-lg flex flex-col z-10 bg-white"
           >
             {/* Image top section */}
             <div className="h-[75%] w-full overflow-hidden rounded-t-2xl">
@@ -102,7 +133,6 @@ export default function ContactHero() {
                 className="w-full h-full object-cover"
               />
             </div>
-
             {/* Text bottom section */}
             <div className="h-[25%] w-full px-6 py-3 flex flex-col justify-center bg-white rounded-b-2xl">
               {slides[current].label && (
@@ -118,7 +148,6 @@ export default function ContactHero() {
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Right arrow */}
         <button
           onClick={nextSlide}
@@ -127,15 +156,20 @@ export default function ContactHero() {
         >
           <img src="/product/whiteright.svg" alt="Next" className="w-6 h-6" />
         </button>
-
         {/* Right thumbnail */}
-        <div className="hidden md:flex flex-shrink-0 w-[370px] h-[260px] rounded-2xl overflow-hidden opacity-90">
+        <motion.div
+          className="hidden md:flex flex-shrink-0 w-[44vw] max-w-[370px] h-[33vw] max-h-[260px] rounded-2xl overflow-hidden opacity-90"
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.55, delay: 0.15 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <img
             src={slides[rightIndex].img}
             alt=""
             className="w-full h-full object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,4 +1,6 @@
-// components/ValuesListHero.tsx
+'use client';
+
+import { motion } from "framer-motion";
 
 export default function ValuesListHero() {
   // Update these with your actual icon image paths:
@@ -32,48 +34,70 @@ export default function ValuesListHero() {
   return (
     <section className="w-full max-w-6xl mx-auto py-8 px-4">
       {/* Tag */}
-      <div className="mb-5">
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.7 }}
+        transition={{ duration: 0.6 }}
+        className="mb-5"
+      >
         <span className="inline-flex items-center gap-1 border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold shadow">
           <img
-              src="/about/star.svg"
-              alt="star"
-              className="w-6 h-6"
-            /> Our Values
+            src="/about/star.svg"
+            alt="star"
+            className="w-6 h-6"
+          /> Our Values
         </span>
-      </div>
+      </motion.div>
       {/* Header */}
-      <h1 className="text-black text-3xl sm:text-4xl font-bold mb-2 leading-tight">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.7 }}
+        transition={{ duration: 0.7, delay: 0.06 }}
+        className="text-black text-3xl sm:text-4xl font-bold mb-2 leading-tight"
+      >
         The Innovation Behind
-      </h1>
-      <h2 className="text-gray-400 text-2xl sm:text-3xl font-semibold mb-8 leading-tight">
+      </motion.h1>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.7 }}
+        transition={{ duration: 0.7, delay: 0.12 }}
+        className="text-gray-400 text-2xl sm:text-3xl font-semibold mb-8 leading-tight"
+      >
         Your Regulations
-      </h2>
+      </motion.h2>
       {/* Values List */}
       <div className="flex flex-col gap-0">
         {values.map((value, i) => (
-          <div
+          <motion.div
             key={value.heading}
-            className={`flex items-start py-5 border-b border-gray-200 ${i === 0 ? "border-t" : ""}`}
+            className={`flex flex-col sm:flex-row items-start py-5 border-b border-gray-200 ${i === 0 ? "border-t" : ""}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.5, delay: i * 0.07 + 0.15 }}
           >
             <img
               src={value.icon}
               alt={value.heading}
-              className="w-8 h-8 mr-5 mt-1"
+              className="w-8 h-8 mr-0 mb-2 sm:mr-5 sm:mb-0 mt-1"
             />
             <div className="flex flex-col flex-1">
               <span className="text-gray-600 text-lg">{value.heading}</span>
             </div>
-            <div className="flex flex-col flex-[2] ml-7">
+            <div className="flex flex-col flex-[2] sm:ml-7 mt-1 sm:mt-0">
               <span className="text-xs sm:text-sm italic text-gray-500 mb-1">
                 {value.subtitle}
               </span>
-              <span className="text-black text-sm sm:text-base font-normal pr-16">
+              <span className="text-black text-sm sm:text-base font-normal pr-0 sm:pr-16">
                 {i === 1 || i === 2
                   ? <b>{value.desc.split(" ")[0]}</b> + " " + value.desc.split(" ").slice(1).join(" ")
                   : value.desc}
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

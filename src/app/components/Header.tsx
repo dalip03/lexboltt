@@ -209,22 +209,25 @@ const Header = () => {
                     </motion.div>
                   ))}
 
-                  <motion.div variants={itemVariants}>
-                    <Link
-                      href="/contact"
-                      onClick={() => setIsOpen(false)}
-                      className="mt-4 block text-sm font-semibold bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-full transition"
-                    >
-                      Contact Us
-                      <span className="ml-2">
-                        <img
-                          src="/img/contacticon.png"
-                          alt="Arrow"
-                          className="w-10 h-10 object-contain"
-                        />
-                      </span>
-                    </Link>
-                  </motion.div>
+             <motion.div variants={itemVariants}>
+  <Link
+    href="/contact"
+    onClick={() => setIsOpen(false)}
+    className="mt-4 flex items-center justify-center text-sm sm:text-base font-semibold 
+               bg-primary hover:bg-primary/90 text-white px-4 sm:px-6 py-2 sm:py-3 
+               rounded-full transition w-full sm:w-auto"
+  >
+    Contact Us
+    <span className="ml-2 flex-shrink-0">
+      <img
+        src="/img/contacticon.png"
+        alt="Contact Icon"
+        className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+      />
+    </span>
+  </Link>
+</motion.div>
+
                 </motion.div>
               </nav>
             </motion.aside>

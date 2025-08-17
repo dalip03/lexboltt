@@ -1,4 +1,7 @@
 'use client';
+
+import { motion } from "framer-motion";
+
 export default function TeamHero() {
   const members = [
     {
@@ -29,7 +32,7 @@ export default function TeamHero() {
       desc: "Architects scalable backend systems and ensures seamless integration.",
       cardBg: "bg-[#FBE1DC]",
     },
-     {
+    {
       image: "/team/rohan.jpg",
       role: "Product Manager",
       name: "Rohan Iyer",
@@ -41,19 +44,37 @@ export default function TeamHero() {
   return (
     <section className="w-full max-w-7xl mx-auto py-12 px-4 relative">
       {/* Tag */}
-      <div className="mb-3 text-center">
+      <motion.div
+        className="mb-3 text-center"
+        initial={{ opacity: 0, y: -15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
         <span className="inline-block border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
           Lexbolt Team
         </span>
-      </div>
+      </motion.div>
 
       {/* Headline and description */}
-      <h1 className="text-center text-3xl md:text-5xl font-bold text-[#232540] mb-2">
+      <motion.h1
+        className="text-center text-3xl md:text-5xl font-bold text-[#232540] mb-2"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
         Meet Our Team
-      </h1>
-      <p className="text-center text-gray-600 max-w-md mx-auto mb-8 text-base">
+      </motion.h1>
+      <motion.p
+        className="text-center text-gray-600 max-w-md mx-auto mb-8 text-base"
+        initial={{ opacity: 0, y: -15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
         A dedicated team of experts using tech and smart strategy to simplify regulations for all
-      </p>
+      </motion.p>
 
       {/* Scrollable cards with gradient edge fades */}
       <div className="relative w-full">
@@ -64,9 +85,13 @@ export default function TeamHero() {
         <div className="overflow-x-auto whitespace-nowrap hide-scrollbar pb-3">
           <div className="inline-flex gap-6 px-1 md:px-2">
             {members.map((member, idx) => (
-              <div
-                key={member.name}
+              <motion.div
+                key={`${member.name}-${idx}`}
                 className="flex-shrink-0 w-[260px] sm:w-[270px] md:w-[280px] h-[400px] rounded-3xl overflow-hidden relative flex flex-col justify-end shadow-lg"
+                initial={{ opacity: 0, scale: 0.85, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
               >
                 {/* Card Background */}
                 <div className={`${member.cardBg} w-full h-full absolute top-0 left-0`} />
@@ -89,20 +114,27 @@ export default function TeamHero() {
                     {member.desc}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
+
       {/* View all button */}
-      <div className="flex w-full justify-center mt-7">
+      <motion.div
+        className="flex w-full justify-center mt-7"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.75 }}
+      >
         <button className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 font-semibold text-gray-700 text-sm shadow transition border border-gray-300">
           View all
           <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-            <path d="M14 6l6 6-6 6M4 12h16" stroke="#232540" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M14 6l6 6-6 6M4 12h16" stroke="#232540" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
-      </div>
+      </motion.div>
 
       {/* Hide scrollbar visually */}
       <style jsx>{`

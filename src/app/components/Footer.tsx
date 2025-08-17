@@ -74,17 +74,16 @@ const Footer: React.FC = () => {
           <div className="w-full max-w-md px-4 py-6 rounded-[16px] flex flex-col items-center md:items-start gap-2">
             <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
 
-            <form className="flex w-full max-w-md mx-auto bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
+            <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="flex-grow px-6 py-4 bg-transparent text-white placeholder-white/60 focus:outline-none"
+                className="flex-grow pl-4 py-4 bg-transparent text-white placeholder-white/60 focus:outline-none"
                 required
               />
               <button
                 type="submit"
-                className="bg-white text-primary font-semibold px-5 py-3 rounded-full transition hover:bg-orange-100"
-                style={{ marginRight: "4px", marginTop: "2px", marginBottom: "2px" }}
+                className="bg-white text-primary font-semibold px-2  py-3 rounded-full transition hover:bg-orange-100"
               >
                 Sign up
               </button>

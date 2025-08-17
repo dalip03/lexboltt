@@ -1,4 +1,6 @@
-// components/ComplianceManagementHero.tsx
+'use client';
+
+import { motion } from "framer-motion";
 
 export default function ComplianceManagementHero() {
   const features = [
@@ -13,40 +15,86 @@ export default function ComplianceManagementHero() {
   return (
     <section className="w-full max-w-6xl mx-auto py-12 px-4 flex flex-col md:flex-row items-center justify-between gap-8">
       {/* Left side: Single image with experience badge */}
-      <div className="flex-1 flex justify-end items-end relative w-full">
+      <motion.div
+        className="flex-1 flex justify-end items-end relative w-full"
+        initial={{ opacity: 0, scale: 0.9, x: -30 }}
+        whileInView={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
         <img
           src="/product/producttransform.png"
           alt="Consultant"
-          className="w-[350px] md:w-[420px] h-[420px] rounded-3xl object-cover"
+          className="w-[90vw] max-w-[350px] md:max-w-[420px] h-[60vw] md:h-[420px] rounded-3xl object-cover"
         />
-      </div>
+      </motion.div>
       {/* Right side: Text */}
-      <div className="flex-1 flex flex-col items-start md:pl-10">
-        <span className="inline-block bg-[#fde8e5] text-[#fc7e41] font-semibold text-xs px-3 py-1 mb-3 rounded-full">
+      <motion.div
+        className="flex-1 flex flex-col items-start md:pl-10"
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <motion.span
+          className="inline-block bg-[#fde8e5] text-[#fc7e41] font-semibold text-xs px-3 py-1 mb-3 rounded-full"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          viewport={{ once: true }}
+        >
           Transform Regulations
-        </span>
-        <h1 className="text-black font-bold text-2xl sm:text-3xl md:text-4xl mb-1 leading-tight">
+        </motion.span>
+        <motion.h1
+          className="text-black font-bold text-2xl sm:text-3xl md:text-4xl mb-1 leading-tight"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.12 }}
+          viewport={{ once: true }}
+        >
           Unlock Compliance
           <br />
           Management
-        </h1>
-        <span className="text-gray-600 text-lg mb-4 font-medium">
+        </motion.h1>
+        <motion.span
+          className="text-gray-600 text-lg mb-4 font-medium"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.16 }}
+          viewport={{ once: true }}
+        >
           Like Never Before
-        </span>
+        </motion.span>
         {/* Features Box */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 bg-white border border-gray-200 rounded-2xl p-5 mb-7 w-full max-w-lg">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 bg-white border border-gray-200 rounded-2xl p-5 mb-7 w-full max-w-lg"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.24 }}
+          viewport={{ once: true }}
+        >
           {features.map((feature, i) => (
-            <div
+            <motion.div
               key={feature}
               className="flex items-center gap-2 text-[16px] text-gray-700"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.09 }}
+              viewport={{ once: true }}
             >
               <img src="/product/check.svg" alt="" className="w-5 h-5" />
               {feature}
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         {/* Explore Button */}
-        <button className="flex items-center gap-2 bg-[#FC7D3F] text-white pl-7 pr-2 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base">
+        <motion.button
+          className="flex items-center gap-2 bg-[#FC7D3F] text-white pl-7 pr-2 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.32 }}
+          viewport={{ once: true }}
+        >
           Explore
           <span className="ml-2">
             <img
@@ -55,8 +103,8 @@ export default function ComplianceManagementHero() {
               className="w-10 h-10 object-contain"
             />
           </span>
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     </section>
   );
 }

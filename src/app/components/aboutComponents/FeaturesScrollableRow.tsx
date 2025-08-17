@@ -1,4 +1,7 @@
-"use client";
+'use client';
+
+import { motion } from "framer-motion";
+
 export default function ImagesScrollableRow() {
   const images = [
     "/about/abouts.png",
@@ -16,9 +19,13 @@ export default function ImagesScrollableRow() {
       <div className="overflow-x-auto whitespace-nowrap hide-scrollbar">
         <div className="inline-flex gap-6 px-2">
           {images.map((src, i) => (
-            <div
+            <motion.div
               key={i}
-              className="flex-shrink-0 w-[230px] h-[175px] rounded-2xl overflow-hidden"
+              className="flex-shrink-0 w-[70vw] max-w-[230px] h-[175px] rounded-2xl overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
             >
               <img
                 src={src}
@@ -26,7 +33,7 @@ export default function ImagesScrollableRow() {
                 className="w-full h-full object-cover rounded-2xl"
                 draggable={false}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
