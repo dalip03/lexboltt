@@ -109,7 +109,7 @@ const Header = () => {
   >
     Contact Us
     <img
-      src="/icons/contacticon.png"
+      src="/img/contacticon.png"
       alt="Arrow"
       className="w-9 h-9 object-contain"
     />
@@ -218,7 +218,7 @@ const Header = () => {
                       Contact Us
                       <span className="ml-2">
                         <img
-                          src="/icons/contacticon.png"
+                          src="/img/contacticon.png"
                           alt="Arrow"
                           className="w-10 h-10 object-contain"
                         />
