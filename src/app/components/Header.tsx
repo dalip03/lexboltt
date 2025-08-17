@@ -9,10 +9,8 @@ import Image from "next/image";
 
 const menuItems = [
   { label: "Home", href: "/" },
-  { label: "Process", href: "/process" },
-  { label: "Features", href: "/features" },
-  // keep user's original route spelling to avoid 404s
-  { label: "Testomonials", href: "/testomonials" },
+  { label: "About us", href: "/about" },
+  { label: "Product", href: "/product" },
 ];
 
 // Variants (static objects only — TS safe)
@@ -57,9 +55,9 @@ const Header = () => {
 
   return (
     <header className="w-full bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-10 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center flex-shrink-0">
           <Link href="/" className="inline-block">
             <Image
               src="/img/lexbolttLogo.svg"
@@ -73,47 +71,60 @@ const Header = () => {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-4">
-          {menuItems.map((item) => (
-            <motion.div
-              key={item.href}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href={item.href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-                  pathname === item.href
-                    ? "bg-primary text-white"
-                    : "text-black hover:bg-primary hover:text-white"
-                }`}
-              >
-                {item.label}
-              </Link>
-            </motion.div>
-          ))}
-        </nav>
+       {/* Desktop Menu */}
+<nav className="hidden md:flex space-x-2 lg:space-x-4">
+  {menuItems.map((item) => (
+    <motion.div
+      key={item.href}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <Link
+        href={item.href}
+        className={`px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition ${
+          pathname === item.href && pathname !== "/contact"
+            ? "bg-primary text-white"
+            : "text-black hover:bg-primary hover:text-white"
+        }`}
+      >
+        {item.label}
+      </Link>
+    </motion.div>
+  ))}
+</nav>
 
-        {/* Contact Button */}
-        <motion.div
-          className="hidden md:block"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Link
-            href="#"
-            className="text-sm font-semibold bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-full transition"
-          >
-            Contact Us
-          </Link>
-        </motion.div>
+{/* Contact Button */}
+<motion.div
+  className="hidden md:block ml-2"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <Link
+    href="/contact"
+    className={`text-sm font-semibold pl-4 pr-2 py-1 rounded-full transition flex items-center gap-2 shadow ${
+      pathname === "/contact"
+        ? "bg-primary text-white"
+        : "bg-gray-100 text-black"
+    }`}
+  >
+    Contact Us
+    <img
+      src="/icons/contacticon.png"
+      alt="Arrow"
+      className="w-9 h-9 object-contain"
+    />
+  </Link>
+</motion.div>
+
+
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden">
+        <div className="md:hidden ml-2">
           <motion.button
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
             whileTap={{ scale: 0.9 }}
+            className="p-2"
           >
             <Menu size={24} color="black" />
           </motion.button>
@@ -205,6 +216,13 @@ const Header = () => {
                       className="mt-4 block text-sm font-semibold bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-full transition"
                     >
                       Contact Us
+                      <span className="ml-2">
+                        <img
+                          src="/icons/contacticon.png"
+                          alt="Arrow"
+                          className="w-10 h-10 object-contain"
+                        />
+                      </span>
                     </Link>
                   </motion.div>
                 </motion.div>
