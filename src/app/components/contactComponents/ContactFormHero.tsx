@@ -6,19 +6,19 @@ export default function ContactFormHero() {
       <div className="relative bg-primary rounded-2xl flex flex-col md:flex-row items-start justify-between px-7 py-10 min-h-[260px]">
         {/* Left Top Curve Image */}
         <img
-          src="/icons/leftcurve.svg"
+          src="/img/leftcurve.svg"
           alt="Left Curve"
           className="absolute left-0 top-0 w-24 h-24 rounded-tl-2xl pointer-events-none"
         />
         {/* Right Top Curve Image */}
         <img
-          src="/icons/rightcurve.svg"
+          src="/img/rightcurve.svg"
           alt="Right Curve"
           className="absolute right-0 top-0 w-20 h-20 pointer-events-none"
         />
         {/* Bottom Center Curve Image */}
         <img
-          src="/icons/downcurve.svg"
+          src="/img/downcurve.svg"
           alt="Bottom Curve"
           className="absolute left-1/2 bottom-0 -translate-x-1/2 w-56 h-20 pointer-events-none opacity-30"
         />
@@ -39,7 +39,7 @@ export default function ContactFormHero() {
         <form className="flex-1 flex flex-col gap-3 max-w-xs w-full md:ml-8">
           <div className="relative">
             <img
-              src="/icons/insta.svg"
+              src="/img/insta.svg"
               alt="User"
               className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none opacity-80"
             />
@@ -51,7 +51,7 @@ export default function ContactFormHero() {
           </div>
           <div className="relative">
             <img
-              src="/icons/chat.svg"
+              src="/img/chat.svg"
               alt="Email"
               className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none opacity-80"
             />
