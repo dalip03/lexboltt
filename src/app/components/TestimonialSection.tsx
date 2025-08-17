@@ -156,7 +156,6 @@ const TestimonialSection: React.FC = () => {
                         <span className="mr-1">✔️</span> Verified
                       </span>
                     )}
-                    <span className="text-xs text-gray-400">{t.location}</span>
                   </div>
                 </div>
 
@@ -173,6 +172,8 @@ const TestimonialSection: React.FC = () => {
                     <Stars count={t.rating} />
                   </div>
                   <div className="text-gray-700 text-sm">{t.text}</div>
+                                      <span className="text-xs text-gray-400">{t.location}</span>
+
                 </div>
               </div>
             </motion.div>
