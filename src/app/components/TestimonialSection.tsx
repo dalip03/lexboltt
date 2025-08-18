@@ -82,7 +82,7 @@ const TestimonialSection: React.FC = () => {
     (100 - trackWidth);
 
   return (
-    <section className="w-full bg-[#F6F6F6] rounded-[32px] max-w-6xl mx-auto mt-14 p-6 md:p-12 flex flex-col md:flex-row gap-10 items-stretch">
+    <section className="w-full bg-[#F6F6F6] rounded-[32px] max-w-6xl mx-auto mt-14 p-6 md:pt-34 md:pb-20 md:pl-10 flex flex-col md:flex-row gap-10 items-stretch">
       {/* Left Side */}
       <div className="md:w-[40%] w-full flex flex-col justify-center mb-8 md:mb-0">
         <span className="bg-white border border-gray-200 rounded-full px-4 py-1 text-xs font-medium mb-3 w-max">

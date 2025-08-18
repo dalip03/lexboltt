@@ -4,6 +4,7 @@ import ComplianceSplitSection from "./components/ComplianceSplitSection";
 import ProcessStepsSection from "./components/ProcessStepsSection";
 import FeaturesTabsSection from "./components/FeaturesTabsSection";
 import TestimonialSection from "./components/TestimonialSection";
+import ComplianceHeroBanner from "./components/ComplianceHeroBanner";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
     <ProcessStepsSection/>
     <FeaturesTabsSection/>
     <TestimonialSection/>
-    <ComplianceSplitSection/>
+    <ComplianceHeroBanner/>
+    {/* <ComplianceSplitSection/> */}
    </div>
   );
 }
