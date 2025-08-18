@@ -23,7 +23,7 @@ export default function ContactHero() {
     {
       img: "/product/contact1.png",
       label: "Scale",
-      desc: "Our solutions grow with your organization’s needs.",
+      desc: "Our solutions grow with your organization's needs.",
     },
   ];
 
@@ -123,28 +123,44 @@ export default function ContactHero() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.89, y: -18 }}
             transition={{ duration: 0.43 }}
-            className="relative w-[96vw] max-w-[470px] md:max-w-[600px] h-[53vw] max-h-[320px] md:max-h-[360px] rounded-2xl overflow-hidden flex-shrink-0 shadow-lg flex flex-col z-10 bg-white"
+            className="relative w-[96vw] max-w-[470px] md:max-w-[600px] h-[53vw] max-h-[320px] md:max-h-[360px] rounded-2xl overflow-hidden flex-shrink-0 shadow-lg z-10"
           >
-            {/* Image top section */}
-            <div className="h-[75%] w-full overflow-hidden rounded-t-2xl">
+            {/* Image */}
+            <div className="w-full h-full relative">
               <img
                 src={slides[current].img}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-2xl"
               />
-            </div>
-            {/* Text bottom section */}
-            <div className="h-[25%] w-full px-6 py-3 flex flex-col justify-center bg-white rounded-b-2xl">
-              {slides[current].label && (
-                <span className="text-black font-bold text-lg mb-1">
-                  {slides[current].label}
-                </span>
-              )}
-              {slides[current].desc && (
-                <p className="text-xs md:text-sm text-gray-700 font-medium leading-snug">
-                  {slides[current].desc}
-                </p>
-              )}
+              
+              {/* Overlay Content */}
+              <div className="absolute inset-0 flex items-end justify-between p-6 ">
+                {/* Left side - Heading */}
+                {slides[current].label && (
+                  <div className="z-20">
+                    <h3 className="relative text-white font-bold text-2xl md:text-3xl mb-2 drop-shadow-lg">
+                      {slides[current].label}
+                    </h3>
+                  </div>
+                )}
+                
+                {/* Right side - Small tilted white div with description */}
+                {slides[current].desc && (
+                  <div className="absolute z-20 ] -bottom-2 right-0">
+                    <div 
+                      className="bg-white p-3 pl-4 py-4  shadow-md max-w-[300px] transform rotate-1"
+                      style={{
+                        clipPath: 'polygon(6% 0, 100% 0, 100% 100%, 0 100%)'
+
+                      }}
+                    >
+                      <p className="text-gray-700 text-[10px] font-medium leading-tight">
+                        {slides[current].desc}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
