@@ -1,6 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion, easeOut } from "framer-motion";
+import RequestDemoModal from "./RequestDemoModal";
+
+interface RequestDemoModalProps {
+  onClose: () => void;
+}
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -10,6 +15,8 @@ const fadeUp = {
 };
 
 export default function HeroSection() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section
       className="min-w-full h-full flex flex-col items-center justify-center rounded-[24px] px-4 mt-4"
@@ -32,14 +39,15 @@ export default function HeroSection() {
         <p className="font-sans text-white/80 text-sm sm:text-base mb-4">
           LexBolt Transforms Complex Automotive Regulations Into Clear,
           Structured Requirements
-          <br />
-          — So Your Team Can Act Faster, Stay Compliant, And Never Miss A Change.
+          <br />— So Your Team Can Act Faster, Stay Compliant, And Never Miss A
+          Change.
         </p>
         <motion.button
           className="bg-primary hover:bg-[#ff4e06] cursor-pointer text-white font-medium font-sans rounded-full px-8 py-3 text-lg shadow-lg transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
+          onClick={() => setShowModal(true)}
         >
           Request Demo
         </motion.button>
@@ -59,6 +67,7 @@ export default function HeroSection() {
           className="w-full max-w-[900px] object-contain"
         />
       </motion.div>
+      {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
     </section>
   );
 }

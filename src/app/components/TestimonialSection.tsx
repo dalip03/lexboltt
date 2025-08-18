@@ -5,8 +5,8 @@ import { motion } from "framer-motion"; // ✅ import framer motion
 // Demo testimonials data
 const testimonials = [
   {
-    name: "Ghazi Chowdrey",
-    role: "CEO and Founder",
+    name: "Sr. Engineer, at a",
+    role: "respected OEM",
     avatar: "/img/testomonial1.svg",
     rating: 5,
     location: "NYC",
@@ -14,8 +14,8 @@ const testimonials = [
     text: "I am beyond impressed with Lexbolt, task and regulations management has never been so easy. I am glad I found out soon about LexBolt. I am more than excited to use it more in my work.",
   },
   {
-    name: "Zain Ahmad",
-    role: "Compliance Manager",
+    name: "Sr, Developer, at a",
+    role: "respected OEM",
     avatar: "/img/testomonial1.svg",
     rating: 4,
     location: "London",
@@ -23,8 +23,8 @@ const testimonials = [
     text: "LexBolt streamlines our compliance in ways our previous solutions never could. Highly recommended.",
   },
   {
-    name: "Meera Singh",
-    role: "Project Lead",
+    name: "Project lead, at a",
+    role: "respected OEM",
     avatar: "/img/testomonial1.svg",
     rating: 5,
     location: "Delhi",
@@ -91,14 +91,14 @@ const TestimonialSection: React.FC = () => {
         </h2>
         <div className="flex gap-4 ">
           {/* Contact us button */}
-          <button className="flex items-center gap-2 bg-[#FF5C1A] text-white font-semibold px-4 py-3 rounded-full shadow-lg hover:bg-orange-500 transition relative">
+          <button className="flex items-center text-sm gap-2 bg-[#FF5C1A] text-white font-semibold px-4 py-3 rounded-full shadow-lg hover:bg-orange-500 transition relative">
             Contact us
             <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#FF784E]/30">
               <span className="text-white text-lg font-semibold">&rarr;</span>
             </span>
           </button>
           {/* Get Started button */}
-          <button className="flex items-center gap-2 bg-[#FFF3ED] text-[#FF5C1A] font-semibold px-7 py-3 rounded-full shadow-lg hover:bg-orange-100 transition relative">
+          <button className="flex items-center text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-2 md:pl-4 py-3 rounded-full shadow-lg hover:bg-orange-100 transition relative">
             Get Started
             <span className="flex items-center justify-center ml-2 w-8 h-8 rounded-full bg-[#FF784E]/20">
               <span className="text-[#FF5C1A] text-lg font-semibold">
@@ -139,8 +139,8 @@ const TestimonialSection: React.FC = () => {
                       alt={t.name}
                       className="w-10 h-10 rounded-full object-cover mb-2"
                     />
-                    <div className="font-medium text-sm">{t.name}</div>
-                    <div className="text-xs text-gray-400">{t.role}</div>
+                    <div className="font-medium text-sm text-gray-400  ">{t.name}</div>
+                    <div className="text-sm font-medium text-gray-400">{t.role}</div>
                   </div>
                   <div>
                     <img

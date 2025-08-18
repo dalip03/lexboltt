@@ -53,7 +53,7 @@ export default function SolutionsHero() {
             />
           </span>
         </button>
-        <button className="flex items-center gap-2 bg-white border border-gray-100 text-gray-700 pl-7 pr-2 py-2 rounded-full font-semibold  hover:bg-gray-100 transition text-base">
+        <button className="flex items-center gap-2 bg-white border border-gray-100 text-gray-700 md:pl-7 pr-2 py-2 rounded-full font-semibold  hover:bg-gray-100 transition text-base">
           Get Started
           <span className="ml-1">
             <img

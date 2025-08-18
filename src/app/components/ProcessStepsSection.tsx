@@ -1,12 +1,13 @@
 "use client";
-import React, { useState } from "react";
+
+import React from "react";
 import { motion, easeOut } from "framer-motion";
 
 const steps = [
   {
     title: "Upload Any Regulation",
     desc: "Drop in documents from applicable regulatory bodies or relevant authorities.",
-    icon: "/img/file.svg",
+    icon: "/img/search.svg",
     image: "/img/process1.svg",
   },
   {
@@ -29,115 +30,82 @@ const steps = [
   },
 ];
 
+// Motion variants
 const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { amount: 0.25, once: true },
-  transition: { duration: 0.6, ease: easeOut },
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
 };
 
-const ProcessStepsSection: React.FC = () => {
-  const [activeStep, setActiveStep] = useState(0);
+const imageFade = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: easeOut } },
+};
 
+export default function ProcessStepsSection() {
   return (
-    <section className="w-full max-w-5xl mx-auto py-16 px-4 sm:px-6">
+    <section className="w-full max-w-6xl mx-auto py-14 px-4 sm:px-8">
       {/* Headings */}
       <motion.div
-        className="flex flex-col items-center mb-6 px-2"
-        initial={fadeUp.initial}
-        whileInView={fadeUp.whileInView}
-        viewport={fadeUp.viewport}
-        transition={fadeUp.transition}
+        className="flex flex-col items-center mb-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={fadeUp}
       >
-        <span className="text-[#FF8C51] border border-[#FF8C51] rounded-full px-5 py-1 text-sm font-medium mb-4 whitespace-nowrap">
+        <span className="text-[#FF8C51] border border-[#FF8C51] rounded-full px-6 py-1 text-sm font-medium mb-4">
           Our Process
         </span>
-        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl mb-3 text-center font-sans leading-tight max-w-[350px] sm:max-w-xl">
-          From Law to
-          <br />
-          Launch — in 4 Steps
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl mb-3 text-center leading-tight max-w-xl">
+          From Law to <br /> Launch — in 4 Steps
         </h1>
-        <p className="text-gray-600 mb-10 text-center font-sans text-sm sm:text-base max-w-[400px] sm:max-w-lg">
+        <p className="text-gray-600 mb-6 text-center text-sm sm:text-base max-w-lg">
           #1 Software for managing all your regulations in one place
         </p>
       </motion.div>
-      <motion.div
-        className="flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center"
-        initial={fadeUp.initial}
-        whileInView={fadeUp.whileInView}
-        viewport={fadeUp.viewport}
-        transition={{ ...fadeUp.transition, delay: 0.15 }}
-      >
-        {/* Left: Steps */}
-        <div className="flex flex-col gap-4 w-full md:w-80 overflow-x-auto md:overflow-visible no-scrollbar md:max-w-none px-2 md:px-0">
-          {steps.map((step, i) => (
-            <motion.button
-              key={step.title}
-              onClick={() => setActiveStep(i)}
-              layout
-              className={`flex items-center gap-3 w-full rounded-xl transition text-left px-4 py-2 md:px-6 md:py-4 cursor-pointer ${
-                activeStep === i
-                  ? "cursor-pointer"
-                  : "shadow-none bg-transparent"
-              }`}
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: "spring", stiffness: 300 }}
+
+      {/* Steps */}
+      <div className="flex flex-col gap-16">
+        {steps.map((step, idx) => (
+          <motion.div
+            key={idx}
+            className={`flex flex-col md:flex-row items-center gap-8 ${
+              idx % 2 === 1 ? "md:flex-row-reverse" : ""
+            }`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {/* Text Card */}
+            <motion.div
+              className="rounded-2xl px-6 py-5 flex items-start w-full md:w-1/2"
+              variants={fadeUp}
+              transition={{ duration: 0.7, ease: easeOut, delay: idx * 0.2 }}
             >
-              <span
-                className={`rounded-full inline-flex items-center justify-center w-14 h-12 border border-[#FFE1D0] transition ${
-                  activeStep === i ? "bg-primary" : "bg-[#FFF3ED]"
-                }`}
-              >
-                <img
-                  src={step.icon}
-                  alt=""
-                  className="w-6 h-6 object-contain"
-                />
-              </span>
+              <img
+                src={step.icon}
+                alt=""
+                className="w-10 h-10 mr-4 flex-shrink-0"
+              />
               <div>
-                <div
-                  className={`font-bold text-base font-sans mb-1 ${
-                    activeStep === i ? "text-black" : "text-gray-900"
-                  }`}
-                >
+                <h3 className="font-bold text-lg text-black mb-1">
                   {step.title}
-                </div>
-                <div className="text-gray-500 text-sm font-sans max-w-[200px] sm:max-w-[300px]">
-                  {step.desc}
-                </div>
+                </h3>
+                <p className="text-gray-500 text-sm">{step.desc}</p>
               </div>
-            </motion.button>
-          ))}
-        </div>
-        {/* Right: Image/Card */}
-        <motion.div
-          className="flex-grow flex items-center justify-center min-h-[220px] sm:min-h-[280px]"
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, ease: easeOut, delay: 0.25 }}
-        >
-          <img
-            src={steps[activeStep].image}
-            alt={steps[activeStep].title}
-            className="rounded-2xl max-h-[220px] sm:max-h-[320px] max-w-full object-contain"
-          />
-        </motion.div>
-      </motion.div>
-      <style>{`
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-        }
-      `}</style>
+            </motion.div>
+
+            {/* Image */}
+            <motion.img
+              src={step.image}
+              alt={step.title}
+              className="rounded-2xl w-full md:w-1/2 max-w-[600px] p-2 self-end"
+              variants={imageFade}
+              transition={{ duration: 0.8, ease: easeOut, delay: idx * 0.3 }}
+            />
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
-};
-
-export default ProcessStepsSection;
+}

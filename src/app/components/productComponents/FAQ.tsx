@@ -6,19 +6,19 @@ import { motion, AnimatePresence } from "framer-motion";
 const FAQS = [
   {
     q: "What is LexBolt.ai?",
-    a: "LexBolt is an AI-powered compliance assistant designed specifically for the automotive industry. It converts complex regulatory documents into structured, actionable data to help teams stay ahead of compliance requirements.",
+    a: "LexBolt.ai is an AI-powered compliance assistant purpose-built for the automotive industry. It transforms complex regulatory documents into structured, actionable data, enabling teams to stay ahead on compliance and streamline workflows.",
   },
   {
     q: "What types of regulations does LexBolt support?",
-    a: "The ideal duration varies per individual, but most successful mentorships last for at least a few months to a year for the best results.",
+    a: "LexBolt supports a broad spectrum of automotive and manufacturing regulations, including safety standards, environmental rules, quality certifications, government guidelines, and more. The platform adapts to diverse regulatory frameworks and evolving compliance needs.",
   },
   {
     q: "How does LexBolt extract data from documents?",
-    a: "You may schedule regular sessions as per your mentorship plan and mutual availability with your mentor.",
+    a: "LexBolt uses advanced AI, machine learning, and natural language processing to automatically parse documents, identify key provisions, and extract relevant data points. This lets users turn lengthy and complex regulatory texts into clear insights and tasks in seconds.",
   },
   {
     q: "Can I compare different versions of a regulation?",
-    a: "You can start whenever you feel ready for focused, consistent improvement and guidance towards your goals.",
+    a: "Yes, LexBolt includes smart version control features. You can compare different revisions of regulatory documents, highlight changes, and track updates, ensuring your business is always in compliance with the latest requirements.",
   },
 ];
 

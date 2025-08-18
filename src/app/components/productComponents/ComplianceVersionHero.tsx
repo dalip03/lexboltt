@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function ComplianceVersionHero() {
   return (
-    <section className="w-full mx-auto py-12 flex flex-col-reverse lg:flex-row items-center justify-between gap-2 ">
+    <section className="w-full mx-auto py-12 flex flex-col-reverse lg:flex-row items-center justify-between gap-2">
       {/* Left side: image */}
       <motion.div
-        className="flex-1 flex items-center justify-start mt-16 w-full"
+        className="flex-1 flex items-center justify-center mt-10 lg:justify-start lg:mt-16 w-full"
         initial={{ opacity: 0, x: -40, scale: 0.96 }}
         whileInView={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -16,12 +16,16 @@ export default function ComplianceVersionHero() {
         <img
           src="/product/productAnalyst.png"
           alt="Compliance Version Dashboard"
-          className="w-[85vw] max-w-[340px] h-[220px] md:max-w-[460px] md:h-full rounded-2xl object-cover shadow-[0px_-14px_240px_-18px_rgba(252,125,63,0.37),146px_6px_240px_-12px_rgba(252,125,63,0.28)]"
+          className="w-[90vw] max-w-[340px] h-[220px] md:max-w-[460px] md:h-full rounded-2xl object-cover shadow-[0px_-14px_240px_-18px_rgba(252,125,63,0.37),146px_6px_240px_-12px_rgba(252,125,63,0.28)]"
         />
       </motion.div>
       {/* Right side: text and CTA */}
       <motion.div
-        className="flex-1 flex flex-col items-start -mt-16"
+        className="
+          flex-1 flex flex-col items-center lg:items-start
+          -mt-10 lg:-mt-16
+          text-center lg:text-left
+        "
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.12 }}

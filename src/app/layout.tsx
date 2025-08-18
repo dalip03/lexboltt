@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono , Urbanist } from "next/font/google";
+import { Geist, Geist_Mono, Urbanist } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
+import { Toaster } from "react-hot-toast";
 
 const urbanist = Urbanist({
-  subsets: ['latin'],
-  variable: '--font-urbanist',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-urbanist",
+  display: "swap",
 });
 
 const geistSans = Geist({
@@ -33,12 +33,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${urbanist.variable} ${urbanist.variable} antialiased`}
-      >
-        <Header/>
+      <body className={`${urbanist.variable} ${urbanist.variable} antialiased`}>
+        <Header />
         {children}
-        <Footer/>
+        <Toaster position="top-center" reverseOrder={false} />
+
+        <Footer />
       </body>
     </html>
   );
