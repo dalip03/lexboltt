@@ -134,18 +134,16 @@ export default function TeamHero() {
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.75 }}
       >
-        <button className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 font-semibold text-gray-700 text-sm shadow transition border border-gray-300">
-          View all
-          <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-            <path
-              d="M14 6l6 6-6 6M4 12h16"
-              stroke="#232540"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+         <button className="flex items-center text-sm gap-2  hover:bg-gray-200 text-gray-700  font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg border border-gray-100  cursor-pointer transition relative">
+           View All
+            <span className="ml-2 flex-shrink-0">
+              <img
+                src="/img/arrowiconsblack.svg"
+                alt="Icon"
+                className="w-12 h-12 object-contain"
+              />
+            </span>
+          </button>
       </motion.div>
 
       {/* Hide scrollbar */}

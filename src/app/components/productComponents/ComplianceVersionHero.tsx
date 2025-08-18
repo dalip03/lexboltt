@@ -1,8 +1,12 @@
 'use client';
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import RequestDemoModal from "../RequestDemoModal";
 
 export default function ComplianceVersionHero() {
+    const [showModal, setShowModal] = useState(false);
+  
   return (
     <section className="w-full mx-auto py-12 flex flex-col-reverse lg:flex-row items-center justify-between gap-2">
       {/* Left side: image */}
@@ -62,27 +66,28 @@ export default function ComplianceVersionHero() {
           decisions. Stay ahead in the ever-evolving race of keeping up with all
           business regulations
         </motion.p>
-        <motion.button
-          className="flex items-center gap-2 bg-[#FF6600] text-white px-7 py-2.5 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.39 }}
-          viewport={{ once: true }}
-        >
-          Schedule a Call
-          <span className="ml-1">
-            <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-              <path
-                d="M16 12H4m12 0l-5-5m5 5l-5 5"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-        </motion.button>
+          <div className="relative inline-flex items-center">
+                    <motion.button
+                      onClick={() => setShowModal(true)}
+                      className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-1 md:pl-6 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                     Schedule a Call
+                      <span className="ml-2 flex-shrink-0">
+                        <img
+                          src="/img/arrowrighticonwhite.svg"
+                          alt="Icon"
+                          className="w-12 h-12 object-contain"
+                        />
+                      </span>
+                    </motion.button>
+                  </div>
+
       </motion.div>
+              {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
+      
     </section>
   );
 }

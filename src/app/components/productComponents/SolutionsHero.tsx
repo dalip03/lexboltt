@@ -1,8 +1,13 @@
 'use client';
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import RequestDemoModal from "../RequestDemoModal";
+import Link from "next/link";
 
 export default function SolutionsHero() {
+        const [showModal, setShowModal] = useState(false);
+  
   return (
     <section className="w-full max-w-4xl mx-auto pt-12 pb-10 px-4 flex flex-col items-center">
       {/* Tag */}
@@ -43,17 +48,19 @@ export default function SolutionsHero() {
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.7, delay: 0.19 }}
       >
-        <button className="flex items-center gap-2 bg-[#FC7D3F] text-white pl-7 pr-2 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base">
-          Contact us
-          <span className="ml-1">
-            <img
-              src="/product/right.svg"
-              alt="Arrow Right"
-              className="w-10 h-10 object-contain"
-            />
-          </span>
-        </button>
-        <button className="flex items-center gap-2 bg-white border border-gray-100 text-gray-700 md:pl-7 pr-2 py-2 rounded-full font-semibold  hover:bg-gray-100 transition text-base">
+       <Link href="/contact">
+      <button className="flex items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base">
+        Contact us
+        <span className="ml-1">
+          <img
+            src="/product/right.svg"
+            alt="Arrow Right"
+            className="w-10 h-10 object-contain"
+          />
+        </span>
+      </button>
+    </Link>
+        <button onClick={() => setShowModal(true)} className="flex items-center gap-2 bg-white border border-gray-100 text-gray-700 md:pl-7 px-1 py-2 rounded-full font-semibold  hover:bg-gray-100 transition text-base">
           Get Started
           <span className="ml-1">
             <img
@@ -85,6 +92,8 @@ export default function SolutionsHero() {
           className="relative w-[365px] h-[365px] md:w-[420px] md:h-[420px] object-cover"
         />
       </motion.div>
+                    {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
+      
     </section>
   );
 }

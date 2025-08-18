@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, easeOut } from "framer-motion";
+import RequestDemoModal from "./RequestDemoModal"; // make sure path is correct
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -12,11 +13,13 @@ const fadeUp = {
 };
 
 const Footer: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <footer className="bg-primary text-gray-400 px-6 md:px-20 py-10 border-t border-gray-200">
       {/* Top part */}
       <motion.div
-        className="flex flex-col md:flex-row items-center justify-between mb-6 text-sm font-semibold text-center md:text-left"
+        className="flex flex-col md:flex-row items-center justify-between  text-sm font-semibold text-center md:text-left"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -37,29 +40,16 @@ const Footer: React.FC = () => {
 
           {/* Social img */}
           <div className="flex gap-4">
-            <img
-              src="/img/twitter.svg"
-              alt="Twitter"
-              className="w-10 h-10 cursor-pointer hover:opacity-80"
-            />
-            
-            <img
-              src="/img/instagram.svg"
-              alt="Instagram"
-              className="w-10 h-10 cursor-pointer hover:opacity-80"
-            />
-            <img
-              src="/img/linkedin.svg"
-              alt="LinkedIn"
-              className="w-10 h-10 cursor-pointer hover:opacity-80"
-            />
+            <img src="/img/twitter.svg" alt="Twitter" className="w-10 h-10 cursor-pointer hover:opacity-80" />
+            <img src="/img/instagram.svg" alt="Instagram" className="w-10 h-10 cursor-pointer hover:opacity-80" />
+            <img src="/img/linkedin.svg" alt="LinkedIn" className="w-10 h-10 cursor-pointer hover:opacity-80" />
           </div>
         </div>
 
         <div className="text-white text-xs">©2025 Lexboltt. All Rights Reserved.</div>
       </motion.div>
 
-      <hr className="border-white mb-8" />
+      <hr className="border-white mb-6" />
 
       {/* Middle part */}
       <motion.div
@@ -70,20 +60,19 @@ const Footer: React.FC = () => {
         transition={{ ...fadeUp.transition, delay: 0.1 }}
       >
         {/* Left: Newsletter */}
-        <div className="w-full md:w-[40%] flex justify-center md:justify-start">
+        <div className="w-full md:w-[35%] flex justify-center md:justify-start">
           <div className="w-full max-w-md px-4 py-6 rounded-[16px] flex flex-col items-center md:items-start gap-2">
             <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
-
             <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="flex-grow pl-4 py-4 bg-transparent text-white placeholder-white/60 focus:outline-none"
+                className="flex-grow pl-4 py-3 bg-transparent text-white placeholder-white/60 focus:outline-none"
                 required
               />
               <button
                 type="submit"
-                className="bg-white text-primary font-semibold px-2  py-3 rounded-full transition hover:bg-orange-100"
+                className="bg-white text-primary font-semibold px-4  py-2 rounded-full transition hover:bg-orange-100"
               >
                 Sign up
               </button>
@@ -91,37 +80,46 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Explore & Resources */}
-        <div className="w-full md:w-[60%] flex flex-col sm:flex-row justify-center md:justify-end gap-10 text-center md:text-left">
+        {/* center explore */}
+        <div className="w-full md:w-[30%] flex justify-center ">
           <div>
             <h4 className="font-medium mb-4 text-white">Explore</h4>
             <ul className="space-y-2 text-white/60">
-              <li className="hover:text-gray-300 cursor-pointer">Home</li>
-              <li className="hover:text-gray-300 cursor-pointer">About Us</li>
-              <li className="hover:text-gray-300 cursor-pointer">Solutions</li>
-              <li className="hover:text-gray-300 cursor-pointer">Blog</li>
+              <li><Link href="/" className="hover:text-gray-300">Home</Link></li>
+              <li><Link href="/about" className="hover:text-gray-300">About Us</Link></li>
+              <li><Link href="/product" className="hover:text-gray-300">Products</Link></li>
+              <li><Link href="/contact" className="hover:text-gray-300">Contact</Link></li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-medium mb-4 text-white">Solutions</h4>
-            <ul className="space-y-2 text-white/60">
-              <li className="hover:text-gray-300 cursor-pointer">Account Management</li>
-              <li className="hover:text-gray-300 cursor-pointer">Sales Tracking</li>
-              <li className="hover:text-gray-300 cursor-pointer">Employee Integration</li>
-              <li className="hover:text-gray-300 cursor-pointer">Analytics Dashboard</li>
-            </ul>
-          </div>
+        </div>
+
+        {/* Resources */}
+        <div className="w-full md:w-[35%] flex flex-col sm:flex-row justify-center md:justify-end gap-10 text-center md:text-left">
           <div>
             <h4 className="font-medium mb-4 text-white">Contact Us</h4>
             <ul className="space-y-2 text-white/60">
-              <li className="hover:text-gray-300 cursor-pointer">hello@lexbolt.ai</li>
-              <li className="hover:text-gray-300 cursor-pointer">Bengaluru, India / Remote Global</li>
-              <li className="hover:text-gray-300 cursor-pointer">Terms of Service</li>
-              <li className="hover:text-gray-300 cursor-pointer">Privacy Policy</li>
+              <li
+                className="hover:text-gray-300 cursor-pointer"
+                onClick={() => setShowModal(true)}
+              >
+                hello@lexbolt.ai
+              </li>
+              <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
+                Bengaluru, India / Remote Global
+              </li>
+              <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
+                Terms of Service
+              </li>
+              <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
+                Privacy Policy
+              </li>
             </ul>
           </div>
         </div>
       </motion.div>
+
+      {/* Modal */}
+      {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
     </footer>
   );
 };

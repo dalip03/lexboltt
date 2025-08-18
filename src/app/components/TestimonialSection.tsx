@@ -96,7 +96,7 @@ const TestimonialSection: React.FC = () => {
         </h2>
         <div className="flex gap-4 ">
           {/* Contact us button */}
-          <button className="flex items-center text-sm gap-2 bg-[#FF5C1A] text-white font-semibold px-2 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-500 transition relative">
+          <button className="flex items-center text-sm gap-2 bg-[#FF5C1A] text-white font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-500 transition relative">
             Contact us
             <span className="ml-2 flex-shrink-0">
               <img
@@ -107,7 +107,7 @@ const TestimonialSection: React.FC = () => {
             </span>
           </button>
           {/* Get Started button */}
-          <button className="flex items-center text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-2 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-100 transition relative">
+          <button className="flex items-center text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-100 transition relative">
             Get Started
             <span className="ml-2 flex-shrink-0">
               <img

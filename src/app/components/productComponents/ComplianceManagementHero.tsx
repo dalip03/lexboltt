@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from "framer-motion";
+import RequestDemoModal from "../RequestDemoModal";
+import { useState } from "react";
 
 export default function ComplianceManagementHero() {
   const features = [
@@ -11,6 +13,8 @@ export default function ComplianceManagementHero() {
     "24/7 Access to Support",
     "Diverse Use Cases",
   ];
+      const [showModal, setShowModal] = useState(false);
+  
 
   return (
     <section className="w-full max-w-6xl mx-auto py-12 px-4 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -89,11 +93,12 @@ export default function ComplianceManagementHero() {
         </motion.div>
         {/* Explore Button */}
         <motion.button
-          className="flex items-center gap-2 bg-[#FC7D3F] text-white pl-7 pr-2 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base"
+          className="flex items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.32 }}
           viewport={{ once: true }}
+          onClick={() => setShowModal(true)}
         >
           Explore
           <span className="ml-2">
@@ -105,6 +110,8 @@ export default function ComplianceManagementHero() {
           </span>
         </motion.button>
       </motion.div>
+              {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
+      
     </section>
   );
 }
