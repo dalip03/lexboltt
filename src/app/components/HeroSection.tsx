@@ -43,15 +43,25 @@ export default function HeroSection() {
             <br />— So Your Team Can Act Faster, Stay Compliant, And Never Miss
             A Change.
           </p>
-          <motion.button
-            className="bg-primary hover:bg-[#ff4e06] cursor-pointer text-white font-medium font-sans rounded-full px-8 py-3 text-lg shadow-lg transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            onClick={() => setShowModal(true)}
-          >
-            Request Demo
-          </motion.button>
+       
+          <div className="relative inline-flex items-center">
+            <motion.button
+              onClick={() => setShowModal(true)}
+              className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-2 md:pl-4 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+             Get a Demo
+              <span className="ml-2 flex-shrink-0">
+                <img
+                  src="/img/arrowrighticonwhite.svg"
+                  alt="Icon"
+                  className="w-12 h-12 object-contain"
+                />
+              </span>
+            </motion.button>
+          </div>
         </motion.div>
 
         {/* Dashboard image + Card overlay */}
