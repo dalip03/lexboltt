@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                 hello@lexbolt.ai
               </li>
               <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
-                Bengaluru, India / Remote Global
+                450 Bath Road, Longford, <br/> Heathrow, Lomdon, UB7 OEB
               </li>
               <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
                 Terms of Service

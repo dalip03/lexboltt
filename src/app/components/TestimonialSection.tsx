@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Sr. Engineer, at a",
     role: "respected OEM",
-    avatar: "/img/testomonial1.svg",
+    avatar: "/img/placeholder.svg",
     rating: 5,
     location: "NYC",
     verified: true,
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Sr, Developer, at a",
     role: "respected OEM",
-    avatar: "/img/testomonial1.svg",
+    avatar: "/img/placeholder.svg",
     rating: 4,
     location: "London",
     verified: true,
@@ -25,7 +25,7 @@ const testimonials = [
   {
     name: "Project lead, at a",
     role: "respected OEM",
-    avatar: "/img/testomonial1.svg",
+    avatar: "/img/placeholder.svg",
     rating: 5,
     location: "Delhi",
     verified: true,
