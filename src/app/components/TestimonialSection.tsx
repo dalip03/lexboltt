@@ -34,9 +34,14 @@ const testimonials = [
 ];
 
 const Stars = ({ count }: { count: number }) => (
-  <span className="inline-flex text-[#FF5C1A] text-xl">
+  <span className="inline-flex text-xl">
     {Array.from({ length: count }).map((_, i) => (
-      <span key={i}>★</span>
+      <img
+        key={i}
+        src="/img/rating.svg" 
+        alt="star"
+        className="w-5 h-5 mr-1"
+      />
     ))}
   </span>
 );
@@ -91,19 +96,25 @@ const TestimonialSection: React.FC = () => {
         </h2>
         <div className="flex gap-4 ">
           {/* Contact us button */}
-          <button className="flex items-center text-sm gap-2 bg-[#FF5C1A] text-white font-semibold px-4 py-3 rounded-full shadow-lg hover:bg-orange-500 transition relative">
+          <button className="flex items-center text-sm gap-2 bg-[#FF5C1A] text-white font-semibold px-2 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-500 transition relative">
             Contact us
-            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#FF784E]/30">
-              <span className="text-white text-lg font-semibold">&rarr;</span>
+            <span className="ml-2 flex-shrink-0">
+              <img
+                src="/img/arrowrighticonwhite.svg"
+                alt="Icon"
+                className="w-12 h-12 object-contain"
+              />
             </span>
           </button>
           {/* Get Started button */}
-          <button className="flex items-center text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-2 md:pl-4 py-3 rounded-full shadow-lg hover:bg-orange-100 transition relative">
+          <button className="flex items-center text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-2 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-100 transition relative">
             Get Started
-            <span className="flex items-center justify-center ml-2 w-8 h-8 rounded-full bg-[#FF784E]/20">
-              <span className="text-[#FF5C1A] text-lg font-semibold">
-                &rarr;
-              </span>
+            <span className="ml-2 flex-shrink-0">
+              <img
+                src="/img/arrowrighticon.svg"
+                alt="Icon"
+                className="w-12 h-12 object-contain"
+              />
             </span>
           </button>
         </div>
@@ -139,8 +150,12 @@ const TestimonialSection: React.FC = () => {
                       alt={t.name}
                       className="w-10 h-10 rounded-full object-cover mb-2"
                     />
-                    <div className="font-medium text-sm text-gray-400  ">{t.name}</div>
-                    <div className="text-sm font-medium text-gray-400">{t.role}</div>
+                    <div className="font-medium text-sm text-gray-400  ">
+                      {t.name}
+                    </div>
+                    <div className="text-sm font-medium text-gray-400">
+                      {t.role}
+                    </div>
                   </div>
                   <div>
                     <img
@@ -172,32 +187,30 @@ const TestimonialSection: React.FC = () => {
                     <Stars count={t.rating} />
                   </div>
                   <div className="text-gray-700 text-sm">{t.text}</div>
-                                      <span className="text-xs text-gray-400">{t.location}</span>
-
+                  <span className="text-xs text-gray-400">{t.location}</span>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-     {/* Orange scroll bar indicator */}
-<div className="relative w-full h-2 mt-1">
-  {/* Gray track */}
-  <div className="absolute left-0 top-0 w-full h-full bg-gray-200 rounded-full" />
+        {/* Orange scroll bar indicator */}
+        <div className="relative w-full h-2 mt-1">
+          {/* Gray track */}
+          <div className="absolute left-0 top-0 w-full h-full bg-gray-200 rounded-full" />
 
-  {/* Orange indicator with border */}
-  <motion.div
-    className="absolute top-0 h-full bg-primary rounded-full transition-all border border-[#FF784E] shadow-md"
-    style={{
-      left: `${trackLeft || 0}%`,
-      width: `${trackWidth || 25}%`,
-      minWidth: "40px",
-    }}
-    layout
-    transition={{ type: "spring", stiffness: 200, damping: 30 }}
-  />
-</div>
-
+          {/* Orange indicator with border */}
+          <motion.div
+            className="absolute top-0 h-full bg-primary rounded-full transition-all border border-[#FF784E] shadow-md"
+            style={{
+              left: `${trackLeft || 0}%`,
+              width: `${trackWidth || 25}%`,
+              minWidth: "40px",
+            }}
+            layout
+            transition={{ type: "spring", stiffness: 200, damping: 30 }}
+          />
+        </div>
       </div>
 
       {/* Hide native scrollbars on all browsers */}

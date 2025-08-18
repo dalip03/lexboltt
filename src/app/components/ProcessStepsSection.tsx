@@ -7,25 +7,25 @@ const steps = [
   {
     title: "Upload Any Regulation",
     desc: "Drop in documents from applicable regulatory bodies or relevant authorities.",
-    icon: "/img/search.svg",
+    icon: "/img/fileicons.svg",
     image: "/img/process1.svg",
   },
   {
     title: "AI Parses Key Requirements",
     desc: "We extract obligations, test procedures, effective dates, and more down to the clause level.",
-    icon: "/img/search.svg",
+    icon: "/img/searchicons.svg",
     image: "/img/process1.svg",
   },
   {
     title: "Track What’s Changed",
     desc: "Compare versions side by side. Get notified of new amendments, deleted text, and reworded requirements.",
-    icon: "/img/doc.svg",
+    icon: "/img/docicons.svg",
     image: "/img/process1.svg",
   },
   {
     title: "Export & Assign",
     desc: "Push structured requirements directly into your workflows PLM, ALM, spreadsheets, or tickets.",
-    icon: "/img/doc.svg",
+    icon: "/img/docicons.svg",
     image: "/img/process1.svg",
   },
 ];
@@ -64,7 +64,7 @@ export default function ProcessStepsSection() {
       </motion.div>
 
       {/* Steps */}
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col">
         {steps.map((step, idx) => (
           <motion.div
             key={idx}

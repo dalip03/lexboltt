@@ -56,14 +56,7 @@ const features = [
     bullets: ["SOC2, HIPAA ready", "Role-based access"],
     image: "/img/process1.svg",
   },
-  {
-    label: "Shipping",
-    icon: "/img/file.svg",
-    title: "Fast Shipping",
-    desc: "Deliver projects faster and ensure requirements never block launches.",
-    bullets: ["Accelerated launches", "No missed requirements"],
-    image: "/img/process1.svg",
-  },
+ 
 ];
 
 const fadeUp = {
@@ -97,7 +90,7 @@ const FeaturesTabsSection: React.FC = () => {
         </p>
       </motion.div>
       <motion.div
-        className="flex flex-nowrap justify-start gap-3 mb-12 overflow-x-auto no-scrollbar"
+        className="flex flex-nowrap justify-center gap-3 mb-12 overflow-x-auto no-scrollbar "
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
