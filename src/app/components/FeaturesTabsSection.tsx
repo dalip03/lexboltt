@@ -15,7 +15,7 @@ const features = [
       "We bring delivery ownership, not advisory slides",
       "We make governance a habit, not an audit",
     ],
-    image: "/about/abouts1.png",
+    image: "/Screenshot_20250819-124314.png",
   },
   {
     label: "Control",
