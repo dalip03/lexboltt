@@ -15,7 +15,7 @@ const features = [
       "We bring delivery ownership, not advisory slides",
       "We make governance a habit, not an audit",
     ],
-    image: "/img/process1.svg",
+    image: "/about/abouts1.png",
   },
   {
     label: "Control",
@@ -27,7 +27,7 @@ const features = [
       "Real-time notifications",
       "Customizable alerts",
     ],
-    image: "/img/process1.svg",
+    image: "/about/abouts2.png",
   },
   {
     label: "Compliance",
@@ -38,7 +38,7 @@ const features = [
       "Automatic compliance checks",
       "Up-to-date with latest requirements",
     ],
-    image: "/img/process1.svg",
+    image: "/about/abouts3.png",
   },
   {
     label: "Compatible",
@@ -46,7 +46,7 @@ const features = [
     title: "Compatible Workflows",
     desc: "Push requirements into your ALM, PLM, workflow and spreadsheet tools.",
     bullets: ["Seamless integrations", "Exports to tickets and sheets"],
-    image: "/img/process1.svg",
+    image: "/about/abouts4.png",
   },
   {
     label: "Security",
@@ -54,7 +54,7 @@ const features = [
     title: "Enterprise-grade Security",
     desc: "Your data is fully secure, encrypted at rest and in transit.",
     bullets: ["SOC2, HIPAA ready", "Role-based access"],
-    image: "/img/process1.svg",
+    image: "/about/abouts5.png",
   },
  
 ];
