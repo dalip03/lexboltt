@@ -8,25 +8,25 @@ const steps = [
     title: "Upload Any Regulation",
     desc: "Drop in documents from applicable regulatory bodies or relevant authorities.",
     icon: "/img/fileicons.svg",
-    image: "/img/process1.svg",
+    image: "/img/upload.svg",
   },
   {
     title: "AI Parses Key Requirements",
     desc: "We extract obligations, test procedures, effective dates, and more down to the clause level.",
     icon: "/img/searchicons.svg",
-    image: "/img/process1.svg",
+    image: "/img/searchai.svg",
   },
   {
     title: "Track What’s Changed",
     desc: "Compare versions side by side. Get notified of new amendments, deleted text, and reworded requirements.",
     icon: "/img/docicons.svg",
-    image: "/img/process1.svg",
+    image: "/img/trackchanged.svg",
   },
   {
     title: "Export & Assign",
     desc: "Push structured requirements directly into your workflows PLM, ALM, spreadsheets, or tickets.",
     icon: "/img/docicons.svg",
-    image: "/img/process1.svg",
+    image: "/img/export.svg",
   },
 ];
 
@@ -37,8 +37,13 @@ const fadeUp = {
 };
 
 const imageFade = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: easeOut } },
+  hidden: { opacity: 0, y: 100, scale: 0.95 }, // comes from down
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.8, ease: easeOut },
+  },
 };
 
 export default function ProcessStepsSection() {
@@ -78,7 +83,7 @@ export default function ProcessStepsSection() {
           >
             {/* Text Card */}
             <motion.div
-              className="rounded-2xl px-6 py-5 flex items-start w-full md:w-1/2"
+              className="rounded-2xl px-6 py-5 flex items-start w-full md:w-1/2 "
               variants={fadeUp}
               transition={{ duration: 0.7, ease: easeOut, delay: idx * 0.2 }}
             >
@@ -96,13 +101,16 @@ export default function ProcessStepsSection() {
             </motion.div>
 
             {/* Image */}
-            <motion.img
-              src={step.image}
-              alt={step.title}
-              className="rounded-2xl w-full md:w-1/2 max-w-[600px] p-2 self-end"
-              variants={imageFade}
-              transition={{ duration: 0.8, ease: easeOut, delay: idx * 0.3 }}
-            />
+            <div className="relative w-full md:w-1/2 max-w-[600px] p-2 self-end flex items-center justify-center">
+              <div className="absolute inset-0 rounded-2xl bg-[#f8f2f1]" />
+              <motion.img
+                src={step.image}
+                alt={step.title}
+                className="rounded-2xl w-full h-full object-cover relative"
+                variants={imageFade}
+                transition={{ duration: 0.8, ease: easeOut, delay: idx * 0.3 }}
+              />
+            </div>
           </motion.div>
         ))}
       </div>

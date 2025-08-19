@@ -62,6 +62,16 @@ const Footer: React.FC = () => {
         {/* Left: Newsletter */}
         <div className="w-full md:w-[35%] flex justify-center md:justify-start">
           <div className="w-full max-w-md px-4 py-6 rounded-[16px] flex flex-col items-center md:items-start gap-2">
+            <div className="text-2xl font-bold">
+                  <Link href="/" className="font-bold font-serif">
+                    <Image
+                      src="/img/footericon2.svg"
+                      alt="Logo"
+                      width={80}
+                      height={20}
+                    />
+                  </Link>
+                </div>{" "}
             <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
             <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
               <input
