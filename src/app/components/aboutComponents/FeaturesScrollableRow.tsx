@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 export default function ImagesScrollableRow() {
   const images = [
-    "/about/abouts1.png",
-    "/about/abouts2.png",
-    "/about/abouts3.png",
-    "/about/abouts4.png",
-    "/about/abouts5.png",
-    "/about/abouts1.png",
+    "/about/abouts.png",
+    "/about/about1.png",
+    "/about/about2.png",
+    "/about/about3.png",
+    "/about/about4.png",
+    "/about/abouts.png",
   ];
 
   return (
