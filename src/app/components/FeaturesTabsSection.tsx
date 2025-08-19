@@ -135,7 +135,7 @@ const FeaturesTabsSection: React.FC = () => {
               src={features[active].image}
               alt={features[active].label}
               className="w-full h-[160px] sm:h-[220px] md:h-[300px] object-contain mb-2"
-              style={{ background: 'white', borderRadius: '16px' }}
+            
             />
           </div>
         </div>
