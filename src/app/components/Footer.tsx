@@ -63,16 +63,7 @@ const Footer: React.FC = () => {
           <div className="w-full max-w-md px-4 py-6 rounded-[16px] flex flex-col items-center md:items-start gap-2">
             <div className="text-2xl font-bold">
               <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
-                  <Link href="/" className="font-bold font-serif">
-                    <Image
-                      src="/img/footericon2.svg"
-                      alt="Logo"
-                      width={80}
-                      height={20}
-                    />
-                  </Link>
-                </div>{" "}
-            
+              
             <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
               <input
                 type="email"
@@ -87,6 +78,16 @@ const Footer: React.FC = () => {
                 Sign up
               </button>
             </form>
+                  <Link href="/" className="font-bold font-serif">
+                    <Image
+                      src="/img/footericon2.svg"
+                      alt="Logo"
+                      width={80}
+                      height={20}
+                    />
+                  </Link>
+                </div>{" "}
+            
           </div>
         </div>
 
