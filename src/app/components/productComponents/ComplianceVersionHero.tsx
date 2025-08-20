@@ -69,7 +69,7 @@ export default function ComplianceVersionHero() {
           <div className="relative inline-flex items-center">
                     <motion.button
                       onClick={() => setShowModal(true)}
-                      className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-1 md:pl-6 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
+                      className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-1 md:pl-6 pl-4 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 300 }}
