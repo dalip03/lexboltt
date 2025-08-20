@@ -159,9 +159,9 @@ const FeaturesTabsSection: React.FC = () => {
                 className="flex items-center gap-2 text-gray-400 text-base justify-center md:justify-start"
               >
                 <img
-                  src="/img/star.svg"
+                  src="/img/orangestar.svg"
                   alt="*"
-                  className="w-4 h-4 opacity-40"
+                  className="w-4 h-4"
                 />
                 {item}
               </li>

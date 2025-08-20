@@ -66,7 +66,8 @@ export default function ValuesListHero() {
         transition={{ duration: 0.7, delay: 0.12 }}
         className="text-gray-400 text-2xl sm:text-3xl font-semibold mb-8 leading-tight"
       >
-        Your Regulations
+        <span className="bg-[#FF6600] text-white px-3 py-1 rounded-md text-2xl sm:text-3xl md:text-4xl font-extrabold inline-block">
+            Your Regulations </span>
       </motion.h2>
       {/* Values List */}
       <div className="flex flex-col gap-0">

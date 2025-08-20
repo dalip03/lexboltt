@@ -1,70 +1,116 @@
-'use client';
+"use client";
+import Image from "next/image";
 
-import { motion } from "framer-motion";
-
-export default function AboutSubHero() {
-  const cards = [
-    {
-      heading: "Our Journey",
-      text:
-        "LexBolt has grown from a niche compliance tool into a trusted AI partner for teams across automotive, manufacturing, and other regulated industries helping them navigate complex requirements with speed and confidence.",
-    },
-    {
-      heading: "Millions of Products Delivered",
-      text:
-        "From electronics to Automotive, we've successfully helped over 12 industries.",
-    },
-    {
-      heading: "4K+ Businesses Empowered",
-      text:
-        "We've helped startups, enterprises, and eCommerce brands scale faster",
-    },
-    {
-      heading: "Built for the Future",
-      text:
-        "With smart version control, real-time insights, and tech-first approach, lexbolt continues to lead the way in modern, efficient regulations management solutions.",
-    },
-  ];
-
+export default function OurJourney() {
   return (
-    <section className="w-full max-w-6xl mx-auto px-2 pt-10 pb-14">
-      {/* History Tag */}
-      <div className="flex flex-wrap items-center gap-4 mb-1">
-        <span className="inline-block border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
-          Lexbolt history
-        </span>
-      </div>
-      {/* Title and Description - Always outside cards */}
-      <div className="grid md:grid-cols-[2fr_3fr] gap-4 mb-7">
-        <h1 className="text-4xl font-semibold text-black leading-tight">
-          About lexbolt.ai
-        </h1>
-        <p className="text-gray-700 text-sm md:text-md leading-relaxed md:mt-2 max-w-2xl">
-          At LexBolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward efficiently and compliantly.
-        </p>
-      </div>
-      {/* Cards Grid with scroll-fade in animation */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mb-8">
-        {cards.map((card, i) => (
-          <motion.div
-            key={i}
-            className="flex flex-col items-start"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: i * 0.15 }}
-          >
-            {/* Card div only */}
-            <div className="bg-[#F8F2F1] rounded-2xl min-h-[180px] w-full" />
-            {/* Text and Heading below the card */}
-            <h3 className="text-black font-semibold text-sm mt-4 mb-2">
-              {card.heading}
+    <section className="bg-[#FAFAFB] py-10 px-2">
+      <div className="max-w-6xl mx-auto flex flex-col gap-8">
+        {/* Heading and Description */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">
+          <div>
+            <div className="mb-2">
+              <span className="inline-block border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
+                Lexbolt History
+              </span>
+            </div>
+            <h2 className="text-4xl font-bold font-sans text-black mb-1">
+              Our Journey
+            </h2>
+          </div>
+          <div className="max-w-xl text-gray-600 text-sm md:text-sm font-semibold md:mt-0 mt-2 text-end">
+            At LexBolt, we blend advanced AI with real-world automotive
+            compliance to deliver faster, smarter regulatory workflows. From
+            instant document parsing to proactive change tracking and
+            integration into your engineering tools, everything we build is
+            designed to move your team forward efficiently and compliantly.
+          </div>
+        </div>
+
+        {/* Row 2: Workshops + Co-created */}
+        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-2 items-start ">
+          {/* Card 1 */}
+          <div className="w-full flex flex-col ">
+            <div className="w-full bg-white rounded-2xl flex items-center justify-center mb-3">
+              <Image
+                src="/about/workshop.png"
+                width={500}
+                height={120}
+                alt="Workshop diagram"
+                className="object-cover w-full h-[120px] md:h-[240px] rounded-2xl"
+              />
+            </div>
+            <h3 className="text-lg font-bold text-black mb-1">
+              From workshops to working solution
             </h3>
-            <p className="text-gray-700 text-xs leading-relaxed mb-1">
-              {card.text}
+            <p className="text-gray-500 text-sm font-semibold">
+              LexBolt began as a hands-on collaboration with OEM teams and
+              homologation/regulatory experts. Through multiple working sessions
+              and reviews, we shaped a tool that turns dense automotive
+              standards into clear, structured outputs.
             </p>
-          </motion.div>
-        ))}
+          </div>
+          {/* Card 2 */}
+          <div className="w-full flex flex-col">
+            <div className="w-full bg-white  rounded-2xl flex items-center justify-center mb-3">
+              <Image
+                src="/about/oem.png"
+                width={500}
+                height={120}
+                alt="Car diagram"
+                className="object-cover w-full h-[180px] md:h-[240px] rounded-2xl "
+              />
+            </div>
+            <h3 className="text-lg font-bold text-black mb-1">
+              Co-created with OEM &amp; Homologation Experts
+            </h3>
+            <p className="text-gray-500 text-sm font-semibold">
+              Built with direct feedback from practitioners. The current feature
+              set reflects real day-to-day tasks in automotive compliance:
+              clause extraction, component linkage, comparison views, and
+              explainable summaries.
+            </p>
+          </div>
+        </div>
+
+        {/* Row 3: Businesses + Future */}
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-2 items-start">
+          {/* Card 3 */}
+          <div className="bg-white rounded-2xl p-4 flex flex-col items-center w-full">
+            <Image
+              src="/about/bussiness.png"
+              width={450}
+              height={170}
+              alt="Car diagram"
+              className="object-contain w-full h-[180px] md:h-[240px] rounded-2xl mb-3"
+            />
+            <h4 className="text-lg font-bold mb-1 text-black self-start">
+              4K+ Businesses Empowered
+            </h4>
+            <p className="text-gray-500 text-sm font-semibold">
+              Built with guidance from automotive regulations and standards like
+              IATF and ISO, to make sure you are compliant.
+            </p>
+          </div>
+          {/* Card 4 */}
+          <div className="bg-white rounded-2xl p-4 flex flex-col items-center w-full">
+            <Image
+              src="/about/future.png"
+              width={550}
+              height={170}
+              alt="Platform screenshot"
+              className="object-cover w-full h-[120px] md:h-[240px] rounded-2xl mb-3"
+            />
+            <h4 className="text-lg font-bold mb-1 text-black self-start">
+              Built for the Future
+            </h4>
+            <p className="text-gray-500 text-sm font-semibold">
+              Version-aware, comparison-ready, and designed for traceability.
+              LexBolt structures information so teams can compare revisions,
+              link components to clauses, and maintain an audit-friendly trail
+              as regulations evolve.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

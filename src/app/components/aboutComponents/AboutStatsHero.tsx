@@ -42,23 +42,23 @@ export default function AboutStatsHero() {
   // "+5K"
   const refClients = useCountUp({
     start: 0,
-    end: 5,
+    end: 10,
     duration: 0.9,
     format: (val: number) => `+${Math.floor(val)}K`,
   });
   // "+50M"
   const refDocs = useCountUp({
     start: 0,
-    end: 50,
+    end: 1,
     duration: 1.1,
-    format: (val: number) => `+${Math.floor(val)}M`,
+    format: (val: number) => `+${Math.floor(val)}K`,
   });
   // "+1.2K"
   const refBiz = useCountUp({
     start: 0,
-    end: 1.2,
+    end: 10,
     duration: 0.8,
-    format: (val: number) => `+${val.toFixed(1)}K`,
+    format: (val: number) => `+${Math.floor(val)}K`,
   });
 
   return (
@@ -83,7 +83,9 @@ export default function AboutStatsHero() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <h1 className="text-black text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-3">
-            Revolutionizing <span className="text-gray-400">Businesses</span>{" "}
+            Revolutionizing  <span className="bg-[#FF6600] text-white px-3 py-1 rounded-md text-2xl sm:text-3xl md:text-4xl font-extrabold inline-block">
+            Bussinesses
+          </span>
             Through <br />Tailored AI Models.
           </h1>
         </motion.div>
@@ -111,7 +113,7 @@ export default function AboutStatsHero() {
             ref={refClients}
             className="text-black text-3xl md:text-4xl font-bold mb-1"
           >+0K</span>
-          <span className="text-gray-600 text-xs sm:text-sm">Clients Empowered</span>
+          <span className="text-gray-600 text-xs sm:text-sm">OEMs Conulted</span>
         </motion.div>
         <motion.div
           className="flex flex-col items-center"
@@ -123,7 +125,7 @@ export default function AboutStatsHero() {
           <span
             ref={refDocs}
             className="text-black text-3xl md:text-4xl font-bold mb-1"
-          >+0M</span>
+          >+0K</span>
           <span className="text-gray-600 text-xs sm:text-sm">Documents Processed</span>
         </motion.div>
         <motion.div
@@ -137,7 +139,7 @@ export default function AboutStatsHero() {
             ref={refBiz}
             className="text-black text-3xl md:text-4xl font-bold mb-1"
           >+0K</span>
-          <span className="text-gray-600 text-xs sm:text-sm">Businesses Deployed</span>
+          <span className="text-gray-600 text-xs sm:text-sm">Industries Served</span>
         </motion.div>
       </div>
     </section>

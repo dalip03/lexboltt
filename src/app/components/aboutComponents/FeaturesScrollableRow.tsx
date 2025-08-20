@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 
 export default function ImagesScrollableRow() {
@@ -7,35 +8,43 @@ export default function ImagesScrollableRow() {
     "/about/about1.png",
     "/about/about2.png",
     "/about/about3.png",
-    "/about/about4.png",
     "/about/abouts.png",
+    "/about/about1.png",
   ];
 
+  // Each image width + gap approx 236px (230 width + 6 gap)
+  // Total width = number of images * 236
+  const totalImgCount = images.length;
+  const itemWidthWithGap = 236;
+  const totalWidth = totalImgCount * itemWidthWithGap;
+
   return (
-    <div className="w-full py-6 bg-white">
-      {/* Hide native scrollbar using Tailwind and custom CSS */}
-      <div className="overflow-x-auto whitespace-nowrap hide-scrollbar">
-        <div className="inline-flex gap-6 px-2">
-          {images.map((src, i) => (
-            <motion.div
-              key={i}
-              className="flex-shrink-0 w-[70vw] max-w-[230px] h-[175px] rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
-            >
-              <img
-                src={src}
-                alt={`Gallery ${i + 1}`}
-                className="w-full h-full object-cover rounded-2xl"
-                draggable={false}
-              />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-      {/* Add to your CSS or global styles */}
+    <div className="w-full py-6 bg-white overflow-hidden">
+      <motion.div
+        className="flex gap-6"
+        style={{ width: totalWidth * 2 }}
+        animate={{ x: [0,-totalWidth] }} 
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 50, 
+          ease: "linear",
+        }}
+      >
+        {[...images, ...images].map((src, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 w-[230px] h-[230px] rounded-2xl overflow-hidden"
+          >
+            <img
+              src={src}
+              alt={`Gallery ${i + 1}`}
+              className="w-full h-full object-contain rounded-2xl bg-white"
+              draggable={false}
+            />
+          </div>
+        ))}
+      </motion.div>
       <style jsx>{`
         .hide-scrollbar::-webkit-scrollbar {
           display: none;

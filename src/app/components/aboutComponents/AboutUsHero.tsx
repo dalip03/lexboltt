@@ -37,11 +37,16 @@ export default function AboutUsHero() {
         animate="visible"
       >
         {/* Top Tag */}
-        <motion.div className="mb-3" variants={textVariant}>
-          <span className="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-semibold tracking-wide shadow">
-            Powering fast moves
-          </span>
-        </motion.div>
+            <motion.div
+        className="mb-2"
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
+      >
+        <span className="inline-block border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
+          Powering Fast Move
+        </span>
+      </motion.div>
 
         {/* Main Heading */}
         <motion.h1
@@ -62,7 +67,7 @@ export default function AboutUsHero() {
           <div className="relative inline-flex items-center">
                     <motion.button
                     onClick={() => setShowModal(true)}
-                      className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
+                      className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-1 md:pl-4 pl-4 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 300 }}
