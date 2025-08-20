@@ -40,14 +40,7 @@ export default function ProductHero() {
             of{" "}
             <span className="text-black">
               Regulations
-              <span className="absolute -left-2 -bottom-1 h-1 w-[calc(100%+16px)] flex items-center pointer-events-none">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <span
-                    key={i}
-                    className="inline-block w-2 h-2 bg-[#FF6600] rounded-full mx-1"
-                  />
-                ))}
-              </span>
+          
             </span>
           </span>
         </motion.h1>
