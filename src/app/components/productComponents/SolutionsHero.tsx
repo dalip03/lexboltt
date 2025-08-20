@@ -42,43 +42,7 @@ export default function SolutionsHero() {
         technology and expertise to simplify shipping products from low to
         launch for businesses
       </motion.p>
-      {/* Buttons */}
-      <motion.div
-        className="flex gap-4 mb-7"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.7, delay: 0.19 }}
-      >
-        <Link href="/contact">
-          <button className="flex items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base">
-            Contact us
-            <span className="ml-1">
-              <img
-                src="/product/right.svg"
-                alt="Arrow Right"
-                className="w-10 h-10 object-contain"
-              />
-            </span>
-          </button>
-        </Link>
-        <motion.button
-          onClick={() => setShowModal(true)}
-          className="flex items-center cursor-pointer text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 pl-4 rounded-full shadow-lg hover:bg-orange-100 transition relative"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          Get a Demo
-          <span className="ml-2 flex-shrink-0">
-            <img
-              src="/img/arrowrighticon.svg"
-              alt="Icon"
-              className="w-12 h-12 object-contain"
-            />
-          </span>
-        </motion.button>
-      </motion.div>
+      
       {/* Central image with orange shadow beneath */}
       <motion.div
         className="w-full flex items-center justify-center relative"
