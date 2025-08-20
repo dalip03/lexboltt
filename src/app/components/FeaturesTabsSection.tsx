@@ -149,14 +149,14 @@ const FeaturesTabsSection: React.FC = () => {
               {features[active].title}
             </span>
           </div>
-          <p className="text-gray-600 font-sans mb-5 px-2 md:pr-20 max-w-md">
+          <p className="text-black font-sans mb-5 px-2 md:pr-20 max-w-md">
             {features[active].desc}
           </p>
           <ul className="mt-2 space-y-2 max-w-md mx-auto md:mx-0">
             {features[active].bullets.map((item, idx) => (
               <li
                 key={idx}
-                className="flex items-center gap-2 text-gray-400 text-base justify-center md:justify-start"
+                className="flex items-center gap-2 text-primary text-base justify-center md:justify-start"
               >
                 <img
                   src="/img/orangestar.svg"
