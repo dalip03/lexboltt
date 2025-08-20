@@ -7,10 +7,10 @@ const features = [
     label: "Regulations",
     icon: "/img/file.svg",
     title: "Upload Any Regulation",
-    desc: "Simply drop in documents from regulatory bodies or relevant authorities — Lexbolt automatically parses them and generates a detailed list of all compliance requirements your project must meet, from the smallest procedural rules to major legal mandates.",
+    desc: "Simply drop in documents from regulatory bodies or relevant authorities Lexbolt automatically parses them and generates a detailed list of all compliance requirements your project must meet, from the smallest procedural rules to major legal mandates.",
     bullets: [
       "We operate like insiders, not vendors",
-      "We think in systems — not deliverables",
+      "We think in systems  not deliverables",
       "We balance architecture and execution",
       "We bring delivery ownership, not advisory slides",
       "We make governance a habit, not an audit",

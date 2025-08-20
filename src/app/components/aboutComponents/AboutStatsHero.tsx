@@ -94,7 +94,7 @@ export default function AboutStatsHero() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <p className="text-gray-700 text-sm md:text-base leading-relaxed md:mt-2 max-w-md">
-            At LexBolt, we create custom AI solutions to transform automotive compliance—from intelligent regulation parsing to automated workflow integration—helping teams thrive in a complex, data-driven industry.
+            At LexBolt, we create custom AI solutions to transform automotive compliance from intelligent regulation parsing to automated workflow integration helping teams thrive in a complex, data-driven industry.
           </p>
         </motion.div>
       </div>

@@ -92,7 +92,7 @@ export default function ComplianceManagementHero() {
           ))}
         </motion.div>
         {/* Explore Button */}
-        <motion.button
+        {/* <motion.button
           className="flex items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export default function ComplianceManagementHero() {
               className="w-10 h-10 object-contain"
             />
           </span>
-        </motion.button>
+        </motion.button> */}
       </motion.div>
               {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
       

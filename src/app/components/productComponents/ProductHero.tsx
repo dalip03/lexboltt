@@ -52,7 +52,7 @@ export default function ProductHero() {
           </span>
         </motion.h1>
         <motion.p className="text-gray-600 mt-2 text-base mb-8" variants={textVariant}>
-          LexBolt is more than software—it&apos;s an intelligent assistant for your compliance team.
+          LexBolt is more than software it&apos;s an intelligent assistant for your compliance team.
         </motion.p>
       </motion.div>
 

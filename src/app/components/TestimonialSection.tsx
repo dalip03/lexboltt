@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion"; // ✅ import framer motion
+import RequestDemoModal from "./RequestDemoModal";
+import Link from "next/link";
 
 // Demo testimonials data
 const testimonials = [
@@ -36,17 +38,14 @@ const testimonials = [
 const Stars = ({ count }: { count: number }) => (
   <span className="inline-flex text-xl">
     {Array.from({ length: count }).map((_, i) => (
-      <img
-        key={i}
-        src="/img/rating.svg" 
-        alt="star"
-        className="w-5 h-5 mr-1"
-      />
+      <img key={i} src="/img/rating.svg" alt="star" className="w-5 h-5 mr-1" />
     ))}
   </span>
 );
 
 const TestimonialSection: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollInfo, setScrollInfo] = useState({
     left: 0,
@@ -96,19 +95,27 @@ const TestimonialSection: React.FC = () => {
         </h2>
         <div className="flex gap-4 ">
           {/* Contact us button */}
-          <button className="flex items-center text-sm gap-2 bg-[#FF5C1A] text-white font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-500 transition relative">
-            Contact us
-            <span className="ml-2 flex-shrink-0">
-              <img
-                src="/img/arrowrighticonwhite.svg"
-                alt="Icon"
-                className="w-12 h-12 object-contain"
-              />
-            </span>
-          </button>
+          <Link href="/contact">
+            <button className="flex cursor-pointer items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base">
+              Contact us
+              <span className="ml-1">
+                <img
+                  src="/product/right.svg"
+                  alt="Arrow Right"
+                  className="w-10 h-10 object-contain"
+                />
+              </span>
+            </button>
+          </Link>
           {/* Get Started button */}
-          <button className="flex items-center text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-100 transition relative">
-            Get Started
+          <motion.button
+            onClick={() => setShowModal(true)}
+            className="flex items-center cursor-pointer text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-100 transition relative"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            Get a Demo
             <span className="ml-2 flex-shrink-0">
               <img
                 src="/img/arrowrighticon.svg"
@@ -116,7 +123,7 @@ const TestimonialSection: React.FC = () => {
                 className="w-12 h-12 object-contain"
               />
             </span>
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -226,6 +233,7 @@ const TestimonialSection: React.FC = () => {
           scroll-snap-align: center;
         }
       `}</style>
+      {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
     </section>
   );
 };

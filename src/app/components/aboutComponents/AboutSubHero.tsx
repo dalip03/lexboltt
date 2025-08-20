@@ -7,7 +7,7 @@ export default function AboutSubHero() {
     {
       heading: "Our Journey",
       text:
-        "LexBolt has grown from a niche compliance tool into a trusted AI partner for teams across automotive, manufacturing, and other regulated industries—helping them navigate complex requirements with speed and confidence.",
+        "LexBolt has grown from a niche compliance tool into a trusted AI partner for teams across automotive, manufacturing, and other regulated industries helping them navigate complex requirements with speed and confidence.",
     },
     {
       heading: "Millions of Products Delivered",
@@ -40,7 +40,7 @@ export default function AboutSubHero() {
           About lexbolt.ai
         </h1>
         <p className="text-gray-700 text-sm md:text-md leading-relaxed md:mt-2 max-w-2xl">
-          At LexBolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward—efficiently and compliantly.
+          At LexBolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward efficiently and compliantly.
         </p>
       </div>
       {/* Cards Grid with scroll-fade in animation */}

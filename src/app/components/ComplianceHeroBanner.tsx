@@ -1,8 +1,23 @@
 "use client";
+import React, { useState } from "react";
+import { motion, easeOut } from "framer-motion";
+import RequestDemoModal from "./RequestDemoModal";
 
-import React from "react";
+interface RequestDemoModalProps {
+  onClose: () => void;
+}
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.7, ease: easeOut },
+};
+
 
 export default function ComplianceHeroBanner() {
+    const [showModal, setShowModal] = useState(false);
+  
   return (
     <section className="w-full relative bg-[#F6F6F6]/60 rounded-[32px] max-w-6xl mx-auto mt-14 p-6 md:p-12 flex flex-col md:flex-row gap-10 items-stretch">
       <div className=" w-full max-w-6xl px-4 py-10 text-center overflow-hidden flex flex-col items-center">
@@ -34,8 +49,13 @@ export default function ComplianceHeroBanner() {
         </p>
 
         <div className="relative inline-flex items-center">
-          <button className="flex items-center text-sm cursor-pointer gap-2 bg-[#FF5C1A] text-white font-semibold px-2 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-500 transition relative">
-            Contact Sales Team
+ <motion.button
+              onClick={() => setShowModal(true)}
+              className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-1 md:pl-6 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >            Get a Demo
             <span className="ml-2 flex-shrink-0">
               <img
                 src="/img/arrowrighticonwhite.svg"
@@ -43,9 +63,11 @@ export default function ComplianceHeroBanner() {
                 className="w-12 h-12 object-contain"
               />
             </span>
-          </button>
+          </motion.button>
         </div>
       </div>
+              {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
+      
     </section>
   );
 }

@@ -127,7 +127,7 @@ export default function TeamHero() {
       </div>
 
       {/* View all */}
-      <motion.div
+      {/* <motion.div
         className="flex w-full justify-center mt-7"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ export default function TeamHero() {
               />
             </span>
           </button>
-      </motion.div>
+      </motion.div> */}
 
       {/* Hide scrollbar */}
       <style jsx>{`

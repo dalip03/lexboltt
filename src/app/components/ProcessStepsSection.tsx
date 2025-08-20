@@ -61,7 +61,7 @@ export default function ProcessStepsSection() {
           Our Process
         </span>
         <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl mb-3 text-center leading-tight max-w-xl">
-          From Law to <br /> Launch — in 4 Steps
+          From Law to <br /> Launch in 4 Steps
         </h1>
         <p className="text-gray-600 mb-6 text-center text-sm sm:text-base max-w-lg">
           #1 Software for managing all your regulations in one place
