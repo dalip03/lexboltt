@@ -63,7 +63,7 @@ export default function HeroSection() {
           <div className="relative inline-flex items-center">
             <motion.button
               onClick={() => setShowModal(true)}
-              className="flex items-center text-sm cursor-pointer gap-2 bg-white text-primary font-semibold px-1 md:pl-6 py-1 pl-4 rounded-full shadow-lg hover:bg-primary/80 transition relative"
+              className="flex items-center text-sm cursor-pointer gap-2 bg-white text-primary font-semibold px-1 md:pl-6 py-1 pl-4 rounded-full shadow-lg hover:bg-white transition relative"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
