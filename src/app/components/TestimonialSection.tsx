@@ -110,7 +110,7 @@ const TestimonialSection: React.FC = () => {
           {/* Get Started button */}
           <motion.button
             onClick={() => setShowModal(true)}
-            className="flex items-center cursor-pointer text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 rounded-full shadow-lg hover:bg-orange-100 transition relative"
+            className="flex items-center cursor-pointer text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 pl-4 rounded-full shadow-lg hover:bg-orange-100 transition relative"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
