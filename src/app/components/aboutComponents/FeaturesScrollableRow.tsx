@@ -1,15 +1,14 @@
 "use client";
-
 import { motion } from "framer-motion";
 
 export default function ImagesScrollableRow() {
   const images = [
-    "/about/abouts1.png",
-    "/about/abouts2.png",
-    "/about/abouts3.png",
-    "/about/abouts4.png",
-    "/about/abouts5.png",
-    "/about/abouts1.png",
+    "/about/abouts.png",
+    "/about/about1.png",
+    "/about/about2.png",
+    "/about/about3.png",
+    "/about/about4.png",
+    "/about/abouts.png",
   ];
 
   return (
@@ -20,7 +19,7 @@ export default function ImagesScrollableRow() {
           {images.map((src, i) => (
             <motion.div
               key={i}
-className="flex-shrink-0 w-[70vw] max-w-[320px] h-[240px] rounded-2xl overflow-hidden bg-white"
+              className="flex-shrink-0 w-[70vw] max-w-[230px] h-[175px] rounded-2xl overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -29,7 +28,7 @@ className="flex-shrink-0 w-[70vw] max-w-[320px] h-[240px] rounded-2xl overflow-h
               <img
                 src={src}
                 alt={`Gallery ${i + 1}`}
-                className="w-full h-full object-contain rounded-2xl"
+                className="w-full h-full object-cover rounded-2xl"
                 draggable={false}
               />
             </motion.div>

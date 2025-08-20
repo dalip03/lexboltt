@@ -15,7 +15,7 @@ const features = [
       "We bring delivery ownership, not advisory slides",
       "We make governance a habit, not an audit",
     ],
-    image: "/img/process1.svg",
+    image: "/about/Frame 2121454378.png",
   },
   {
     label: "Control",
@@ -27,7 +27,7 @@ const features = [
       "Real-time notifications",
       "Customizable alerts",
     ],
-    image: "/img/process1.svg",
+    image: "/about/abouts2.png",
   },
   {
     label: "Compliance",
@@ -38,7 +38,7 @@ const features = [
       "Automatic compliance checks",
       "Up-to-date with latest requirements",
     ],
-    image: "/img/process1.svg",
+    image: "/about/abouts3.png",
   },
   {
     label: "Compatible",
@@ -46,7 +46,7 @@ const features = [
     title: "Compatible Workflows",
     desc: "Push requirements into your ALM, PLM, workflow and spreadsheet tools.",
     bullets: ["Seamless integrations", "Exports to tickets and sheets"],
-    image: "/img/process1.svg",
+    image: "/about/abouts4.png",
   },
   {
     label: "Security",
@@ -54,9 +54,8 @@ const features = [
     title: "Enterprise-grade Security",
     desc: "Your data is fully secure, encrypted at rest and in transit.",
     bullets: ["SOC2, HIPAA ready", "Role-based access"],
-    image: "/img/process1.svg",
+    image: "/about/abouts5.png",
   },
- 
 ];
 
 const fadeUp = {
@@ -90,7 +89,7 @@ const FeaturesTabsSection: React.FC = () => {
         </p>
       </motion.div>
       <motion.div
-        className="flex flex-nowrap justify-center gap-3 mb-12 overflow-x-auto no-scrollbar "
+        className="flex flex-nowrap justify-center gap-3 mb-12 overflow-x-auto no-scrollbar"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -112,18 +111,18 @@ const FeaturesTabsSection: React.FC = () => {
       </motion.div>
 
       <style>{`
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-`}</style>
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
 
       {/* Content */}
       <motion.div
-        className="flex flex-col md:flex-row gap-4 justify-center items-stretch "
+        className="flex flex-col md:flex-row gap-4 justify-center items-stretch"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -131,11 +130,12 @@ const FeaturesTabsSection: React.FC = () => {
       >
         {/* Left: Image/Card */}
         <div className="flex-1 flex justify-center items-center">
-          <div className="bg-[#FFF3ED] rounded-2xl shadow w-full max-w-sm p-6 flex flex-col items-center justify-center">
+          <div className="bg-[#FFF3ED] rounded-2xl shadow w-full max-w-[360px] min-h-[180px] flex flex-col items-center justify-center p-4">
             <img
               src={features[active].image}
               alt={features[active].label}
-              className="h-[300px] max-w-full mb-2"
+              className="w-full h-[160px] sm:h-[220px] md:h-[300px] object-contain mb-2"
+            
             />
           </div>
         </div>
