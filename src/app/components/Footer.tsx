@@ -40,7 +40,6 @@ const Footer: React.FC = () => {
 
           {/* Social img */}
           <div className="flex gap-4">
-            <img src="/img/twitter.svg" alt="Twitter" className="w-10 h-10 cursor-pointer hover:opacity-80" />
             <img src="/img/instagram.svg" alt="Instagram" className="w-10 h-10 cursor-pointer hover:opacity-80" />
             <img src="/img/linkedin.svg" alt="LinkedIn" className="w-10 h-10 cursor-pointer hover:opacity-80" />
           </div>
@@ -63,6 +62,7 @@ const Footer: React.FC = () => {
         <div className="w-full md:w-[35%] flex justify-center md:justify-start">
           <div className="w-full max-w-md px-4 py-6 rounded-[16px] flex flex-col items-center md:items-start gap-2">
             <div className="text-2xl font-bold">
+              <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
                   <Link href="/" className="font-bold font-serif">
                     <Image
                       src="/img/footericon2.svg"
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                     />
                   </Link>
                 </div>{" "}
-            <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
+            
             <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
               <input
                 type="email"
