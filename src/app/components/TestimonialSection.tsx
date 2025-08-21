@@ -13,7 +13,7 @@ const testimonials = [
     rating: 5,
     location: "NYC",
     verified: true,
-    text: "I am beyond impressed with Lexbolt, task and regulations management has never been so easy. I am glad I found out soon about LexBolt. I am more than excited to use it more in my work.",
+    text: "“LexBolt made a 300-page document usable in 15 minutes. Game-changing.”",
   },
   {
     name: "Sr, Developer, at a",
@@ -50,7 +50,7 @@ const Rating = ({ count }: { count: number }) => (
         key={i}
         src="/img/ratingstar.svg"
         alt="star"
-        className="w-2 h-2 mr-1"
+        className="w-3 h-3 mr-1"
       />
     ))}
   </span>
@@ -93,37 +93,37 @@ const TestimonialSection: React.FC = () => {
     (100 - trackWidth);
 
   return (
-    <section className="w-[90%] bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-6 px-6  md:px-10  flex flex-col md:flex-row justify-between gap-10 items-stretch">
+    <section className="md:w-[95%] bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-20 flex flex-col md:flex-row justify-between gap-1 items-stretch">
       {/* Left Side */}
-      <div className="flex flex-col items-center mb-8 md:px-0  xl-px-10 ">
+      <div className="w-full md:w-[45%]flex flex-col  mb-8 px-4  md:px-20 ">
         <motion.span
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6 }}
-          className="inline-block border border-gray-200 self-start text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+          className="inline-block border border-gray-200  self-start text-black text-[12px] px-4 py-2 rounded-full font-semibold mb-3"
         >
           Testimonial
         </motion.span>
-        <span className="text-black text-xs mb-3 self-start flex justify-center items-center gap-2">
+        <span className="text-black text-[17px] mb-3 self-start flex gap-2 items-center">
           Trusted By 20,000+ Clients <Rating count={5} />
         </span>
-        <h2 className="font-sans font-bold text-2xl md:text-4xl mb-6 text-gray-900 max-w-xs self-start">
+        <h2 className="w-full font-sans font-bold text-2xl md:text-[56px] mb-6 text-black  self-start">
           What Do Our Clients Say
         </h2>
       </div>
 
       {/* Right Side: Testimonials */}
-      <div className="md:w-[60%] w-full flex flex-col items-end justify-end ">
+      <div className="md:w-[55%] w-full flex flex-col items-end justify-end  ">
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto pb-4 py-6 no-scrollbar w-full overflow-y-hidden "
+          className="flex gap-6 overflow-x-auto pb-4 py-6 no-scrollbar w-full  overflow-y-hidden "
           style={{ scrollSnapType: "x mandatory" }}
         >
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              className=" rounded-[24px] flex shadow p-6 w-[620px] min-w-[470px] max-w-xs flex-shrink-0 scroll-snap-align-center"
+              className=" rounded-[24px] flex shadow p-6 w-[620px] min-w-[490px] max-w-xs flex-shrink-0 scroll-snap-align-center"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(28, 28, 28, 0.10) 0%, rgba(28, 28, 28, 0.00) 100%)",
@@ -135,33 +135,41 @@ const TestimonialSection: React.FC = () => {
               transition={{ duration: 0.6, delay: i * 0.2 }}
             >
               {/* Card header */}
-              <div className="flex items-start gap-4 justify-between mb-3">
-                <div className="flex flex-col justify-between h-full">
+              <div className="flex items-start relative gap-4 justify-between ">
+                <div className="  flex flex-col gap-12 h-full">
                   <div>
                     <img
                       src={t.avatar}
                       alt={t.name}
-                      className="w-10 h-10 rounded-full object-cover mb-2"
+                      className="w-8 h-8 rounded-full object-cover mb-2"
                     />
-                    <div className="font-medium text-sm text-gray-400  ">
+                    <div className="font-medium text-xs text-black  ">
                       {t.name}
                     </div>
-                    <div className="text-sm font-medium text-gray-400">
+                    <div className="text-xs font-medium text-black">
                       {t.role}
                     </div>
                   </div>
-                  <div>
+                  <div className="absolute">
                     <img
                       src="/img/grid.svg"
                       alt="grid"
-                      className="w-20 h-10 rounded-full object-cover mb-2"
+                      className="w-30 h-30 rounded-full object-cover mb-2"
                     />
                   </div>
 
-                  <div className="flex items-center gap-2 mt-2">
+                  <div className="flex items-center gap-2">
                     {t.verified && (
-                      <span className="text-xs text-gray-400 flex items-center">
-                        <span className="mr-1">✔️</span> Verified
+                      <span className="text-xs text-[#2E2E2E] flex items-center">
+                        <span className="mr-1">
+                          {" "}
+                          <img
+                            src="/img/verify.svg"
+                            alt="location"
+                            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-cover"
+                          />
+                        </span>{" "}
+                        Verified
                       </span>
                     )}
                   </div>
@@ -169,18 +177,27 @@ const TestimonialSection: React.FC = () => {
 
                 {/* Card text and stars */}
                 <div
-                  className="p-4 rounded-[24px] ml-4 flex-1 shadow"
+                  className="p-4 rounded-[24px] ml-4 flex-1"
                   style={{
                     background:
                       "linear-gradient(180deg, rgba(28, 28, 28, 0.10) 0%, rgba(28, 28, 28, 0.00) 100%)",
                     borderRadius: "24px",
                   }}
                 >
-                  <div className="flex items-center mb-2">
+                  <div className="flex items-center mb-4">
                     <Stars count={t.rating} />
                   </div>
-                  <div className="text-gray-700 text-sm">{t.text}</div>
-                  <span className="text-xs text-gray-400">{t.location}</span>
+                  <div className="text-black text-[16px]">{t.text}</div>
+                  <div className="flex items-center  gap-1 text-center mt-4">
+                    <img
+                      src="/img/location.svg"
+                      alt="location"
+                      className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-cover"
+                    />
+                    <span className="text-[10px] sm:text-sm md:text-sm text-black">
+                      {t.location}
+                    </span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -194,11 +211,12 @@ const TestimonialSection: React.FC = () => {
 
           {/* Orange indicator with border */}
           <motion.div
-            className="absolute top-0 h-full bg-primary rounded-full transition-all border border-[#FF784E] shadow-md"
+            className="absolute top-0 h-full bg-primary rounded-full border border-[#FF784E]"
             style={{
               left: `${trackLeft || 0}%`,
               width: `${trackWidth || 25}%`,
               minWidth: "40px",
+              boxShadow: "0 0 8px 2px rgba(255, 120, 78, 0.6)", // glow effect
             }}
             layout
             transition={{ type: "spring", stiffness: 200, damping: 30 }}

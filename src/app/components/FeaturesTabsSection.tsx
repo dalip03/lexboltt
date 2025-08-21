@@ -15,7 +15,7 @@ const features = [
       "We bring delivery ownership, not advisory slides",
       "We make governance a habit, not an audit",
     ],
-    image: "/about/abouts1.svg",
+    image: "/about/abouts4.svg",
   },
   {
     label: "Control",
@@ -46,7 +46,7 @@ const features = [
     title: "Compatible Workflows",
     desc: "Push requirements into your ALM, PLM, workflow and spreadsheet tools.",
     bullets: ["Seamless integrations", "Exports to tickets and sheets"],
-    image: "/about/abouts4.svg",
+    image: "/about/abouts1.svg",
   },
   {
     label: "Security",
@@ -105,16 +105,16 @@ const FeaturesTabsSection: React.FC = () => {
       >
         {features.map((feat, i) => (
           <button
-      key={feat.label}
-      onClick={() => setActive(i)}
-      className={`flex-shrink-0 w-[95px] sm:w-[110px] cursor-pointer md:w-[120px] py-2 px-1 text-[15px] rounded-lg font-semibold transition
+            key={feat.label}
+            onClick={() => setActive(i)}
+            className={`flex-shrink-0 w-[95px] sm:w-[110px] cursor-pointer md:w-[120px] py-2 px-1 text-[15px] rounded-lg font-semibold transition
         flex justify-center items-center
         ${
           active === i
             ? "bg-[#F35418] text-white shadow"
             : "bg-white text-gray-700 border border-gray-200 hover:bg-[#F35418] hover:text-white"
         }`}
-    >
+          >
             {feat.label}
           </button>
         ))}
@@ -132,7 +132,7 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col lg:flex-row gap-12 justify-center items-center lg:items-start max-w-7xl mx-auto px-4 lg:px-0 "
+        className="flex flex-col lg:flex-row gap-12 justify-center items-center max-w-6xl mx-auto px-4 lg:px-0"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -140,7 +140,7 @@ const FeaturesTabsSection: React.FC = () => {
       >
         {/* Left: Image/Card */}
         <div className="flex-1 flex justify-center items-center max-w-xl lg:max-w-lg ">
-          <div className="bg-[#FFF3ED] rounded-3xl shadow-lg w-full flex items-center justify-center">
+          <div className="bg-[#FFF3ED] rounded-3xl w-full flex items-center justify-center">
             <img
               src={features[active].image}
               alt={features[active].label}
@@ -150,33 +150,30 @@ const FeaturesTabsSection: React.FC = () => {
         </div>
 
         {/* Right: Details */}
-        <div className="flex-1 max-w-2xl flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-          <div className="flex items-center gap-4 mb-6 justify-center lg:justify-start w-full max-w-md">
-            <span className="inline-flex items-center justify-center w-12 h-12 bg-[#FF5C1A] rounded-full">
-              <img src={features[active].icon} alt="" className="w-7 h-7" />
-            </span>
-            <span className="font-extrabold text-2xl lg:text-4xl text-black">
-              {features[active].title}
-            </span>
+        <div className="max-w-2xl flex justify-center items-center lg:justify-center lg:items-start text-center lg:text-left ">
+          <img src="/img/fileicons.svg" alt="*" className="w-10 h-10 mr-2 hidden md:block"  />
+
+          <div className="flex-1 flex flex-col justify-center items-center lg:justify-center lg:items-start text-center lg:text-left">
+            <div className="flex items-center gap-4 mb-2 justify-center lg:justify-start w-full max-w-md">
+              <span className="font-extrabold text-[24px] text-black">
+                {features[active].title}
+              </span>
+            </div>
+            <p className="text-[16px] text-black mb-2 max-w-lg px-2 lg:pr-24 ">
+              {features[active].desc}
+            </p>
+            <ul className="space-y-4 max-w-lg lg:max-w-none">
+              {features[active].bullets.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-2 text-[16px]  text-black"
+                >
+                  <img src="/img/orangestar.svg" alt="*" className="w-4 h-4" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <p className="text-lg lg:text-xl text-gray-700 font-sans mb-7 max-w-lg px-2 lg:px-0">
-            {features[active].desc}
-          </p>
-          <ul className="space-y-4 max-w-lg lg:max-w-none">
-            {features[active].bullets.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex items-start gap-3 text-base lg:text-lg text-black"
-              >
-                <img
-                  src="/img/orangestar.svg"
-                  alt="*"
-                  className="w-5 h-5 mt-1"
-                />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </motion.div>
     </section>

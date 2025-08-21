@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
             />
           </div>
         </div>
-        <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right">
+        <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right hidden md:block">
           ©2025 Lexboltt. All Rights Reserved.
         </div>
       </motion.div>
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Right: Explore and Contact Us side by side on small screens, centered */}
-        <div className="w-full flex flex-row justify-center gap-10 text-center md:text-left md:justify-end">
+        <div className="w-full flex flex-col sm:flex-row justify-center gap-10 text-center md:text-left md:justify-end">
           {/* Explore */}
           <div className="sm:pr-8">
             <h4 className="font-medium mb-4 text-white">Explore</h4>
@@ -142,6 +142,9 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+        </div>
+          <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right md:block">
+          ©2025 Lexboltt. All Rights Reserved.
         </div>
       </motion.div>
 

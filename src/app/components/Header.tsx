@@ -71,7 +71,6 @@ const Header = () => {
         </div>
 
         {/* Desktop Menu */}
-        {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-2 lg:space-x-4">
           {menuItems.map((item) => (
             <motion.div
@@ -81,7 +80,7 @@ const Header = () => {
             >
               <Link
                 href={item.href}
-                className={`px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer ${
+                className={`px-3 lg:px-4 py-2 rounded-full text-[16px] font-medium transition cursor-pointer ${
                   pathname === item.href && pathname !== "/contact"
                     ? "bg-primary text-white"
                     : "text-black hover:bg-primary hover:text-white"
@@ -101,7 +100,7 @@ const Header = () => {
         >
           <Link
             href="/contact"
-            className={`text-sm font-semibold pl-4 py-1 px-1 rounded-full transition flex items-center gap-2 shadow ${
+            className={`text-[18px] font-semibold pl-4 py-1 px-1 rounded-full transition flex items-center gap-2 shadow ${
               pathname === "/contact"
                 ? "bg-primary text-white"
                 : "bg-gray-100 text-black"
@@ -111,7 +110,7 @@ const Header = () => {
             <img
               src="/img/abouticons.svg"
               alt="Arrow"
-              className="w-9 h-9 object-contain"
+              className="w-12 h-12 object-contain"
             />
           </Link>
         </motion.div>
@@ -208,22 +207,21 @@ const Header = () => {
                   ))}
 
                   <motion.div variants={itemVariants}>
-                    <Link
-                      href="/contact"
-                      onClick={() => setIsOpen(false)}
-                      className="mt-4 flex items-center justify-center text-sm sm:text-base font-semibold 
-               bg-primary hover:bg-primary/90 text-white px-4 sm:px-6 py-2 sm:py-3 
-               rounded-full transition w-full sm:w-auto"
-                    >
-                      Contact Us
-                      <span className="ml-2 flex-shrink-0">
-                        <img
-                          src="/img/contacticon.png"
-                          alt="Contact Icon"
-                          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-                        />
-                      </span>
-                    </Link>
+                         <Link
+            href="/contact"
+            className={`text-[18px] font-semibold pl-4 py-1 px-1 rounded-full transition flex items-center gap-2 shadow ${
+              pathname === "/contact"
+                ? "bg-primary text-white"
+                : "bg-gray-100 text-black"
+            }`}
+          >
+            Contact Us
+            <img
+              src="/img/abouticons.svg"
+              alt="Arrow"
+              className="w-12 h-12 object-contain"
+            />
+          </Link>
                   </motion.div>
                 </motion.div>
               </nav>

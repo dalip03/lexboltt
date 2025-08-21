@@ -26,7 +26,7 @@ export default function SolutionsHero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.7, delay: 0.09 }}
-        className="text-black font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-2 leading-tight max-w-4xl"
+        className="text-black font-bold text-3xl sm:text-4xl md:text-[64px]  text-center mb-2 leading-tight max-w-4xl"
       >
         Industry Leading Solutions
       </motion.h1>

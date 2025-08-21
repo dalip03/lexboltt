@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react"; // ✅ add lucide-react icons
 
 const FAQS = [
   {
@@ -70,6 +71,11 @@ export default function FAQ() {
               >
                 <span className="text-black text-[15px] font-medium">
                   {item.q}
+                </span>
+
+                {/* ✅ Toggle icon */}
+                <span className="ml-4 text-black">
+                  {openIdx === idx ? <Minus size={14} /> :""}
                 </span>
               </button>
               <AnimatePresence initial={false}>

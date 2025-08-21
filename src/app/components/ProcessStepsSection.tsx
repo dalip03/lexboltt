@@ -79,7 +79,7 @@ export default function ProcessStepsSection() {
         {steps.map((step, idx) => (
           <motion.div
             key={idx}
-            className={`flex flex-col md:flex-row items-center gap-12 mb-6 ${
+            className={`flex flex-col md:flex-row items-center gap-4 mb-20  ${
               idx % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
             initial="hidden"
@@ -89,7 +89,7 @@ export default function ProcessStepsSection() {
           >
             {/* Text Card */}
             <motion.div
-              className="rounded-2xl px-6 py-5 flex items-start w-full md:w-1/2 "
+              className="rounded-2xl px-6 md:pl-20  py-5 flex items-start w-full md:w-1/2 "
               variants={fadeUp}
               transition={{ duration: 0.7, ease: easeOut, delay: idx * 0.2 }}
             >
@@ -98,11 +98,11 @@ export default function ProcessStepsSection() {
                 alt=""
                 className="w-10 h-10 mr-4 flex-shrink-0"
               />
-              <div>
-                <h3 className="font-bold text-xl md:2xl text-black mb-1">
+              <div className="">
+                <h3 className="font-extrabold text-xl text-black mb-1">
                   {step.title}
                 </h3>
-                <p className="text-black text-sm md:text-lg">{step.desc}</p>
+                <p className="text-black text-sm md:text-md">{step.desc}</p>
               </div>
             </motion.div>
 

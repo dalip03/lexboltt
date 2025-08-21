@@ -37,7 +37,7 @@ export default function ProductHero() {
         animate="visible"
       >
         <motion.h1
-          className="text-black font-extrabold text-2xl sm:text-3xl md:text-[48px] lg:text-[64px] mb-3 leading-tight"
+          className="text-black font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[64px] mb-3 leading-tight"
           variants={textVariant}
         >
           Powering the Future <br />

@@ -40,9 +40,9 @@ export default function ComplianceHeroBanner() {
           />
         </div>
 
-        <h1 className="font-extrabold text-xl  md:text-[48px] text-black mb-2 leading-tight ">
+        <h1 className="font-extrabold text-2xl  md:text-[48px] text-black mb-2 leading-tight ">
           Transform your
-          <span className="bg-[#FF6600] text-white px-3 py-1 rounded-md text-xl md:text-[48px] font-extrabold inline-block">
+          <span className="bg-[#FF6600] text-white px-3 py-1 rounded-md text-2xl md:text-[48px] font-extrabold inline-block">
             Compliance
           </span>
           From
@@ -53,22 +53,20 @@ export default function ComplianceHeroBanner() {
           Lexbolt Is Hub For Managing All Regulations Professionally And <br />
           Efficiently
         </p>
-
-   {/* Contact Button */}
+        {/* Contact Button */}
         <Link href="/contact" passHref>
-          <button
-            className="flex items-center gap-2 bg-[#FF6600] hover:bg-[#e75d00] transition text-white px-6 py-3 rounded-full font-semibold shadow text-sm sm:text-base"
-          >
+          <button className="flex items-center gap-2 bg-[#FF6600] hover:bg-[#e75d00] transition text-white px-1 pl-4 py-1 rounded-full font-semibold shadow text-sm sm:text-base">
             Contact us
             <span>
               <img
                 src="/product/right.svg"
                 alt="Arrow Right"
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
               />
             </span>
           </button>
-        </Link>      </div>
+        </Link>
+      </div>
       {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
     </section>
   );
