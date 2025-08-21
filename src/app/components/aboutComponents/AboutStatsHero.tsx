@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -62,7 +62,7 @@ export default function AboutStatsHero() {
   });
 
   return (
-    <section className="w-full max-w-6xl mx-auto pt-8 pb-10 px-4">
+    <section className="w-full max-w-6xl mx-auto pt-8 pb-10 px-4 my-20">
       {/* Tag with fade-in */}
       <motion.div
         className="mb-2"
@@ -70,36 +70,47 @@ export default function AboutStatsHero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15 }}
       >
-        <span className="inline-block border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
+        <span className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold">
           About Lexbolt
         </span>
       </motion.div>
       {/* Headline and Description with slide-in */}
-      <div className="flex flex-col md:flex-row md:items-start md:gap-8 mb-8">
+      <div className="flex flex-col md:flex-row md:items-end md:gap-8 mb-8">
+        {/* Left: Heading (big column) */}
         <motion.div
-          className="flex-1"
+          className="flex-[2] min-w-0"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h1 className="text-black text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-3">
-            Revolutionizing  <span className="bg-[#FF6600] text-white px-3 py-1 rounded-md text-2xl sm:text-3xl md:text-4xl font-extrabold inline-block">
-            Bussinesses
-          </span>
-            Through <br />Tailored AI Models.
+          <h1 className="text-black text-2xl sm:text-3xl md:text-[56px] xl:text-[64px] font-bold leading-tight mb-3">
+            Revolutionizing{" "}
+            <span className="bg-[#FF6600] text-white px-2 md:px-3 py-1 font-extrabold inline-block">
+              Businesses
+            </span>{" "}
+            Through <br />
+            Tailored AI Models.
           </h1>
         </motion.div>
+
+        {/* Right: Paragraph bottom right, matching the heading height */}
         <motion.div
-          className="flex-1 flex items-center md:items-start"
+          className="flex-[1] flex flex-col justify-end items-end "
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed md:mt-2 max-w-md">
-            At LexBolt, we create custom AI solutions to transform automotive compliance from intelligent regulation parsing to automated workflow integration helping teams thrive in a complex, data-driven industry.
-          </p>
+          <div className="h-full flex items-end">
+            <p className="text-black text-sm md:text-base leading-tight max-w-md md:text-right">
+              At LexBolt, we create custom AI solutions to transform automotive
+              compliance from intelligent regulation parsing to automated
+              workflow integration helping teams thrive in a complex,
+              data-driven industry.
+            </p>
+          </div>
         </motion.div>
       </div>
+
       {/* Stats row with zoom-in/count-up animation */}
       <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0 pt-4">
         <motion.div
@@ -111,9 +122,13 @@ export default function AboutStatsHero() {
         >
           <span
             ref={refClients}
-            className="text-black text-3xl md:text-4xl font-bold mb-1"
-          >+0K</span>
-          <span className="text-gray-600 text-xs sm:text-sm">OEMs Conulted</span>
+            className="text-black text-4xl md:text-[96px] font-bold mb-1"
+          >
+            +0
+          </span>
+          <span className="text-gray-600 text-xs sm:text-sm md:text-md">
+            OEMs Conulted
+          </span>
         </motion.div>
         <motion.div
           className="flex flex-col items-center"
@@ -124,9 +139,13 @@ export default function AboutStatsHero() {
         >
           <span
             ref={refDocs}
-            className="text-black text-3xl md:text-4xl font-bold mb-1"
-          >+0K</span>
-          <span className="text-gray-600 text-xs sm:text-sm">Documents Processed</span>
+            className="text-black text-4xl md:text-[96px]  font-bold mb-1"
+          >
+            +0K
+          </span>
+          <span className="text-gray-600 text-xs sm:text-sm md:text-md">
+            Documents Processed
+          </span>
         </motion.div>
         <motion.div
           className="flex flex-col items-center"
@@ -137,9 +156,13 @@ export default function AboutStatsHero() {
         >
           <span
             ref={refBiz}
-            className="text-black text-3xl md:text-4xl font-bold mb-1"
-          >+0K</span>
-          <span className="text-gray-600 text-xs sm:text-sm">Industries Served</span>
+            className="text-black text-4xl md:text-[96px]  font-bold mb-1"
+          >
+            +0K
+          </span>
+          <span className="text-gray-600 text-xs sm:text-sm md:md">
+            Industries Served
+          </span>
         </motion.div>
       </div>
     </section>

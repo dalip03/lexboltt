@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import RequestDemoModal from "./RequestDemoModal";
+import DemoButton from "./DemoButton";
 
 interface RequestDemoModalProps {
   onClose: () => void;
@@ -19,26 +20,37 @@ export default function HeroSection() {
 
   return (
     <div className="min-w-full h-full px-4 relative">
-      <section
-        className="min-w-full h-full flex flex-col items-center justify-center rounded-[24px] px-4 mt-4 relative overflow-hidden"
-        style={{
-          background: "linear-gradient(180deg, #F35418 0%, #F35418 100%)",
-        }}
-      >
-        {/* Right top corner image */}
-        <img
-          src="/img/herodiv.png" // replace with your actual image path
-          alt="Top Right Decoration"
-          className="absolute top-0 right-0 pointer-events-none select-none w-34 h-35 object-contain"
-          style={{ zIndex: 10 }}
+      <section className="min-w-full h-full flex flex-col bg-[#F6F6F6] items-center justify-center rounded-[24px] px-4 mt-4 relative overflow-hidden">
+        <div
+          className="absolute"
+          style={{
+            width: "456px",
+            height: "456px",
+            right: "-148px",
+            top: "-148px",
+            background: "#F35418",
+            borderRadius: "456px",
+            filter: "blur(172px)",
+            zIndex: 5,
+            pointerEvents: "none",
+          }}
         />
 
-        {/* Bottom left corner image */}
-        <img
-          src="/img/herodiv.png" // replace with your actual image path
-          alt="Bottom Left Decoration"
-          className="absolute bottom-0 rotate-180 left-0 pointer-events-none select-none w-34 h-35 object-contain"
-          style={{ zIndex: 10 }}
+        {/* (Optional) Add a similar effect to bottom-left for symmetry */}
+
+        <div
+          className="absolute"
+          style={{
+            width: "456px",
+            height: "456px",
+            left: "-148px",
+            bottom: "-148px",
+            background: "#F35418",
+            borderRadius: "456px",
+            filter: "blur(172px)",
+            zIndex: 5,
+            pointerEvents: "none",
+          }}
         />
 
         <motion.div
@@ -48,36 +60,18 @@ export default function HeroSection() {
           viewport={fadeUp.viewport}
           transition={fadeUp.transition}
         >
-          <h1 className="font-sans font-bold text-white text-3xl sm:text-4xl leading-tight mb-6 relative">
+          <h1 className="font-bold text-black text-2xl md:text-[64px] leading-tight mb-6 relative">
             Stay Ahead of Every
             <br />
             Regulation, Effortlessly
           </h1>
-          <p className="font-sans text-white/80 text-sm sm:text-base mb-4">
+          <p className="text-black text-xs md:text-xl mb-4">
             LexBolt Transforms Complex Automotive Regulations Into Clear,
-            Structured Requirements
-            <br />
-            So Your Team Can Act Faster, Stay Compliant, And Never Miss A Change.
+            Structured Requirements So Your Team Can Act Faster, Stay Compliant,
+            And Never Miss A Change.
           </p>
 
-          <div className="relative inline-flex items-center">
-            <motion.button
-              onClick={() => setShowModal(true)}
-              className="flex items-center text-sm cursor-pointer gap-2 bg-white text-primary font-semibold px-1 md:pl-6 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              Get a Demo
-              <span className="ml-2 flex-shrink-0">
-                <img
-                  src="/img/righticonorange.svg"
-                  alt="Icon"
-                  className="w-12 h-12 object-contain"
-                />
-              </span>
-            </motion.button>
-          </div>
+          <DemoButton onClick={() => setShowModal(true)} />
         </motion.div>
 
         {/* Dashboard image + Card overlay */}
@@ -89,9 +83,9 @@ export default function HeroSection() {
           transition={{ duration: 0.7, ease: easeOut }}
         >
           <img
-            src="/img/herobg.png"
+            src="/img/homebgnew.svg"
             alt="Dashboard Screenshot"
-            className="w-full max-w-[900px] object-contain"
+            className="w-full max-w-[900px] object-contain z-50"
           />
         </motion.div>
 

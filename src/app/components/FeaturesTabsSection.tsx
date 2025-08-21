@@ -15,7 +15,7 @@ const features = [
       "We bring delivery ownership, not advisory slides",
       "We make governance a habit, not an audit",
     ],
-    image: "/about/Frame 2121454378.png",
+    image: "/about/abouts1.svg",
   },
   {
     label: "Control",
@@ -27,7 +27,7 @@ const features = [
       "Real-time notifications",
       "Customizable alerts",
     ],
-    image: "/about/abouts2.png",
+    image: "/about/abouts2.svg",
   },
   {
     label: "Compliance",
@@ -38,7 +38,7 @@ const features = [
       "Automatic compliance checks",
       "Up-to-date with latest requirements",
     ],
-    image: "/about/abouts3.png",
+    image: "/about/abouts3.svg",
   },
   {
     label: "Compatible",
@@ -46,7 +46,7 @@ const features = [
     title: "Compatible Workflows",
     desc: "Push requirements into your ALM, PLM, workflow and spreadsheet tools.",
     bullets: ["Seamless integrations", "Exports to tickets and sheets"],
-    image: "/about/abouts4.png",
+    image: "/about/abouts4.svg",
   },
   {
     label: "Security",
@@ -54,7 +54,7 @@ const features = [
     title: "Enterprise-grade Security",
     desc: "Your data is fully secure, encrypted at rest and in transit.",
     bullets: ["SOC2, HIPAA ready", "Role-based access"],
-    image: "/about/abouts5.png",
+    image: "/about/abouts5.svg",
   },
 ];
 
@@ -69,7 +69,7 @@ const FeaturesTabsSection: React.FC = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="w-full max-w-5xl mx-auto py-16 px-2">
+    <section className="w-full max-w-6xl mx-auto py-16 px-2">
       {/* Subtitle & Heading */}
       <motion.div
         className="flex flex-col items-center mb-8"
@@ -78,13 +78,19 @@ const FeaturesTabsSection: React.FC = () => {
         viewport={fadeUp.viewport}
         transition={fadeUp.transition}
       >
-        <span className="text-[#FF8C51] border border-[#FF8C51] rounded-full px-4 py-1 text-sm font-medium mb-3 whitespace-nowrap">
+        <motion.span
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+        >
           Why Choose Us?
-        </span>
-        <h2 className="font-sans font-bold text-3xl md:text-4xl text-gray-900 mb-2 text-center">
+        </motion.span>
+        <h2 className="font-bold text-2xl md:text-[64px] text-black mb-2 text-center">
           Features & Benefits
         </h2>
-        <p className="text-gray-500 text-center text-base md:max-w-xl mx-auto">
+        <p className="text-black text-center text-xl md:max-w-xl mx-auto">
           #1 Software for managing all your regulations in one place
         </p>
       </motion.div>
@@ -99,11 +105,18 @@ const FeaturesTabsSection: React.FC = () => {
           <button
             key={feat.label}
             onClick={() => setActive(i)}
-            className={`flex-shrink-0 px-7 py-2 rounded-full font-semibold text-base transition ${
+            className={`flex-shrink-0 w-[156px] py-[18px] hover:bg-[#F35418] hover:text-white cursor-pointer px-[16px] flex flex-col justify-center items-center gap-[20px] rounded-[12px] font-semibold text-base transition ${
               active === i
-                ? "bg-[#FF5C1A] text-white shadow"
+                ? "bg-[#F35418] text-white"
                 : "bg-white text-gray-700 border border-gray-200"
             }`}
+            style={
+              active === i
+                ? {
+                    boxShadow: "0 54.479px 64.093px 0 rgba(205,205,205,0.16)",
+                  }
+                : {}
+            }
           >
             {feat.label}
           </button>
@@ -122,7 +135,7 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col md:flex-row gap-4 justify-center items-stretch"
+        className="flex flex-col md:flex-row gap-8 justify-center items-stretch"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -130,43 +143,41 @@ const FeaturesTabsSection: React.FC = () => {
       >
         {/* Left: Image/Card */}
         <div className="flex-1 flex justify-center items-center">
-          <div className="bg-[#FFF3ED] rounded-2xl shadow w-full max-w-[360px] min-h-[180px] flex flex-col items-center justify-center p-4">
+          <div className="bg-[#FFF3ED] rounded-2xl shadow w-full max-w-[552px] min-h-[296px] flex flex-col items-center justify-center">
             <img
               src={features[active].image}
               alt={features[active].label}
-              className="w-full h-[160px] sm:h-[220px] md:h-[300px] object-contain mb-2"
-            
+              className="w-full h-full object-contain"
             />
           </div>
         </div>
         {/* Right: Details */}
-        <div className="flex-1 flex flex-col justify-center items-center md:items-start px-4 md:px-0 text-center md:text-left">
-          <div className="flex items-center gap-3 mb-4 justify-center md:justify-start w-full max-w-md mx-auto md:mx-0">
-            <span className="inline-flex items-center justify-center w-10 h-10 bg-[#FF5C1A] rounded-full">
+        <div className="flex flex-row gap-4 justify-center items-center md:items-start px-4 md:px-0 text-center md:text-left">
+          <span className="inline-flex items-center justify-center w-10 h-10 bg-[#FF5C1A] rounded-full">
               <img src={features[active].icon} alt="" className="w-6 h-6" />
             </span>
-            <span className="font-sans font-bold text-xl text-gray-900">
+            <div>
+          <div className="flex items-center gap-3 mb-4 justify-center md:justify-start w-full max-w-md mx-auto md:mx-0">
+           
+            <span className="font-bold text-xl text-black">
               {features[active].title}
             </span>
           </div>
-          <p className="text-gray-600 font-sans mb-5 px-2 md:pr-20 max-w-md">
+          <p className="text-black mb-5 px-2 md:pr-20 max-w-md">
             {features[active].desc}
           </p>
           <ul className="mt-2 space-y-2 max-w-md mx-auto md:mx-0">
             {features[active].bullets.map((item, idx) => (
               <li
                 key={idx}
-                className="flex items-center gap-2 text-gray-400 text-base justify-center md:justify-start"
+                className="flex items-center gap-2 text-black text-base justify-center md:justify-start"
               >
-                <img
-                  src="/img/orangestar.svg"
-                  alt="*"
-                  className="w-4 h-4"
-                />
+                <img src="/img/orangestar.svg" alt="*" className="w-4 h-4" />
                 {item}
               </li>
             ))}
           </ul>
+          </div>
         </div>
       </motion.div>
     </section>

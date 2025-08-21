@@ -40,7 +40,6 @@ const Footer: React.FC = () => {
 
           {/* Social img */}
           <div className="flex gap-4">
-            <img src="/img/twitter.svg" alt="Twitter" className="w-10 h-10 cursor-pointer hover:opacity-80" />
             <img src="/img/instagram.svg" alt="Instagram" className="w-10 h-10 cursor-pointer hover:opacity-80" />
             <img src="/img/linkedin.svg" alt="LinkedIn" className="w-10 h-10 cursor-pointer hover:opacity-80" />
           </div>
@@ -72,7 +71,7 @@ const Footer: React.FC = () => {
                     />
                   </Link>
                 </div>{" "}
-            <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
+            {/* <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
             <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
               <input
                 type="email"
@@ -86,12 +85,13 @@ const Footer: React.FC = () => {
               >
                 Sign up
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
 
-        {/* center explore */}
-        <div className="w-full md:w-[30%] flex justify-center ">
+        {/* Resources */}
+        <div className="w-full  flex flex-col sm:flex-row justify-center md:justify-end gap-20 text-center md:text-left">
+         
           <div>
             <h4 className="font-medium mb-4 text-white">Explore</h4>
             <ul className="space-y-2 text-white/60">
@@ -101,11 +101,7 @@ const Footer: React.FC = () => {
               <li><Link href="/contact" className="hover:text-gray-300">Contact</Link></li>
             </ul>
           </div>
-        </div>
-
-        {/* Resources */}
-        <div className="w-full md:w-[35%] flex flex-col sm:flex-row justify-center md:justify-end gap-10 text-center md:text-left">
-          <div>
+           <div className="ml-12">
             <h4 className="font-medium mb-4 text-white">Contact Us</h4>
             <ul className="space-y-2 text-white/60">
               <li

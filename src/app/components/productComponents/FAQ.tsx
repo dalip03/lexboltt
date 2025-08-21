@@ -29,7 +29,7 @@ export default function FAQ() {
     <section className="w-full py-16 px-4">
       <div className="max-w-3xl mx-auto flex flex-col items-center">
         <motion.span
-          className="inline-block border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold mb-3"
+          className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -37,7 +37,7 @@ export default function FAQ() {
           FAQ
         </motion.span>
         <motion.h2
-          className="text-black text-2xl md:text-3xl font-semibold mb-2 text-center"
+          className="text-black text-2xl md:text-[56px] font-semibold mb-2 text-center"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -45,7 +45,7 @@ export default function FAQ() {
           Frequently Asked Questions
         </motion.h2>
         <motion.p
-          className="text-gray-400 mb-8 text-center"
+          className="text-black mb-8 text-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}

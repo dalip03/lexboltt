@@ -8,8 +8,7 @@ export default function ImagesScrollableRow() {
     "/about/about1.png",
     "/about/about2.png",
     "/about/about3.png",
-    "/about/abouts.png",
-    "/about/about1.png",
+
   ];
 
   // Each image width + gap approx 236px (230 width + 6 gap)

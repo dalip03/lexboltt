@@ -41,23 +41,23 @@ export default function ComplianceManagementHero() {
         viewport={{ once: true }}
       >
         <motion.span
-          className="inline-block bg-[#fde8e5] text-[#fc7e41] font-semibold text-xs px-3 py-1 mb-3 rounded-full"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.05 }}
-          viewport={{ once: true }}
-        >
-          Transform Regulations
-        </motion.span>
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6 }}
+        className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+      >
+        Transform Regulations
+      </motion.span>
         <motion.h1
-          className="text-black font-bold text-2xl sm:text-3xl md:text-4xl mb-1 leading-tight"
+          className="text-black font-bold  text-2xl sm:text-3xl md:text-[56px] mb-1 leading-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.12 }}
           viewport={{ once: true }}
         >
           Unlock Compliance
-          <br />
+         
           Management
         </motion.h1>
         <motion.span

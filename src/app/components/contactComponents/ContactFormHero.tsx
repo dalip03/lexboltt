@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function ContactFormHero() {
   return (
-    <section className="w-full max-w-3xl mx-auto px-4 py-10">
+    <section className="w-full max-w-5xl mx-auto px-4 py-20">
       <motion.div
-        className="relative bg-primary rounded-2xl flex flex-col md:flex-row items-start justify-between px-7 py-10 min-h-[260px]"
+        className="relative bg-primary rounded-2xl flex flex-col md:flex-row items-start justify-between px-7 py-10 min-h-[400px]"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -44,24 +44,24 @@ export default function ContactFormHero() {
         />
         {/* Form content */}
         <motion.div
-          className="flex-1 py-2"
+          className="flex-1 py-2 mt-12"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.13 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-white font-bold text-2xl sm:text-3xl mb-2 leading-snug">
+          <h2 className="text-white font-bold text-2xl sm:text-3xl pl-20 md:text-[42px] mb-2 leading-snug">
             Start Easing your
             <br />
             Regulations Today
           </h2>
-          <p className="text-white text-sm mb-6 opacity-90 font-medium">
-            Join lexbolt to access easy, regulated and sorted compliances!
+          <p className="text-white text-sm mb-6 opacity-90 font-medium pl-20">
+            Join lexbolt to access easy, regulated and sorted <br/> compliances!
           </p>
         </motion.div>
         {/* Form box */}
         <motion.form
-          className="flex-1 flex flex-col gap-3 max-w-xs w-full md:ml-8"
+          className="flex-1 flex flex-col gap-3 max-w-xs w-full md:ml-8 mt-12"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
@@ -76,7 +76,7 @@ export default function ContactFormHero() {
             <input
               type="text"
               placeholder="Your Name"
-              className="bg-transparent border border-white rounded-lg pl-10 pr-4 py-2 text-white text-sm placeholder-white/80 focus:outline-none w-full"
+              className="bg-transparent border border-white/40 rounded-lg pl-10 pr-4 py-3 text-white text-sm placeholder-white/80 focus:outline-none w-full"
             />
           </div>
           <div className="relative">
@@ -88,17 +88,17 @@ export default function ContactFormHero() {
             <input
               type="email"
               placeholder="Email address"
-              className="bg-transparent border border-white rounded-lg pl-10 pr-4 py-2 text-white text-sm placeholder-white/80 focus:outline-none w-full"
+              className="bg-transparent border border-white/40 rounded-lg pl-10 pr-4 py-3 text-white text-sm placeholder-white/80 focus:outline-none w-full"
             />
           </div>
           <textarea
             rows={3}
             placeholder="Type your message"
-            className="bg-transparent border border-white rounded-lg px-4 py-2 text-white text-sm placeholder-white/80 focus:outline-none resize-none"
+            className="bg-transparent border border-white/40 rounded-lg pl-10 pr-4 py-4 text-white text-sm placeholder-white/80 focus:outline-none resize-none"
           />
           <button
             type="submit"
-            className="bg-white text-primary w-40 font-semibold px-4 py-3 rounded-full shadow mt-2 hover:bg-orange-200 transition text-sm"
+            className="bg-white text-primary w-40 cursor-pointer font-semibold px-4 py-3 rounded-full shadow mt-2 hover:bg-orange-200 transition text-sm"
           >
             Submit form
           </button>

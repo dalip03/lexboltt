@@ -43,6 +43,13 @@ const Stars = ({ count }: { count: number }) => (
   </span>
 );
 
+const Rating = ({ count }: { count: number }) => (
+  <span className="inline-flex text-xl">
+    {Array.from({ length: count }).map((_, i) => (
+      <img key={i} src="/img/ratingstar.svg" alt="star" className="w-2 h-2 mr-1" />
+    ))}
+  </span>
+);
 const TestimonialSection: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -81,16 +88,22 @@ const TestimonialSection: React.FC = () => {
     (100 - trackWidth);
 
   return (
-    <section className="w-full bg-[#F6F6F6] rounded-[32px] max-w-6xl mx-auto mt-14 p-6 md:pt-34 md:pb-20 md:pl-10 flex flex-col md:flex-row gap-10 items-stretch">
+    <section className="w-full bg-[#F6F6F6] rounded-[32px] max-w-6xl mx-auto mt-14 py-6 pl-6 md:pt-34 md:pb-20 flex flex-col md:flex-row justify-between  gap-10 items-stretch">
       {/* Left Side */}
-      <div className="md:w-[40%] w-full flex flex-col justify-center mb-8 md:mb-0">
-        <span className="bg-white border border-gray-200 rounded-full px-4 py-1 text-xs font-medium mb-3 w-max">
+      <div className="flex flex-col items-center mb-8">
+        <motion.span
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="inline-block border border-gray-200 self-start text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+        >
           Testimonial
+        </motion.span>
+        <span className="text-black text-xs mb-3 self-start flex justify-center items-center gap-2">
+          Trusted By 20,000+ Clients <Rating count={5} />
         </span>
-        <span className="text-gray-500 text-xs mb-3">
-          Trusted By 20,000+ Clients <Stars count={4} />
-        </span>
-        <h2 className="font-sans font-bold text-2xl md:text-4xl mb-6 text-gray-900 max-w-xs">
+        <h2 className="font-sans font-bold text-2xl md:text-4xl mb-6 text-gray-900 max-w-xs self-start">
           What Do Our Clients Say
         </h2>
         <div className="flex gap-4 ">
@@ -128,10 +141,10 @@ const TestimonialSection: React.FC = () => {
       </div>
 
       {/* Right Side: Testimonials */}
-      <div className="md:w-[60%] w-full flex flex-col items-end justify-end">
+      <div className="md:w-[60%] w-full flex flex-col items-end justify-end ">
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto pb-4 no-scrollbar w-full"
+          className="flex gap-6 overflow-x-auto pb-4 py-6 no-scrollbar w-full overflow-y-hidden "
           style={{ scrollSnapType: "x mandatory" }}
         >
           {testimonials.map((t, i) => (

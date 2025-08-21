@@ -71,52 +71,50 @@ const Header = () => {
         </div>
 
         {/* Desktop Menu */}
-       {/* Desktop Menu */}
-<nav className="hidden md:flex space-x-2 lg:space-x-4">
-  {menuItems.map((item) => (
-    <motion.div
-      key={item.href}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <Link
-        href={item.href}
-        className={`px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition ${
-          pathname === item.href && pathname !== "/contact"
-            ? "bg-primary text-white"
-            : "text-black hover:bg-primary hover:text-white"
-        }`}
-      >
-        {item.label}
-      </Link>
-    </motion.div>
-  ))}
-</nav>
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex space-x-2 lg:space-x-4">
+          {menuItems.map((item) => (
+            <motion.div
+              key={item.href}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                href={item.href}
+                className={`px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition ${
+                  pathname === item.href && pathname !== "/contact"
+                    ? "bg-primary text-white"
+                    : "text-black hover:bg-primary hover:text-white"
+                }`}
+              >
+                {item.label}
+              </Link>
+            </motion.div>
+          ))}
+        </nav>
 
-{/* Contact Button */}
-<motion.div
-  className="hidden md:block ml-2"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
->
-  <Link
-    href="/contact"
-    className={`text-sm font-semibold pl-4 pr-2 py-1 rounded-full transition flex items-center gap-2 shadow ${
-      pathname === "/contact"
-        ? "bg-primary text-white"
-        : "bg-gray-100 text-black"
-    }`}
-  >
-    Contact Us
-    <img
-      src="/img/contacticon.png"
-      alt="Arrow"
-      className="w-9 h-9 object-contain"
-    />
-  </Link>
-</motion.div>
-
-
+        {/* Contact Button */}
+        <motion.div
+          className="hidden md:block ml-2"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            href="/contact"
+            className={`text-sm font-semibold pl-4 pr-2 py-1 rounded-full transition flex items-center gap-2 shadow ${
+              pathname === "/contact"
+                ? "bg-primary text-white"
+                : "bg-gray-100 text-black"
+            }`}
+          >
+            Contact Us
+            <img
+              src="/img/contacticon.png"
+              alt="Arrow"
+              className="w-9 h-9 object-contain"
+            />
+          </Link>
+        </motion.div>
 
         {/* Mobile Hamburger */}
         <div className="md:hidden ml-2">
@@ -209,25 +207,24 @@ const Header = () => {
                     </motion.div>
                   ))}
 
-             <motion.div variants={itemVariants}>
-  <Link
-    href="/contact"
-    onClick={() => setIsOpen(false)}
-    className="mt-4 flex items-center justify-center text-sm sm:text-base font-semibold 
+                  <motion.div variants={itemVariants}>
+                    <Link
+                      href="/contact"
+                      onClick={() => setIsOpen(false)}
+                      className="mt-4 flex items-center justify-center text-sm sm:text-base font-semibold 
                bg-primary hover:bg-primary/90 text-white px-4 sm:px-6 py-2 sm:py-3 
                rounded-full transition w-full sm:w-auto"
-  >
-    Contact Us
-    <span className="ml-2 flex-shrink-0">
-      <img
-        src="/img/contacticon.png"
-        alt="Contact Icon"
-        className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-      />
-    </span>
-  </Link>
-</motion.div>
-
+                    >
+                      Contact Us
+                      <span className="ml-2 flex-shrink-0">
+                        <img
+                          src="/img/contacticon.png"
+                          alt="Contact Icon"
+                          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                        />
+                      </span>
+                    </Link>
+                  </motion.div>
                 </motion.div>
               </nav>
             </motion.aside>

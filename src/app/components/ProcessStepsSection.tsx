@@ -57,13 +57,19 @@ export default function ProcessStepsSection() {
         viewport={{ once: true, amount: 0.25 }}
         variants={fadeUp}
       >
-        <span className="text-[#FF8C51] border border-[#FF8C51] rounded-full px-6 py-1 text-sm font-medium mb-4">
-          Our Process
-        </span>
-        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl mb-3 text-center leading-tight max-w-xl">
+        <motion.span
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6 }}
+        className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+      >
+        Our Process
+      </motion.span>
+        <h1 className="font-bold text-2xl md:text-[64px] mb-3 text-center leading-tight max-w-xl">
           From Law to <br /> Launch in 4 Steps
         </h1>
-        <p className="text-gray-600 mb-6 text-center text-sm sm:text-base max-w-lg">
+        <p className="text-black mb-6 text-center text-sm sm:text-xl max-w-lg">
           #1 Software for managing all your regulations in one place
         </p>
       </motion.div>
@@ -73,7 +79,7 @@ export default function ProcessStepsSection() {
         {steps.map((step, idx) => (
           <motion.div
             key={idx}
-            className={`flex flex-col md:flex-row items-center gap-8 ${
+            className={`flex flex-col md:flex-row items-center gap-12 mb-6 ${
               idx % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
             initial="hidden"
@@ -93,15 +99,15 @@ export default function ProcessStepsSection() {
                 className="w-10 h-10 mr-4 flex-shrink-0"
               />
               <div>
-                <h3 className="font-bold text-lg text-black mb-1">
+                <h3 className="font-bold text-xl text-black mb-1">
                   {step.title}
                 </h3>
-                <p className="text-gray-500 text-sm">{step.desc}</p>
+                <p className="text-black text-sm">{step.desc}</p>
               </div>
             </motion.div>
 
             {/* Image */}
-            <div className="relative w-full md:w-1/2 max-w-[600px] p-2 self-end flex items-center justify-center">
+            <div className="relative w-full md:w-1/2 max-w-[600px] self-end flex items-center justify-center">
               <div className="absolute inset-0 rounded-2xl bg-[#f8f2f1]" />
               <motion.img
                 src={step.image}

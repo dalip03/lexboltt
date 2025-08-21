@@ -14,7 +14,6 @@ export default function Home() {
     <FeaturesTabsSection/>
     <TestimonialSection/>
     <ComplianceHeroBanner/>
-    {/* <ComplianceSplitSection/> */}
    </div>
   );
 }

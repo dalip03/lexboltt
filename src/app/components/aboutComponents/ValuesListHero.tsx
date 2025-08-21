@@ -34,19 +34,15 @@ export default function ValuesListHero() {
   return (
     <section className="w-full max-w-6xl mx-auto py-8 px-4">
       {/* Tag */}
+     
       <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.7 }}
-        transition={{ duration: 0.6 }}
-        className="mb-5"
+        className="mb-2"
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
       >
-        <span className="inline-flex items-center gap-1 border border-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold shadow">
-          <img
-            src="/about/star.svg"
-            alt="star"
-            className="w-6 h-6"
-          /> Our Values
+        <span className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold">
+          Our Values
         </span>
       </motion.div>
       {/* Header */}
@@ -55,7 +51,7 @@ export default function ValuesListHero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.7 }}
         transition={{ duration: 0.7, delay: 0.06 }}
-        className="text-black text-3xl sm:text-4xl font-bold mb-2 leading-tight"
+        className="text-black text-2xl sm:text-3xl md:text-[64px] font-bold mb-2 leading-tight"
       >
         The Innovation Behind
       </motion.h1>
@@ -66,7 +62,7 @@ export default function ValuesListHero() {
         transition={{ duration: 0.7, delay: 0.12 }}
         className="text-gray-400 text-2xl sm:text-3xl font-semibold mb-8 leading-tight"
       >
-        <span className="bg-[#FF6600] text-white px-3 py-1 rounded-md text-2xl sm:text-3xl md:text-4xl font-extrabold inline-block">
+        <span className="bg-[#FF6600] text-white px-3 py-1 text-2xl sm:text-3xl md:text-[64px] font-bold inline-block">
             Your Regulations </span>
       </motion.h2>
       {/* Values List */}
@@ -86,10 +82,10 @@ export default function ValuesListHero() {
               className="w-8 h-8 mr-0 mb-2 sm:mr-5 sm:mb-0 mt-1"
             />
             <div className="flex flex-col flex-1">
-              <span className="text-gray-600 text-lg">{value.heading}</span>
+              <span className="text-black text-lg">{value.heading}</span>
             </div>
             <div className="flex flex-col flex-[2] sm:ml-7 mt-1 sm:mt-0">
-              <span className="text-xs sm:text-sm italic text-gray-500 mb-1">
+              <span className="text-xs sm:text-sm italic text-gray-800 mb-1">
                 {value.subtitle}
               </span>
               <span className="text-black text-sm sm:text-base font-normal pr-0 sm:pr-16">
