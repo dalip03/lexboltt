@@ -81,7 +81,7 @@ const Header = () => {
             >
               <Link
                 href={item.href}
-                className={`px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition ${
+                className={`px-3 lg:px-4 py-2 rounded-full text-sm font-medium transition cursor-pointer ${
                   pathname === item.href && pathname !== "/contact"
                     ? "bg-primary text-white"
                     : "text-black hover:bg-primary hover:text-white"

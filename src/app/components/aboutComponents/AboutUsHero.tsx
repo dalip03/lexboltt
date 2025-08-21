@@ -27,10 +27,10 @@ export default function AboutUsHero() {
   };
 
   return (
-    <section className="w-full  mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 pt-8 lg:pt-20 lg:pb-10">
-      {/* Left Side - text area (wider on desktop) */}
+    <section className="w-full max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 lg:pb-10 px-4 sm:px-6">
+      {/* Left Side - text area */}
       <motion.div
-        className="lg:flex-[1.8] flex-1 flex flex-col items-start justify-center ml-20"
+        className="flex-1 lg:flex-[1.8] flex flex-col items-start justify-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -48,7 +48,7 @@ export default function AboutUsHero() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-black font-bold text-2xl sm:text-3xl md:text-[64px] leading-tight mb-5"
+          className="text-black font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[64px] leading-tight mb-5"
           variants={textVariant}
         >
           Driven By Innovation <br />
@@ -57,7 +57,7 @@ export default function AboutUsHero() {
 
         {/* Subheading */}
         <motion.p
-          className="text-black text-base mb-8 max-w-lg"
+          className="text-black text-sm sm:text-base md:text-lg mb-8 max-w-lg"
           variants={textVariant}
         >
           Seamlessly manage deliveries with real-time tracking, cost-effective
@@ -65,11 +65,11 @@ export default function AboutUsHero() {
         </motion.p>
 
         {/* CTA Button + Icon */}
-        <motion.div className="flex items-center gap-7" variants={textVariant}>
+        <motion.div className="flex items-center gap-5 sm:gap-7" variants={textVariant}>
           <div className="relative inline-flex items-center">
             <motion.button
               onClick={() => setShowModal(true)}
-              className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-1 md:pl-4 pl-4 py-1 rounded-full shadow-lg hover:bg-primary/80 transition relative"
+              className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-primary/80 transition relative"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -79,7 +79,7 @@ export default function AboutUsHero() {
                 <img
                   src="/img/arrowrighticonwhite.svg"
                   alt="Icon"
-                  className="w-12 h-12 object-contain"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
                 />
               </span>
             </motion.button>
@@ -87,9 +87,9 @@ export default function AboutUsHero() {
         </motion.div>
       </motion.div>
 
-      {/* Right Side - Dashboard/Image area (less wide on desktop) */}
+      {/* Right Side - Dashboard/Image area */}
       <motion.div
-        className="lg:flex-1 flex-1 flex  w-full "
+        className="flex-1 w-full flex justify-center lg:justify-end"
         variants={imageVariant}
         initial="hidden"
         animate="visible"
@@ -99,7 +99,7 @@ export default function AboutUsHero() {
           alt="Dashboard"
           width={440}
           height={390}
-          className="rounded-xl object-cover w-full max-w-[420px] md:max-w-[440px] lg:max-w-[420px] xl:max-w-[420px]"
+          className="rounded-xl object-cover w-full max-w-[320px] sm:max-w-[380px] md:max-w-[440px]"
           priority
         />
       </motion.div>

@@ -21,36 +21,20 @@ export default function HeroSection() {
   return (
     <div className="min-w-full h-full px-4 relative">
       <section className="min-w-full h-full flex flex-col bg-[#F6F6F6] items-center justify-center rounded-[24px] px-4 mt-4 relative overflow-hidden">
+        {/* Top-right blur circle */}
         <div
-          className="absolute"
-          style={{
-            width: "456px",
-            height: "456px",
-            right: "-148px",
-            top: "-148px",
-            background: "#F35418",
-            borderRadius: "456px",
-            filter: "blur(172px)",
-            zIndex: 5,
-            pointerEvents: "none",
-          }}
+          className="absolute right-[-148px] top-[-148px] bg-[#F35418] rounded-full filter blur-[172px] pointer-events-none z-5 
+          w-[456px] h-[456px]
+          sm:right-[-120px] sm:top-[-120px] sm:w-[360px] sm:h-[360px]
+          xs:right-[-80px] xs:top-[-80px] xs:w-[240px] xs:h-[240px]"
         />
 
-        {/* (Optional) Add a similar effect to bottom-left for symmetry */}
-
+        {/* Bottom-left blur circle */}
         <div
-          className="absolute"
-          style={{
-            width: "456px",
-            height: "456px",
-            left: "-148px",
-            bottom: "-148px",
-            background: "#F35418",
-            borderRadius: "456px",
-            filter: "blur(172px)",
-            zIndex: 5,
-            pointerEvents: "none",
-          }}
+          className="absolute left-[-148px] bottom-[-148px] bg-[#F35418] rounded-full filter blur-[172px] pointer-events-none z-5 
+          w-[456px] h-[456px] 
+          sm:left-[-120px] sm:bottom-[-120px] sm:w-[360px] sm:h-[360px] 
+          xs:left-[-80px] xs:bottom-[-80px] xs:w-[240px] xs:h-[240px]"
         />
 
         <motion.div

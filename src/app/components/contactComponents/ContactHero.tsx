@@ -37,22 +37,20 @@ export default function ContactHero() {
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
-  // Calculate indices for left and right thumbnails
   const leftIndex = (current - 1 + slides.length) % slides.length;
   const rightIndex = (current + 1) % slides.length;
 
   return (
-    <section className="w-full mx-auto py-12 px-2 overflow-x-hidden">
+    <section className="w-full max-w-screen-xl mx-auto py-12 px-4 sm:px-6 overflow-x-hidden">
       {/* Header */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-8 gap-0 items-center px-0 md:px-20 mb-6"
+        className="grid grid-cols-1 md:grid-cols-8 gap-4 items-center px-0 md:px-20 mb-6"
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="md:col-span-3 flex flex-col justify-center">
-       
+        <div className="md:col-span-3 flex flex-col justify-center text-center md:text-left">
           <motion.h1
             className="text-black font-bold text-3xl md:text-5xl leading-tight mb-1"
             initial={{ opacity: 0, y: 25 }}
@@ -66,13 +64,13 @@ export default function ContactHero() {
           </motion.h1>
         </div>
         <motion.div
-          className="md:col-span-5 flex flex-col items-end justify-start"
+          className="md:col-span-5 flex flex-col items-center md:items-end justify-start"
           initial={{ opacity: 0, x: 25 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.22 }}
           viewport={{ once: true }}
         >
-          <p className="text-black text-sm md:text-base max-w-md text-right ml-auto mb-7">
+          <p className="text-black text-sm md:text-base max-w-md text-center md:text-right mb-7">
             We deliver tailored AI compliance solutions designed to scale your
             regulatory workflows and drive measurable operational results.
           </p>
@@ -80,10 +78,10 @@ export default function ContactHero() {
       </motion.div>
 
       {/* Carousel */}
-      <div className="flex items-center justify-center mt-2 gap-2 relative z-0 w-full">
+      <div className="flex items-center justify-center mt-2 gap-2 relative z-0 w-full px-4 sm:px-0">
         {/* Left thumbnail */}
         <motion.div
-          className="hidden md:flex flex-shrink-0 w-[44vw] max-w-[370px] h-[33vw] max-h-[260px] rounded-2xl overflow-hidden opacity-90"
+          className="hidden md:flex flex-shrink-0 w-[40vw] max-w-[370px] h-[30vw] max-h-[260px] rounded-2xl overflow-hidden opacity-90"
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.15 }}
@@ -91,22 +89,25 @@ export default function ContactHero() {
         >
           <img
             src={slides[leftIndex].img}
-            alt=""
-            className="w-full h-full object-cover"
+            alt={slides[leftIndex].label}
+            className="w-full h-full object-cover rounded-2xl"
           />
         </motion.div>
+
         {/* Left arrow */}
         <button
           onClick={prevSlide}
-          className="absolute left-[calc(50%-320px)] cursor-pointer top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center bg-white rounded-full"
+          className="absolute left-[calc(50%-310px)] cursor-pointer top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center bg-white rounded-full shadow-md"
           style={{ width: "46px", height: "46px" }}
+          aria-label="Previous Slide"
         >
           <img
             src="/product/whiteright.svg"
-            alt="Prev"
+            alt="Previous"
             className="w-8 h-8 rotate-180"
           />
         </button>
+
         {/* Center slide */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -115,58 +116,53 @@ export default function ContactHero() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.89, y: -18 }}
             transition={{ duration: 0.43 }}
-            className="relative w-[96vw] max-w-[470px] md:max-w-[600px] h-[53vw] max-h-[320px] md:max-h-[360px] rounded-2xl overflow-hidden flex-shrink-0 shadow-lg z-10"
+            className="relative w-[90vw] max-w-[470px] md:max-w-[600px] h-[50vw] max-h-[320px] md:max-h-[360px] rounded-2xl overflow-hidden flex-shrink-0 shadow-lg z-10"
           >
-            {/* Image */}
-            <div className="w-full h-full relative">
-              <img
-                src={slides[current].img}
-                alt=""
-                className="w-full h-full object-cover rounded-2xl"
-              />
-              
-              {/* Overlay Content */}
-              <div className="absolute inset-0 flex items-end justify-between p-6 ">
-                {/* Left side - Heading */}
-                {slides[current].label && (
-                  <div className="z-20">
-                    <h3 className="relative text-white font-bold text-2xl md:text-3xl mb-2 drop-shadow-lg">
-                      {slides[current].label}
-                    </h3>
+            <img
+              src={slides[current].img}
+              alt={slides[current].label}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            {/* Overlay Content */}
+            <div className="absolute inset-0 flex items-end justify-between p-6">
+              {slides[current].label && (
+                <div className="z-20">
+                  <h3 className="relative text-white font-bold text-2xl md:text-3xl mb-2 drop-shadow-lg">
+                    {slides[current].label}
+                  </h3>
+                </div>
+              )}
+              {slides[current].desc && (
+                <div className="absolute z-20 -bottom-2 right-0">
+                  <div
+                    className="bg-white p-4 shadow-md max-w-[280px] transform rotate-1"
+                    style={{
+                      clipPath: "polygon(6% 0, 100% 0, 100% 100%, 0 100%)",
+                    }}
+                  >
+                    <p className="text-gray-700 text-xs md:text-sm font-medium leading-tight">
+                      {slides[current].desc}
+                    </p>
                   </div>
-                )}
-                
-                {/* Right side - Small tilted white div with description */}
-                {slides[current].desc && (
-                  <div className="absolute z-20 ] -bottom-2 right-0">
-                    <div 
-                      className="bg-white p-3 pl-4 py-4  shadow-md max-w-[300px] transform rotate-1"
-                      style={{
-                        clipPath: 'polygon(6% 0, 100% 0, 100% 100%, 0 100%)'
-
-                      }}
-                    >
-                      <p className="text-gray-700 text-[10px] font-medium leading-tight">
-                        {slides[current].desc}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </motion.div>
         </AnimatePresence>
+
         {/* Right arrow */}
         <button
           onClick={nextSlide}
-          className="absolute right-[calc(50%-320px)] cursor-pointer top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center bg-white rounded-full shadow-md"
+          className="absolute right-[calc(50%-310px)] cursor-pointer top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center bg-white rounded-full shadow-md"
           style={{ width: "46px", height: "46px" }}
+          aria-label="Next Slide"
         >
           <img src="/product/whiteright.svg" alt="Next" className="w-6 h-6" />
         </button>
+
         {/* Right thumbnail */}
         <motion.div
-          className="hidden md:flex flex-shrink-0 w-[44vw] max-w-[370px] h-[33vw] max-h-[260px] rounded-2xl overflow-hidden opacity-90"
+          className="hidden md:flex flex-shrink-0 w-[40vw] max-w-[370px] h-[30vw] max-h-[260px] rounded-2xl overflow-hidden opacity-90"
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.15 }}
@@ -174,8 +170,8 @@ export default function ContactHero() {
         >
           <img
             src={slides[rightIndex].img}
-            alt=""
-            className="w-full h-full object-cover"
+            alt={slides[rightIndex].label}
+            className="w-full h-full object-cover rounded-2xl"
           />
         </motion.div>
       </div>

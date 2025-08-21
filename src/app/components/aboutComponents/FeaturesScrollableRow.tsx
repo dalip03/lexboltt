@@ -2,38 +2,44 @@
 
 import { motion } from "framer-motion";
 
-export default function ImagesScrollableRow() {
+export default function FeaturesScrollableRow() {
   const images = [
     "/about/abouts.png",
     "/about/about1.png",
     "/about/about2.png",
     "/about/about3.png",
-
   ];
 
-  // Each image width + gap approx 236px (230 width + 6 gap)
-  // Total width = number of images * 236
-  const totalImgCount = images.length;
-  const itemWidthWithGap = 236;
-  const totalWidth = totalImgCount * itemWidthWithGap;
+  // Double the array for smooth infinite scroll effect
+  const allImages = [...images, ...images];
+
+  // Animation distance calculation based on max (desktop) width + gap
+  const ITEM_WIDTH = 230;
+  const ITEM_GAP = 24; // gap-6
+  const MOVE_X = images.length * (ITEM_WIDTH + ITEM_GAP);
 
   return (
-    <div className="w-full py-6 bg-white overflow-hidden">
+    <div className="w-full max-w-screen-xl mx-auto px-4 py-6 bg-white overflow-x-auto hide-scrollbar">
       <motion.div
-        className="flex gap-6"
-        style={{ width: totalWidth * 2 }}
-        animate={{ x: [0,-totalWidth] }} 
+        className="flex gap-6 w-max"
+        animate={{ x: [0, -MOVE_X] }}
         transition={{
           repeat: Infinity,
           repeatType: "loop",
-          duration: 50, 
+          duration: 50, // adjust for preferred speed
           ease: "linear",
         }}
       >
-        {[...images, ...images].map((src, i) => (
+        {allImages.map((src, i) => (
           <div
             key={i}
-            className="flex-shrink-0 w-[230px] h-[230px] rounded-2xl overflow-hidden"
+            className={`
+              flex-shrink-0 rounded-2xl overflow-hidden
+              w-[140px] h-[140px]
+              sm:w-[180px] sm:h-[180px]
+              md:w-[200px] md:h-[200px]
+              lg:w-[230px] lg:h-[230px]
+            `}
           >
             <img
               src={src}

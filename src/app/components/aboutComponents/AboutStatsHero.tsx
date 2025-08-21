@@ -44,21 +44,21 @@ export default function AboutStatsHero() {
     start: 0,
     end: 10,
     duration: 0.9,
-    format: (val: number) => `+${Math.floor(val)}K`,
+    format: (val: number) => `${Math.floor(val)}+`,
   });
   // "+50M"
   const refDocs = useCountUp({
     start: 0,
     end: 1,
     duration: 1.1,
-    format: (val: number) => `+${Math.floor(val)}K`,
+    format: (val: number) => `${Math.floor(val)}K+`,
   });
   // "+1.2K"
   const refBiz = useCountUp({
     start: 0,
-    end: 10,
+    end: 12,
     duration: 0.8,
-    format: (val: number) => `+${Math.floor(val)}K`,
+    format: (val: number) => `${Math.floor(val)}+`,
   });
 
   return (

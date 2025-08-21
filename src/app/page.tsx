@@ -8,7 +8,7 @@ import ComplianceHeroBanner from "./components/ComplianceHeroBanner";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden mb-10">
+<div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden mb-10 w-full max-w-screen-xl px-4 mx-auto">
     <HeroSection/>
     <ProcessStepsSection/>
     <FeaturesTabsSection/>

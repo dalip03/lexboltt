@@ -80,8 +80,8 @@ export default function TeamHero() {
       {/* Scrollable cards */}
       <div className="relative w-full">
         {/* Left/right fades */}
-        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-12 bg-gradient-to-r from-white via-white/80 to-white/0" />
-        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-12 bg-gradient-to-l from-white via-white/80 to-white/0" />
+        <div className="pointer-events-none absolute top-0 left-0 z-50 h-full w-12 bg-gradient-to-r from-white via-white/80 to-white/0" />
+        <div className="pointer-events-none absolute top-0 right-0 z-50 h-full w-12 bg-gradient-to-l from-white via-white/80 to-white/0" />
 
        <div className="overflow-x-auto whitespace-nowrap hide-scrollbar pb-3">
   <div className="inline-flex gap-4 sm:gap-6 px-1 md:px-2">
@@ -116,7 +116,7 @@ export default function TeamHero() {
           <h3 className="text-white font-bold text-xs sm:text-base">
             {member.name}
           </h3>
-          <p className="text-white text-[10px] border sm:text-xs opacity-90">
+          <p className="text-white text-[10px]  sm:text-xs opacity-90">
             {member.desc}
           </p>
         </div>
