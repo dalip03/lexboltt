@@ -3,6 +3,7 @@ import { motion, easeOut } from "framer-motion";
 import Image from "next/image";
 import RequestDemoModal from "../RequestDemoModal";
 import { useState } from "react";
+import DemoButton from "../DemoButton";
 
 export default function AboutUsHero() {
   const [showModal, setShowModal] = useState(false);
@@ -65,26 +66,7 @@ export default function AboutUsHero() {
         </motion.p>
 
         {/* CTA Button + Icon */}
-        <motion.div className="flex items-center gap-5 sm:gap-7" variants={textVariant}>
-          <div className="relative inline-flex items-center">
-            <motion.button
-              onClick={() => setShowModal(true)}
-              className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-primary/80 transition relative"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              Get a Demo
-              <span className="ml-2 flex-shrink-0">
-                <img
-                  src="/img/arrowrighticonwhite.svg"
-                  alt="Icon"
-                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-                />
-              </span>
-            </motion.button>
-          </div>
-        </motion.div>
+       <DemoButton onClick={()=> setShowModal(true)}/>
       </motion.div>
 
       {/* Right Side - Dashboard/Image area */}

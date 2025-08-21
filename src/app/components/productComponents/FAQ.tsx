@@ -76,7 +76,7 @@ export default function FAQ() {
                 {openIdx === idx && (
                   <motion.div
                     key="content"
-                    className="px-5 pb-5 text-gray-400 text-sm"
+                    className="px-5 pb-5 text-black text-sm"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}

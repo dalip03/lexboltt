@@ -117,7 +117,7 @@ export default function OurJourney() {
               className="object-contain w-full h-[180px] md:h-[240px] rounded-2xl mb-3"
             />
             <h4 className="text-lg font-bold mb-1 text-black self-start">
-              4K+ Businesses Empowered
+              Automotive Focus
             </h4>
             <p className="text-gray-500 text-sm font-semibold">
               Built with guidance from automotive regulations and standards like IATF and ISO, to make sure you are compliant.

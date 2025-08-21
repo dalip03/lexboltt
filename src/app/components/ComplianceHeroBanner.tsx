@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import RequestDemoModal from "./RequestDemoModal";
 import DemoButton from "./DemoButton";
+import Link from "next/link";
 
 interface RequestDemoModalProps {
   onClose: () => void;
@@ -53,8 +54,21 @@ export default function ComplianceHeroBanner() {
           Efficiently
         </p>
 
-        <DemoButton onClick={() => setShowModal(true)} />
-      </div>
+   {/* Contact Button */}
+        <Link href="/contact" passHref>
+          <button
+            className="flex items-center gap-2 bg-[#FF6600] hover:bg-[#e75d00] transition text-white px-6 py-3 rounded-full font-semibold shadow text-sm sm:text-base"
+          >
+            Contact us
+            <span>
+              <img
+                src="/product/right.svg"
+                alt="Arrow Right"
+                className="w-6 h-6 object-contain"
+              />
+            </span>
+          </button>
+        </Link>      </div>
       {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
     </section>
   );

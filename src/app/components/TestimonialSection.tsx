@@ -46,7 +46,12 @@ const Stars = ({ count }: { count: number }) => (
 const Rating = ({ count }: { count: number }) => (
   <span className="inline-flex text-xl">
     {Array.from({ length: count }).map((_, i) => (
-      <img key={i} src="/img/ratingstar.svg" alt="star" className="w-2 h-2 mr-1" />
+      <img
+        key={i}
+        src="/img/ratingstar.svg"
+        alt="star"
+        className="w-2 h-2 mr-1"
+      />
     ))}
   </span>
 );
@@ -88,7 +93,7 @@ const TestimonialSection: React.FC = () => {
     (100 - trackWidth);
 
   return (
-    <section className="w-full bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-6 pl-6 md:pt-34 md:pb-20 flex flex-col md:flex-row justify-between  gap-10 items-stretch">
+    <section className="w-full bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-6 px-6 md:px-20 lg:px-32 flex flex-col md:flex-row justify-between gap-10 items-stretch">
       {/* Left Side */}
       <div className="flex flex-col items-center mb-8 md:px-0  xl-px-10">
         <motion.span
@@ -106,7 +111,6 @@ const TestimonialSection: React.FC = () => {
         <h2 className="font-sans font-bold text-2xl md:text-4xl mb-6 text-gray-900 max-w-xs self-start">
           What Do Our Clients Say
         </h2>
-        
       </div>
 
       {/* Right Side: Testimonials */}

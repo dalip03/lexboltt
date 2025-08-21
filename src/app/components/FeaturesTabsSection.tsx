@@ -132,15 +132,15 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col lg:flex-row gap-12 justify-center items-center lg:items-start max-w-7xl mx-auto px-4 lg:px-0"
+        className="flex flex-col lg:flex-row gap-12 justify-center items-center lg:items-start max-w-7xl mx-auto px-4 lg:px-0 "
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
         transition={{ ...fadeUp.transition, delay: 0.2 }}
       >
         {/* Left: Image/Card */}
-        <div className="flex-1 flex justify-center items-center max-w-xl lg:max-w-lg">
-          <div className="bg-[#FFF3ED] rounded-3xl shadow-lg w-full flex items-center justify-center p-8">
+        <div className="flex-1 flex justify-center items-center max-w-xl lg:max-w-lg ">
+          <div className="bg-[#FFF3ED] rounded-3xl shadow-lg w-full flex items-center justify-center">
             <img
               src={features[active].image}
               alt={features[active].label}
