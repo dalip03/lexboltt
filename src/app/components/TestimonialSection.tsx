@@ -93,9 +93,9 @@ const TestimonialSection: React.FC = () => {
     (100 - trackWidth);
 
   return (
-    <section className="w-full bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-6 px-6 md:px-20 lg:px-32 flex flex-col md:flex-row justify-between gap-10 items-stretch">
+    <section className="w-[90%] bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-6 px-6  md:px-10  flex flex-col md:flex-row justify-between gap-10 items-stretch">
       {/* Left Side */}
-      <div className="flex flex-col items-center mb-8 md:px-0  xl-px-10">
+      <div className="flex flex-col items-center mb-8 md:px-0  xl-px-10 ">
         <motion.span
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
