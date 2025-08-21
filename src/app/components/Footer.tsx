@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
         viewport={fadeUp.viewport}
         transition={fadeUp.transition}
       >
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-6 w-full md:w-auto">
           {/* Logo */}
           <Link href="/" className="inline-block">
             <Image
@@ -39,12 +39,22 @@ const Footer: React.FC = () => {
           </Link>
 
           {/* Social img */}
-          <div className="flex gap-4">
-            <img src="/img/instagram.svg" alt="Instagram" className="w-10 h-10 cursor-pointer hover:opacity-80" />
-            <img src="/img/linkedin.svg" alt="LinkedIn" className="w-10 h-10 cursor-pointer hover:opacity-80" />
+          <div className="flex gap-4 justify-center md:justify-start">
+            <img
+              src="/img/instagram.svg"
+              alt="Instagram"
+              className="w-10 h-10 cursor-pointer hover:opacity-80"
+            />
+            <img
+              src="/img/linkedin.svg"
+              alt="LinkedIn"
+              className="w-10 h-10 cursor-pointer hover:opacity-80"
+            />
           </div>
         </div>
-        <div className="text-white text-xs">©2025 Lexboltt. All Rights Reserved.</div>
+        <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right">
+          ©2025 Lexboltt. All Rights Reserved.
+        </div>
       </motion.div>
 
       <hr className="border-white mb-6" />
@@ -61,15 +71,16 @@ const Footer: React.FC = () => {
         <div className="w-full md:w-[35%] flex justify-center md:justify-start">
           <div className="w-full max-w-md px-4 py-6 rounded-[16px] flex flex-col items-center md:items-start gap-2">
             <div className="text-2xl font-bold">
-                  <Link href="/" className="font-bold font-serif">
-                    <Image
-                      src="/img/footericon2.svg"
-                      alt="Logo"
-                      width={80}
-                      height={20}
-                    />
-                  </Link>
-                </div>{" "}
+              <Link href="/" className="font-bold font-serif">
+                <Image
+                  src="/img/footericon2.svg"
+                  alt="Logo"
+                  width={80}
+                  height={20}
+                />
+              </Link>
+            </div>
+            {/* Uncomment and customize newsletter section if needed */}
             {/* <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
             <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
               <input
@@ -84,25 +95,40 @@ const Footer: React.FC = () => {
               >
                 Sign up
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
 
-        {/* center explore */}
-        <div className="w-full md:w-[30%] flex justify-center ">
-          <div>
-            <h4 className="font-medium mb-4 text-white">Explore</h4>
-            <ul className="space-y-2 text-white/60">
-              <li><Link href="/" className="hover:text-gray-300">Home</Link></li>
-              <li><Link href="/about" className="hover:text-gray-300">About Us</Link></li>
-              <li><Link href="/product" className="hover:text-gray-300">Products</Link></li>
-              <li><Link href="/contact" className="hover:text-gray-300">Contact</Link></li>
-            </ul>
-          </div>
-        </div>
+       
 
         {/* Resources */}
-        <div className="w-full md:w-[35%] flex flex-col sm:flex-row justify-center md:justify-end gap-10 text-center md:text-left">
+        <div className="w-full  flex flex-col sm:flex-row justify-center md:justify-end gap-10 text-center md:text-left">
+           <div className="pr-20">
+            <h4 className="font-medium mb-4 text-white">Explore</h4>
+            <ul className="space-y-2 text-white/60">
+              <li>
+                <Link href="/" className="hover:text-gray-300">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-gray-300">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/product" className="hover:text-gray-300">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-gray-300">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
           <div>
             <h4 className="font-medium mb-4 text-white">Contact Us</h4>
             <ul className="space-y-2 text-white/60">
@@ -112,13 +138,22 @@ const Footer: React.FC = () => {
               >
                 hello@lexbolt.ai
               </li>
-              <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
+              <li
+                className="hover:text-gray-300 cursor-pointer"
+                onClick={() => setShowModal(true)}
+              >
                 450 Bath Road, Longford, <br /> Heathrow, Lomdon, UB7 OEB
               </li>
-              <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
+              <li
+                className="hover:text-gray-300 cursor-pointer"
+                onClick={() => setShowModal(true)}
+              >
                 Terms of Service
               </li>
-              <li className="hover:text-gray-300 cursor-pointer" onClick={() => setShowModal(true)}>
+              <li
+                className="hover:text-gray-300 cursor-pointer"
+                onClick={() => setShowModal(true)}
+              >
                 Privacy Policy
               </li>
             </ul>
@@ -133,4 +168,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-          
