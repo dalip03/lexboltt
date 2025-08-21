@@ -78,15 +78,15 @@ const FeaturesTabsSection: React.FC = () => {
         viewport={fadeUp.viewport}
         transition={fadeUp.transition}
       >
-        <motion.span
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block text-[#FC7D3F] text-base lg:text-lg font-semibold mb-4"
-        >
-          Why Choose Us?
-        </motion.span>
+         <motion.span
+             initial={{ opacity: 0, y: 14 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true, amount: 0.6 }}
+             transition={{ duration: 0.6 }}
+             className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+           >
+             Why Choose Us?
+           </motion.span>       
         <h2 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl max-w-6xl text-center leading-tight mb-4">
           Features & Benefits
         </h2>
