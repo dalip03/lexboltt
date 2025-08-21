@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
             />
           </Link>
 
-          {/* Social img */}
+          {/* Social images */}
           <div className="flex gap-4 justify-center md:justify-start">
             <img
               src="/img/instagram.svg"
@@ -80,30 +80,13 @@ const Footer: React.FC = () => {
                 />
               </Link>
             </div>
-            {/* Uncomment and customize newsletter section if needed */}
-            {/* <h3 className="text-md text-white font-medium">Subscribe to lexboltt.ai</h3>
-            <form className="flex w-full max-w-md mx-auto pr-1 bg-[#F35418] rounded-full overflow-hidden shadow items-center border">
-              <input
-                type="email"
-                placeholder="Enter your Email"
-                className="flex-grow min-w-0 pl-4 py-3 bg-transparent text-white placeholder-white/60 focus:outline-none"
-                required
-              />
-              <button
-                type="submit"
-                className="bg-white text-primary font-semibold px-4 py-2 rounded-full transition hover:bg-orange-100 whitespace-nowrap"
-              >
-                Sign up
-              </button>
-            </form> */}
           </div>
         </div>
 
-       
-
-        {/* Resources */}
-        <div className="w-full  flex flex-col sm:flex-row justify-center md:justify-end gap-10 text-center md:text-left">
-           <div className="pr-20">
+        {/* Right: Explore and Contact Us side by side on small screens, centered */}
+        <div className="w-full flex flex-col sm:flex-row justify-center gap-10 text-center md:text-left md:justify-end">
+          {/* Explore */}
+          <div className="sm:pr-8">
             <h4 className="font-medium mb-4 text-white">Explore</h4>
             <ul className="space-y-2 text-white/60">
               <li>
@@ -128,7 +111,8 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
+          {/* Contact Us */}
           <div>
             <h4 className="font-medium mb-4 text-white">Contact Us</h4>
             <ul className="space-y-2 text-white/60">
