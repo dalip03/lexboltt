@@ -138,7 +138,7 @@ const Header = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed inset-0 bg-black z-40"
+              className="fixed inset-0 bg-black z-60"
               onClick={() => setIsOpen(false)}
             />
 

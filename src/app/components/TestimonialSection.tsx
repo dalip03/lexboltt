@@ -123,7 +123,7 @@ const TestimonialSection: React.FC = () => {
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              className=" rounded-[24px] flex shadow p-6 w-[620px] min-w-[490px] max-w-xs flex-shrink-0 scroll-snap-align-center"
+        className="flex-shrink-0 w-[90%] sm:w-[70%] md:w-[620px] rounded-[24px] flex  p-6 scroll-snap-align-center"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(28, 28, 28, 0.10) 0%, rgba(28, 28, 28, 0.00) 100%)",
