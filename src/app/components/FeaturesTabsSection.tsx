@@ -163,7 +163,7 @@ const FeaturesTabsSection: React.FC = () => {
               {features[active].title}
             </span>
           </div>
-          <p className="text-black mb-5 px-2 md:pr-20 max-w-md">
+          <p className="text-gray-600 font-sans mb-5 px-2 md:pr-20 max-w-md">
             {features[active].desc}
           </p>
           <ul className="mt-2 space-y-2 max-w-md mx-auto md:mx-0">
