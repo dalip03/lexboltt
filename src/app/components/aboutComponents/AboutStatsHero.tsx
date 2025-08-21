@@ -103,7 +103,7 @@ export default function AboutStatsHero() {
         >
           <div className="h-full flex items-end max-w-full">
             <p className="text-black text-sm md:text-base leading-tight max-w-md md:text-right break-words">
-              At LexBolt, we create custom AI solutions to transform automotive
+              At Lexbolt, we create custom AI solutions to transform automotive
               compliance from intelligent regulation parsing to automated
               workflow integration helping teams thrive in a complex,
               data-driven industry.

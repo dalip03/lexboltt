@@ -13,7 +13,7 @@ const testimonials = [
     rating: 5,
     location: "NYC",
     verified: true,
-    text: "“LexBolt made a 300-page document usable in 15 minutes. Game-changing.”",
+    text: "“Lexbolt made a 300-page document usable in 15 minutes. Game-changing.”",
   },
   {
     name: "Sr, Developer, at a",
@@ -22,7 +22,7 @@ const testimonials = [
     rating: 4,
     location: "London",
     verified: true,
-    text: "LexBolt streamlines our compliance in ways our previous solutions never could. Highly recommended.",
+    text: "Lexbolt streamlines our compliance in ways our previous solutions never could. Highly recommended.",
   },
   {
     name: "Project lead, at a",
@@ -31,7 +31,7 @@ const testimonials = [
     rating: 5,
     location: "Delhi",
     verified: true,
-    text: "Super intuitive and fast! I wish we had switched to LexBolt years ago.",
+    text: "Super intuitive and fast! I wish we had switched to Lexbolt years ago.",
   },
 ];
 

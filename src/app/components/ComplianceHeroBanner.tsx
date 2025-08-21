@@ -20,10 +20,10 @@ export default function ComplianceHeroBanner() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="w-full relative bg-[#F6F6F6]/60 rounded-[32px]  mx-auto mt-14 p-6 md:p-12 flex flex-col md:flex-row gap-10 items-stretch">
-      <div className=" w-full max-w-6xl px-4 py-10 text-center  overflow-hidden flex flex-col items-center content-center justify-center">
+    <section className="w-full relative bg-[#F6F6F6]/60 rounded-[32px] mx-auto mt-14 p-6 md:p-12 flex flex-col items-center gap-10">
+      <div className="w-full max-w-6xl px-4 py-10 text-center overflow-hidden flex flex-col items-center justify-center more ">
         {/* Top left dots image */}
-        <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block ">
+        <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block">
           <img
             src="/img/dots.svg"
             alt="Decorative Shape"
@@ -40,22 +40,22 @@ export default function ComplianceHeroBanner() {
           />
         </div>
 
-        <h1 className="font-extrabold text-2xl  md:text-[48px] text-black mb-2 leading-tight ">
-          Transform your
+        <h1 className="font-extrabold text-2xl md:text-[48px] text-black mb-2 leading-tight max-w-4xl mx-auto">
+          Transform your{" "}
           <span className="bg-primary text-white px-3 cursor-pointer py-1 rounded-md text-2xl md:text-[48px] font-extrabold inline-block">
             Compliance
-          </span>
+          </span>{" "}
           From
           <br />
           reactive to proactive.
         </h1>
-        <p className="text-black md:text-xl  text-lg font-medium mb-7 mt-2 md:px-12">
+        <p className="text-black md:text-xl text-lg font-medium mb-7 mt-2 md:px-12 max-w-2xl mx-auto">
           Lexbolt Is Hub For Managing All Regulations Professionally And <br />
           Efficiently
         </p>
         {/* Contact Button */}
         <Link href="/contact" passHref>
-          <button className="flex items-center gap-2 bg-[#FF6600] hover:bg-[#e75d00] transition text-white px-1 pl-4 py-1 rounded-full font-semibold shadow text-sm sm:text-base">
+          <button className="flex items-center gap-2 bg-primary hover:bg-primary transition text-white px-4 py-2 rounded-full font-semibold shadow text-sm sm:text-base mx-auto">
             Contact us
             <span>
               <img

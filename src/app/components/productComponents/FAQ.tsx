@@ -6,20 +6,20 @@ import { Plus, Minus } from "lucide-react"; // ✅ add lucide-react icons
 
 const FAQS = [
   {
-    q: "What is LexBolt.ai?",
-    a: "LexBolt.ai is an AI-powered compliance assistant purpose-built for the automotive industry. It transforms complex regulatory documents into structured, actionable data, enabling teams to stay ahead on compliance and streamline workflows.",
+    q: "What is Lexbolt.ai?",
+    a: "Lexbolt.ai is an AI-powered compliance assistant purpose-built for the automotive industry. It transforms complex regulatory documents into structured, actionable data, enabling teams to stay ahead on compliance and streamline workflows.",
   },
   {
-    q: "What types of regulations does LexBolt support?",
-    a: "LexBolt supports a broad spectrum of automotive and manufacturing regulations, including safety standards, environmental rules, quality certifications, government guidelines, and more. The platform adapts to diverse regulatory frameworks and evolving compliance needs.",
+    q: "What types of regulations does Lexbolt support?",
+    a: "Lexbolt supports a broad spectrum of automotive and manufacturing regulations, including safety standards, environmental rules, quality certifications, government guidelines, and more. The platform adapts to diverse regulatory frameworks and evolving compliance needs.",
   },
   {
-    q: "How does LexBolt extract data from documents?",
-    a: "LexBolt uses advanced AI, machine learning, and natural language processing to automatically parse documents, identify key provisions, and extract relevant data points. This lets users turn lengthy and complex regulatory texts into clear insights and tasks in seconds.",
+    q: "How does Lexbolt extract data from documents?",
+    a: "Lexbolt uses advanced AI, machine learning, and natural language processing to automatically parse documents, identify key provisions, and extract relevant data points. This lets users turn lengthy and complex regulatory texts into clear insights and tasks in seconds.",
   },
   {
     q: "Can I compare different versions of a regulation?",
-    a: "Yes, LexBolt includes smart version control features. You can compare different revisions of regulatory documents, highlight changes, and track updates, ensuring your business is always in compliance with the latest requirements.",
+    a: "Yes, Lexbolt includes smart version control features. You can compare different revisions of regulatory documents, highlight changes, and track updates, ensuring your business is always in compliance with the latest requirements.",
   },
 ];
 

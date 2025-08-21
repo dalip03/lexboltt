@@ -42,7 +42,7 @@ export default function OurJourney() {
             transition={fadeUp.transition}
             className="max-w-xl text-gray-600 text-sm md:text-sm font-semibold md:mt-0 mt-2 text-end"
           >
-            At LexBolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward efficiently and compliantly.
+            At Lexbolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward efficiently and compliantly.
           </motion.div>
         </div>
 
@@ -69,7 +69,7 @@ export default function OurJourney() {
               From workshops to working solution
             </h3>
             <p className="text-gray-500 text-sm font-semibold">
-              LexBolt began as a hands-on collaboration with OEM teams and homologation/regulatory experts. Through multiple working sessions and reviews, we shaped a tool that turns dense automotive standards into clear, structured outputs.
+              Lexbolt began as a hands-on collaboration with OEM teams and homologation/regulatory experts. Through multiple working sessions and reviews, we shaped a tool that turns dense automotive standards into clear, structured outputs.
             </p>
           </motion.div>
 

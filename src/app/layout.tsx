@@ -12,8 +12,8 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Lexboltt",
-  description: "Lexboltt - AI-Powered Legal Document Automation",
+  title: "Lexbolt",
+  description: "Lexbolt - AI-Powered Legal Document Automation",
 };
 
 export default function RootLayout({

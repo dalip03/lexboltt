@@ -52,7 +52,7 @@ export default function ProductHero() {
           className="text-black mt-2 text-base md:text-xl mb-8 md:pr-36"
           variants={textVariant}
         >
-          LexBolt is more than software it&apos;s an intelligent assistant for your compliance team.
+          Lexbolt is more than software it&apos;s an intelligent assistant for your compliance team.
         </motion.p>
 
         {/* Responsive DemoButton wrapper */}
