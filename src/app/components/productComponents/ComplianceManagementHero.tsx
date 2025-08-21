@@ -65,7 +65,7 @@ export default function ComplianceManagementHero() {
         </div>
         {/* Contact Button */}
         <Link href="/contact" passHref>
-          <button className="flex items-center gap-2 bg-[#FF6600] hover:bg-[#e75d00] transition text-white px-1 pl-4 py-1 rounded-full font-semibold shadow text-sm sm:text-base">
+          <button className="flex items-center cursor-pointer gap-2 bg-primary hover:bg-primary/90 transition text-white px-1 pl-4 py-1 rounded-full font-semibold shadow text-sm sm:text-base">
             Contact us
             <span>
               <img

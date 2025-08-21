@@ -42,7 +42,7 @@ export default function ComplianceHeroBanner() {
 
         <h1 className="font-extrabold text-2xl  md:text-[48px] text-black mb-2 leading-tight ">
           Transform your
-          <span className="bg-[#FF6600] text-white px-3 py-1 rounded-md text-2xl md:text-[48px] font-extrabold inline-block">
+          <span className="bg-primary text-white px-3 cursor-pointer py-1 rounded-md text-2xl md:text-[48px] font-extrabold inline-block">
             Compliance
           </span>
           From
