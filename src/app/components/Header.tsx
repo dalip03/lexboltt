@@ -149,7 +149,7 @@ const Header = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 w-72 h-full bg-white z-50 shadow-lg p-6"
+              className="fixed top-0 right-0 w-72 h-full bg-white z-60 shadow-lg p-6"
             >
               {/* Close Button */}
               <div className="flex justify-end mb-6">
