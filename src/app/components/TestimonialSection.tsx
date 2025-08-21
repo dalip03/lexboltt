@@ -106,38 +106,7 @@ const TestimonialSection: React.FC = () => {
         <h2 className="font-sans font-bold text-2xl md:text-4xl mb-6 text-gray-900 max-w-xs self-start">
           What Do Our Clients Say
         </h2>
-        <div className="flex gap-4 ">
-          {/* Contact us button */}
-          <Link href="/contact">
-            <button className="flex cursor-pointer items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-xs md:text-base">
-              Contact us
-              <span className="ml-1">
-                <img
-                  src="/product/right.svg"
-                  alt="Arrow Right"
-                  className="w-10 h-10 object-contain"
-                />
-              </span>
-            </button>
-          </Link>
-          {/* Get Started button */}
-          <motion.button
-            onClick={() => setShowModal(true)}
-            className="flex items-center cursor-pointer text-xs md:text-base gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 pl-4 rounded-full shadow-lg hover:bg-orange-100 transition relative"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Get a Demo
-            <span className="ml-2 flex-shrink-0">
-              <img
-                src="/img/arrowrighticon.svg"
-                alt="Icon"
-                className="w-12 h-12 object-contain"
-              />
-            </span>
-          </motion.button>
-        </div>
+        
       </div>
 
       {/* Right Side: Testimonials */}
