@@ -148,7 +148,7 @@ const Header = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 w-72 h-full bg-white z-60 shadow-lg p-6"
+              className="fixed top-0 right-0 w-72 h-full bg-white z-120 shadow-lg p-6"
             >
               {/* Close Button */}
               <div className="flex justify-end mb-6">
@@ -207,21 +207,21 @@ const Header = () => {
                   ))}
 
                   <motion.div variants={itemVariants}>
-                         <Link
-            href="/contact"
-            className={`text-[18px] font-semibold pl-4 py-1 px-1 rounded-full transition flex items-center gap-2 shadow ${
-              pathname === "/contact"
-                ? "bg-primary text-white"
-                : "bg-gray-100 text-black"
-            }`}
-          >
-            Contact Us
-            <img
-              src="/img/abouticons.svg"
-              alt="Arrow"
-              className="w-12 h-12 object-contain"
-            />
-          </Link>
+                    <Link
+                      href="/contact"
+                      className={`text-[18px] font-semibold pl-12 py-1 px-1 rounded-full transition flex items-center justify-between gap-2 shadow ${
+                        pathname === "/contact"
+                          ? "bg-primary text-white"
+                          : "bg-gray-100 text-black"
+                      }`}
+                    >
+                      Contact Us
+                      <img
+                        src="/img/abouticons.svg"
+                        alt="Arrow"
+                        className="w-12 h-12 object-contain"
+                      />
+                    </Link>
                   </motion.div>
                 </motion.div>
               </nav>

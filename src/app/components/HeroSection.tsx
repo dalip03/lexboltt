@@ -69,7 +69,7 @@ export default function HeroSection() {
           <img
             src="/img/homebgnew.svg"
             alt="Dashboard Screenshot"
-            className="w-full max-w-[900px] object-contain z-50"
+            className="w-full max-w-[900px] object-contain z-20"
           />
         </motion.div>
 
