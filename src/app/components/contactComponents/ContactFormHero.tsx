@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ContactFormHero() {
   return (
-    <section className="w-full max-w-5xl mx-auto px-4 py-20">
+    <section className="w-full max-w-7xl mx-auto px-4 py-20">
       <motion.div
         className="relative bg-primary rounded-2xl flex flex-col md:flex-row items-start justify-between px-7 py-10 min-h-[400px]"
         initial={{ opacity: 0, y: 40 }}

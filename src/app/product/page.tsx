@@ -7,7 +7,7 @@ import FAQ from '../components/productComponents/FAQ'
 
 function page() {
   return (
-    <div>
+<div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden  mb-10 w-full mx-auto">
       <ProductHero/>
       <ComplianceVersionHero/>
       <SolutionsHero/>  

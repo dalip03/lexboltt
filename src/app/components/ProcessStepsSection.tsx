@@ -48,7 +48,7 @@ const imageFade = {
 
 export default function ProcessStepsSection() {
   return (
-    <section className="w-full max-w-6xl mx-auto py-14 px-4 sm:px-8">
+    <section className="w-full mx-auto py-14 px-4 md:px-8">
       {/* Headings */}
       <motion.div
         className="flex flex-col items-center mb-12"
@@ -99,10 +99,10 @@ export default function ProcessStepsSection() {
                 className="w-10 h-10 mr-4 flex-shrink-0"
               />
               <div>
-                <h3 className="font-bold text-xl text-black mb-1">
+                <h3 className="font-bold text-xl md:2xl text-black mb-1">
                   {step.title}
                 </h3>
-                <p className="text-black text-sm">{step.desc}</p>
+                <p className="text-black text-sm md:text-lg">{step.desc}</p>
               </div>
             </motion.div>
 

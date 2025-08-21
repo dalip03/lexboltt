@@ -39,21 +39,21 @@ function useCountUp({ start = 0, end, duration = 1, format }: CountUpParams) {
 }
 
 export default function AboutStatsHero() {
-  // "+5K"
+  // "+10+"
   const refClients = useCountUp({
     start: 0,
     end: 10,
     duration: 0.9,
     format: (val: number) => `${Math.floor(val)}+`,
   });
-  // "+50M"
+  // "+1K+"
   const refDocs = useCountUp({
     start: 0,
     end: 1,
     duration: 1.1,
     format: (val: number) => `${Math.floor(val)}K+`,
   });
-  // "+1.2K"
+  // "+12+"
   const refBiz = useCountUp({
     start: 0,
     end: 12,
@@ -62,7 +62,7 @@ export default function AboutStatsHero() {
   });
 
   return (
-    <section className="w-full max-w-6xl mx-auto pt-8 pb-10 px-4 my-20">
+    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10 md:px-20 px-4 sm:px-20 my-20 overflow-x-hidden">
       {/* Tag with fade-in */}
       <motion.div
         className="mb-2"
@@ -74,16 +74,17 @@ export default function AboutStatsHero() {
           About Lexbolt
         </span>
       </motion.div>
+
       {/* Headline and Description with slide-in */}
       <div className="flex flex-col md:flex-row md:items-end md:gap-8 mb-8">
-        {/* Left: Heading (big column) */}
+        {/* Left: Heading */}
         <motion.div
           className="flex-[2] min-w-0"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h1 className="text-black text-2xl sm:text-3xl md:text-[56px] xl:text-[64px] font-bold leading-tight mb-3">
+          <h1 className="text-black text-2xl sm:text-3xl md:text-[56px] xl:text-[64px] font-bold leading-tight mb-3 break-words">
             Revolutionizing{" "}
             <span className="bg-[#FF6600] text-white px-2 md:px-3 py-1 font-extrabold inline-block">
               Businesses
@@ -93,15 +94,15 @@ export default function AboutStatsHero() {
           </h1>
         </motion.div>
 
-        {/* Right: Paragraph bottom right, matching the heading height */}
+        {/* Right: Paragraph aligned bottom right */}
         <motion.div
-          className="flex-[1] flex flex-col justify-end items-end "
+          className="flex-[1] flex flex-col justify-end items-end mt-4 md:mt-0"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <div className="h-full flex items-end">
-            <p className="text-black text-sm md:text-base leading-tight max-w-md md:text-right">
+          <div className="h-full flex items-end max-w-full">
+            <p className="text-black text-sm md:text-base leading-tight max-w-md md:text-right break-words">
               At LexBolt, we create custom AI solutions to transform automotive
               compliance from intelligent regulation parsing to automated
               workflow integration helping teams thrive in a complex,
@@ -112,58 +113,31 @@ export default function AboutStatsHero() {
       </div>
 
       {/* Stats row with zoom-in/count-up animation */}
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0 pt-4">
-        <motion.div
-          className="flex flex-col items-center"
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.25, type: "spring" }}
-          viewport={{ once: true }}
-        >
-          <span
-            ref={refClients}
-            className="text-black text-4xl md:text-[96px] font-bold mb-1"
+      <div className="flex  justify-between items-center gap-6 sm:gap-0 pt-4 max-w-full">
+        {[ 
+          { ref: refClients, label: "OEMs Consulted" },
+          { ref: refDocs, label: "Documents Processed" },
+          { ref: refBiz, label: "Industries Served" }
+        ].map(({ ref, label }, idx) => (
+          <motion.div
+            key={idx}
+            className="flex flex-col items-center min-w-[100px]"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.25 + idx * 0.1, type: "spring" }}
+            viewport={{ once: true }}
           >
-            +0
-          </span>
-          <span className="text-gray-600 text-xs sm:text-sm md:text-md">
-            OEMs Conulted
-          </span>
-        </motion.div>
-        <motion.div
-          className="flex flex-col items-center"
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.35, type: "spring" }}
-          viewport={{ once: true }}
-        >
-          <span
-            ref={refDocs}
-            className="text-black text-4xl md:text-[96px]  font-bold mb-1"
-          >
-            +0K
-          </span>
-          <span className="text-gray-600 text-xs sm:text-sm md:text-md">
-            Documents Processed
-          </span>
-        </motion.div>
-        <motion.div
-          className="flex flex-col items-center"
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.45, type: "spring" }}
-          viewport={{ once: true }}
-        >
-          <span
-            ref={refBiz}
-            className="text-black text-4xl md:text-[96px]  font-bold mb-1"
-          >
-            +0K
-          </span>
-          <span className="text-gray-600 text-xs sm:text-sm md:md">
-            Industries Served
-          </span>
-        </motion.div>
+            <span
+              ref={ref}
+              className="text-black text-4xl md:text-[96px] font-bold mb-1 leading-none whitespace-nowrap"
+            >
+              0
+            </span>
+            <span className="text-gray-600 text-xs sm:text-sm md:text-md text-center max-w-[160px]">
+              {label}
+            </span>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

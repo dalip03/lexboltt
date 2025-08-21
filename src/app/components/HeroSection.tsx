@@ -19,7 +19,7 @@ export default function HeroSection() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="min-w-full h-full px-4 relative">
+    <div className="min-w-full h-full md:px-4 relative">
       <section className="min-w-full h-full flex flex-col bg-[#F6F6F6] items-center justify-center rounded-[24px] px-4 mt-4 relative overflow-hidden">
         {/* Top-right blur circle */}
         <div

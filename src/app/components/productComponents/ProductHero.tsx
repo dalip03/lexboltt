@@ -28,7 +28,7 @@ export default function ProductHero() {
   };
 
   return (
-    <section className="w-full max-w-6xl mx-auto pt-12 pb-10 px-4 flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-14">
+    <section className="w-full mx-auto pt-12 pb-10 md:px-20 px-4 flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-14">
       {/* Left side: Headline & text */}
       <motion.div
         className="flex-[1.4] flex flex-col text-center md:text-start md:justify-center md:items-start"

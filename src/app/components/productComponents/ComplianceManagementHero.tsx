@@ -1,117 +1,83 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
-import RequestDemoModal from "../RequestDemoModal";
-import { useState } from "react";
+import Link from "next/link";
 
 export default function ComplianceManagementHero() {
   const features = [
     "Expert-Curated Model",
-    "Seamless Export",
-    "Interactive System",
     "Flexible Management",
+    "Seamless Export",
     "24/7 Access to Support",
+    "Interactive System",
     "Diverse Use Cases",
   ];
-      const [showModal, setShowModal] = useState(false);
-  
 
   return (
-    <section className="w-full max-w-6xl mx-auto py-12 px-4 flex flex-col md:flex-row items-center justify-between gap-8">
-      {/* Left side: Single image with experience badge */}
-      <motion.div
-        className="flex-1 flex justify-end items-end relative w-full"
-        initial={{ opacity: 0, scale: 0.9, x: -30 }}
-        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-      >
+    <section className="w-full max-w-screen-xl mx-auto md:px-4 py-12 flex flex-col md:flex-row items-center justify-center gap-8">
+      {/* Left: Image with experience badge */}
+      <div className="relative flex-shrink-0 w-full max-w-[350px]">
         <img
           src="/product/producttransform.png"
-          alt="Consultant"
-          className="w-[90vw] max-w-[350px] md:max-w-[420px] h-[60vw] md:h-[420px] rounded-3xl object-cover"
+          alt="Consultant working"
+          className="rounded-3xl w-full object-cover aspect-[4/5] shadow"
         />
-      </motion.div>
-      {/* Right side: Text */}
-      <motion.div
-        className="flex-1 flex flex-col items-start md:pl-10"
-        initial={{ opacity: 0, x: 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
+        {/* Experience badge */}
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0 bg-white px-6 py-3 rounded-2xl shadow-md flex items-center gap-2 border font-semibold text-[#FF6600] text-2xl md:text-3xl leading-none">
+          10+
+          <span className="text-gray-700 text-sm font-normal ml-2">Years of experience</span>
+        </div>
+      </div>
+
+      {/* Right: Text and Content */}
+      <div className="flex-1 flex flex-col items-center md:items-start gap-5 w-full max-w-xl">
         <motion.span
-        initial={{ opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.6 }}
-        className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
-      >
-        Transform Regulations
-      </motion.span>
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="inline-block border border-[#FF6600]/30 bg-[#FF6600]/10 text-[#FF6600] text-xs sm:text-sm px-4 py-2 rounded-full font-semibold mb-2"
+        >
+          Transform Regulations
+        </motion.span>
         <motion.h1
-          className="text-black font-bold  text-2xl sm:text-3xl md:text-[56px] mb-1 leading-tight"
+          className="text-black font-bold text-2xl sm:text-3xl md:text-5xl mb-2 leading-tight text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.12 }}
           viewport={{ once: true }}
         >
-          Unlock Compliance
-         
+          Unlock Compliance <br className="hidden md:block" />
           Management
         </motion.h1>
-        <motion.span
-          className="text-gray-600 text-lg mb-4 font-medium"
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.16 }}
-          viewport={{ once: true }}
-        >
+        <span className="text-gray-600 text-base sm:text-lg mb-1 font-medium text-center md:text-left">
           Like Never Before
-        </motion.span>
-        {/* Features Box */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 bg-white border border-gray-200 rounded-2xl p-5 mb-7 w-full max-w-lg"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.24 }}
-          viewport={{ once: true }}
-        >
-          {features.map((feature, i) => (
-            <motion.div
-              key={feature}
-              className="flex items-center gap-2 text-[16px] text-gray-700"
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.09 }}
-              viewport={{ once: true }}
-            >
+        </span>
+        {/* Features grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-7 gap-y-3 border border-gray-200 rounded-2xl bg-white py-4 px-6 mb-3 w-full">
+          {features.map((feature, idx) => (
+            <div key={feature} className="flex items-center gap-2 text-gray-700 text-[15px] md:text-base">
               <img src="/product/check.svg" alt="" className="w-5 h-5" />
               {feature}
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
-        {/* Explore Button */}
-        {/* <motion.button
-          className="flex items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.32 }}
-          viewport={{ once: true }}
-          onClick={() => setShowModal(true)}
-        >
-          Explore
-          <span className="ml-2">
-            <img
-              src="/product/right.svg"
-              alt="Arrow Right"
-              className="w-10 h-10 object-contain"
-            />
-          </span>
-        </motion.button> */}
-      </motion.div>
-              {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
-      
+        </div>
+        {/* Contact Button */}
+        <Link href="/contact" passHref>
+          <button
+            className="flex items-center gap-2 bg-[#FF6600] hover:bg-[#e75d00] transition text-white px-6 py-3 rounded-full font-semibold shadow text-sm sm:text-base"
+          >
+            Contact us
+            <span>
+              <img
+                src="/product/right.svg"
+                alt="Arrow Right"
+                className="w-6 h-6 object-contain"
+              />
+            </span>
+          </button>
+        </Link>
+      </div>
     </section>
   );
 }

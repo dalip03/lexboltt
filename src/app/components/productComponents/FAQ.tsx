@@ -27,7 +27,7 @@ export default function FAQ() {
 
   return (
     <section className="w-full py-16 px-4">
-      <div className="max-w-3xl mx-auto flex flex-col items-center">
+      <div className="w-full mx-auto flex flex-col items-center md:px-20">
         <motion.span
           className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
           initial={{ opacity: 0, y: 10 }}

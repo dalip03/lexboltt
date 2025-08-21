@@ -27,10 +27,10 @@ export default function AboutUsHero() {
   };
 
   return (
-    <section className="w-full max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 lg:pb-10 px-4 sm:px-6">
+    <section className="w-full mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 lg:pb-10 px-4 sm:px-6">
       {/* Left Side - text area */}
       <motion.div
-        className="flex-1 lg:flex-[1.8] flex flex-col items-start justify-center"
+        className="flex-1 lg:flex-[1.8] md:pl-20 flex flex-col items-start justify-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -48,7 +48,7 @@ export default function AboutUsHero() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-black font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[64px] leading-tight mb-5"
+          className="text-black font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[56px]   leading-tight mb-5"
           variants={textVariant}
         >
           Driven By Innovation <br />

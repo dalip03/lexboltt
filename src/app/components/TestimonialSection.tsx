@@ -88,9 +88,9 @@ const TestimonialSection: React.FC = () => {
     (100 - trackWidth);
 
   return (
-    <section className="w-full bg-[#F6F6F6] rounded-[32px] max-w-6xl mx-auto mt-14 py-6 pl-6 md:pt-34 md:pb-20 flex flex-col md:flex-row justify-between  gap-10 items-stretch">
+    <section className="w-full bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-6 pl-6 md:pt-34 md:pb-20 flex flex-col md:flex-row justify-between  gap-10 items-stretch">
       {/* Left Side */}
-      <div className="flex flex-col items-center mb-8">
+      <div className="flex flex-col items-center mb-8 md:px-0  xl-px-10">
         <motion.span
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ const TestimonialSection: React.FC = () => {
         <div className="flex gap-4 ">
           {/* Contact us button */}
           <Link href="/contact">
-            <button className="flex cursor-pointer items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-base">
+            <button className="flex cursor-pointer items-center gap-2 bg-primary text-white pl-7 px-1 py-2 rounded-full font-semibold shadow hover:bg-[#e75d00] transition text-xs md:text-base">
               Contact us
               <span className="ml-1">
                 <img
@@ -123,7 +123,7 @@ const TestimonialSection: React.FC = () => {
           {/* Get Started button */}
           <motion.button
             onClick={() => setShowModal(true)}
-            className="flex items-center cursor-pointer text-sm gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 pl-4 rounded-full shadow-lg hover:bg-orange-100 transition relative"
+            className="flex items-center cursor-pointer text-xs md:text-base gap-2 bg-[#F354181A] text-[#FF5C1A] font-semibold px-1 md:pl-4 py-1 pl-4 rounded-full shadow-lg hover:bg-orange-100 transition relative"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}

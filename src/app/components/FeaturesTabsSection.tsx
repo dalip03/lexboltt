@@ -69,10 +69,10 @@ const FeaturesTabsSection: React.FC = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="w-full max-w-6xl mx-auto py-16 px-2">
+    <section className="w-full mx-auto py-20 px-4 sm:px-12 lg:px-20">
       {/* Subtitle & Heading */}
       <motion.div
-        className="flex flex-col items-center mb-8"
+        className="flex flex-col items-center mb-10"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -83,19 +83,21 @@ const FeaturesTabsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6 }}
-          className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+          className="inline-block text-[#FC7D3F] text-base lg:text-lg font-semibold mb-4"
         >
           Why Choose Us?
         </motion.span>
-        <h2 className="font-bold text-2xl md:text-[64px] text-black mb-2 text-center">
+        <h2 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl max-w-6xl text-center leading-tight mb-4">
           Features & Benefits
         </h2>
-        <p className="text-black text-center text-xl md:max-w-xl mx-auto">
+        <p className="text-black text-center text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto">
           #1 Software for managing all your regulations in one place
         </p>
       </motion.div>
+
+      {/* Tab buttons */}
       <motion.div
-        className="flex flex-nowrap justify-center gap-3 mb-12 overflow-x-auto no-scrollbar"
+        className="flex flex-nowrap justify-center items-center w-full gap-2 mb-20 overflow-x-auto no-scrollbar "
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -103,21 +105,16 @@ const FeaturesTabsSection: React.FC = () => {
       >
         {features.map((feat, i) => (
           <button
-            key={feat.label}
-            onClick={() => setActive(i)}
-            className={`flex-shrink-0 w-[156px] py-[18px] hover:bg-[#F35418] hover:text-white cursor-pointer px-[16px] flex flex-col justify-center items-center gap-[20px] rounded-[12px] font-semibold text-base transition ${
-              active === i
-                ? "bg-[#F35418] text-white"
-                : "bg-white text-gray-700 border border-gray-200"
-            }`}
-            style={
-              active === i
-                ? {
-                    boxShadow: "0 54.479px 64.093px 0 rgba(205,205,205,0.16)",
-                  }
-                : {}
-            }
-          >
+      key={feat.label}
+      onClick={() => setActive(i)}
+      className={`flex-shrink-0 w-[95px] sm:w-[110px] cursor-pointer md:w-[120px] py-2 px-1 text-[15px] rounded-lg font-semibold transition
+        flex justify-center items-center
+        ${
+          active === i
+            ? "bg-[#F35418] text-white shadow"
+            : "bg-white text-gray-700 border border-gray-200 hover:bg-[#F35418] hover:text-white"
+        }`}
+    >
             {feat.label}
           </button>
         ))}
@@ -135,49 +132,51 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col md:flex-row gap-8 justify-center items-stretch"
+        className="flex flex-col lg:flex-row gap-12 justify-center items-center lg:items-start max-w-7xl mx-auto px-4 lg:px-0"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
         transition={{ ...fadeUp.transition, delay: 0.2 }}
       >
         {/* Left: Image/Card */}
-        <div className="flex-1 flex justify-center items-center">
-          <div className="bg-[#FFF3ED] rounded-2xl shadow w-full max-w-[552px] min-h-[296px] flex flex-col items-center justify-center">
+        <div className="flex-1 flex justify-center items-center max-w-xl lg:max-w-lg">
+          <div className="bg-[#FFF3ED] rounded-3xl shadow-lg w-full flex items-center justify-center p-8">
             <img
               src={features[active].image}
               alt={features[active].label}
-              className="w-full h-full object-contain"
+              className="w-full h-auto max-h-[360px] object-contain"
             />
           </div>
         </div>
+
         {/* Right: Details */}
-        <div className="flex flex-row gap-4 justify-center items-center md:items-start px-4 md:px-0 text-center md:text-left">
-          <span className="inline-flex items-center justify-center w-10 h-10 bg-[#FF5C1A] rounded-full">
-              <img src={features[active].icon} alt="" className="w-6 h-6" />
+        <div className="flex-1 max-w-2xl flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+          <div className="flex items-center gap-4 mb-6 justify-center lg:justify-start w-full max-w-md">
+            <span className="inline-flex items-center justify-center w-12 h-12 bg-[#FF5C1A] rounded-full">
+              <img src={features[active].icon} alt="" className="w-7 h-7" />
             </span>
-            <div>
-          <div className="flex items-center gap-3 mb-4 justify-center md:justify-start w-full max-w-md mx-auto md:mx-0">
-           
-            <span className="font-bold text-xl text-black">
+            <span className="font-extrabold text-2xl lg:text-4xl text-black">
               {features[active].title}
             </span>
           </div>
-          <p className="text-gray-600 font-sans mb-5 px-2 md:pr-20 max-w-md">
+          <p className="text-lg lg:text-xl text-gray-700 font-sans mb-7 max-w-lg px-2 lg:px-0">
             {features[active].desc}
           </p>
-          <ul className="mt-2 space-y-2 max-w-md mx-auto md:mx-0">
+          <ul className="space-y-4 max-w-lg lg:max-w-none">
             {features[active].bullets.map((item, idx) => (
               <li
                 key={idx}
-                className="flex items-center gap-2 text-black text-base justify-center md:justify-start"
+                className="flex items-start gap-3 text-base lg:text-lg text-black"
               >
-                <img src="/img/orangestar.svg" alt="*" className="w-4 h-4" />
-                {item}
+                <img
+                  src="/img/orangestar.svg"
+                  alt="*"
+                  className="w-5 h-5 mt-1"
+                />
+                <span>{item}</span>
               </li>
             ))}
           </ul>
-          </div>
         </div>
       </motion.div>
     </section>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function ComplianceVersionHero() {
   return (
-    <section className="w-full max-w-7xl mx-auto py-12 flex flex-col-reverse lg:flex-row items-start gap-8 mt-20">
+    <section className="w-full mx-auto py-12 flex flex-col-reverse lg:flex-row items-start gap-8 mt-20 ">
       {/* Left Side: Image */}
       <motion.div
         className="flex-1 flex items-start justify-center lg:justify-start w-full "
@@ -15,7 +15,7 @@ export default function ComplianceVersionHero() {
         <img
           src="/product/products2.svg"
           alt="Compliance Version Dashboard"
-          className="w-full max-w-[340px] h-[220px] md:max-w-[460px] md:h-full object-cover shadow-[0px_-14px_240px_-18px_rgba(252,125,63,0.37),146px_6px_240px_-12px_rgba(252,125,63,0.28)]"
+          className="w-full max-w-[340px] h-[220px] md:max-w-[660px] md:h-full object-cover shadow-[0px_-14px_240px_-18px_rgba(252,125,63,0.37),146px_6px_240px_-12px_rgba(252,125,63,0.28)]"
         />
       </motion.div>
       {/* Right Side: Text, aligned top-left on desktop */}

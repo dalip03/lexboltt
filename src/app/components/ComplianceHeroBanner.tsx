@@ -19,10 +19,10 @@ export default function ComplianceHeroBanner() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="w-full relative bg-[#F6F6F6]/60 rounded-[32px] max-w-6xl mx-auto mt-14 p-6 md:p-12 flex flex-col md:flex-row gap-10 items-stretch">
-      <div className=" w-full max-w-6xl px-4 py-10 text-center overflow-hidden flex flex-col items-center">
+    <section className="w-full relative bg-[#F6F6F6]/60 rounded-[32px]  mx-auto mt-14 p-6 md:p-12 flex flex-col md:flex-row gap-10 items-stretch">
+      <div className=" w-full max-w-6xl px-4 py-10 text-center  overflow-hidden flex flex-col items-center content-center justify-center">
         {/* Top left dots image */}
-        <div className="absolute right-0 bottom-0 pointer-events-none select-none z-10 hidden md:block">
+        <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block ">
           <img
             src="/img/dots.svg"
             alt="Decorative Shape"
@@ -48,7 +48,7 @@ export default function ComplianceHeroBanner() {
           <br />
           reactive to proactive.
         </h1>
-        <p className="text-black md:text-xl  text-lg font-medium mb-7 mt-2 px-12">
+        <p className="text-black md:text-xl  text-lg font-medium mb-7 mt-2 md:px-12">
           Lexbolt Is Hub For Managing All Regulations Professionally And <br />
           Efficiently
         </p>

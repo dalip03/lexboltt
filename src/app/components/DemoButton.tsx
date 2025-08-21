@@ -15,7 +15,7 @@ const DemoButton: React.FC<DemoButtonProps> = ({ onClick }) => (
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
-      Get a Demo
+      Book a Demo
       <span className="ml-2 flex-shrink-0">
         <img
           src="/img/arrowrighticonwhite.svg"

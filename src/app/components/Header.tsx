@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <header className="w-full bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <div className="w-full mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
           <Link href="/" className="inline-block">
@@ -101,7 +101,7 @@ const Header = () => {
         >
           <Link
             href="/contact"
-            className={`text-sm font-semibold pl-4 pr-2 py-1 rounded-full transition flex items-center gap-2 shadow ${
+            className={`text-sm font-semibold pl-4 py-1 px-1 rounded-full transition flex items-center gap-2 shadow ${
               pathname === "/contact"
                 ? "bg-primary text-white"
                 : "bg-gray-100 text-black"
@@ -109,7 +109,7 @@ const Header = () => {
           >
             Contact Us
             <img
-              src="/img/contacticon.png"
+              src="/img/abouticons.svg"
               alt="Arrow"
               className="w-9 h-9 object-contain"
             />
