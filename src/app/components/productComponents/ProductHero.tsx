@@ -37,7 +37,7 @@ export default function ProductHero() {
         animate="visible"
       >
         <motion.h1
-          className="text-black font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[64px] mb-3 leading-tight"
+          className="text-black font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[56px] mb-3 leading-tight"
           variants={textVariant}
         >
           Powering the Future <br />
@@ -49,7 +49,7 @@ export default function ProductHero() {
           </span>
         </motion.h1>
         <motion.p
-          className="text-black mt-2 text-base md:text-xl mb-8 md:pr-36"
+          className="text-black mt-2 text-base md:text-[18px] mb-8 md:pr-36"
           variants={textVariant}
         >
           Lexbolt is more than software it&apos;s an intelligent assistant for your compliance team.

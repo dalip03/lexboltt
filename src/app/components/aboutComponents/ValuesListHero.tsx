@@ -32,7 +32,7 @@ export default function ValuesListHero() {
   ];
 
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10 md:px-20 px-4 sm:px-20 my-20 overflow-x-hidden">
+    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10 px-4 sm:px-20 my-20 overflow-x-hidden">
       {/* Tag */}
      
       <motion.div
@@ -62,7 +62,7 @@ export default function ValuesListHero() {
         transition={{ duration: 0.7, delay: 0.12 }}
         className="text-gray-400 text-2xl sm:text-3xl font-semibold mb-8 leading-tight"
       >
-        <span className="bg-[#FF6600] text-white px-3 py-1 text-2xl sm:text-3xl md:text-[64px] font-bold inline-block">
+        <span className="bg-primary text-white px-3 py-1 text-2xl sm:text-3xl md:text-[64px] font-bold inline-block">
             Your Regulations </span>
       </motion.h2>
       {/* Values List */}
@@ -70,7 +70,7 @@ export default function ValuesListHero() {
         {values.map((value, i) => (
           <motion.div
             key={value.heading}
-            className={`flex flex-col sm:flex-row items-start py-5 border-b border-gray-200 ${i === 0 ? "border-t" : ""}`}
+            className={`flex flex-col sm:flex-row  items-center py-5 border-b border-gray-200 ${i === 0 ? "border-t" : ""}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
@@ -79,9 +79,9 @@ export default function ValuesListHero() {
             <img
               src={value.icon}
               alt={value.heading}
-              className="w-8 h-8 mr-0 mb-2 sm:mr-5 sm:mb-0 mt-1"
+              className="w-8 h-8 mr-0 mb-2 sm:mr-5 sm:mb-0 mt-1 "
             />
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 items-start justify-center ">
               <span className="text-black text-lg">{value.heading}</span>
             </div>
             <div className="flex flex-col flex-[2] sm:ml-7 mt-1 sm:mt-0">

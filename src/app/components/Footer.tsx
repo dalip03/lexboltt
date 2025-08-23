@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-          <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right md:block">
+          <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right md:hidden">
           ©2025 Lexbolt. All Rights Reserved.
         </div>
       </motion.div>

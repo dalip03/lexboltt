@@ -69,7 +69,7 @@ export default function TeamHero() {
       </motion.h1>
 
       <motion.p
-        className="text-center text-black max-w-md mx-auto mb-8 text-xl"
+        className="text-center text-black max-w-md mx-auto mb-8 text-md md:text[16px]"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -118,9 +118,10 @@ export default function TeamHero() {
                   <h3 className="text-white font-bold text-xs sm:text-base">
                     {member.name}
                   </h3>
-                  <p className="text-white text-[10px]  sm:text-xs opacity-90">
-                    {member.desc}
-                  </p>
+                  <p className="text-white text-[10px] sm:text-xs opacity-90 w-full break-words leading-snug whitespace-normal">
+  {member.desc}
+</p>
+
                 </div>
               </motion.div>
             ))}

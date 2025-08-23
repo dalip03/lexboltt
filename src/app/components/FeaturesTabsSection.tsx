@@ -69,7 +69,7 @@ const FeaturesTabsSection: React.FC = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="w-full mx-auto py-20 px-4 sm:px-12 lg:px-20">
+    <section className="w-full mx-auto pb-20 px-4 sm:px-12 lg:px-20 ">
       {/* Subtitle & Heading */}
       <motion.div
         className="flex flex-col items-center mb-10"
@@ -78,19 +78,19 @@ const FeaturesTabsSection: React.FC = () => {
         viewport={fadeUp.viewport}
         transition={fadeUp.transition}
       >
-         <motion.span
-             initial={{ opacity: 0, y: 14 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true, amount: 0.6 }}
-             transition={{ duration: 0.6 }}
-             className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
-           >
-             Why Choose Us?
-           </motion.span>       
-        <h2 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-7xl max-w-6xl text-center leading-tight mb-4">
+        <motion.span
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
+        >
+          Why Choose Us?
+        </motion.span>
+        <h2 className="font-extrabold text-3xl sm:text-4xl md:text-[56px]  max-w-6xl text-center leading-tight mb-4">
           Features & Benefits
         </h2>
-        <p className="text-black text-center text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto">
+        <p className="text-black text-center text-sm sm:text-base md:text-[16px] max-w-4xl mx-auto">
           #1 Software for managing all your regulations in one place
         </p>
       </motion.div>
@@ -112,7 +112,7 @@ const FeaturesTabsSection: React.FC = () => {
         ${
           active === i
             ? "bg-[#F35418] text-white shadow"
-            : "bg-white text-gray-700 border border-gray-200 hover:bg-[#F35418] hover:text-white"
+            : "bg-white text-black font-bold border border-gray-200 hover:bg-[#F35418] hover:text-white"
         }`}
           >
             {feat.label}
@@ -151,7 +151,11 @@ const FeaturesTabsSection: React.FC = () => {
 
         {/* Right: Details */}
         <div className="max-w-2xl flex justify-center items-center lg:justify-center lg:items-start text-center lg:text-left ">
-          <img src="/img/fileicons.svg" alt="*" className="w-10 h-10 mr-2 hidden md:block"  />
+          <img
+            src="/img/fileicons.svg"
+            alt="*"
+            className="w-10 h-10 mr-2 hidden md:block"
+          />
 
           <div className="flex-1 flex flex-col justify-center items-center lg:justify-center lg:items-start text-center lg:text-left">
             <div className="flex items-center gap-4 mb-2 justify-center lg:justify-start w-full max-w-md">
@@ -159,14 +163,14 @@ const FeaturesTabsSection: React.FC = () => {
                 {features[active].title}
               </span>
             </div>
-            <p className="text-[16px] text-black mb-2 max-w-lg px-2 lg:pr-24 ">
+            <p className="text-black text-sm md:text-md mb-2 max-w-lg lg:pr-24 ">
               {features[active].desc}
             </p>
-            <ul className="space-y-4 max-w-lg lg:max-w-none">
+            <ul className="space-y-2 max-w-lg lg:max-w-none ">
               {features[active].bullets.map((item, idx) => (
                 <li
                   key={idx}
-                  className="flex items-start gap-2 text-[16px]  text-black"
+                  className="flex items-center justify-start text-start gap-2 text-[16px] text-black"
                 >
                   <img src="/img/orangestar.svg" alt="*" className="w-4 h-4" />
                   <span>{item}</span>

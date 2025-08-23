@@ -62,7 +62,7 @@ export default function AboutStatsHero() {
   });
 
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10 md:px-20 px-4 sm:px-20 my-20 overflow-x-hidden">
+    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10  px-4 sm:px-20 my-20 overflow-x-hidden">
       {/* Tag with fade-in */}
       <motion.div
         className="mb-2"
@@ -76,7 +76,7 @@ export default function AboutStatsHero() {
       </motion.div>
 
       {/* Headline and Description with slide-in */}
-      <div className="flex flex-col md:flex-row md:items-end md:gap-8 mb-8">
+      <div className="flex flex-col md:flex-row md:items-end mb-8 ">
         {/* Left: Heading */}
         <motion.div
           className="flex-[2] min-w-0"
@@ -86,7 +86,7 @@ export default function AboutStatsHero() {
         >
           <h1 className="text-black text-2xl sm:text-3xl md:text-[56px] xl:text-[64px] font-bold leading-tight mb-3 break-words">
             Revolutionizing{" "}
-            <span className="bg-[#FF6600] text-white px-2 md:px-3 py-1 font-extrabold inline-block">
+            <span className="bg-primary text-white px-2 md:px-3 py-1 font-extrabold inline-block">
               Businesses
             </span>{" "}
             Through <br />
@@ -96,13 +96,13 @@ export default function AboutStatsHero() {
 
         {/* Right: Paragraph aligned bottom right */}
         <motion.div
-          className="flex-[1] flex flex-col justify-end items-end mt-4 md:mt-0"
+          className="flex-[1] flex flex-col justify-end items-end mt-4 md:mb-0 w-full "
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <div className="h-full flex items-end max-w-full">
-            <p className="text-black text-sm md:text-base leading-tight max-w-md md:text-right break-words">
+          <div className="h-full flex items-end max-w-full ">
+            <p className="text-black text-sm md:text-base leading-tight md:text-right break-words">
               At Lexbolt, we create custom AI solutions to transform automotive
               compliance from intelligent regulation parsing to automated
               workflow integration helping teams thrive in a complex,

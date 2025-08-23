@@ -38,18 +38,18 @@ export default function HeroSection() {
         />
 
         <motion.div
-          className="max-w-4xl w-full mx-auto text-center relative mt-12 px-2 sm:px-4 z-20"
+          className="max-w-4xl w-full mx-auto text-center relative mt-14 px-2 sm:px-4 z-20"
           initial={fadeUp.initial}
           whileInView={fadeUp.whileInView}
           viewport={fadeUp.viewport}
           transition={fadeUp.transition}
         >
-          <h1 className="font-bold text-black text-2xl md:text-[64px] leading-tight mb-6 relative">
+          <h1 className="font-bold text-black text-2xl sm:text-3xl md:text-[48px] lg:text-[56px] leading-tight mb-6 relative">
             Stay Ahead of Every
             <br />
             Regulation, Effortlessly
           </h1>
-          <p className="text-black text-xs md:text-xl mb-4">
+          <p className="text-black text-sm sm:text-base md:text-[16px] mb-4 md:px-24" >
             Lexbolt Transforms Complex Automotive Regulations Into Clear,
             Structured Requirements So Your Team Can Act Faster, Stay Compliant,
             And Never Miss A Change.

@@ -52,7 +52,7 @@ export default function ContactHero() {
       >
         <div className="md:col-span-3 flex flex-col justify-center text-center md:text-left">
           <motion.h1
-            className="text-black font-bold text-3xl md:text-[56px] leading-tight mb-1"
+            className="text-black font-bold text-3xl md:text-[48px] leading-tight mb-1"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.17 }}
@@ -70,7 +70,7 @@ export default function ContactHero() {
           transition={{ duration: 0.6, delay: 0.22 }}
           viewport={{ once: true }}
         >
-          <p className="text-black text-sm md:text-xl max-w-md text-center md:text-right mb-7">
+          <p className="text-black text-sm md:text-[16px] max-w-md text-center md:text-right mb-7">
             We deliver tailored AI compliance solutions designed to scale your
             regulatory workflows and drive measurable operational results.
           </p>

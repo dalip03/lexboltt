@@ -11,7 +11,7 @@ const fadeUp = {
 
 export default function OurJourney() {
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10 md:px-20 px-4 sm:px-20 my-20 overflow-x-hidden">
+    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10  px-4 sm:px-8 my-20 overflow-x-hidden">
       <div className="w-full mx-auto flex flex-col gap-8">
         {/* Heading and Description */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">
@@ -40,7 +40,7 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={fadeUp.transition}
-            className="max-w-xl text-gray-600 text-sm md:text-sm font-semibold md:mt-0 mt-2 text-end"
+            className="max-w-xl text-black text-sm md:text-sm font-semibold md:mt-0 mt-2 text-end"
           >
             At Lexbolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward efficiently and compliantly.
           </motion.div>
@@ -68,7 +68,7 @@ export default function OurJourney() {
             <h3 className="text-lg font-bold text-black mb-1">
               From workshops to working solution
             </h3>
-            <p className="text-gray-500 text-sm font-semibold">
+            <p className="text-black text-sm ">
               Lexbolt began as a hands-on collaboration with OEM teams and homologation/regulatory experts. Through multiple working sessions and reviews, we shaped a tool that turns dense automotive standards into clear, structured outputs.
             </p>
           </motion.div>
@@ -93,7 +93,7 @@ export default function OurJourney() {
             <h3 className="text-lg font-bold text-black mb-1">
               Co-created with OEM &amp; Homologation Experts
             </h3>
-            <p className="text-gray-500 text-sm font-semibold">
+            <p className="text-black text-sm ">
               Built with direct feedback from practitioners. The current feature set reflects real day-to-day tasks in automotive compliance: clause extraction, component linkage, comparison views, and explainable summaries.
             </p>
           </motion.div>
@@ -119,7 +119,7 @@ export default function OurJourney() {
             <h4 className="text-lg font-bold mb-1 text-black self-start">
               Automotive Focus
             </h4>
-            <p className="text-gray-500 text-sm font-semibold">
+            <p className="text-black text-sm ">
               Built with guidance from automotive regulations and standards like IATF and ISO, to make sure you are compliant.
             </p>
           </motion.div>
@@ -142,7 +142,7 @@ export default function OurJourney() {
             <h4 className="text-lg font-bold mb-1 text-black self-start">
               Built for the Future
             </h4>
-            <p className="text-gray-500 text-sm font-semibold">
+            <p className="text-black text-sm ">
               Version-aware, comparison-ready, and designed for traceability. LexBolt structures information so teams can compare revisions, link components to clauses, and maintain an audit-friendly trail as regulations evolve.
             </p>
           </motion.div>

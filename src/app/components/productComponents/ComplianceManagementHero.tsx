@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ContactButton from "../ContactButton";
 
 export default function ComplianceManagementHero() {
   const features = [
@@ -16,7 +17,7 @@ export default function ComplianceManagementHero() {
   return (
     <section className="w-full max-w-screen-xl mx-auto md:px-4 py-12 flex flex-col md:flex-row items-center justify-center gap-8">
       {/* Left: Image with experience badge */}
-      <div className="relative flex-shrink-0 w-full max-w-[350px]">
+      <div className="relative flex-shrink-0 w-full max-w-[450px]">
         <img
           src="/product/producttransform.png"
           alt="Consultant working"
@@ -39,7 +40,7 @@ export default function ComplianceManagementHero() {
           
      
         <motion.h1
-          className="text-black font-bold text-2xl sm:text-3xl md:text-[64px] mb-2 leading-tight text-center md:text-left"
+          className="text-black font-bold text-2xl sm:text-3xl md:text-[56px] mb-2 leading-tight text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.12 }}
@@ -64,18 +65,7 @@ export default function ComplianceManagementHero() {
           ))}
         </div>
         {/* Contact Button */}
-        <Link href="/contact" passHref>
-          <button className="flex items-center cursor-pointer gap-2 bg-primary hover:bg-primary/90 transition text-white px-1 pl-4 py-1 rounded-full font-semibold shadow text-sm sm:text-base">
-            Contact us
-            <span>
-              <img
-                src="/product/right.svg"
-                alt="Arrow Right"
-                className="w-10 h-10 object-contain"
-              />
-            </span>
-          </button>
-        </Link>
+       <ContactButton/>
       </div>
     </section>
   );
