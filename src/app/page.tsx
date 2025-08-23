@@ -5,6 +5,7 @@ import ProcessStepsSection from "./components/ProcessStepsSection";
 import FeaturesTabsSection from "./components/FeaturesTabsSection";
 import TestimonialSection from "./components/TestimonialSection";
 import ComplianceHeroBanner from "./components/ComplianceHeroBanner";
+import ContactUsPage from "./components/ContactUsPage";
 
 export default function Home() {
   return (

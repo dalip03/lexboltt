@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <footer className="bg-primary text-gray-400 px-6 md:px-20 py-10 border-t border-gray-200">
+    <footer className="bg-primary text-gray-400 px-6 md:px-10 py-10 border-t border-gray-200">
       {/* Top part */}
       <motion.div
         className="flex flex-col md:flex-row items-center justify-between text-sm font-semibold text-center md:text-left"
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-gray-300">
+                <Link href="/contactus" className="hover:text-gray-300">
                   Contact
                 </Link>
               </li>
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
                 className="hover:text-gray-300 cursor-pointer"
                 onClick={() => setShowModal(true)}
               >
-                450 Bath Road, Longford, <br /> Heathrow, Lomdon, UB7 OEB
+                450 Bath Road, Longford, <br /> Heathrow, London, UB7 OEB
               </li>
               <li
                 className="hover:text-gray-300 cursor-pointer"
