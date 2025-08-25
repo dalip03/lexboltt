@@ -12,7 +12,7 @@ export default function TeamHero() {
       cardBg: "bg-[#F354184D]",
     },
     {
-      image: "/img/testo1.png",
+      image: "/img/profile.jpeg",
       role: "CTO / Co Founder",
       name: "Abinandhan S",
       desc: "Architects scalable backend systems and ensures seamless integration.",
