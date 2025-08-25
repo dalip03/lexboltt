@@ -43,12 +43,12 @@ const Footer: React.FC = () => {
             <img
               src="/img/instagram.svg"
               alt="Instagram"
-              className="w-10 h-10 cursor-pointer hover:opacity-80"
+              className="w-10 h-10 cursor-pointer border border-white/40 rounded-full"
             />
             <img
               src="/img/linkedin.svg"
               alt="LinkedIn"
-              className="w-10 h-10 cursor-pointer hover:opacity-80"
+              className="w-10 h-10 cursor-pointer border border-white/40 rounded-full"
             />
           </div>
         </div>

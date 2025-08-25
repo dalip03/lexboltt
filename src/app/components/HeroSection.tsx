@@ -50,9 +50,9 @@ export default function HeroSection() {
             Regulation, Effortlessly
           </h1>
           <p className="text-black text-sm sm:text-base md:text-[16px] mb-4 md:px-24" >
-            Lexbolt Transforms Complex Automotive Regulations Into Clear,
-            Structured Requirements So Your Team Can Act Faster, Stay Compliant,
-            And Never Miss A Change.
+            Lexbolt transforms complex automotive regulations into clear,
+            structured requirements so your team can act faster, stay compliant,
+            and never miss a change.
           </p>
 
           <DemoButton onClick={() => setShowModal(true)} />

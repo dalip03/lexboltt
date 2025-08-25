@@ -8,7 +8,7 @@ export default function SolutionsHero() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="w-full max-w-screen-xl mx-auto pt-12 pb-10 px-4 flex flex-col items-center">
+    <section className="w-full bg-[#F9F9F9] mx-auto pt-12 pb-10 px-4 flex flex-col items-center ">
       {/* Tag */}
       <motion.span
         initial={{ opacity: 0, y: 14 }}

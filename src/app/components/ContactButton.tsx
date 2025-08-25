@@ -5,7 +5,7 @@ function ContactButton() {
   return (
     <div>
         <Link href="/contactus" passHref>
-          <button className="flex items-center gap-2 bg-primary hover:bg-primary transition text-white px-1 py-2 pl-4 rounded-full font-semibold shadow text-sm sm:text-base mx-auto">
+          <button className="flex items-center gap-2 bg-primary hover:bg-primary transition text-white px-1 py-1 pl-4 rounded-full font-semibold shadow text-sm sm:text-base mx-auto">
             Contact us
             <span>
               <img

@@ -15,7 +15,7 @@ export default function ComplianceManagementHero() {
   ];
 
   return (
-    <section className="w-full max-w-screen-xl mx-auto md:px-4 py-12 flex flex-col md:flex-row items-center justify-center gap-8">
+    <section className="w-full max-w-screen-xl mx-auto md:px-4 py-12 md:mt-10 flex flex-col md:flex-row items-center justify-center gap-8">
       {/* Left: Image with experience badge */}
       <div className="relative flex-shrink-0 w-full max-w-[450px]">
         <img

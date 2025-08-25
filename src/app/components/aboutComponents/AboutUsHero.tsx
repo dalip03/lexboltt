@@ -28,7 +28,7 @@ export default function AboutUsHero() {
   };
 
   return (
-    <section className="w-full mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 lg:pb-10 px-4 sm:px-6">
+    <section className="w-full mx-auto flex flex-col-reverse md:pl-20 lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 lg:pb-10">
       {/* Left Side - text area */}
       <motion.div
         className="flex-1 lg:flex-[1.8]  flex flex-col items-start justify-center"
@@ -77,7 +77,7 @@ export default function AboutUsHero() {
         animate="visible"
       >
         <Image
-          src="/about/aboutHero.svg"
+          src="/img/aboutHero2.png"
           alt="Dashboard"
           width={440}
           height={390}

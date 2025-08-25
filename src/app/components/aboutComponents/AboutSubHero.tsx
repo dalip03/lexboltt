@@ -11,7 +11,7 @@ const fadeUp = {
 
 export default function OurJourney() {
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10  px-4 sm:px-8 my-20 overflow-x-hidden">
+    <section className="w-full max-w-screen-3xl mx-auto pt-8 md:px-20 pb-10  px-4 sm:px-8 my-20 overflow-x-hidden">
       <div className="w-full mx-auto flex flex-col gap-8">
         {/* Heading and Description */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">

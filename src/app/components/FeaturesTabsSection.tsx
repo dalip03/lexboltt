@@ -132,54 +132,57 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col lg:flex-row gap-12 justify-center items-center max-w-6xl mx-auto px-4 lg:px-0"
-        initial={fadeUp.initial}
-        whileInView={fadeUp.whileInView}
-        viewport={fadeUp.viewport}
-        transition={{ ...fadeUp.transition, delay: 0.2 }}
-      >
-        {/* Left: Image/Card */}
-        <div className="flex-1 flex justify-center items-center max-w-xl lg:max-w-lg ">
-          <div className="bg-[#FFF3ED] rounded-3xl w-full flex items-center justify-center">
-            <img
-              src={features[active].image}
-              alt={features[active].label}
-              className="w-full h-auto max-h-[360px] object-contain"
-            />
-          </div>
-        </div>
+  className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center max-w-6xl mx-auto px-4"
+  initial={fadeUp.initial}
+  whileInView={fadeUp.whileInView}
+  viewport={fadeUp.viewport}
+  transition={{ ...fadeUp.transition, delay: 0.2 }}
+>
+  {/* Left: Image/Card */}
+  <div className="flex-1 w-full flex justify-center">
+    <div className="bg-[#FFF3ED] rounded-3xl w-full max-w-xl flex items-center justify-center p-6">
+      <img
+        src={features[active].image}
+        alt={features[active].label}
+        className="w-full h-auto max-h-[360px] object-contain"
+      />
+    </div>
+  </div>
 
-        {/* Right: Details */}
-        <div className="max-w-2xl flex justify-center items-center lg:justify-center lg:items-start text-center lg:text-left ">
-          <img
-            src="/img/fileicons.svg"
-            alt="*"
-            className="w-10 h-10 mr-2 hidden md:block"
-          />
+  {/* Right: Details */}
+  <div className="flex-1 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
+    {/* Icon + Title */}
+    <div className="flex items-center gap-3 mb-4">
+      <img
+        src="/img/fileicons.svg"
+        alt="icon"
+        className="w-10 h-10 hidden md:block"
+      />
+      <h2 className="font-extrabold text-2xl md:text-3xl text-black">
+        {features[active].title}
+      </h2>
+    </div>
 
-          <div className="flex-1 flex flex-col justify-center items-center lg:justify-center lg:items-start text-center lg:text-left">
-            <div className="flex items-center gap-4 mb-2 justify-center lg:justify-start w-full max-w-md">
-              <span className="font-extrabold text-[24px] text-black">
-                {features[active].title}
-              </span>
-            </div>
-            <p className="text-black text-sm md:text-md mb-2 max-w-lg lg:pr-24 ">
-              {features[active].desc}
-            </p>
-            <ul className="space-y-2 max-w-lg lg:max-w-none ">
-              {features[active].bullets.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-center justify-start text-start gap-2 text-[16px] text-black"
-                >
-                  <img src="/img/orangestar.svg" alt="*" className="w-4 h-4" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.div>
+    {/* Description */}
+    <p className="text-black text-sm md:text-base mb-4 max-w-lg">
+      {features[active].desc}
+    </p>
+
+    {/* Bullets */}
+    <ul className="space-y-3 max-w-lg">
+      {features[active].bullets.map((item, idx) => (
+        <li
+          key={idx}
+          className="flex items-start gap-2 text-base text-black"
+        >
+          <img src="/img/orangestar.svg" alt="*" className="w-4 h-4 mt-1" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</motion.div>
+
     </section>
   );
 };

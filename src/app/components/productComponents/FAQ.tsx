@@ -38,7 +38,7 @@ export default function FAQ() {
           FAQ
         </motion.span>
         <motion.h2
-          className="text-black text-2xl md:text-[56px] font-semibold mb-2 text-center"
+          className="text-black text-2xl md:text-[56px] mb-2 font-bold text-center"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -69,7 +69,7 @@ export default function FAQ() {
                 onClick={() => setOpenIdx(idx === openIdx ? null : idx)}
                 aria-expanded={openIdx === idx}
               >
-                <span className="text-black text-[15px] font-medium">
+                <span className="text-black font-bold text-[15px]">
                   {item.q}
                 </span>
 

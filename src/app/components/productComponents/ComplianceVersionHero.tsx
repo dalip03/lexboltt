@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function ComplianceVersionHero() {
   return (
-    <section className="w-full mx-auto py-12 flex flex-col-reverse lg:flex-row items-start gap-8 mt-20 ">
+    <section className="w-full mx-auto flex flex-col-reverse lg:flex-row items-start gap-8 mt-20 ">
       {/* Left Side: Image */}
       <motion.div
         className="flex-1 flex items-start justify-center lg:justify-start w-full "
