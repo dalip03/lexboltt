@@ -20,8 +20,8 @@ export default function TeamHero() {
     },
     {
       image: "/img/testo2.png",
-      role: "AI Advisor",
-      name: "Ananya Mehta",
+      role: "Product Manager",
+      name: "Mr. Manjunathan",
       desc: "Drives product vision by combining deep regulatory knowledge.",
       cardBg: "bg-[#F354184D]",
     },
@@ -85,8 +85,8 @@ export default function TeamHero() {
         <div className="pointer-events-none absolute top-0 left-0 z-50 h-full w-12 bg-gradient-to-r from-white via-white/80 to-white/0" />
         <div className="pointer-events-none absolute top-0 right-0 z-50 h-full w-12 bg-gradient-to-l from-white via-white/80 to-white/0" />
 
-        <div className="overflow-x-auto whitespace-nowrap hide-scrollbar pb-3 flex justify-center">
-          <div className="inline-flex gap-4 sm:gap-6 px-1 md:px-2">
+        <div className="overflow-x-auto whitespace-nowrap hide-scrollbar pb-3 border flex justify-center">
+          <div className="inline-flex gap-4 sm:gap-6 px-1 md:px-2 ">
             {members.map((member, idx) => (
               <motion.div
                 key={`${member.name}-${idx}`}
@@ -119,9 +119,8 @@ export default function TeamHero() {
                     {member.name}
                   </h3>
                   <p className="text-white text-[10px] sm:text-xs opacity-90 w-full break-words leading-snug whitespace-normal">
-  {member.desc}
-</p>
-
+                    {member.desc}
+                  </p>
                 </div>
               </motion.div>
             ))}

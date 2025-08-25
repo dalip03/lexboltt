@@ -76,12 +76,13 @@ export default function ValuesListHero() {
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.5, delay: i * 0.07 + 0.15 }}
           >
+            
             <img
               src={value.icon}
               alt={value.heading}
-              className="w-8 h-8 mr-0 mb-2 sm:mr-5 sm:mb-0 mt-1 "
+              className="w-8 h-8 mr-0 sm:mr-5 sm:mb-0 "
             />
-            <div className="flex flex-col flex-1 items-start justify-center ">
+            <div className="flex flex-col flex-1 items-start text-start justify-center">
               <span className="text-black text-lg">{value.heading}</span>
             </div>
             <div className="flex flex-col flex-[2] sm:ml-7 mt-1 sm:mt-0">

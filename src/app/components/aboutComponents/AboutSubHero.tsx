@@ -11,8 +11,8 @@ const fadeUp = {
 
 export default function OurJourney() {
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 md:px-20 pb-10  px-4 sm:px-8 my-20 overflow-x-hidden">
-      <div className="w-full mx-auto flex flex-col gap-8">
+    <section className="w-full max-w-screen-3xl mx-auto pt-8 md:px-20 pb-10 px-4 sm:px-8 my-20 overflow-x-hidden">
+      <div className="w-full mx-auto flex flex-col gap-12">
         {/* Heading and Description */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">
           <div>
@@ -46,29 +46,27 @@ export default function OurJourney() {
           </motion.div>
         </div>
 
-        {/* Row 2: Workshops + Co-created */}
-        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-2 items-start ">
+        {/* Row 1: Workshops + Co-created */}
+        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-2 items-start">
           {/* Card 1 */}
           <motion.div
             initial={fadeUp.initial}
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.1 }}
-            className="w-full flex flex-col "
+            className="w-full flex flex-col"
           >
-            <div className="w-full bg-white rounded-2xl flex items-center justify-center mb-3">
-              <Image
-                src="/about/history1.svg"
-                width={500}
-                height={120}
-                alt="Workshop diagram"
-                className="object-cover w-full h-[120px] md:h-[240px] rounded-2xl"
-              />
-            </div>
+            <Image
+              src="/about/history1.svg"
+              width={500}
+              height={240}
+              alt="Workshop diagram"
+              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-2xl mb-3"
+            />
             <h3 className="text-lg font-bold text-black mb-1">
               From workshops to working solution
             </h3>
-            <p className="text-black text-sm ">
+            <p className="text-black text-sm">
               Lexbolt began as a hands-on collaboration with OEM teams and homologation/regulatory experts. Through multiple working sessions and reviews, we shaped a tool that turns dense automotive standards into clear, structured outputs.
             </p>
           </motion.div>
@@ -81,45 +79,43 @@ export default function OurJourney() {
             transition={{ ...fadeUp.transition, delay: 0.15 }}
             className="w-full flex flex-col"
           >
-            <div className="w-full bg-white rounded-2xl flex items-center justify-center mb-3">
-              <Image
-                src="/about/history2.svg"
-                width={500}
-                height={120}
-                alt="Car diagram"
-                className="object-cover w-full h-[180px] md:h-[240px] rounded-2xl "
-              />
-            </div>
+            <Image
+              src="/about/history2.svg"
+              width={500}
+              height={240}
+              alt="Car diagram"
+              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-2xl mb-3"
+            />
             <h3 className="text-lg font-bold text-black mb-1">
               Co-created with OEM &amp; Homologation Experts
             </h3>
-            <p className="text-black text-sm ">
-              Built with direct feedback from practitioners. The current feature set reflects real day-to-day tasks in automotive compliance: clause extraction, component linkage, comparison views, and explainable summaries.
+            <p className="text-black text-sm">
+              Built with direct feedback from practitioners. The current feature set reflects real day-to-day tasks in automotive compliance: clause extraction.
             </p>
           </motion.div>
         </div>
 
-        {/* Row 3: Businesses + Future */}
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-2 items-start">
+        {/* Row 2: Automotive + Future (opposite ratio) */}
+        <div className="grid grid-cols-1 md:grid-cols-[1.6fr_2.4fr] gap-2 items-start ">
           {/* Card 3 */}
           <motion.div
             initial={fadeUp.initial}
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.2 }}
-            className="bg-white rounded-2xl p-4 flex flex-col items-center w-full"
+            className="w-full flex flex-col bg-gray-200/30"
           >
             <Image
               src="/about/history3.svg"
               width={450}
-              height={170}
+              height={240}
               alt="Car diagram"
-              className="object-contain w-full h-[180px] md:h-[240px] rounded-2xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[280px] rounded-2xl mb-3"
             />
-            <h4 className="text-lg font-bold mb-1 text-black self-start">
+            <h4 className="text-lg font-bold mb-1 text-black pl-2">
               Automotive Focus
             </h4>
-            <p className="text-black text-sm ">
+            <p className="text-black text-sm pl-2 pb-2">
               Built with guidance from automotive regulations and standards like IATF and ISO, to make sure you are compliant.
             </p>
           </motion.div>
@@ -130,21 +126,23 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.25 }}
-            className="bg-white rounded-2xl p-4 flex flex-col items-center w-full"
+            className="w-full flex flex-col"
           >
             <Image
               src="/about/history4.svg"
               width={550}
-              height={170}
+              height={240}
               alt="Platform screenshot"
-              className="object-cover w-full h-[120px] md:h-[240px] rounded-2xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[280px] rounded-t-2xl mb-3"
             />
-            <h4 className="text-lg font-bold mb-1 text-black self-start">
+            <div className="bg-white">
+            <h4 className="text-lg font-bold mb-1 text-black">
               Built for the Future
             </h4>
-            <p className="text-black text-sm ">
+            <p className="text-black text-sm">
               Version-aware, comparison-ready, and designed for traceability. LexBolt structures information so teams can compare revisions, link components to clauses, and maintain an audit-friendly trail as regulations evolve.
             </p>
+            </div>
           </motion.div>
         </div>
       </div>
