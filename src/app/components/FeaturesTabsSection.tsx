@@ -7,13 +7,13 @@ const features = [
     label: "Regulations",
     icon: "/img/file.svg",
     title: "Upload Any Regulation",
-    desc: "Simply drop in documents from regulatory bodies or relevant authorities Lexbolt automatically parses them and generates a detailed list of all compliance requirements your project must meet, from the smallest procedural rules to major legal mandates.",
+    subtitle: "AI-Powered Document Intelligence",
+    desc: "Upload standards, directives, or homologation files -from UNECE to ISO. LexBolt automatically interprets and structures them into actionable compliance requirements, from high-level mandates to clause-level rules.",
     bullets: [
-      "We operate like insiders, not vendors",
-      "We think in systems  not deliverables",
-      "We balance architecture and execution",
-      "We bring delivery ownership, not advisory slides",
-      "We make governance a habit, not an audit",
+      "Works with global standards (ISO, UNECE, IATF, ASPICE, FMVSS, GB/T)",
+      "Structured outputs: requirements, tests, references",
+      "Zero manual tagging or keyword hunting",
+  
     ],
     image: "/about/abouts4.svg",
   },
@@ -21,11 +21,12 @@ const features = [
     label: "Control",
     icon: "/img/file.svg",
     title: "Total Control",
-    desc: "Take charge of your regulatory process end-to-end with full visibility.",
+    subtitle: "End-to-End Compliance Visibility",
+    desc: "Gain complete oversight of your regulatory landscape. Monitor every clause, update, and validation in one intelligent dashboard.",
     bullets: [
-      "Automate key controls",
-      "Real-time notifications",
-      "Customizable alerts",
+      "Automated controls with audit trail",
+      "Real-time notifications and alerts",
+      "Configurable dashboards for teams",
     ],
     image: "/about/abouts2.svg",
   },
@@ -33,10 +34,12 @@ const features = [
     label: "Compliance",
     icon: "/img/file.svg",
     title: "Ensure Compliance",
-    desc: "Stay compliant with continuous updates and AI validation.",
+    subtitle: "Continuous AI Validation",
+    desc: "Stay ahead of evolving regulations with proactive compliance checks and auto-updated requirements.",
     bullets: [
-      "Automatic compliance checks",
-      "Up-to-date with latest requirements",
+      "Automatic validation against latest revisions",
+      "Multi-market regulation tracking",
+      "Clause-to-component verification",
     ],
     image: "/about/abouts3.svg",
   },
@@ -44,16 +47,18 @@ const features = [
     label: "Compatible",
     icon: "/img/file.svg",
     title: "Compatible Workflows",
-    desc: "Push requirements into your ALM, PLM, workflow and spreadsheet tools.",
-    bullets: ["Seamless integrations", "Exports to tickets and sheets"],
+    subtitle:"Integrate Where You Work",
+    desc: "Push requirements directly into your engineering and compliance workflows. No disruption just smarter pipelines.",
+    bullets: ["Connect to ALM / PLM / ERP systems", "Export to JIRA, Azure DevOps, and spreadsheets","API-ready for custom integrations"],
     image: "/about/abouts1.svg",
   },
   {
     label: "Security",
     icon: "/img/file.svg",
     title: "Enterprise-grade Security",
-    desc: "Your data is fully secure, encrypted at rest and in transit.",
-    bullets: ["SOC2, HIPAA ready", "Role-based access"],
+    subtitle: "Secure. Scalable. Audit-Ready.",
+    desc: "Built with the rigor of enterprise security frameworks, ensuring your data remains protected across regions and teams.",
+    bullets: ["Data encrypted at rest & in transit", "Role-based access controls","•	SOC2 & ISO27001-ready architecture"],
     image: "/about/abouts5.svg",
   },
 ];
@@ -158,9 +163,11 @@ const FeaturesTabsSection: React.FC = () => {
         alt="icon"
         className="w-10 h-10 hidden md:block"
       />
+      <div>
       <h2 className="font-extrabold text-2xl md:text-3xl text-black">
         {features[active].title}
       </h2>
+      </div>
     </div>
 
     {/* Description */}

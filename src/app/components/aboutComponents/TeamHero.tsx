@@ -65,18 +65,19 @@ export default function TeamHero() {
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        Meet Our Team
+        The Team Behind LexBolt
       </motion.h1>
 
       <motion.p
-        className="text-center text-black max-w-md mx-auto mb-8 text-md md:text[16px]"
+        className="text-center text-black max-w-3xl mx-auto mb-8 text-md md:text[16px]"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        A dedicated team of experts using tech and smart strategy to simplify
-        regulations for all
+        A joint initiative between <span className="font-bold">Jags Consultancy Limited, UK </span>and domain
+        experts from the automotive ecosystem, <span className="font-bold">blending deep AI research</span> with
+        <span className="font-bold">decades of compliance experience.</span>
       </motion.p>
 
       {/* Scrollable cards */}
@@ -85,7 +86,7 @@ export default function TeamHero() {
         <div className="pointer-events-none absolute top-0 left-0 z-50 h-full w-12 bg-gradient-to-r from-white via-white/80 to-white/0" />
         <div className="pointer-events-none absolute top-0 right-0 z-50 h-full w-12 bg-gradient-to-l from-white via-white/80 to-white/0" />
 
-        <div className="overflow-x-auto whitespace-nowrap hide-scrollbar pb-3 border flex justify-center">
+        <div className="overflow-x-auto whitespace-nowrap hide-scrollbar pb-3  flex justify-center">
           <div className="inline-flex gap-4 sm:gap-6 px-1 md:px-2 ">
             {members.map((member, idx) => (
               <motion.div

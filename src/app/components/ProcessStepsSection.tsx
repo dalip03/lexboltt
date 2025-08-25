@@ -5,26 +5,26 @@ import { motion, easeOut } from "framer-motion";
 
 const steps = [
   {
-    title: "Upload Any Regulation",
-    desc: "Drop in documents from applicable regulatory bodies or relevant authorities.",
+    title: "Smarter Document Intelligence ",
+    desc: "Go beyond keyword search with semantic AI tuned for ISO, UNECE, ASPICE, and OEM standards.",
     icon: "/img/fileicons.svg",
     image: "/img/upload.svg",
   },
   {
-    title: "AI Parses Key Requirements",
-    desc: "We extract obligations, test procedures, effective dates, and more down to the clause level.",
+    title: "Component-Level Traceability ",
+    desc: "Connect vehicle specs directly with applicable clauses and thresholds.",
     icon: "/img/searchicons.svg",
     image: "/img/searchai.svg",
   },
   {
-    title: "Track What’s Changed",
-    desc: "Compare versions side by side. Get notified of new amendments, deleted text, and reworded requirements.",
+    title: "Instant Regulatory Comparisons ",
+    desc: "Old vs new revisions, or multi-market standards side by side.",
     icon: "/img/docicons.svg",
     image: "/img/trackchanged.svg",
   },
   {
-    title: "Export & Assign",
-    desc: "Push structured requirements directly into your workflows PLM, ALM, spreadsheets, or tickets.",
+    title: "Audit-Ready Summaries ",
+    desc: "Generate structured tables of requirements, tests, and interpretations you can trust.",
     icon: "/img/docicons.svg",
     image: "/img/export.svg",
   },
@@ -67,10 +67,10 @@ export default function ProcessStepsSection() {
         Our Process
       </motion.span>
         <h1 className="font-bold text-2xl md:text-[56px] mb-3 text-center leading-tight max-w-xl">
-          From Law to <br /> Launch in 4 Steps
+          Upload. Interpret. Compare. Validate. 
         </h1>
-        <p className="text-black mb-6 text-center text-sm sm:text-[16px] max-w-lg">
-          #1 Software for managing all your regulations in one place
+        <p className="text-black mb-6 text-center text-sm sm:text-[16px] max-w-xl">
+          Compliance simplified for Engineering, NPD, Regulations and Homologation teams.
         </p>
       </motion.div>
 

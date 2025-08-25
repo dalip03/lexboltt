@@ -38,21 +38,21 @@ export default function HeroSection() {
         />
 
         <motion.div
-          className="max-w-4xl w-full mx-auto text-center relative mt-14 px-2 sm:px-4 z-20"
+          className="max-w-6xl w-full mx-auto text-center relative mt-14 px-2 sm:px-4 z-20"
           initial={fadeUp.initial}
           whileInView={fadeUp.whileInView}
           viewport={fadeUp.viewport}
           transition={fadeUp.transition}
         >
           <h1 className="font-bold text-black text-2xl sm:text-3xl md:text-[48px] lg:text-[56px] leading-tight mb-6 relative">
-            Stay Ahead of Every
+            Rethinking Compliance Intelligence
             <br />
-            Regulation, Effortlessly
+            for the Automotive Industry
           </h1>
-          <p className="text-black text-sm sm:text-base md:text-[16px] mb-4 md:px-24" >
-            Lexbolt transforms complex automotive regulations into clear,
-            structured requirements so your team can act faster, stay compliant,
-            and never miss a change.
+          <p className="text-black text-sm sm:text-base md:text-[16px] mb-4 md:px-28">
+            AI-driven insights that decode regulations, accelerate validation,
+            and keep your designs compliant from concept to production, and new
+            regulations updated for engineering and homologation.
           </p>
 
           <DemoButton onClick={() => setShowModal(true)} />

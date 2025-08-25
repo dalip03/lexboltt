@@ -61,12 +61,13 @@ export default function AboutUsHero() {
           className="text-black text-sm sm:text-base md:text-lg mb-8 max-w-lg"
           variants={textVariant}
         >
-          Seamlessly manage deliveries with real-time tracking, cost-effective
-          rates, and unmatched reliability across the globe
+          Regulations are evolving faster than ever. For automotive OEMs and
+          suppliers, ensuring compliance across markets is both mission-critical
+          and resource-intensive.<span className="font-semibold"> LexBolt exists to change that.</span>
         </motion.p>
 
         {/* CTA Button + Icon */}
-       <DemoButton onClick={()=> setShowModal(true)}/>
+        <DemoButton onClick={() => setShowModal(true)} />
       </motion.div>
 
       {/* Right Side - Dashboard/Image area */}
@@ -74,7 +75,7 @@ export default function AboutUsHero() {
         className="flex-1 w-full flex justify-center lg:justify-end"
         variants={imageVariant}
         initial="hidden"
-        animate="visible" 
+        animate="visible"
       >
         <Image
           src="/img/abouthero2.png"
