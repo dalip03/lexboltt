@@ -74,7 +74,7 @@ export default function AboutUsHero() {
         className="flex-1 w-full flex justify-center lg:justify-end"
         variants={imageVariant}
         initial="hidden"
-        animate="visible"
+        animate="visible" 
       >
         <Image
           src="/img/abouthero2.png"

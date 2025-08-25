@@ -89,9 +89,7 @@ export default function ValuesListHero() {
                 {value.subtitle}
               </span>
               <span className="text-black text-sm sm:text-base font-normal pr-0 sm:pr-16">
-                {i === 1 || i === 2
-                  ? <b>{value.desc.split(" ")[0]}</b> + " " + value.desc.split(" ").slice(1).join(" ")
-                  : value.desc}
+                {value.desc}
               </span>
             </div>
           </motion.div>
