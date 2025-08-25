@@ -77,7 +77,7 @@ export default function AboutUsHero() {
         animate="visible"
       >
         <Image
-          src="/img/aboutHero2.png"
+          src="/img/abouthero2.png"
           alt="Dashboard"
           width={440}
           height={390}
