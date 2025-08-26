@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function FeaturesScrollableRow() {
   const images = [
@@ -41,11 +42,13 @@ export default function FeaturesScrollableRow() {
               lg:w-[230px] lg:h-[230px]
             `}
           >
-            <img
+            <Image
               src={src}
               alt={`Gallery ${i + 1}`}
               className="w-full h-full object-contain rounded-2xl bg-white"
               draggable={false}
+              width={230}
+              height={230}
             />
           </div>
         ))}

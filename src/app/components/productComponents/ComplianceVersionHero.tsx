@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ComplianceVersionHero() {
   return (
@@ -12,9 +13,11 @@ export default function ComplianceVersionHero() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <img
+        <Image
           src="/product/products2.svg"
           alt="Compliance Version Dashboard"
+          width={660} // match largest expected width
+          height={220} // match expected height
           className="w-full max-w-[340px] h-[220px] md:max-w-[660px] md:h-full object-cover shadow-[0px_-14px_240px_-18px_rgba(252,125,63,0.37),146px_6px_240px_-12px_rgba(252,125,63,0.28)]"
         />
       </motion.div>
@@ -42,7 +45,8 @@ export default function ComplianceVersionHero() {
           transition={{ duration: 0.7, delay: 0.22 }}
           viewport={{ once: true }}
         >
-          Smart Version Control<br />
+          Smart Version Control
+          <br />
           for Compliances
         </motion.h1>
         <motion.p
@@ -52,7 +56,9 @@ export default function ComplianceVersionHero() {
           transition={{ duration: 0.7, delay: 0.29 }}
           viewport={{ once: true }}
         >
-          Monitor real-time changes in compliances and make informed business decisions. Stay ahead in the ever-evolving race of keeping up with all business regulations.
+          Monitor real-time changes in compliances and make informed business
+          decisions. Stay ahead in the ever-evolving race of keeping up with all
+          business regulations.
         </motion.p>
       </motion.div>
     </section>

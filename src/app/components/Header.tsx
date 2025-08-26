@@ -107,10 +107,12 @@ const Header = () => {
             }`}
           >
             Contact Us
-            <img
+            <Image
               src="/img/abouticons.svg"
               alt="Arrow"
-              className="w-12 h-12 object-contain"
+              width={48} // w-12 = 48px
+              height={48} // h-12 = 48px
+              className=" object-contain"
             />
           </Link>
         </motion.div>
@@ -216,10 +218,12 @@ const Header = () => {
                       }`}
                     >
                       Contact Us
-                      <img
+                      <Image
                         src="/img/abouticons.svg"
                         alt="Arrow"
-                        className="w-12 h-12 object-contain"
+                        width={48} // w-12 = 48px
+                        height={48} // h-12 = 48px
+                        className="object-contain"
                       />
                     </Link>
                   </motion.div>

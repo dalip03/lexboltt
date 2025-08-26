@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 
 const steps = [
   {
@@ -85,10 +86,12 @@ export default function ProcessStepsSection() {
               variants={fadeUp}
               transition={{ duration: 0.7, ease: easeOut, delay: idx * 0.2 }}
             >
-              <img
+              <Image
                 src={step.icon}
-                alt=""
-                className="w-10 h-10 mr-4 flex-shrink-0"
+                alt="icon"
+                width={40} // w-10 = 40px
+                height={40} // h-10 = 40px
+                className="mr-4 flex-shrink-0"
               />
               <div className="">
                 <h3 className="font-extrabold text-xl text-black mb-1">

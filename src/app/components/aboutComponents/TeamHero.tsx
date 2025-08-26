@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
+import Image from "next/image";
 import React, { useEffect } from "react";
 
 export default function TeamHero() {
@@ -73,7 +74,7 @@ export default function TeamHero() {
     <section className="w-full mx-auto pb-20 px-4 relative">
       {/* Headline */}
       <motion.h1
-        className="text-center text-2xl sm:text-3xl md:text-[64px] font-bold text-[#232540] mb-2"
+        className="text-center text-2xl sm:text-3xl md:text-[64px] font-bold text-black mb-2"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -126,7 +127,8 @@ export default function TeamHero() {
               {/* FIXED IMAGE SECTION */}
               <div className="relative w-full h-[65%] flex items-start justify-center overflow-hidden">
                 <div className={`${member.cardBg} absolute inset-0`} />
-                <img
+                <Image
+                  fill
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover object-top z-10 rounded-t-3xl"

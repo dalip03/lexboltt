@@ -4,6 +4,7 @@ import { motion, easeOut } from "framer-motion";
 import DemoButton from "../DemoButton";
 import { useState } from "react";
 import RequestDemoModal from "../RequestDemoModal";
+import Image from "next/image";
 
 export default function ProductHero() {
   const [showModal, setShowModal] = useState(false);
@@ -42,17 +43,15 @@ export default function ProductHero() {
         >
           Powering the Future <br />
           <span className="relative inline-block">
-            of{" "}
-            <span className="text-black">
-              Regulations
-            </span>
+            of <span className="text-black">Regulations</span>
           </span>
         </motion.h1>
         <motion.p
           className="text-black mt-2 text-base md:text-[18px] mb-8 md:pr-36"
           variants={textVariant}
         >
-          Lexbolt is more than software it&apos;s an intelligent assistant for your compliance team.
+          Lexbolt is more than software it&apos;s an intelligent assistant for
+          your compliance team.
         </motion.p>
 
         {/* Responsive DemoButton wrapper */}
@@ -68,9 +67,11 @@ export default function ProductHero() {
         initial="hidden"
         animate="visible"
       >
-        <img
+        <Image
           src="/product/products1.svg"
           alt="Product Dashboard"
+          width={410}
+          height={320}
           className="w-full max-w-[320px] md:max-w-[410px] h-auto rounded-3xl object-cover"
         />
       </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   {
@@ -13,7 +14,6 @@ const features = [
       "Works with global standards (ISO, UNECE, IATF, ASPICE, FMVSS, GB/T)",
       "Structured outputs: requirements, tests, references",
       "Zero manual tagging or keyword hunting",
-  
     ],
     image: "/about/abouts4.svg",
   },
@@ -47,9 +47,13 @@ const features = [
     label: "Compatible",
     icon: "/img/file.svg",
     title: "Compatible Workflows",
-    subtitle:"Integrate Where You Work",
+    subtitle: "Integrate Where You Work",
     desc: "Push requirements directly into your engineering and compliance workflows. No disruption just smarter pipelines.",
-    bullets: ["Connect to ALM / PLM / ERP systems", "Export to JIRA, Azure DevOps, and spreadsheets","API-ready for custom integrations"],
+    bullets: [
+      "Connect to ALM / PLM / ERP systems",
+      "Export to JIRA, Azure DevOps, and spreadsheets",
+      "API-ready for custom integrations",
+    ],
     image: "/about/abouts1.svg",
   },
   {
@@ -58,7 +62,11 @@ const features = [
     title: "Enterprise-grade Security",
     subtitle: "Secure. Scalable. Audit-Ready.",
     desc: "Built with the rigor of enterprise security frameworks, ensuring your data remains protected across regions and teams.",
-    bullets: ["Data encrypted at rest & in transit", "Role-based access controls","•	SOC2 & ISO27001-ready architecture"],
+    bullets: [
+      "Data encrypted at rest & in transit",
+      "Role-based access controls",
+      "•	SOC2 & ISO27001-ready architecture",
+    ],
     image: "/about/abouts5.svg",
   },
 ];
@@ -83,21 +91,9 @@ const FeaturesTabsSection: React.FC = () => {
         viewport={fadeUp.viewport}
         transition={fadeUp.transition}
       >
-        {/* <motion.span
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
-        >
-          Why Choose Us?
-        </motion.span> */}
         <h2 className="font-extrabold text-3xl sm:text-4xl md:text-[56px]  max-w-6xl text-center leading-tight mb-4">
           Features & Benefits
         </h2>
-        {/* <p className="text-black text-center text-sm sm:text-base md:text-[16px] max-w-4xl mx-auto">
-          #1 Software for managing all your regulations in one place
-        </p> */}
       </motion.div>
 
       {/* Tab buttons */}
@@ -137,59 +133,68 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-  className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center max-w-6xl mx-auto px-4"
-  initial={fadeUp.initial}
-  whileInView={fadeUp.whileInView}
-  viewport={fadeUp.viewport}
-  transition={{ ...fadeUp.transition, delay: 0.2 }}
->
-  {/* Left: Image/Card */}
-  <div className="flex-1 w-full flex justify-center">
-    <div className="bg-[#FFF3ED] rounded-3xl w-full max-w-xl flex items-center justify-center p-6">
-      <img
-        src={features[active].image}
-        alt={features[active].label}
-        className="w-full h-auto max-h-[360px] object-contain"
-      />
-    </div>
-  </div>
+        className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center max-w-6xl mx-auto px-4"
+        initial={fadeUp.initial}
+        whileInView={fadeUp.whileInView}
+        viewport={fadeUp.viewport}
+        transition={{ ...fadeUp.transition, delay: 0.2 }}
+      >
+        {/* Left: Image/Card */}
+        <div className="flex-1 w-full flex justify-center">
+          <div className="bg-[#FFF3ED] rounded-3xl w-full max-w-xl flex items-center justify-center">
+            <Image
+              src={features[active].image}
+              alt={features[active].label}
+              width={800}
+              height={360}
+              className="w-full h-auto max-h-[360px] object-contain"
+            />
+          </div>
+        </div>
 
-  {/* Right: Details */}
-  <div className="flex-1 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
-    {/* Icon + Title */}
-    <div className="flex items-center gap-3 mb-4">
-      <img
-        src="/img/fileicons.svg"
-        alt="icon"
-        className="w-10 h-10 hidden md:block"
-      />
-      <div>
-      <h2 className="font-extrabold text-2xl md:text-3xl text-black">
-        {features[active].title}
-      </h2>
-      </div>
-    </div>
+        {/* Right: Details */}
+        <div className="flex-1 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
+          {/* Icon + Title */}
+          <div className="flex items-center gap-3 mb-4">
+            <Image
+              src="/img/fileicons.svg"
+              alt="icon"
+              width={40} // w-8 = 32px
+              height={40} // h-8 = 32px
+              className=" hidden md:block"
+            />
+            <div>
+              <h2 className="font-extrabold text-2xl md:text-3xl text-black">
+                {features[active].title}
+              </h2>
+            </div>
+          </div>
 
-    {/* Description */}
-    <p className="text-black text-sm md:text-base mb-4 max-w-lg">
-      {features[active].desc}
-    </p>
+          {/* Description */}
+          <p className="text-black text-sm md:text-base mb-4 max-w-lg">
+            {features[active].desc}
+          </p>
 
-    {/* Bullets */}
-    <ul className="space-y-3 max-w-lg">
-      {features[active].bullets.map((item, idx) => (
-        <li
-          key={idx}
-          className="flex items-start gap-2 text-base text-black"
-        >
-          <img src="/img/orangestar.svg" alt="*" className="w-4 h-4 mt-1" />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-</motion.div>
-
+          {/* Bullets */}
+          <ul className="space-y-3 max-w-lg">
+            {features[active].bullets.map((item, idx) => (
+              <li
+                key={idx}
+                className="flex items-start gap-2 text-base text-black"
+              >
+                <Image
+                  src="/img/orangestar.svg"
+                  alt="*"
+                  width={16}
+                  height={16}
+                  className=" mt-1"
+                />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </motion.div>
     </section>
   );
 };

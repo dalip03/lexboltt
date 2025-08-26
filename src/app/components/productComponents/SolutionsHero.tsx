@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import RequestDemoModal from "../RequestDemoModal";
+import Image from "next/image";
 
 export default function SolutionsHero() {
   const [showModal, setShowModal] = useState(false);
@@ -67,19 +68,21 @@ export default function SolutionsHero() {
               "radial-gradient(ellipse at center, #FC7D3F 40%, transparent 85%)",
           }}
         />
-        <img
+        <Image
           src="/product/productWheel.png"
           alt="Solutions Diagram"
+          width={620}
+          height={620}
           className="
-            relative
-            w-[280px] h-[280px]
-            sm:w-[320px] sm:h-[320px]
-            md:w-[370px] md:h-[370px]
-            lg:w-[420px] lg:h-[420px]
-            xl:w-[520px] xl:h-[520px]
-            2xl:w-[620px] 2xl:h-[620px]
-            object-cover
-          "
+    relative
+    w-[280px] h-[280px]
+    sm:w-[320px] sm:h-[320px]
+    md:w-[370px] md:h-[370px]
+    lg:w-[420px] lg:h-[420px]
+    xl:w-[520px] xl:h-[520px]
+    2xl:w-[620px] 2xl:h-[620px]
+    object-cover
+  "
         />
       </motion.div>
 

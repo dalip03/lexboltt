@@ -1,19 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { easeOut } from "framer-motion";
 import RequestDemoModal from "./RequestDemoModal";
 import ContactButton from "./ContactButton";
-
-interface RequestDemoModalProps {
-  onClose: () => void;
-}
-
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.3 },
-  transition: { duration: 0.7, ease: easeOut },
-};
+import Image from "next/image";
 
 export default function ComplianceHeroBanner() {
   const [showModal, setShowModal] = useState(false);
@@ -23,19 +12,23 @@ export default function ComplianceHeroBanner() {
       <div className="w-full md:max-w-6xl  px-4 py-10 text-center overflow-hidden flex flex-col items-center justify-center more ">
         {/* Top left dots image */}
         <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">
-          <img
+          <Image
             src="/img/dots.svg"
             alt="Decorative Shape"
+            width={120} 
+            height={120}
             style={{ display: "block" }}
           />
         </div>
 
         {/* Bottom right shapes image */}
         <div className="absolute right-0 bottom-0   pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">
-          <img
+          <Image
             className="rounded-2xl"
             src="/img/decorative.svg"
             alt="Decorative Shape"
+            width={260} 
+            height={260}
             style={{ display: "block" }}
           />
         </div>
@@ -54,7 +47,7 @@ export default function ComplianceHeroBanner() {
           Efficiently
         </p>
         {/* Contact Button */}
-      <ContactButton/>
+        <ContactButton />
       </div>
       {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
     </section>

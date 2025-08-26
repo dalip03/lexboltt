@@ -3,10 +3,7 @@ import React, { useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import RequestDemoModal from "./RequestDemoModal";
 import DemoButton from "./DemoButton";
-
-interface RequestDemoModalProps {
-  onClose: () => void;
-}
+import Image from "next/image";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -66,9 +63,11 @@ export default function HeroSection() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease: easeOut }}
         >
-          <img
+          <Image
             src="/img/homebgnew.svg"
             alt="Dashboard Screenshot"
+            width={900} 
+            height={500} 
             className="w-full max-w-[900px] object-contain z-20"
           />
         </motion.div>

@@ -8,9 +8,6 @@ function page() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden  mb-10 w-full mx-auto">
       <ProductHero />
-      {/* <ComplianceVersionHero/> */}
-      {/* <SolutionsHero/>   */}
-      {/* <ComplianceManagementHero/> */}
       <Corecapabilities />
       <ProductTalkUs />
       <FAQ />

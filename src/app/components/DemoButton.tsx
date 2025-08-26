@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface DemoButtonProps {
   onClick?: () => void;
@@ -17,10 +18,12 @@ const DemoButton: React.FC<DemoButtonProps> = ({ onClick }) => (
     >
       Book a Demo
       <span className="ml-2 flex-shrink-0">
-        <img
+        <Image
           src="/img/arrowrighticonwhite.svg"
           alt="Icon"
-          className="w-12 h-12 object-contain"
+          width={48} // w-12 = 48px
+          height={48} // h-12 = 48px
+          className="object-contain"
         />
       </span>
     </motion.button>

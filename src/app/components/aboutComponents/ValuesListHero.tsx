@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ValuesListHero() {
   // Update these with your actual icon image paths:
@@ -33,19 +34,6 @@ export default function ValuesListHero() {
 
   return (
     <section className="w-full max-w-screen-3xl mx-auto pb-10 px-4 sm:px-20 my-10 overflow-x-hidden">
-      {/* Tag */}
-     
-      {/* <motion.div
-        className="mb-2"
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.15 }}
-      >
-        <span className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold">
-          Our Values
-        </span>
-      </motion.div> */}
-      {/* Header */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -63,24 +51,28 @@ export default function ValuesListHero() {
         className="text-gray-400 text-2xl sm:text-3xl font-semibold mb-8 leading-tight"
       >
         <span className="bg-primary text-white px-3 py-1 text-2xl sm:text-3xl md:text-[64px] font-bold inline-block">
-            Your Regulations </span>
+          Your Regulations{" "}
+        </span>
       </motion.h2>
       {/* Values List */}
       <div className="flex flex-col gap-0">
         {values.map((value, i) => (
           <motion.div
             key={value.heading}
-            className={`flex flex-col sm:flex-row  items-center py-5 border-b border-gray-200 ${i === 0 ? "border-t" : ""}`}
+            className={`flex flex-col sm:flex-row  items-center py-5 border-b border-gray-200 ${
+              i === 0 ? "border-t" : ""
+            }`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.5, delay: i * 0.07 + 0.15 }}
           >
-            
-            <img
+            <Image
               src={value.icon}
               alt={value.heading}
-              className="w-8 h-8 mr-0 sm:mr-5 sm:mb-0 "
+              width={32} // w-8 = 32px
+              height={32} // h-8 = 32px
+              className="mr-0 sm:mr-5 sm:mb-0"
             />
             <div className="flex flex-col flex-1 items-start text-start justify-center">
               <span className="text-black text-lg">{value.heading}</span>

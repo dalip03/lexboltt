@@ -5,10 +5,7 @@ import { motion, easeOut } from "framer-motion";
 import RequestDemoModal from "../RequestDemoModal";
 import TalkUs from "./talkusButton";
 import RequestCall from "../RequestCallButton";
-
-interface RequestDemoModalProps {
-  onClose: () => void;
-}
+import Image from "next/image";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -31,20 +28,24 @@ export default function ProductTalkUs() {
       <div className="w-full md:max-w-6xl  px-4 py-10 text-center overflow-hidden flex flex-col items-center justify-center more ">
         {/* Top left dots image */}
         <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block rounded-t-[32px] overflow-hidden">
-          <img
+          <Image
             src="/product/talkus2.svg"
             alt="Decorative Shape"
+            width={112} // 24 * 4 = 96px, responsive approx
+            height={112}
             className="w-24 h-auto md:w-28"
           />
         </div>
 
         {/* Bottom right shapes image */}
         <div className="absolute right-0 bottom-0 pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">
-          <img
-            className="w-24 h-auto md:w-56"
-            src="/product/talkus1.svg"
-            alt="Decorative Shape"
-          />
+          <Image
+  src="/product/talkus1.svg"
+  alt="Decorative Shape"
+  width={224} 
+  height={96} 
+  className="w-24 h-auto md:w-56"
+/>
         </div>
 
         <div className="py-10">
@@ -54,7 +55,7 @@ export default function ProductTalkUs() {
 
           <div className="flex gap-4 mt-6 w-full justify-center md:justify-center">
             {/* Contact Button */}
-            <RequestCall onClick={() => setShowModal(true)}/>
+            <RequestCall onClick={() => setShowModal(true)} />
             <TalkUs />
           </div>
         </div>

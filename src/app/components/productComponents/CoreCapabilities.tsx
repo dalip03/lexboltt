@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const capabilities = [
   {
@@ -77,7 +78,6 @@ export default function CoreCapabilities() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-     
         <h2 className="text-3xl md:text-[56px] font-bold text-black">
           Core Capabilities
         </h2>
@@ -103,7 +103,10 @@ export default function CoreCapabilities() {
               boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
             }}
             variants={cardVariants}
-            whileHover={{ scale: 1.03, boxShadow: "0 8px 18px rgba(0,0,0,0.08)" }}
+            whileHover={{
+              scale: 1.03,
+              boxShadow: "0 8px 18px rgba(0,0,0,0.08)",
+            }}
           >
             {/* Text */}
             <div>
@@ -115,17 +118,21 @@ export default function CoreCapabilities() {
 
             {/* Decorative shapes */}
             <div className="absolute bottom-0 right-0  z-0 pointer-events-none select-none">
-              <img
+              <Image
                 src="/product/capabilities.svg"
                 alt="decorative"
+                width={500} 
+                height={500}
                 className="w-full h-full object-contain"
               />
             </div>
 
             <div className="absolute left-0 top-0 z-0 pointer-events-none select-none">
-              <img
+              <Image
                 src="/product/capabilities1.svg"
-                alt="Decorative corner"
+                alt="corner"
+                width={500} 
+                height={500}
                 className="w-full h-full object-contain"
               />
             </div>

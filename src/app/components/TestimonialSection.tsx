@@ -2,6 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import RequestDemoModal from "./RequestDemoModal";
+import Image from "next/image";
 
 // Demo testimonials data
 const testimonials = [
@@ -37,7 +38,7 @@ const testimonials = [
 const Stars = ({ count }: { count: number }) => (
   <span className="inline-flex text-xl">
     {Array.from({ length: count }).map((_, i) => (
-      <img key={i} src="/img/rating.svg" alt="star" className="w-5 h-5 mr-1" />
+      <Image key={i} src="/img/rating.svg" alt="star" width={20} height={20} className="mr-1" />
     ))}
   </span>
 );
@@ -45,11 +46,13 @@ const Stars = ({ count }: { count: number }) => (
 const Rating = ({ count }: { count: number }) => (
   <span className="inline-flex text-xl">
     {Array.from({ length: count }).map((_, i) => (
-      <img
+      <Image
         key={i}
         src="/img/ratingstar.svg"
         alt="star"
-        className="w-3 h-3 mr-1"
+        width={12}
+        height={12}
+        className=" mr-1"
       />
     ))}
   </span>
@@ -95,7 +98,6 @@ const TestimonialSection: React.FC = () => {
     <section className="md:w-[97%] bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-20 flex flex-col md:flex-row justify-between gap-1 items-stretch">
       {/* Left Side */}
       <div className="w-full md:w-[45%] flex flex-col  mb-8 px-4  md:px-20 ">
-     
         <span className="text-black text-[16px] mb-3 self-start flex gap-2 items-center">
           Trusted By 20,000+ Clients <Rating count={5} />
         </span>
@@ -114,7 +116,7 @@ const TestimonialSection: React.FC = () => {
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-        className="flex-shrink-0 w-[90%] sm:w-[70%] md:w-[620px] rounded-[24px] flex  p-6 scroll-snap-align-center"
+              className="flex-shrink-0 w-[90%] sm:w-[70%] md:w-[620px] rounded-[24px] flex  p-6 scroll-snap-align-center"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(28, 28, 28, 0.10) 0%, rgba(28, 28, 28, 0.00) 100%)",
@@ -129,11 +131,14 @@ const TestimonialSection: React.FC = () => {
               <div className="flex items-start relative gap-4 justify-between ">
                 <div className="  flex flex-col gap-12 h-full">
                   <div>
-                    <img
+                    <Image
                       src={t.avatar}
                       alt={t.name}
-                      className="w-8 h-8 rounded-full object-cover mb-2"
+                      width={32} // w-8 → 32px
+                      height={32} // h-8 → 32px
+                      className="rounded-full object-cover mb-2"
                     />
+
                     <div className="font-medium text-xs text-black  ">
                       {t.name}
                     </div>
@@ -142,10 +147,12 @@ const TestimonialSection: React.FC = () => {
                     </div>
                   </div>
                   <div className="absolute">
-                    <img
+                    <Image
                       src="/img/grid.svg"
                       alt="grid"
-                      className="w-30 h-30 rounded-full object-cover mb-2"
+                      width={120} // ✅ 30*4 = 120px (Tailwind ka w-30, h-30 = 120px)
+                      height={120}
+                      className="rounded-full object-cover mb-2"
                     />
                   </div>
 
@@ -154,9 +161,11 @@ const TestimonialSection: React.FC = () => {
                       <span className="text-xs text-[#2E2E2E] flex items-center">
                         <span className="mr-1">
                           {" "}
-                          <img
+                          <Image
                             src="/img/verify.svg"
                             alt="location"
+                            width={20} // md:h-5 → 20px
+                            height={20} // md:w-5 → 20px
                             className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-cover"
                           />
                         </span>{" "}
@@ -180,11 +189,14 @@ const TestimonialSection: React.FC = () => {
                   </div>
                   <div className="text-black text-[16px]">{t.text}</div>
                   <div className="flex items-center  gap-1 text-center mt-4">
-                    <img
+                    <Image
                       src="/img/location.svg"
                       alt="location"
-                      className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-cover"
+                      width={20} // md:h-5 ka approx
+                      height={20}
+                      className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-contain"
                     />
+
                     <span className="text-[10px] sm:text-sm md:text-sm text-black">
                       {t.location}
                     </span>
