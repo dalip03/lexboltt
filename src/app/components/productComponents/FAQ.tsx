@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus } from "lucide-react"; // ✅ add lucide-react icons
+import { Minus } from "lucide-react"; 
 
 const FAQS = [
   {
@@ -29,14 +29,7 @@ export default function FAQ() {
   return (
     <section className="w-full py-16 px-4">
       <div className="w-full mx-auto flex flex-col items-center md:px-20">
-        <motion.span
-          className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          FAQ
-        </motion.span>
+      
         <motion.h2
           className="text-black text-2xl md:text-[56px] mb-2 font-bold text-center"
           initial={{ opacity: 0, y: 15 }}

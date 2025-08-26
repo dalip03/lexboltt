@@ -77,9 +77,7 @@ export default function CoreCapabilities() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <span className="inline-block text-xs font-medium text-[#444] border border-[#ddd] rounded-full px-5 py-1 mb-4">
-          Lexbolt Advantages
-        </span>
+     
         <h2 className="text-3xl md:text-[56px] font-bold text-black">
           Core Capabilities
         </h2>

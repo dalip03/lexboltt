@@ -8,26 +8,26 @@ export default function ValuesListHero() {
     {
       icon: "/about/innovation.svg",
       heading: "Innovation",
-      subtitle: "Innovative Compliance Solution",
-      desc: "We are passionate about pushing the boundaries of technology and exploring new frontiers in AI.",
+      subtitle: "Redefining Compliance with AI",
+      desc: "We push the boundaries of technology to simplify complex regulations, turning compliance into a driver of innovation rather than a roadblock.",
     },
     {
       icon: "/about/excellence.svg",
       heading: "Excellence",
-      subtitle: "Excellent Service",
-      desc: "We strive for the highest standards in everything we do, from compliance analysis to customer service.",
+      subtitle: "Raising the Standard",
+      desc: "From compliance analysis to customer experience, we hold ourselves to the highest standards, ensuring accuracy, reliability, and trust at every step.",
     },
     {
       icon: "/about/collaboration.svg",
       heading: "Collaboration",
-      subtitle: "Collaborative tool for teams",
-      desc: "We believe that the best results come from working together, lexbolt ensures proper cooperation within the team.",
+      subtitle: "Built for Teams, Powered by Partnerships",
+      desc: "We believe the strongest solutions come from working together. LexBolt enables seamless collaboration across engineering, homologation, and compliance teams.",
     },
     {
       icon: "/about/integrity.svg",
       heading: "Integrity",
-      subtitle: "Legal and Friendly",
-      desc: "We are committed to ethical practices and transparency in all our operations.",
+      subtitle: "Ethical, Transparent, Responsible",
+      desc: "Our foundation is trust. We operate with full transparency and a commitment to ethical practices, ensuring compliance solutions that are both secure and dependable.",
     },
   ];
 
@@ -35,7 +35,7 @@ export default function ValuesListHero() {
     <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10 px-4 sm:px-20 my-20 overflow-x-hidden">
       {/* Tag */}
      
-      <motion.div
+      {/* <motion.div
         className="mb-2"
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function ValuesListHero() {
         <span className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold">
           Our Values
         </span>
-      </motion.div>
+      </motion.div> */}
       {/* Header */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}

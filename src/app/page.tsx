@@ -1,11 +1,8 @@
-import Image from "next/image";
 import HeroSection from "./components/HeroSection";
-import ComplianceSplitSection from "./components/ComplianceSplitSection";
 import ProcessStepsSection from "./components/ProcessStepsSection";
 import FeaturesTabsSection from "./components/FeaturesTabsSection";
 import TestimonialSection from "./components/TestimonialSection";
 import ComplianceHeroBanner from "./components/ComplianceHeroBanner";
-import ContactUsPage from "./components/ContactUsPage";
 
 export default function Home() {
   return (

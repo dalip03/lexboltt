@@ -29,3 +29,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-urbanist);
 }
+
+/* global.css or inside <style jsx global> */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+.hide-scrollbar {
+  scrollbar-width: none;   /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}

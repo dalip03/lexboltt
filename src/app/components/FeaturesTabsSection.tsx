@@ -83,7 +83,7 @@ const FeaturesTabsSection: React.FC = () => {
         viewport={fadeUp.viewport}
         transition={fadeUp.transition}
       >
-        <motion.span
+        {/* <motion.span
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
@@ -91,13 +91,13 @@ const FeaturesTabsSection: React.FC = () => {
           className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
         >
           Why Choose Us?
-        </motion.span>
+        </motion.span> */}
         <h2 className="font-extrabold text-3xl sm:text-4xl md:text-[56px]  max-w-6xl text-center leading-tight mb-4">
           Features & Benefits
         </h2>
-        <p className="text-black text-center text-sm sm:text-base md:text-[16px] max-w-4xl mx-auto">
+        {/* <p className="text-black text-center text-sm sm:text-base md:text-[16px] max-w-4xl mx-auto">
           #1 Software for managing all your regulations in one place
-        </p>
+        </p> */}
       </motion.div>
 
       {/* Tab buttons */}

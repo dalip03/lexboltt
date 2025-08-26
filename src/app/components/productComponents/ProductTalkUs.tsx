@@ -2,10 +2,8 @@
 
 import React, { useState } from "react";
 import { motion, easeOut } from "framer-motion";
-import ContactButton from "../ContactButton";
 import RequestDemoModal from "../RequestDemoModal";
 import TalkUs from "./talkusButton";
-import DemoButton from "../DemoButton";
 import RequestCall from "../RequestCallButton";
 
 interface RequestDemoModalProps {

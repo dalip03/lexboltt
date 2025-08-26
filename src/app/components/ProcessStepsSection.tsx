@@ -57,15 +57,7 @@ export default function ProcessStepsSection() {
         viewport={{ once: true, amount: 0.25 }}
         variants={fadeUp}
       >
-        <motion.span
-        initial={{ opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.6 }}
-        className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
-      >
-        Our Process
-      </motion.span>
+     
         <h1 className="font-bold text-2xl md:text-[56px] mb-3 text-center leading-tight max-w-xl">
           Upload. Interpret. Compare. Validate. 
         </h1>

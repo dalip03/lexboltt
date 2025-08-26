@@ -64,16 +64,7 @@ export default function AboutStatsHero() {
   return (
     <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10  px-4 sm:px-20 my-20 overflow-x-hidden">
       {/* Tag with fade-in */}
-      <motion.div
-        className="mb-2"
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.15 }}
-      >
-        <span className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold">
-          About Lexbolt
-        </span>
-      </motion.div>
+     
 
       {/* Headline and Description with slide-in */}
       <div className="flex flex-col md:flex-row md:items-end mb-8 ">

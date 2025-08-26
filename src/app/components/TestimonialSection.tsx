@@ -1,8 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion"; // ✅ import framer motion
+import { motion } from "framer-motion";
 import RequestDemoModal from "./RequestDemoModal";
-import Link from "next/link";
 
 // Demo testimonials data
 const testimonials = [
@@ -96,15 +95,7 @@ const TestimonialSection: React.FC = () => {
     <section className="md:w-[97%] bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-20 flex flex-col md:flex-row justify-between gap-1 items-stretch">
       {/* Left Side */}
       <div className="w-full md:w-[45%] flex flex-col  mb-8 px-4  md:px-20 ">
-        <motion.span
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block border border-gray-200  self-start text-black text-[12px] px-4 py-2 rounded-full font-semibold mb-3"
-        >
-          Testimonial
-        </motion.span>
+     
         <span className="text-black text-[16px] mb-3 self-start flex gap-2 items-center">
           Trusted By 20,000+ Clients <Rating count={5} />
         </span>

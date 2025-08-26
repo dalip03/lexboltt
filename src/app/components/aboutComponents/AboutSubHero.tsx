@@ -16,15 +16,7 @@ export default function OurJourney() {
         {/* Heading and Description */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">
           <div>
-            <motion.span
-              initial={fadeUp.initial}
-              whileInView={fadeUp.whileInView}
-              viewport={fadeUp.viewport}
-              transition={fadeUp.transition}
-              className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
-            >
-              Lexbolt history
-            </motion.span>
+           
             <motion.h2
               initial={fadeUp.initial}
               whileInView={fadeUp.whileInView}
@@ -40,7 +32,7 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={fadeUp.transition}
-            className="max-w-xl text-black text-sm md:text-sm font-semibold md:mt-0 mt-2 text-end"
+            className="max-w-xl text-black text-sm md:text-sm md:mt-0 mt-2 text-end"
           >
             At Lexbolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward efficiently and compliantly.
           </motion.div>
@@ -61,12 +53,12 @@ export default function OurJourney() {
               width={500}
               height={240}
               alt="Workshop diagram"
-              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl"
             />
             <div className="bg-[#F9F9F9] pl-4">
-             
+
            
-            <h3 className="text-xl font-bold text-black mb-1">
+            <h3 className="text-xl font-bold text-black mb-1 mt-2">
               From workshops to working solution
             </h3>
             <p className="text-black text-sm">
@@ -88,10 +80,10 @@ export default function OurJourney() {
               width={500}
               height={240}
               alt="Car diagram"
-              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl"
             />
             <div className="bg-[#F9F9F9] pl-4">
-            <h3 className="text-xl font-bold text-black mb-1">
+            <h3 className="text-xl font-bold text-black mb-1 mt-2">
               Co-created with OEM &amp; Homologation Experts
             </h3>
             <p className="text-black text-sm">
@@ -116,10 +108,10 @@ export default function OurJourney() {
               width={450}
               height={240}
               alt="Car diagram"
-              className="object-cover w-full h-[180px] md:h-[280px] rounded-3xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[280px] rounded-3xl"
             />
             <div className="bg-[#F9F9F9] pl-4">
-            <h4 className="text-xl font-bold mb-1 text-black pl-2">
+            <h4 className="text-xl font-bold mb-1 text-black pl-2 mt-2">
               Automotive Focus
             </h4>
             <p className="text-black text-sm pl-2 pb-2">
@@ -141,10 +133,10 @@ export default function OurJourney() {
               width={550}
               height={240}
               alt="Platform"
-              className="object-cover w-full h-[180px] md:h-[280px] rounded-t-3xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[280px] rounded-t-3xl"
             />
             <div className="bg-[#F9F9F9] pl-4">
-            <h4 className="text-xl font-bold mb-1 text-black">
+            <h4 className="text-xl font-bold mb-1 text-black mt-2">
               Built for the Future
             </h4>
             <p className="text-black text-sm">

@@ -36,16 +36,7 @@ export default function AboutUsHero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Top Tag */}
-        <motion.span
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block border border-gray-200 text-gray-700 text-xs px-4 py-2 rounded-full font-semibold mb-3"
-        >
-          Powering Fast Move
-        </motion.span>
+        
 
         {/* Main Heading */}
         <motion.h1
