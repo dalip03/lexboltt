@@ -134,10 +134,10 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.25 }}
-            className="w-full flex flex-col"
+            className="w-full flex flex-col bg-[#F8F2F1] rounded-[24px]"
           >
             <Image
-              src="/about/aboutsub1.svg"
+              src="/about/aboutsub1.png"
               width={550}
               height={240}
               alt="Platform"
