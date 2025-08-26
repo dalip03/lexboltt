@@ -6,6 +6,7 @@ import ContactButton from "../ContactButton";
 import RequestDemoModal from "../RequestDemoModal";
 import TalkUs from "./talkusButton";
 import DemoButton from "../DemoButton";
+import RequestCall from "../RequestCallButton";
 
 interface RequestDemoModalProps {
   onClose: () => void;
@@ -55,7 +56,7 @@ export default function ProductTalkUs() {
 
           <div className="flex gap-4 mt-6 w-full justify-center md:justify-center">
             {/* Contact Button */}
-            <DemoButton />
+            <RequestCall onClick={() => setShowModal(true)}/>
             <TalkUs />
           </div>
         </div>
