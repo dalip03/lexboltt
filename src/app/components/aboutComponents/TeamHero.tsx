@@ -20,7 +20,7 @@ export default function TeamHero() {
     },
     {
       image: "/img/ceo.jpg",
-      role: "Product Manager",
+      role: "CEO / Co Founder",
       name: "Mr. Manjunathan",
       desc: "Drives product vision by combining deep regulatory knowledge.",
       cardBg: "bg-[#F354184D]",
