@@ -14,12 +14,12 @@ export default function TeamHero() {
     {
       image: "/img/profile.jpeg",
       role: "CTO / Co Founder",
-      name: "Abinandhan S",
+      name: "Abinandhanan S",
       desc: "Architects scalable backend systems and ensures seamless integration.",
       cardBg: "bg-[#F354184D]",
     },
     {
-      image: "/img/testo2.png",
+      image: "/img/ceo.jpg",
       role: "Product Manager",
       name: "Mr. Manjunathan",
       desc: "Drives product vision by combining deep regulatory knowledge.",
@@ -104,7 +104,7 @@ export default function TeamHero() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="absolute inset-0 w-full h-full object-cover object-top z-10"
+                  className="absolute inset-0 w-full h-full object-contain object-top z-10"
                 />
 
                 {/* Floating Role Badge */}
