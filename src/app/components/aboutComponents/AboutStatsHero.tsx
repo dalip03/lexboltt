@@ -70,7 +70,7 @@ export default function AboutStatsHero() {
       <div className="flex flex-col md:flex-row md:items-end mb-8 ">
         {/* Left: Heading */}
         <motion.div
-          className="flex-[2] min-w-0"
+          className="flex-[2] min-w-0 "
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -87,7 +87,7 @@ export default function AboutStatsHero() {
 
         {/* Right: Paragraph aligned bottom right */}
         <motion.div
-          className="flex-[1] flex flex-col justify-end items-end mt-4 md:mb-0 w-full "
+          className="flex-[1] flex flex-col justify-end items-end mt-4 md:mb-0 pb-6 w-full "
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
@@ -104,7 +104,7 @@ export default function AboutStatsHero() {
       </div>
 
       {/* Stats row with zoom-in/count-up animation */}
-      <div className="flex  justify-between items-center gap-6 sm:gap-0 pt-4 max-w-full">
+      <div className="flex  justify-between items-center gap-6 sm:gap-0 pt-16 max-w-full">
         {[ 
           { ref: refClients, label: "OEMs Consulted" },
           { ref: refDocs, label: "Documents Processed" },

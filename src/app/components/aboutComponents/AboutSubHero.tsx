@@ -55,7 +55,7 @@ export default function OurJourney() {
               alt="Workshop diagram"
               className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl"
             />
-            <div className="bg-[#F9F9F9] pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
 
            
             <h3 className="text-xl font-bold text-black mb-1 mt-2">
@@ -82,7 +82,7 @@ export default function OurJourney() {
               alt="Car diagram"
               className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl"
             />
-            <div className="bg-[#F9F9F9] pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
             <h3 className="text-xl font-bold text-black mb-1 mt-2">
               Co-created with OEM &amp; Homologation Experts
             </h3>
@@ -110,7 +110,7 @@ export default function OurJourney() {
               alt="Car diagram"
               className="object-cover w-full h-[180px] md:h-[280px] rounded-3xl"
             />
-            <div className="bg-[#F9F9F9] pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
             <h4 className="text-xl font-bold mb-1 text-black pl-2 mt-2">
               Automotive Focus
             </h4>
@@ -135,7 +135,7 @@ export default function OurJourney() {
               alt="Platform"
               className="object-cover w-full h-[180px] md:h-[280px] rounded-t-3xl"
             />
-            <div className="bg-[#F9F9F9] pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
             <h4 className="text-xl font-bold mb-1 text-black mt-2">
               Built for the Future
             </h4>

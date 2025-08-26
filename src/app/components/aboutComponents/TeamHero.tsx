@@ -21,23 +21,23 @@ export default function TeamHero() {
     },
     {
       image: "/img/testo1.png",
-      role: "Project Manager",
+      role: "Backend Architect",
       name: "John B",
-      desc: "Drives product vision by combining deep regulatory knowledge.",
+      desc: "Designs and maintains the scalable backend systems that power LexBolt's compliance engine, ensuring speed, security, and reliability.",
       cardBg: "bg-[#F354184D]",
     },
     {
       image: "/img/testo1.png",
-      role: "Lead Developer",
+      role: "AI Industry Advisor",
       name: "Rohan Iyer",
-      desc: "Architects scalable backend systems and ensures seamless integration.",
+      desc: "Provides guidance on aligning the latest AI innovations with real-world enterprise needs, keeping LexBolt cutting-edge and practical.",
       cardBg: "bg-[#F354184D]",
     },
     {
       image: "/img/testo2.png",
-      role: "Product Manager",
+      role: "Automobile Regulation Expert",
       name: "Maya de",
-      desc: "Architects scalable backend systems and ensures seamless integration.",
+      desc: "Brings deep knowledge of global automotive standards and homologation, ensuring LexBolt’s outputs are accurate and industry-relevant.",
       cardBg: "bg-[#F354184D]",
     },
   ];
@@ -70,7 +70,7 @@ export default function TeamHero() {
   const repeatedMembers = [...members, ...members];
 
   return (
-    <section className="w-full mx-auto py-12 px-4 relative">
+    <section className="w-full mx-auto pb-20 px-4 relative">
       {/* Headline */}
       <motion.h1
         className="text-center text-2xl sm:text-3xl md:text-[64px] font-bold text-[#232540] mb-2"
@@ -115,7 +115,7 @@ export default function TeamHero() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.12 }}
-              onMouseEnter={() => controls.stop()} 
+              onMouseEnter={() => controls.stop()}
               onMouseLeave={() =>
                 controls.start({
                   x: "-50%",
@@ -139,13 +139,22 @@ export default function TeamHero() {
               </div>
 
               {/* FIXED TEXT FOOTER */}
-              <div className="w-full h-[35%] overflow-y-scroll hide-scrollbar bg-primary rounded-b-3xl px-2 py-3 sm:px-4 sm:py-5 z-20 flex flex-col">
-                <h3 className="text-white font-bold text-xs sm:text-base">
-                  {member.name}
-                </h3>
-                <p className="text-white text-[11px] sm:text-xs opacity-90 w-full leading-snug whitespace-normal transition-all duration-300 ease-in-out line-clamp-3 hover:line-clamp-none">
-                  {member.desc}
-                </p>
+              <div className="relative w-full h-[8rem] group">
+                {" "}
+                {/* match initial maxHeight */}
+                <motion.div
+                  initial={{ maxHeight: "8rem" }}
+                  whileHover={{ maxHeight: "24rem" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="absolute bottom-0  left-0 right-0 overflow-hidden bg-primary rounded-b-3xl px-2 py-3 sm:px-4 sm:py-5 z-20 flex flex-col will-change-max-height"
+                >
+                  <h3 className="text-white font-bold text-xs sm:text-base mb-1 ">
+                    {member.name}
+                  </h3>
+                  <p className="text-white text-[11px] sm:text-xs opacity-90 w-full leading-snug whitespace-normal line-clamp-4 group-hover:line-clamp-none transition-all duration-300 ease-in-out">
+                    {member.desc}
+                  </p>
+                </motion.div>
               </div>
             </motion.div>
           ))}

@@ -58,7 +58,7 @@ export default function ProcessStepsSection() {
         variants={fadeUp}
       >
      
-        <h1 className="font-bold text-2xl md:text-[56px] mb-3 text-center leading-tight max-w-xl">
+        <h1 className="font-bold text-2xl md:text-[56px] mb-3 text-center leading-tight max-w-xl mt-6">
           Upload. Interpret. Compare. Validate. 
         </h1>
         <p className="text-black mb-6 text-center text-sm sm:text-[16px] max-w-xl">

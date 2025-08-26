@@ -32,7 +32,7 @@ export default function ValuesListHero() {
   ];
 
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10 px-4 sm:px-20 my-20 overflow-x-hidden">
+    <section className="w-full max-w-screen-3xl mx-auto pb-10 px-4 sm:px-20 my-10 overflow-x-hidden">
       {/* Tag */}
      
       {/* <motion.div
