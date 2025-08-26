@@ -1,6 +1,7 @@
 "use client";
+
 import React, { useState } from "react";
-import { easeOut } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import ContactButton from "../ContactButton";
 import RequestDemoModal from "../RequestDemoModal";
 import TalkUs from "./talkusButton";
@@ -21,7 +22,13 @@ export default function ProductTalkUs() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="md:w-[95%] relative bg-[#F6F6F6]/60 rounded-[32px] mx-auto mt-14 md:p-6 md:px-12 flex flex-col items-center">
+    <motion.section
+      className="md:w-[95%] relative bg-[#F6F6F6]/60 rounded-[32px] mx-auto mt-14 md:p-6 md:px-12 flex flex-col items-center"
+      initial={fadeUp.initial}
+      whileInView={fadeUp.whileInView}
+      viewport={fadeUp.viewport}
+      transition={fadeUp.transition}
+    >
       <div className="w-full md:max-w-6xl  px-4 py-10 text-center overflow-hidden flex flex-col items-center justify-center more ">
         {/* Top left dots image */}
         <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block rounded-t-[32px] overflow-hidden">
@@ -33,13 +40,14 @@ export default function ProductTalkUs() {
         </div>
 
         {/* Bottom right shapes image */}
-        <div className="absolute right-0 bottom-0   pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">
+        <div className="absolute right-0 bottom-0 pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">
           <img
             className="w-24 h-auto md:w-56"
             src="/product/talkus1.svg"
             alt="Decorative Shape"
           />
         </div>
+
         <div className="py-10">
           <h1 className="font-bold text-2xl md:text-[48px] text-black mb-2 max-w-3xl mx-auto leading-[1.1] tracking-tight">
             Compliance Should Accelerate Innovation, Not Slow It Down.
@@ -53,6 +61,6 @@ export default function ProductTalkUs() {
         </div>
       </div>
       {showModal && <RequestDemoModal onClose={() => setShowModal(false)} />}
-    </section>
+    </motion.section>
   );
 }
