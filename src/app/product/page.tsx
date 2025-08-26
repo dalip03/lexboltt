@@ -4,6 +4,8 @@ import ComplianceVersionHero from '../components/productComponents/ComplianceVer
 import SolutionsHero from '../components/productComponents/SolutionsHero'
 import ComplianceManagementHero from '../components/productComponents/ComplianceManagementHero'
 import FAQ from '../components/productComponents/FAQ'
+import ProductTalkUs from '../components/productComponents/ProductTalkUs'
+import Corecapabilities from '../components/productComponents/CoreCapabilities'
 
 function page() {
   return (
@@ -12,6 +14,8 @@ function page() {
       <ComplianceVersionHero/>
       <SolutionsHero/>  
       <ComplianceManagementHero/>
+      <Corecapabilities/>
+      <ProductTalkUs/>
       <FAQ/>
     </div>
   )

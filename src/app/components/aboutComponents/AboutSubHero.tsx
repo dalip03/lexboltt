@@ -47,7 +47,7 @@ export default function OurJourney() {
         </div>
 
         {/* Row 1: Workshops + Co-created */}
-        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-2 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-3 items-start">
           {/* Card 1 */}
           <motion.div
             initial={fadeUp.initial}
@@ -61,14 +61,18 @@ export default function OurJourney() {
               width={500}
               height={240}
               alt="Workshop diagram"
-              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-2xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl mb-3"
             />
-            <h3 className="text-lg font-bold text-black mb-1">
+            <div className="bg-[#F9F9F9] pl-4">
+             
+           
+            <h3 className="text-xl font-bold text-black mb-1">
               From workshops to working solution
             </h3>
             <p className="text-black text-sm">
               Lexbolt began as a hands-on collaboration with OEM teams and homologation/regulatory experts. Through multiple working sessions and reviews, we shaped a tool that turns dense automotive standards into clear, structured outputs.
             </p>
+             </div>
           </motion.div>
 
           {/* Card 2 */}
@@ -84,40 +88,44 @@ export default function OurJourney() {
               width={500}
               height={240}
               alt="Car diagram"
-              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-2xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl mb-3"
             />
-            <h3 className="text-lg font-bold text-black mb-1">
+            <div className="bg-[#F9F9F9] pl-4">
+            <h3 className="text-xl font-bold text-black mb-1">
               Co-created with OEM &amp; Homologation Experts
             </h3>
             <p className="text-black text-sm">
               Built with direct feedback from practitioners. The current feature set reflects real day-to-day tasks in automotive compliance: clause extraction.
             </p>
+            </div>
           </motion.div>
         </div>
 
         {/* Row 2: Automotive + Future (opposite ratio) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.6fr_2.4fr] gap-2 items-start ">
+        <div className="grid grid-cols-1 md:grid-cols-[1.6fr_2.4fr] gap-3 items-start ">
           {/* Card 3 */}
           <motion.div
             initial={fadeUp.initial}
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.2 }}
-            className="w-full flex flex-col bg-gray-200/30"
+            className="w-full flex flex-col bg-[#F9F9F9] rounded-3xl"
           >
             <Image
               src="/about/history3.svg"
               width={450}
               height={240}
               alt="Car diagram"
-              className="object-cover w-full h-[180px] md:h-[280px] rounded-2xl mb-3"
+              className="object-cover w-full h-[180px] md:h-[280px] rounded-3xl mb-3"
             />
-            <h4 className="text-lg font-bold mb-1 text-black pl-2">
+            <div className="bg-[#F9F9F9] pl-4">
+            <h4 className="text-xl font-bold mb-1 text-black pl-2">
               Automotive Focus
             </h4>
             <p className="text-black text-sm pl-2 pb-2">
               Built with guidance from automotive regulations and standards like IATF and ISO, to make sure you are compliant.
             </p>
+            </div>
           </motion.div>
 
           {/* Card 4 */}
@@ -129,14 +137,14 @@ export default function OurJourney() {
             className="w-full flex flex-col"
           >
             <Image
-              src="/about/history4.svg"
+              src="/about/aboutsub1.svg"
               width={550}
               height={240}
-              alt="Platform screenshot"
-              className="object-cover w-full h-[180px] md:h-[280px] rounded-t-2xl mb-3"
+              alt="Platform"
+              className="object-cover w-full h-[180px] md:h-[280px] rounded-t-3xl mb-3"
             />
-            <div className="bg-white">
-            <h4 className="text-lg font-bold mb-1 text-black">
+            <div className="bg-[#F9F9F9] pl-4">
+            <h4 className="text-xl font-bold mb-1 text-black">
               Built for the Future
             </h4>
             <p className="text-black text-sm">
