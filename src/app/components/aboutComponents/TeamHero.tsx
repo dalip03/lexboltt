@@ -62,7 +62,6 @@ export default function TeamHero() {
     }
     infiniteScroll();
 
-    // Cleanup just in case
     return () => {
       controls.stop();
     };
@@ -116,7 +115,7 @@ export default function TeamHero() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.12 }}
-              onMouseEnter={() => controls.stop()} // stop animation when hover
+              onMouseEnter={() => controls.stop()} 
               onMouseLeave={() =>
                 controls.start({
                   x: "-50%",
@@ -144,7 +143,7 @@ export default function TeamHero() {
                 <h3 className="text-white font-bold text-xs sm:text-base">
                   {member.name}
                 </h3>
-                <p className="text-white text-[11px] sm:text-xs opacity-90 w-full leading-snug whitespace-normal transition-all duration-300 ease-in-out line-clamp-3 group-hover:line-clamp-none">
+                <p className="text-white text-[11px] sm:text-xs opacity-90 w-full leading-snug whitespace-normal transition-all duration-300 ease-in-out line-clamp-3 hover:line-clamp-none">
                   {member.desc}
                 </p>
               </div>
