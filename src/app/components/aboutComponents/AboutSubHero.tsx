@@ -49,7 +49,7 @@ export default function OurJourney() {
             className="w-full flex flex-col"
           >
             <Image
-              src="/about/history1.svg"
+              src="/about_assets/history1.svg"
               width={500}
               height={240}
               alt="Workshop diagram"
@@ -76,7 +76,7 @@ export default function OurJourney() {
             className="w-full flex flex-col"
           >
             <Image
-              src="/about/history2.svg"
+              src="/about_assets/history2.svg"
               width={500}
               height={240}
               alt="Car diagram"
@@ -104,7 +104,7 @@ export default function OurJourney() {
             className="w-full flex flex-col bg-[#F9F9F9] rounded-3xl"
           >
             <Image
-              src="/about/history3.svg"
+              src="/about_assets/history3.svg"
               width={450}
               height={240}
               alt="Car diagram"
@@ -129,7 +129,7 @@ export default function OurJourney() {
             className="w-full flex flex-col bg-[#F8F2F1] rounded-[24px]"
           >
             <Image
-              src="/about/aboutsub1.png"
+              src="/about_assets/aboutsub1.png"
               width={550}
               height={240}
               alt="Platform"

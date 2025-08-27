@@ -10,7 +10,7 @@ function ContactButton() {
             Contact us
             <span>
               <Image
-                src="/product/right.svg"
+                src="/product_assets/right.svg"
                 alt="Arrow Right"
                 width={40} // w-12 = 48px
                 height={40} // h-12 = 48px

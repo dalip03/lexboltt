@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function FeaturesScrollableRow() {
   const images = [
-    "/about/abouts.png",
-    "/about/about1.png",
-    "/about/about2.png",
-    "/about/about3.png",
+    "/about_assets/abouts.png",
+    "/about_assets/about1.png",
+    "/about_assets/about2.png",
+    "/about_assets/about3.png",
   ];
 
   // Double the array for smooth infinite scroll effect

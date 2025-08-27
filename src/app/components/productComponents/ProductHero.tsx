@@ -68,8 +68,8 @@ export default function ProductHero() {
         animate="visible"
       >
         <Image
-          src="/product/products1.svg"
-          alt="Product Dashboard"
+          src="/product_assets/products1.svg"
+          alt="Product"
           width={410}
           height={320}
           className="w-full max-w-[320px] md:max-w-[410px] h-auto rounded-3xl object-cover"

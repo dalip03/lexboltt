@@ -15,7 +15,7 @@ const features = [
       "Structured outputs: requirements, tests, references",
       "Zero manual tagging or keyword hunting",
     ],
-    image: "/about/abouts4.svg",
+    image: "/about_assets/abouts4.svg",
   },
   {
     label: "Control",
@@ -28,7 +28,7 @@ const features = [
       "Real-time notifications and alerts",
       "Configurable dashboards for teams",
     ],
-    image: "/about/abouts2.svg",
+    image: "/about_assets/abouts2.svg",
   },
   {
     label: "Compliance",
@@ -41,7 +41,7 @@ const features = [
       "Multi-market regulation tracking",
       "Clause-to-component verification",
     ],
-    image: "/about/abouts3.svg",
+    image: "/about_assets/abouts3.svg",
   },
   {
     label: "Compatible",
@@ -54,7 +54,7 @@ const features = [
       "Export to JIRA, Azure DevOps, and spreadsheets",
       "API-ready for custom integrations",
     ],
-    image: "/about/abouts1.svg",
+    image: "/about_assets/abouts1.svg",
   },
   {
     label: "Security",
@@ -67,7 +67,7 @@ const features = [
       "Role-based access controls",
       "•	SOC2 & ISO27001-ready architecture",
     ],
-    image: "/about/abouts5.svg",
+    image: "/about_assets/abouts5.svg",
   },
 ];
 

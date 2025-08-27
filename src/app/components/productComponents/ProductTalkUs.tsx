@@ -29,7 +29,7 @@ export default function ProductTalkUs() {
         {/* Top left dots image */}
         <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block rounded-t-[32px] overflow-hidden">
           <Image
-            src="/product/talkus2.svg"
+            src="/product_assets/talkus2.svg"
             alt="Decorative Shape"
             width={112} // 24 * 4 = 96px, responsive approx
             height={112}
@@ -40,7 +40,7 @@ export default function ProductTalkUs() {
         {/* Bottom right shapes image */}
         <div className="absolute right-0 bottom-0 pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">
           <Image
-  src="/product/talkus1.svg"
+  src="/product_assets/talkus1.svg"
   alt="Decorative Shape"
   width={224} 
   height={96} 

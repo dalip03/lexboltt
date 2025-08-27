@@ -7,25 +7,25 @@ export default function ValuesListHero() {
   // Update these with your actual icon image paths:
   const values = [
     {
-      icon: "/about/innovation.svg",
+      icon: "/about_assets/innovation.svg",
       heading: "Innovation",
       subtitle: "Redefining Compliance with AI",
       desc: "We push the boundaries of technology to simplify complex regulations, turning compliance into a driver of innovation rather than a roadblock.",
     },
     {
-      icon: "/about/excellence.svg",
+      icon: "/about_assets/excellence.svg",
       heading: "Excellence",
       subtitle: "Raising the Standard",
       desc: "From compliance analysis to customer experience, we hold ourselves to the highest standards, ensuring accuracy, reliability, and trust at every step.",
     },
     {
-      icon: "/about/collaboration.svg",
+      icon: "/about_assets/collaboration.svg",
       heading: "Collaboration",
       subtitle: "Built for Teams, Powered by Partnerships",
       desc: "We believe the strongest solutions come from working together. LexBolt enables seamless collaboration across engineering, homologation, and compliance teams.",
     },
     {
-      icon: "/about/integrity.svg",
+      icon: "/about_assets/integrity.svg",
       heading: "Integrity",
       subtitle: "Ethical, Transparent, Responsible",
       desc: "Our foundation is trust. We operate with full transparency and a commitment to ethical practices, ensuring compliance solutions that are both secure and dependable.",

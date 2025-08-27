@@ -119,7 +119,7 @@ export default function CoreCapabilities() {
             {/* Decorative shapes */}
             <div className="absolute bottom-0 right-0  z-0 pointer-events-none select-none">
               <Image
-                src="/product/capabilities.svg"
+                src="/product_assets/capabilities.svg"
                 alt="decorative"
                 width={500} 
                 height={500}
@@ -129,7 +129,7 @@ export default function CoreCapabilities() {
 
             <div className="absolute left-0 top-0 z-0 pointer-events-none select-none">
               <Image
-                src="/product/capabilities1.svg"
+                src="/product_assets/capabilities1.svg"
                 alt="corner"
                 width={500} 
                 height={500}

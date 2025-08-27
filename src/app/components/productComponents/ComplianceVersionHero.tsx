@@ -14,7 +14,7 @@ export default function ComplianceVersionHero() {
         viewport={{ once: true }}
       >
         <Image
-          src="/product/products2.svg"
+          src="/product_assets/products2.svg"
           alt="Compliance Version Dashboard"
           width={660} // match largest expected width
           height={220} // match expected height

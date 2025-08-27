@@ -69,7 +69,7 @@ export default function SolutionsHero() {
           }}
         />
         <Image
-          src="/product/productWheel.png"
+          src="/product_assets/productWheel.png"
           alt="Solutions Diagram"
           width={620}
           height={620}
