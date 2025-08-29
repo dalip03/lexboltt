@@ -28,10 +28,10 @@ export default function AboutUsHero() {
   };
 
   return (
-    <section className="w-full mx-auto flex flex-col-reverse md:pl-20 lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 lg:pb-10">
+    <section className="w-full mx-auto flex flex-col-reverse md:pl-20 lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 pb-10">
       {/* Left Side - text area */}
       <motion.div
-        className="flex-1 lg:flex-[1.8]  flex flex-col items-start justify-center"
+        className="flex-1 lg:flex-[1.8] text-center md:text-start flex flex-col md:items-start justify-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -49,7 +49,7 @@ export default function AboutUsHero() {
 
         {/* Subheading */}
         <motion.p
-          className="text-black text-sm sm:text-base md:text-lg mb-8 max-w-lg"
+          className="text-black text-center md:text-start px-8 md:px-0 text-sm sm:text-base md:text-lg mb-8 max-w-lg"
           variants={textVariant}
         >
           Regulations are evolving faster than ever. For automotive OEMs and
@@ -58,8 +58,11 @@ export default function AboutUsHero() {
         </motion.p>
 
         {/* CTA Button + Icon */}
+        <div>
         <DemoButton onClick={() => setShowModal(true)} />
+          </div>
       </motion.div>
+      
 
       {/* Right Side - Dashboard/Image area */}
       <motion.div

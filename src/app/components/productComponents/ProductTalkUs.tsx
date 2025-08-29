@@ -25,7 +25,7 @@ export default function ProductTalkUs() {
       viewport={fadeUp.viewport}
       transition={fadeUp.transition}
     >
-      <div className="w-full md:max-w-6xl  px-4 py-10 text-center overflow-hidden flex flex-col items-center justify-center more ">
+      <div className="w-full md:max-w-6xl px-4 py-10 text-center overflow-hidden flex flex-col items-center justify-center more ">
         {/* Top left dots image */}
         <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block rounded-t-[32px] overflow-hidden">
           <Image
@@ -40,16 +40,16 @@ export default function ProductTalkUs() {
         {/* Bottom right shapes image */}
         <div className="absolute right-0 bottom-0 pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">
           <Image
-  src="/product_assets/talkus1.svg"
-  alt="Decorative Shape"
-  width={224} 
-  height={96} 
-  className="w-24 h-auto md:w-56"
-/>
+            src="/product_assets/talkus1.svg"
+            alt="Decorative Shape"
+            width={224}
+            height={96}
+            className="w-24 h-auto md:w-56"
+          />
         </div>
 
         <div className="py-10">
-          <h1 className="font-bold text-2xl md:text-[48px] text-black mb-2 max-w-3xl mx-auto leading-[1.1] tracking-tight">
+          <h1 className="font-bold text-3xl md:text-[48px] text-black mb-2 max-w-3xl mx-auto leading-[1.1] tracking-tight">
             Compliance Should Accelerate Innovation, Not Slow It Down.
           </h1>
 

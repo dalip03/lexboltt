@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -99,18 +100,19 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/product" className="hover:text-gray-300">
+                  Product
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-gray-300">
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link href="/product" className="hover:text-gray-300">
-                  Products
-                </Link>
-              </li>
+
               <li>
                 <Link href="/contactus" className="hover:text-gray-300">
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -130,24 +132,18 @@ const Footer: React.FC = () => {
                 className="hover:text-gray-300 cursor-pointer"
                 onClick={() => setShowModal(true)}
               >
-                450 Bath Road, Longford, <br /> Heathrow, London, UB7 OEB
+                450 Bath Road, Longford, <br /> Heathrow, London, UB7 0EB
               </li>
-              <li
-                className="hover:text-gray-300 cursor-pointer"
-                onClick={() => setShowModal(true)}
-              >
-                Terms of Service
+              <li className="hover:text-gray-300 cursor-pointer">
+                <Link href="/terms">Terms and Conditions</Link>
               </li>
-              <li
-                className="hover:text-gray-300 cursor-pointer"
-                onClick={() => setShowModal(true)}
-              >
-                Privacy Policy
+              <li className="hover:text-gray-300 cursor-pointer">
+                <Link href="/privacypolicy">Privacy Policy</Link>
               </li>
             </ul>
           </div>
         </div>
-          <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right md:hidden">
+        <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right md:hidden">
           ©2025 Lexbolt. All Rights Reserved.
         </div>
       </motion.div>

@@ -43,20 +43,6 @@ const Stars = ({ count }: { count: number }) => (
   </span>
 );
 
-const Rating = ({ count }: { count: number }) => (
-  <span className="inline-flex text-xl">
-    {Array.from({ length: count }).map((_, i) => (
-      <Image
-        key={i}
-        src="/img/ratingstar.svg"
-        alt="star"
-        width={12}
-        height={12}
-        className=" mr-1"
-      />
-    ))}
-  </span>
-);
 const TestimonialSection: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -98,9 +84,9 @@ const TestimonialSection: React.FC = () => {
     <section className="md:w-[97%] bg-[#F6F6F6] rounded-[32px] mx-auto mt-14 py-20 flex flex-col md:flex-row justify-between gap-1 items-stretch">
       {/* Left Side */}
       <div className="w-full md:w-[45%] flex flex-col  mb-8 px-4  md:px-20 ">
-        <span className="text-black text-[16px] mb-3 self-start flex gap-2 items-center">
+        {/* <span className="text-black text-[16px] mb-3 self-start flex gap-2 items-center">
           Trusted By 20,000+ Clients <Rating count={5} />
-        </span>
+        </span> */}
         <h2 className="w-full font-sans font-bold text-2xl md:text-[56px] mb-6 text-black  self-start">
           What Do Our Clients Say
         </h2>

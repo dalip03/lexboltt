@@ -16,7 +16,7 @@ const RequestCall: React.FC<DemoButtonProps> = ({ onClick }) => (
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
-      Request a Call
+      Book a Demo
       <span className="ml-2 flex-shrink-0">
         <Image
           src="/img/arrowrighticonwhite.svg"

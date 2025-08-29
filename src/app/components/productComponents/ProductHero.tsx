@@ -38,7 +38,7 @@ export default function ProductHero() {
         animate="visible"
       >
         <motion.h1
-          className="text-black font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[56px] mb-3 leading-tight"
+          className="text-black hidden md:block font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[56px] mb-3 leading-tight"
           variants={textVariant}
         >
           Powering the Future <br />
@@ -46,8 +46,17 @@ export default function ProductHero() {
             of <span className="text-black">Regulations</span>
           </span>
         </motion.h1>
+         <motion.h1
+          className="text-black  md:hidden font-bold text-2xl sm:text-3xl md:text-[48px] lg:text-[56px] mb-3 leading-tight"
+          variants={textVariant}
+        >
+          Powering the Future of<br />
+          <span className="relative inline-block">
+          <span className="text-black">Regulations</span>
+          </span>
+        </motion.h1>
         <motion.p
-          className="text-black mt-2 text-base md:text-[18px] mb-8 md:pr-36"
+          className="text-black mt-2 text-base md:text-[18px] mb-8 md:pr-36 px-4"
           variants={textVariant}
         >
           Lexbolt is more than software it&apos;s an intelligent assistant for
@@ -62,7 +71,7 @@ export default function ProductHero() {
 
       {/* Right side: Product image */}
       <motion.div
-        className="flex-1 flex items-end justify-end w-full"
+        className="flex-1 flex md:items-end md:justify-end items-center justify-center w-full"
         variants={imageVariant}
         initial="hidden"
         animate="visible"

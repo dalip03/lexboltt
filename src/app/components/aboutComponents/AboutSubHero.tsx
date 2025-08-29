@@ -15,14 +15,14 @@ export default function OurJourney() {
       <div className="w-full mx-auto flex flex-col gap-12">
         {/* Heading and Description */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">
-          <div>
+          <div className="text-center md:text-start">
            
             <motion.h2
               initial={fadeUp.initial}
               whileInView={fadeUp.whileInView}
               viewport={fadeUp.viewport}
               transition={fadeUp.transition}
-              className="text-2xl md:text-[64px] font-bold text-black mb-1"
+              className="text-2xl md:text-[64px] font-bold text-black mb-1 self-center md:text-start "
             >
               Our Journey
             </motion.h2>
@@ -32,14 +32,14 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={fadeUp.transition}
-            className="max-w-xl text-black text-sm md:text-sm md:mt-0 mt-2 text-end"
+            className="max-w-xl text-black text-sm md:text-sm md:mt-0 mt-2 md:text-end text-center px-4 md:px-0"
           >
             At Lexbolt, we blend advanced AI with real-world automotive compliance to deliver faster, smarter regulatory workflows. From instant document parsing to proactive change tracking and integration into your engineering tools, everything we build is designed to move your team forward efficiently and compliantly.
           </motion.div>
         </div>
 
         {/* Row 1: Workshops + Co-created */}
-        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-3 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-3 items-start mt-4 md:mt-0">
           {/* Card 1 */}
           <motion.div
             initial={fadeUp.initial}
@@ -55,7 +55,7 @@ export default function OurJourney() {
               alt="Workshop diagram"
               className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl"
             />
-            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
 
            
             <h3 className="text-xl font-bold text-black mb-1 mt-2">
@@ -73,7 +73,7 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.15 }}
-            className="w-full flex flex-col"
+            className="w-full flex flex-col mt-4 md:mt-0 "
           >
             <Image
               src="/about_assets/history2.svg"
@@ -82,7 +82,7 @@ export default function OurJourney() {
               alt="Car diagram"
               className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl"
             />
-            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
             <h3 className="text-xl font-bold text-black mb-1 mt-2">
               Co-created with OEM &amp; Homologation Experts
             </h3>
@@ -101,7 +101,7 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.2 }}
-            className="w-full flex flex-col bg-[#F9F9F9] rounded-3xl"
+            className="w-full flex flex-col bg-[#F9F9F9] rounded-3xl mt-4 md:mt-0"
           >
             <Image
               src="/about_assets/history3.svg"
@@ -110,7 +110,7 @@ export default function OurJourney() {
               alt="Car diagram"
               className="object-cover w-full h-[180px] md:h-[280px] rounded-3xl"
             />
-            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
             <h4 className="text-xl font-bold mb-1 text-black pl-2 mt-2">
               Automotive Focus
             </h4>
@@ -126,7 +126,7 @@ export default function OurJourney() {
             whileInView={fadeUp.whileInView}
             viewport={fadeUp.viewport}
             transition={{ ...fadeUp.transition, delay: 0.25 }}
-            className="w-full flex flex-col bg-[#F8F2F1] rounded-[24px]"
+            className="w-full flex flex-col bg-[#F8F2F1] rounded-[24px] mt-4 md:mt-0"
           >
             <Image
               src="/about_assets/aboutsub1.png"
@@ -135,7 +135,7 @@ export default function OurJourney() {
               alt="Platform"
               className="object-cover w-full h-[180px] md:h-[280px] rounded-t-3xl"
             />
-            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl pl-4">
+            <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
             <h4 className="text-xl font-bold mb-1 text-black mt-2">
               Built for the Future
             </h4>

@@ -39,7 +39,7 @@ export default function ValuesListHero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.7 }}
         transition={{ duration: 0.7, delay: 0.06 }}
-        className="text-black text-2xl sm:text-3xl md:text-[64px] font-bold mb-2 leading-tight"
+        className="text-black text-3xl sm:text-3xl md:text-[64px] font-bold mb-2 leading-tight text-center md:text-start"
       >
         The Innovation Behind
       </motion.h1>
@@ -48,9 +48,9 @@ export default function ValuesListHero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.7 }}
         transition={{ duration: 0.7, delay: 0.12 }}
-        className="text-gray-400 text-2xl sm:text-3xl font-semibold mb-8 leading-tight"
+        className="text-gray-400 text-3xl sm:text-3xl font-semibold mb-8 leading-tight text-center md:text-start"
       >
-        <span className="bg-primary text-white px-3 py-1 text-2xl sm:text-3xl md:text-[64px] font-bold inline-block">
+        <span className="bg-primary text-white px-3 py-1 text-2xl sm:text-3xl md:text-[64px] font-bold inline-block ">
           Your Regulations{" "}
         </span>
       </motion.h2>
@@ -77,7 +77,7 @@ export default function ValuesListHero() {
             <div className="flex flex-col flex-1 items-start text-start justify-center">
               <span className="text-black text-lg">{value.heading}</span>
             </div>
-            <div className="flex flex-col flex-[2] sm:ml-7 mt-1 sm:mt-0">
+            <div className="flex flex-col flex-[2] sm:ml-7 mt-1 sm:mt-0 text-center md:text-start px-6 md:px-0">
               <span className="text-xs sm:text-sm italic text-gray-800 mb-1">
                 {value.subtitle}
               </span>

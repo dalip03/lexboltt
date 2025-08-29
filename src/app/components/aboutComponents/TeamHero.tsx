@@ -8,7 +8,7 @@ export default function TeamHero() {
   const members = [
     {
       image: "/img/ceo.jpg",
-      role: "CEO/Co founder",
+      role: "CEO/Co-founder",
       name: "Manjunathan B",
       desc: "Seasoned entrepreneur with over 24 years of experience in IT consultancy and business leadership. Skilled at driving strategic growth, fostering strong customer relationships, and managing key accounts to deliver sustained value and client satisfaction.",
       cardBg: "bg-[#F354184D]",
@@ -23,21 +23,21 @@ export default function TeamHero() {
     {
       image: "/img/placeholder.svg",
       role: "Backend Architect",
-      name: "John B",
+      name: ".",
       desc: "Designs and maintains the scalable backend systems that power LexBolt's compliance engine, ensuring speed, security, and reliability.",
       cardBg: "bg-[#F354184D]",
     },
     {
       image: "/img/placeholder.svg",
       role: "AI Industry Advisor",
-      name: "Rohan Iyer",
+      name: ".",
       desc: "Provides guidance on aligning the latest AI innovations with real-world enterprise needs, keeping LexBolt cutting-edge and practical.",
       cardBg: "bg-[#F354184D]",
     },
     {
       image: "/img/placeholder.svg",
       role: "Automobile Regulation Expert",
-      name: "Maya de",
+      name: ".",
       desc: "Brings deep knowledge of global automotive standards and homologation, ensuring LexBolt’s outputs are accurate and industry-relevant.",
       cardBg: "bg-[#F354184D]",
     },
@@ -150,7 +150,7 @@ export default function TeamHero() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="absolute bottom-0  left-0 right-0 overflow-hidden bg-primary rounded-b-3xl px-2 py-3 sm:px-4 sm:py-5 z-20 flex flex-col will-change-max-height"
                 >
-                  <h3 className="text-white font-bold text-xs sm:text-base mb-1 ">
+                  <h3 className="text-primary font-bold text-xs sm:text-base mb-1 ">
                     {member.name}
                   </h3>
                   <p className="text-white text-[11px] sm:text-xs opacity-90 w-full leading-snug whitespace-normal line-clamp-4 group-hover:line-clamp-none transition-all duration-300 ease-in-out">

@@ -23,9 +23,7 @@ export default function page() {
         <div className="mb-6">
           <h4 className="uppercase text-[18px] text-black mb-1">VISIT US</h4>
           <p className="text-[16px] text-black">
-            450 Bath Road, Longford, Heathrow,
-            <br />
-            London, UB7 OEB
+            450 Bath Road, Longford, <br /> Heathrow, London, UB7 0EB
           </p>
         </div>
         {/* Get in Touch */}

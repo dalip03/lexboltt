@@ -133,7 +133,7 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center max-w-6xl mx-auto px-4"
+        className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center max-w-6xl mx-auto md:px-4"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -180,7 +180,7 @@ const FeaturesTabsSection: React.FC = () => {
             {features[active].bullets.map((item, idx) => (
               <li
                 key={idx}
-                className="flex items-start gap-2 text-base text-black"
+                className="flex items-start text-start gap-2 text-base text-black"
               >
                 <Image
                   src="/img/orangestar.svg"

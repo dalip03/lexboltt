@@ -39,11 +39,11 @@ export default function ComplianceHeroBanner() {
             Compliance
           </span>{" "}
           From
-          <br />
+          <br className="hidden md:block" />
           reactive to proactive.
         </h1>
         <p className="text-black md:text-[18px] text-md font-medium mb-7 mt-2 md:px-12 max-w-2xl mx-auto">
-          Lexbolt Is Hub For Managing All Regulations Professionally And <br />
+          Lexbolt Is Hub For Managing All Regulations Professionally And <br className="hidden md:block" />
           Efficiently
         </p>
         {/* Contact Button */}
