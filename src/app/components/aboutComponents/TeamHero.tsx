@@ -74,7 +74,7 @@ export default function TeamHero() {
     <section className="w-full mx-auto pb-20 px-4 relative">
       {/* Headline */}
       <motion.h1
-        className="text-center text-2xl sm:text-3xl md:text-[64px] font-bold text-black mb-2"
+        className="text-center text-3xl sm:text-3xl md:text-[64px] font-bold text-black mb-2"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -84,7 +84,7 @@ export default function TeamHero() {
       </motion.h1>
 
       <motion.p
-        className="text-center text-black max-w-3xl mx-auto mb-8 text-md md:text[16px]"
+        className="text-center text-black max-w-3xl mx-auto mb-8 text-md md:text[16px] px-4 md:px-0"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

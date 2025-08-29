@@ -11,7 +11,7 @@ const fadeUp = {
 
 export default function OurJourney() {
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 md:px-20 pb-10 px-4 sm:px-8 my-20 overflow-x-hidden">
+    <section className="w-full max-w-screen-3xl mx-auto md:pt-8 md:px-20 pb-10 px-4 sm:px-8 md:my-20 mt-4 overflow-x-hidden">
       <div className="w-full mx-auto flex flex-col gap-12">
         {/* Heading and Description */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8">
@@ -39,7 +39,7 @@ export default function OurJourney() {
         </div>
 
         {/* Row 1: Workshops + Co-created */}
-        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-3 items-start mt-4 md:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1.6fr] gap-3 items-start">
           {/* Card 1 */}
           <motion.div
             initial={fadeUp.initial}
@@ -58,10 +58,10 @@ export default function OurJourney() {
             <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
 
            
-            <h3 className="text-xl font-bold text-black mb-1 mt-2">
+            <h3 className="text-xl font-bold text-black mb-1 mt-2 text-center md:text-start">
               From workshops to working solution
             </h3>
-            <p className="text-black text-sm">
+            <p className="text-black text-sm text-center md:text-start">
               Lexbolt began as a hands-on collaboration with OEM teams and homologation/regulatory experts. Through multiple working sessions and reviews, we shaped a tool that turns dense automotive standards into clear, structured outputs.
             </p>
              </div>
@@ -83,10 +83,10 @@ export default function OurJourney() {
               className="object-cover w-full h-[180px] md:h-[240px] rounded-t-3xl"
             />
             <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
-            <h3 className="text-xl font-bold text-black mb-1 mt-2">
+            <h3 className="text-xl font-bold text-black mb-1 mt-2 text-center md:text-start">
               Co-created with OEM &amp; Homologation Experts
             </h3>
-            <p className="text-black text-sm">
+            <p className="text-black text-sm text-center md:text-start">
               Built with direct feedback from practitioners. The current feature set reflects real day-to-day tasks in automotive compliance: clause extraction.
             </p>
             </div>
@@ -111,10 +111,10 @@ export default function OurJourney() {
               className="object-cover w-full h-[180px] md:h-[280px] rounded-3xl"
             />
             <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
-            <h4 className="text-xl font-bold mb-1 text-black pl-2 mt-2">
+            <h4 className="text-xl font-bold mb-1 text-black pl-2 mt-2 text-center md:text-start">
               Automotive Focus
             </h4>
-            <p className="text-black text-sm pl-2 pb-2">
+            <p className="text-black text-sm pl-2 pb-2 text-center md:text-start">
               Built with guidance from automotive regulations and standards like IATF and ISO, to make sure you are compliant.
             </p>
             </div>
@@ -136,10 +136,10 @@ export default function OurJourney() {
               className="object-cover w-full h-[180px] md:h-[280px] rounded-t-3xl"
             />
             <div className="bg-[#F9F9F9] pb-2 rounded-b-2xl px-3">
-            <h4 className="text-xl font-bold mb-1 text-black mt-2">
+            <h4 className="text-xl font-bold mb-1 text-black mt-2 text-center md:text-start">
               Built for the Future
             </h4>
-            <p className="text-black text-sm">
+            <p className="text-black text-sm text-center md:text-start">
               Version-aware, comparison-ready, and designed for traceability. LexBolt structures information so teams can compare revisions, link components to clauses, and maintain an audit-friendly trail as regulations evolve.
             </p>
             </div>

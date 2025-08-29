@@ -62,7 +62,7 @@ export default function AboutStatsHero() {
   });
 
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pt-8 pb-10  px-4 sm:px-20 my-20 overflow-x-hidden">
+    <section className="w-full max-w-screen-3xl mx-auto pb-10  px-4 sm:px-20 md:my-20 overflow-x-hidden">
       {/* Tag with fade-in */}
      
 
@@ -75,12 +75,12 @@ export default function AboutStatsHero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h1 className="text-black text-2xl sm:text-3xl md:text-[56px] xl:text-[64px] font-bold leading-tight mb-3 break-words">
+          <h1 className="text-black text-center md:text-start px-6 md:px-0 text-2xl sm:text-3xl md:text-[56px] xl:text-[64px] font-bold leading-tight mb-3 break-words">
             Revolutionizing{" "}
             <span className="bg-primary text-white px-2 md:px-3 py-1 font-extrabold inline-block">
               Businesses
             </span>{" "}
-            Through <br />
+            Through <br className="hidden md:block" />
             Tailored AI Models.
           </h1>
         </motion.div>
@@ -93,7 +93,7 @@ export default function AboutStatsHero() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <div className="h-full flex items-end max-w-full ">
-            <p className="text-black text-sm md:text-base leading-tight md:text-right break-words">
+            <p className="text-black text-center text-sm md:text-base leading-tight md:text-right break-words">
               At Lexbolt, we create custom AI solutions to transform automotive
               compliance from intelligent regulation parsing to automated
               workflow integration helping teams thrive in a complex,
@@ -104,7 +104,7 @@ export default function AboutStatsHero() {
       </div>
 
       {/* Stats row with zoom-in/count-up animation */}
-      <div className="flex  justify-between items-center gap-6 sm:gap-0 pt-16 max-w-full">
+      <div className="flex  justify-between items-center gap-6 sm:gap-0 md:pt-12 max-w-full">
         {[ 
           { ref: refClients, label: "OEMs Consulted" },
           { ref: refDocs, label: "Documents Processed" },

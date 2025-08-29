@@ -65,7 +65,7 @@ const features = [
     bullets: [
       "Data encrypted at rest & in transit",
       "Role-based access controls",
-      "•	SOC2 & ISO27001-ready architecture",
+      "SOC2 & ISO27001-ready architecture",
     ],
     image: "/about_assets/abouts5.svg",
   },
@@ -82,7 +82,7 @@ const FeaturesTabsSection: React.FC = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="w-full mx-auto pb-20 px-4 sm:px-12 lg:px-20 ">
+    <section className="w-full mx-auto pb-10 px-4 sm:px-12 lg:px-20">
       {/* Subtitle & Heading */}
       <motion.div
         className="flex flex-col items-center mb-10"
@@ -91,14 +91,14 @@ const FeaturesTabsSection: React.FC = () => {
         viewport={fadeUp.viewport}
         transition={fadeUp.transition}
       >
-        <h2 className="font-extrabold text-3xl sm:text-4xl md:text-[56px]  max-w-6xl text-center leading-tight mb-4">
+        <h2 className="font-extrabold text-3xl sm:text-4xl md:text-[56px]  max-w-6xl text-center leading-tight md:mb-4">
           Features & Benefits
         </h2>
       </motion.div>
 
       {/* Tab buttons */}
       <motion.div
-        className="flex flex-nowrap justify-center items-center w-full gap-2 mb-20 overflow-x-auto no-scrollbar "
+        className="flex flex-nowrap md:justify-center md:items-center w-full gap-2 md:mb-20 mb-5 overflow-x-auto no-scrollbar "
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}
@@ -133,7 +133,7 @@ const FeaturesTabsSection: React.FC = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center max-w-6xl mx-auto md:px-4"
+        className="flex flex-col lg:flex-row gap-4 lg:gap-16 justify-center items-center max-w-6xl mx-auto md:px-4"
         initial={fadeUp.initial}
         whileInView={fadeUp.whileInView}
         viewport={fadeUp.viewport}

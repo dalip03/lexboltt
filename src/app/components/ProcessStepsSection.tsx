@@ -49,7 +49,7 @@ const imageFade = {
 
 export default function ProcessStepsSection() {
   return (
-    <section className="w-full mx-auto py-10 px-4 md:px-8 ">
+    <section className="w-full mx-auto md:py-10 pt-5 px-4 md:px-8 ">
       {/* Headings */}
       <motion.div
         className="flex flex-col items-center mb-12"
@@ -62,7 +62,7 @@ export default function ProcessStepsSection() {
         <h1 className="font-bold text-2xl md:text-[56px] mb-3 text-center leading-tight max-w-xl mt-6">
           Upload. Interpret. Compare. Validate. 
         </h1>
-        <p className="text-black mb-6 text-center text-sm sm:text-[16px] max-w-xl">
+        <p className="text-black md:mb-6 text-center text-sm sm:text-[16px] max-w-xl">
           Compliance simplified for Engineering, NPD, Regulations and Homologation teams.
         </p>
       </motion.div>
@@ -72,7 +72,7 @@ export default function ProcessStepsSection() {
         {steps.map((step, idx) => (
           <motion.div
             key={idx}
-            className={`flex flex-col md:flex-row items-center gap-4 mb-20  ${
+            className={`flex flex-col md:flex-row items-center gap-4 md:mb-20 mb-10 ${
               idx % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
             initial="hidden"

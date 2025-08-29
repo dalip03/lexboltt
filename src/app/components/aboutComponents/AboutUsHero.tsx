@@ -54,7 +54,7 @@ export default function AboutUsHero() {
         >
           Regulations are evolving faster than ever. For automotive OEMs and
           suppliers, ensuring compliance across markets is both mission-critical
-          and resource-intensive.<span className="font-semibold"> LexBolt exists to change that.</span>
+          and resource-intensive.<span className="font-semibold"> Lexbolt exists to change that.</span>
         </motion.p>
 
         {/* CTA Button + Icon */}

@@ -3,14 +3,14 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="min-h-screen text-black flex flex-col lg:flex-row items-stretch px-10 py-12">
+    <div className="min-h-screen text-black flex flex-col lg:flex-row items-stretch md:px-10 px-6 py-12">
       {/* Left Info Section */}
       <div className="flex-1 flex flex-col justify-center pr-0 md:pr-6 ">
         <div className="mb-8">
-          <h2 className="text-3xl md:text-[56px] font-bold leading-15 ">
+          <h2 className="text-3xl md:text-[56px] font-bold md:leading-15 ">
             Partner with Us to Drive Compliance Forward
           </h2>
-          <div className="mt-6 text-black text-[16px] max-w-2xl">
+          <div className="mt-4 text-black text-[16px] max-w-2xl">
             At Lexbolt, we integrate advanced AI with automotive compliance
             expertise to deliver reliable, efficient, and future-ready
             regulatory workflows. Our solutions enable automated document
@@ -20,7 +20,7 @@ export default function page() {
           </div>
         </div>
         {/* Visit Us */}
-        <div className="mb-6">
+        <div className="mb-4">
           <h4 className="uppercase text-[18px] text-black mb-1">VISIT US</h4>
           <p className="text-[16px] text-black">
             450 Bath Road, Longford, <br /> Heathrow, London, UB7 0EB
@@ -35,8 +35,8 @@ export default function page() {
         </div>
       </div>
       {/* Right Form Section */}
-      <div className="flex-1 flex items-center">
-       <form className="w-full bg-gray-200/20 rounded-xl border border-gray-200 p-8 flex flex-col gap-6">
+      <div className="flex-1 flex items-center mt-1">
+       <form className="w-full bg-gray-200/20 rounded-xl border border-gray-200 md:p-8 p-4 flex flex-col gap-6">
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div>
       <label className="block text-xs mb-1 text-black">

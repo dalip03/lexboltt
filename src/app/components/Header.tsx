@@ -211,6 +211,7 @@ const Header = () => {
                   <motion.div variants={itemVariants}>
                     <Link
                       href="/contactus"
+                       onClick={() => setIsOpen(false)}
                       className={`text-[18px] font-semibold pl-12 py-1 px-1 rounded-full transition flex items-center justify-between gap-2 shadow ${
                         pathname === "/contactus"
                           ? "bg-primary text-white"
