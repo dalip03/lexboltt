@@ -41,24 +41,38 @@ const Footer: React.FC = () => {
 
           {/* Social images */}
           <div className="flex gap-4 justify-center md:justify-start">
+            <Link
+              href="https://www.linkedin.com/company/lexbolt-ai/about/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
             <Image
-              src="/img/instagram.svg"
-              alt="Instagram"
-              width={40} // w-10 = 40px
-              height={40} // h-10 = 40px
-              className=" cursor-pointer border border-white/40 rounded-full"
+              src="/img/googlemybussiness.svg"
+              alt="Google My Business"
+              width={40}
+              height={40} // make height equal to width for circle
+              className="cursor-pointer border border-white/40 rounded-full w-10 h-10 object-contain"
             />
-            <Image
-              src="/img/linkedin.svg"
-              alt="LinkedIn"
-              width={40} // w-10 = 40px
-              height={40} // h-10 = 40px
-              className="cursor-pointer border border-white/40 rounded-full"
-            />
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/company/lexbolt-ai/about/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/img/linkedin.svg"
+                alt="LinkedIn"
+                width={40} // w-10 = 40px
+                height={40} // h-10 = 40px
+                className="cursor-pointer border border-white/40 rounded-full"
+              />
+            </Link>
           </div>
         </div>
         <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right hidden md:block">
-          ©2025 Lexbolt. All Rights Reserved.
+          ©2025 Lexbolt. All Rights Reserved. <br />
+          Company Number 16632579
         </div>
       </motion.div>
 
@@ -100,13 +114,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/product" className="hover:text-gray-300">
-                  Product
+                <Link href="/about" className="hover:text-gray-300">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-gray-300">
-                  About Us
+                <Link href="/product" className="hover:text-gray-300">
+                  Product
                 </Link>
               </li>
 
@@ -128,10 +142,7 @@ const Footer: React.FC = () => {
               >
                 hello@lexbolt.ai
               </li>
-              <li
-                className="hover:text-gray-300 cursor-pointer"
-                onClick={() => setShowModal(true)}
-              >
+              <li className="hover:text-gray-300 cursor-pointer">
                 450 Bath Road, Longford, <br /> Heathrow, London, UB7 0EB
               </li>
               <li className="hover:text-gray-300 cursor-pointer">
@@ -139,6 +150,9 @@ const Footer: React.FC = () => {
               </li>
               <li className="hover:text-gray-300 cursor-pointer">
                 <Link href="/privacypolicy">Privacy Policy</Link>
+              </li>
+              <li className="hover:text-gray-300 cursor-pointer">
+                <Link href="/cookiespolicy">Cookies Policy</Link>
               </li>
             </ul>
           </div>
