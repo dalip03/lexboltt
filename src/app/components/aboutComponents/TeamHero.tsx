@@ -20,8 +20,7 @@ export default function TeamHero() {
       image: "/img/ceo.jpg",
       role: "CEO/Co-founder",
       name: "Manjunathan B",
-      desc:
-        "Seasoned entrepreneur with over 24 years of experience in IT consultancy and business leadership. Skilled at driving strategic growth, fostering strong customer relationships, and managing key accounts to deliver sustained value and client satisfaction.",
+      desc: "Seasoned entrepreneur with over 24 years of experience in IT consultancy and business leadership. Skilled at driving strategic growth, fostering strong customer relationships, and managing key accounts to deliver sustained value and client satisfaction.",
       cardBg: "bg-[#F354184D]",
       href: "https://www.linkedin.com/in/manjunath-b-1528a817?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BeM2D2sTJTBq7ovVmatXndA%3D%3D",
     },
@@ -29,8 +28,7 @@ export default function TeamHero() {
       image: "/img/profile.jpeg",
       role: "CTO/Co-founder",
       name: "Abinandhanan S",
-      desc:
-        "Over a decade of experience in research and building scalable AI solutions for enterprises. Proven track record of working closely with global automobile companies to design and deploy advanced compliance and regulatory intelligence systems.",
+      desc: "Over a decade of experience in research and building scalable AI solutions for enterprises. Proven track record of working closely with global automobile companies to design and deploy advanced compliance and regulatory intelligence systems.",
       cardBg: "bg-[#F354184D]",
       href: "https://www.linkedin.com/in/abinandhanan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
     },
@@ -38,8 +36,15 @@ export default function TeamHero() {
       image: "/img/placeholder.svg",
       role: "Chief of Staff",
       name: "Safiya R",
-      desc:
-        "Experienced in operations, strategy, and collaboration with a proven ability to streamline processes, align priorities, and drive impactful results",
+      desc: "Experienced in operations, strategy, and collaboration with a proven ability to streamline processes, align priorities, and drive impactful results",
+      cardBg: "bg-[#F354184D]",
+      href: "#",
+    },
+    {
+      image: "/img/placeholder.svg",
+      role: "Product and Growth",
+      name: "Siva P",
+      desc: "Experienced in product strategy and digital transformation across FinTech and global media, driving operational efficiency and data-driven growth.",
       cardBg: "bg-[#F354184D]",
       href: "#",
     },
@@ -47,8 +52,7 @@ export default function TeamHero() {
       image: "/img/placeholder.svg",
       role: "Backend Architect",
       name: ".",
-      desc:
-        "Designs and maintains the scalable backend systems that power LexBolt's compliance engine, ensuring speed, security, and reliability.",
+      desc: "Designs and maintains the scalable backend systems that power LexBolt's compliance engine, ensuring speed, security, and reliability.",
       cardBg: "bg-[#F354184D]",
       href: "#",
     },
@@ -56,8 +60,7 @@ export default function TeamHero() {
       image: "/img/placeholder.svg",
       role: "AI Industry Advisor",
       name: ".",
-      desc:
-        "Provides guidance on aligning the latest AI innovations with real-world enterprise needs, keeping LexBolt cutting-edge and practical.",
+      desc: "Provides guidance on aligning the latest AI innovations with real-world enterprise needs, keeping LexBolt cutting-edge and practical.",
       cardBg: "bg-[#F354184D]",
       href: "#",
     },
@@ -65,8 +68,7 @@ export default function TeamHero() {
       image: "/img/placeholder.svg",
       role: "Automobile Regulation Expert",
       name: ".",
-      desc:
-        "Brings deep knowledge of global automotive standards and homologation, ensuring LexBolt’s outputs are accurate and industry-relevant.",
+      desc: "Brings deep knowledge of global automotive standards and homologation, ensuring LexBolt’s outputs are accurate and industry-relevant.",
       cardBg: "bg-[#F354184D]",
       href: "#",
     },
@@ -107,10 +109,10 @@ export default function TeamHero() {
 
   // Card onClick: navigate to href
   const handleCardClick = (href?: string) => {
-  if (href) {
-    window.open(href, "_blank");
-  }
-};
+    if (href) {
+      window.open(href, "_blank");
+    }
+  };
 
   return (
     <section className="w-full mx-auto pb-20 px-4 relative">
@@ -132,7 +134,8 @@ export default function TeamHero() {
       >
         A joint initiative between{" "}
         <span className="font-bold">Jags Consultancy Limited, UK </span>and
-        domain experts from the automotive ecosystem, blending deep AI research with decades of compliance experience.
+        domain experts from the automotive ecosystem, blending deep AI research
+        with decades of compliance experience.
       </motion.p>
 
       <div className="relative w-full overflow-hidden">
@@ -188,8 +191,13 @@ export default function TeamHero() {
         </div>
         {/* Hide scrollbar visually */}
         <style jsx>{`
-          .hide-scrollbar::-webkit-scrollbar { display: none; }
-          .hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .hide-scrollbar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
         `}</style>
       </div>
     </section>

@@ -46,13 +46,13 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Image
-              src="/img/googlemybussiness.svg"
-              alt="Google My Business"
-              width={40}
-              height={40} // make height equal to width for circle
-              className="cursor-pointer border border-white/40 rounded-full w-10 h-10 object-contain"
-            />
+              <Image
+                src="/img/google.svg"
+                alt="Google My Business"
+                width={40}
+                height={40}
+                className="cursor-pointer border border-white/40 p-2 rounded-full w-10 h-10 object-contain"
+              />
             </Link>
 
             <Link
@@ -71,8 +71,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right hidden md:block">
-          ©2025 Lexbolt. All Rights Reserved. <br />
-          Company Number 16632579
+          ©2025 Lexbolt. All Rights Reserved. Company Number 16632579
         </div>
       </motion.div>
 
