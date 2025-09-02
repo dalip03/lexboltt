@@ -42,12 +42,12 @@ const Footer: React.FC = () => {
           {/* Social images */}
           <div className="flex gap-4 justify-center md:justify-start">
             <Link
-              href="https://www.linkedin.com/company/lexbolt-ai/about/?viewAsMember=true"
+              href="https://share.google/yHMmUj9hn2gohMSqQ"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
-                src="/img/google.svg"
+                src="/img/googlewhite.svg"
                 alt="Google My Business"
                 width={40}
                 height={40}
@@ -63,9 +63,9 @@ const Footer: React.FC = () => {
               <Image
                 src="/img/linkedin.svg"
                 alt="LinkedIn"
-                width={40} // w-10 = 40px
-                height={40} // h-10 = 40px
-                className="cursor-pointer border border-white/40 rounded-full"
+                width={50}
+                height={50}
+                className="cursor-pointer border border-white/40 rounded-full w-10 h-10 object-contain"
               />
             </Link>
           </div>
