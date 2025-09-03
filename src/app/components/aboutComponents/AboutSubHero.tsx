@@ -76,7 +76,7 @@ export default function OurJourney() {
             className="w-full flex flex-col mt-4 md:mt-0 "
           >
             <Image
-              src="/img/Frame 2121454370.png"
+              src="/img/Frame 2121454370-1.png"
               width={500}
               height={240}
               alt="Car diagram"
