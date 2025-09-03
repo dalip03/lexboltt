@@ -33,7 +33,7 @@ export default function TeamHero() {
       href: "https://www.linkedin.com/in/abinandhanan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
     },
     {
-      image: "/img/placeholder.svg",
+      image: "/img/IMG-20250903-WA0002.jpg"
       role: "Chief of Staff",
       name: "Safiya R",
       desc: "Experienced in operations, strategy, and collaboration with a proven ability to streamline processes, align priorities, and drive impactful results",
@@ -46,7 +46,7 @@ export default function TeamHero() {
       name: "Siva P",
       desc: "Experienced in product strategy and digital transformation across FinTech and global media, driving operational efficiency and data-driven growth.",
       cardBg: "bg-[#F354184D]",
-      href: "#",
+      href: "https://www.linkedin.com/in/sivaprasadreddy/",
     },
     {
       image: "/img/placeholder.svg",
