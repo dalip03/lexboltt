@@ -76,7 +76,7 @@ export default function OurJourney() {
             className="w-full flex flex-col mt-4 md:mt-0 "
           >
             <Image
-              src="/about_assets/history2.svg"
+              src="/img/Frame 2121454370.png"
               width={500}
               height={240}
               alt="Car diagram"
