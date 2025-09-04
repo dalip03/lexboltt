@@ -41,7 +41,7 @@ export default function TeamHero() {
       href: "#",
     },
     {
-      image: "/img/placeholder.svg",
+      image: "/img/siva.jpg",
       role: "Product and Growth",
       name: "Siva P",
       desc: "Experienced in product strategy and digital transformation across FinTech and global media, driving operational efficiency and data-driven growth.",

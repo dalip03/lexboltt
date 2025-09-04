@@ -9,7 +9,7 @@ const features = [
     icon: "/img/file.svg",
     title: "Upload Any Regulation",
     subtitle: "AI-Powered Document Intelligence",
-    desc: "Upload standards, directives, or homologation files -from UNECE to ISO. LexBolt automatically interprets and structures them into actionable compliance requirements, from high-level mandates to clause-level rules.",
+    desc: "Upload standards, directives, or homologation files -from UNECE to ISO. Lexbolt automatically interprets and structures them into actionable compliance requirements, from high-level mandates to clause-level rules.",
     bullets: [
       "Works with global standards (ISO, UNECE, IATF, ASPICE, FMVSS, GB/T)",
       "Structured outputs: requirements, tests, references",
