@@ -3,6 +3,7 @@ import ProcessStepsSection from "./components/ProcessStepsSection";
 import FeaturesTabsSection from "./components/FeaturesTabsSection";
 import TestimonialSection from "./components/TestimonialSection";
 import ComplianceHeroBanner from "./components/ComplianceHeroBanner";
+import CookieConsent from "./components/cookies/CookieConsent";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <FeaturesTabsSection/>
     <TestimonialSection/>
     <ComplianceHeroBanner/>
+      <CookieConsent />
    </div>
   );
 }
