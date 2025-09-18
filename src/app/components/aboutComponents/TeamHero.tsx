@@ -17,7 +17,7 @@ export default function TeamHero() {
   // Example: add href to card objects as needed
   const members: Member[] = [
     {
-      image: "/img/ceo.jpg",
+      image: "/img/ceo1.JPG",
       role: "CEO/Co-founder",
       name: "Manjunathan B",
       desc: "Seasoned entrepreneur with over 24 years of experience in IT consultancy and business leadership. Skilled at driving strategic growth, fostering strong customer relationships, and managing key accounts to deliver sustained value and client satisfaction.",
@@ -25,7 +25,7 @@ export default function TeamHero() {
       href: "https://www.linkedin.com/in/manjunath-b-1528a817?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BeM2D2sTJTBq7ovVmatXndA%3D%3D",
     },
     {
-      image: "/img/profile.jpeg",
+      image: "/img/Abhinandan.JPG",
       role: "CTO/Co-founder",
       name: "Abinandhanan S",
       desc: "Over a decade of experience in research and building scalable AI solutions for enterprises. Proven track record of working closely with global automobile companies to design and deploy advanced compliance and regulatory intelligence systems.",
@@ -33,7 +33,7 @@ export default function TeamHero() {
       href: "https://www.linkedin.com/in/abinandhanan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
     },
     {
-      image: "/img/IMG-20250903-WA0002.jpg",
+      image: "/img/safiya.JPG",
       role: "Chief of Staff",
       name: "Safiya R",
       desc: "Experienced in operations, strategy, and collaboration with a proven ability to streamline processes, align priorities, and drive impactful results",
@@ -41,7 +41,7 @@ export default function TeamHero() {
       href: "#",
     },
     {
-      image: "/img/siva.jpg",
+      image: "/img/siva1.JPG",
       role: "Product and Growth",
       name: "Siva P",
       desc: "Experienced in product strategy and digital transformation across FinTech and global media, driving operational efficiency and data-driven growth.",
@@ -145,7 +145,7 @@ export default function TeamHero() {
 
         <div
           ref={scrollRef}
-          className="flex gap-4 sm:gap-6 px-1 md:px-2 whitespace-nowrap overflow-x-auto scroll-smooth hide-scrollbar"
+          className="flex gap-4  sm:gap-6 px-1 md:px-2 whitespace-nowrap overflow-x-auto scroll-smooth hide-scrollbar"
           style={{
             scrollBehavior: "smooth",
             WebkitOverflowScrolling: "touch",
@@ -157,31 +157,34 @@ export default function TeamHero() {
           {repeatedMembers.map((member, idx) => (
             <div
               key={`${member.name}-${idx}`}
-              className="group flex-shrink-0 w-[180px] sm:w-[220px] md:w-[240px] lg:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden relative bg-white flex flex-col cursor-pointer"
               onClick={() => handleCardClick(member.href)}
+              className="group  flex-shrink-0 max-w-[260px] w-full aspect-[3/4] rounded-3xl overflow-hidden relative bg-white flex flex-col cursor-pointer"
             >
               {/* Image section */}
-              <div className="relative w-full h-[65%] flex items-start justify-center overflow-hidden">
+              <div className="relative  w-full h-[65%] flex items-start justify-center overflow-hidden">
                 <div className={`${member.cardBg} absolute inset-0`} />
                 <Image
                   fill
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover object-top z-10 rounded-t-3xl"
+                  className="object-cover object-center z-10 rounded-t-3xl"
+                  sizes="(max-width: 640px) 100vw,
+             (max-width: 1024px) 50vw,
+             25vw"
+                  priority={idx < 3} // optimize LCP images
                 />
-                <div className="absolute top-3 left-3 z-20">
-                  <span className="inline-block bg-white/95 backdrop-blur-sm text-gray-700 font-semibold text-[10px] sm:text-[11px] px-2 py-1 rounded-full shadow border border-gray-200">
-                    {member.role}
-                  </span>
-                </div>
+                <span className="absolute top-3 left-3 z-20 inline-block bg-white/90 backdrop-blur-sm text-gray-700 font-semibold text-[10px] sm:text-xs px-2 py-1 rounded-full shadow border border-gray-200">
+                  {member.role}
+                </span>
               </div>
+
               {/* Card footer */}
-              <div className="relative w-full min-h-[8rem] flex flex-col justify-end">
-                <div className="absolute bottom-0 left-0 right-0 bg-primary rounded-b-3xl px-2 py-3 sm:px-4 sm:py-5 z-20 flex flex-col">
-                  <h3 className="text-white font-bold text-xs sm:text-base mb-1">
+              <div className="relative flex-1  flex flex-col justify-end bg-primary">
+                <div className="absolute bottom-0 left-0 right-0 bg-primary rounded-b-3xl px-3 py-4 sm:px-4 sm:py-5 z-20 flex flex-col">
+                  <h3 className="text-white font-bold text-[clamp(0.75rem,1vw,1rem)] mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-white text-[11px] sm:text-xs opacity-90 w-full leading-snug whitespace-normal line-clamp-4 group-hover:line-clamp-none transition-all">
+                  <p className="text-white text-[clamp(0.65rem,0.9vw,0.85rem)] opacity-90 leading-snug whitespace-normal line-clamp-4 group-hover:line-clamp-none transition-all duration-300 ease-in-out">
                     {member.desc}
                   </p>
                 </div>
