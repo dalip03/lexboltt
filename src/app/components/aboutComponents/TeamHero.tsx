@@ -41,7 +41,7 @@ export default function TeamHero() {
       href: "#",
     },
     {
-      image: "/img/siva1.JPG",
+      image: "/img/sivas.JPG",
       role: "Product and Growth",
       name: "Siva P",
       desc: "Experienced in product strategy and digital transformation across FinTech and global media, driving operational efficiency and data-driven growth.",
@@ -167,7 +167,7 @@ export default function TeamHero() {
                   fill
                   src={member.image}
                   alt={member.name}
-                  className="object-cover object-center z-10 rounded-t-3xl"
+                  className="object-cover object-[center_25%] z-10 rounded-t-3xl"
                   sizes="(max-width: 640px) 100vw,
              (max-width: 1024px) 50vw,
              25vw"
