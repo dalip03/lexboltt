@@ -58,7 +58,9 @@ const Header = () => {
       <div className="w-full mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
-          <Link href="/" className="inline-block">
+         <h1 className="text-xl font-medium" style={{ fontFamily: 'Urbane Medium, sans-serif' }}>lexbolt.ai</h1>
+
+          {/* <Link href="/" className="inline-block">
             <Image
               src="/img/lexbolttLogo.svg"
               alt="IIPWorks Logo"
@@ -67,7 +69,7 @@ const Header = () => {
               priority
               className="w-[100px] h-auto"
             />
-          </Link>
+          </Link> */}
         </div>
 
         {/* Desktop Menu */}

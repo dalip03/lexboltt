@@ -39,3 +39,10 @@ body {
   -ms-overflow-style: none; /* IE/Edge */
 }
 
+@font-face {
+  font-family: 'Urbane Medium';
+  src: url('/fonts/Urbane-Medium.ttf') format('truetype');
+  font-weight: 500; /* or as appropriate */
+  font-style: normal;
+  font-display: swap;
+}
