@@ -76,7 +76,6 @@ export default function TeamHero() {
 
   // Duplicate members for infinite scroll
   const repeatedMembers = [...members, ...members];
-
   // Typed ref for auto-scroll container
   const scrollRef = useRef<HTMLDivElement>(null);
   const paused = useRef(false);
@@ -158,7 +157,44 @@ export default function TeamHero() {
             <div
               key={`${member.name}-${idx}`}
               onClick={() => handleCardClick(member.href)}
-              className="group  flex-shrink-0 max-w-[260px] w-full aspect-[3/4] rounded-3xl overflow-hidden relative bg-white flex flex-col cursor-pointer"
+              className="group hidden flex-shrink-0 max-w-[260px] w-full aspect-[3/4] rounded-3xl overflow-hidden relative bg-white md:flex flex-col cursor-pointer"
+            >
+              {/* Image section */}
+              <div className="relative  w-full h-[65%] flex items-start justify-center overflow-hidden">
+                <div className={`${member.cardBg} absolute inset-0`} />
+                <Image
+                  fill
+                  src={member.image}
+                  alt={member.name}
+                  className="object-cover object-[center_25%] z-10 rounded-t-3xl"
+                  sizes="(max-width: 640px) 100vw,
+             (max-width: 1024px) 50vw,
+             25vw"
+                  priority={idx < 3} // optimize LCP images
+                />
+                <span className="absolute top-3 left-3 z-20 inline-block bg-white/90 backdrop-blur-sm text-gray-700 font-semibold text-[10px] sm:text-xs px-2 py-1 rounded-full shadow border border-gray-200">
+                  {member.role}
+                </span>
+              </div>
+
+              {/* Card footer */}
+              <div className="relative flex-1  flex flex-col justify-end bg-primary">
+                <div className="absolute bottom-0 left-0 right-0 bg-primary rounded-b-3xl px-3 py-4 sm:px-4 sm:py-5 z-20 flex flex-col">
+                  <h3 className="text-white font-bold text-[clamp(0.75rem,1vw,1rem)] mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-white text-[clamp(0.65rem,0.9vw,0.85rem)] opacity-90 leading-snug whitespace-normal line-clamp-4 group-hover:line-clamp-none transition-all duration-300 ease-in-out">
+                    {member.desc}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+            {members.map((member, idx) => (
+            <div
+              key={`${member.name}-${idx}`}
+              onClick={() => handleCardClick(member.href)}
+              className="group md:hidden flex-shrink-0 max-w-[260px] w-full aspect-[3/4] rounded-3xl overflow-hidden relative bg-white flex-col cursor-pointer"
             >
               {/* Image section */}
               <div className="relative  w-full h-[65%] flex items-start justify-center overflow-hidden">

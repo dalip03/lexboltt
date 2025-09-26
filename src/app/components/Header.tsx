@@ -58,7 +58,12 @@ const Header = () => {
       <div className="w-full mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
-         <h1 className="text-xl font-medium" style={{ fontFamily: 'Urbane Medium, sans-serif' }}>lexbolt.ai</h1>
+          <h1
+            className="text-xl font-medium"
+            style={{ fontFamily: "Urbane Medium, sans-serif" }}
+          >
+            lexbolt.ai
+          </h1>
 
           {/* <Link href="/" className="inline-block">
             <Image
@@ -172,17 +177,17 @@ const Header = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ type: "spring", stiffness: 250, damping: 20 }}
-                  className="flex items-center"
+                  className="flex items-center mb-12"
                 >
                   <Link href="/" className="inline-block">
-                    <Image
-                      src="/img/lexbolttLogo.svg"
-                      alt="Logo"
-                      width={120}
-                      height={40}
-                      priority
-                      className="h-auto w-auto max-h-40 mb-10"
-                    />
+                   
+                      <h1
+                        className="text-xl font-medium"
+                        style={{ fontFamily: "Urbane Medium, sans-serif" }}
+                      >
+                        lexbolt.ai
+                      </h1>
+                   
                   </Link>
                 </motion.div>
 
@@ -213,7 +218,7 @@ const Header = () => {
                   <motion.div variants={itemVariants}>
                     <Link
                       href="/contactus"
-                       onClick={() => setIsOpen(false)}
+                      onClick={() => setIsOpen(false)}
                       className={`text-[18px] font-semibold pl-12 py-1 px-1 rounded-full transition flex items-center justify-between gap-2 shadow ${
                         pathname === "/contactus"
                           ? "bg-primary text-white"
