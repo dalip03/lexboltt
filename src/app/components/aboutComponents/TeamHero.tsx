@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 type Member = {
   image: string;
@@ -13,7 +13,10 @@ type Member = {
   href?: string;
 };
 
+
 export default function TeamHero() {
+    const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
+
   // Example: add href to card objects as needed
   const members: Member[] = [
     {
@@ -73,6 +76,8 @@ export default function TeamHero() {
     //   href: "#",
     // },
   ];
+
+  
 
   // Duplicate members for infinite scroll
   const repeatedMembers = [...members, ...members];
@@ -159,7 +164,6 @@ export default function TeamHero() {
               onClick={() => handleCardClick(member.href)}
               className="group hidden flex-shrink-0 max-w-[260px] w-full aspect-[3/4] rounded-3xl overflow-hidden relative bg-white md:flex flex-col cursor-pointer"
             >
-              {/* Image section */}
               <div className="relative  w-full h-[65%] flex items-start justify-center overflow-hidden">
                 <div className={`${member.cardBg} absolute inset-0`} />
                 <Image
@@ -170,14 +174,13 @@ export default function TeamHero() {
                   sizes="(max-width: 640px) 100vw,
              (max-width: 1024px) 50vw,
              25vw"
-                  priority={idx < 3} // optimize LCP images
+                  priority={idx < 3}
                 />
                 <span className="absolute top-3 left-3 z-20 inline-block bg-white/90 backdrop-blur-sm text-gray-700 font-semibold text-[10px] sm:text-xs px-2 py-1 rounded-full shadow border border-gray-200">
                   {member.role}
                 </span>
               </div>
 
-              {/* Card footer */}
               <div className="relative flex-1  flex flex-col justify-end bg-primary">
                 <div className="absolute bottom-0 left-0 right-0 bg-primary rounded-b-3xl px-3 py-4 sm:px-4 sm:py-5 z-20 flex flex-col">
                   <h3 className="text-white font-bold text-[clamp(0.75rem,1vw,1rem)] mb-1">
@@ -190,14 +193,14 @@ export default function TeamHero() {
               </div>
             </div>
           ))}
-            {members.map((member, idx) => (
+          {members.map((member, idx) => (
             <div
               key={`${member.name}-${idx}`}
               onClick={() => handleCardClick(member.href)}
               className="group md:hidden flex-shrink-0 max-w-[260px] w-full aspect-[3/4] rounded-3xl overflow-hidden relative bg-white flex-col cursor-pointer"
             >
               {/* Image section */}
-              <div className="relative  w-full h-[65%] flex items-start justify-center overflow-hidden">
+              <div className="relative  w-full h-full flex items-start justify-center overflow-hidden">
                 <div className={`${member.cardBg} absolute inset-0`} />
                 <Image
                   fill
@@ -220,9 +223,17 @@ export default function TeamHero() {
                   <h3 className="text-white font-bold text-[clamp(0.75rem,1vw,1rem)] mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-white text-[clamp(0.65rem,0.9vw,0.85rem)] opacity-90 leading-snug whitespace-normal line-clamp-4 group-hover:line-clamp-none transition-all duration-300 ease-in-out">
-                    {member.desc}
-                  </p>
+                 <p
+                onClick={(e) => {
+                  e.stopPropagation(); // prevent opening link on text click
+                  setExpandedIdx(expandedIdx === idx ? null : idx);
+                }}
+                className={`text-white text-[clamp(0.65rem,0.9vw,0.85rem)] opacity-90 leading-snug whitespace-normal cursor-pointer transition-all duration-300 ${
+                  expandedIdx === idx ? "" : "line-clamp-3"
+                }`}
+              >
+                {member.desc}
+              </p>
                 </div>
               </div>
             </div>
