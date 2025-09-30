@@ -51,6 +51,14 @@ export default function TeamHero() {
       cardBg: "bg-[#F354184D]",
       href: "https://www.linkedin.com/in/sivaprasadreddy/",
     },
+      {
+      image: "/img/ShankerG.jpeg",
+      role: "AI governance and Strategy Advisor",
+      name: "Shankar G",
+      desc: "AI governance and data strategy leader with 28 years of experience. Expert in aligning enterprises with the EU AI Act, ISO/IEC 42001, and NIST AI RMF; former TCS Director driving scalable governance, compliance, and business value.",
+      cardBg: "bg-[#F354184D]",
+      href: "#",
+    },
     // {
     //   image: "/img/placeholder.svg",
     //   role: "Backend Architect",
