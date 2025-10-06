@@ -54,10 +54,10 @@ export default function TeamHero() {
       {
       image: "/img/ShankerG.jpeg",
       role: "AI governance and Strategy Advisor",
-      name: "Shankar G",
-      desc: "AI governance and data strategy leader with 28 years of experience. Expert in aligning enterprises with the EU AI Act, ISO/IEC 42001, and NIST AI RMF; former TCS Director driving scalable governance, compliance, and business value.",
+      name: "Shankar",
+      desc: "AI Advisor to LexBolt.AI, brings 29 year's experience in AI and data strategy—guiding enterprises to operationalize responsible AI and delivering multi-million-dollar program outcomes.",
       cardBg: "bg-[#F354184D]",
-      href: "#",
+      href: "https://www.linkedin.com/in/shankargsri",
     },
     // {
     //   image: "/img/placeholder.svg",
