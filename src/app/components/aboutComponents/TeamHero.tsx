@@ -55,34 +55,10 @@ export default function TeamHero() {
       image: "/img/ShankerG.jpeg",
       role: "AI & Strategy Advisor",
       name: "Shankar G",
-      desc: "AI Advisor to LexBolt.AI, brings 29 year's experience in AI and data strategy—guiding enterprises to operationalize responsible AI and delivering multi-million-dollar program outcomes.",
+      desc: "AI Advisor to Lexbolt.AI, brings 29 year's experience in AI and data strategy, guiding enterprises to operationalize responsible AI and delivering multi-million-dollar program outcomes.",
       cardBg: "bg-[#F354184D]",
       href: "https://www.linkedin.com/in/shankargsri",
-    },
-    // {
-    //   image: "/img/placeholder.svg",
-    //   role: "Backend Architect",
-    //   name: ".",
-    //   desc: "Designs and maintains the scalable backend systems that power LexBolt's compliance engine, ensuring speed, security, and reliability.",
-    //   cardBg: "bg-[#F354184D]",
-    //   href: "#",
-    // },
-    // {
-    //   image: "/img/placeholder.svg",
-    //   role: "AI Industry Advisor",
-    //   name: ".",
-    //   desc: "Provides guidance on aligning the latest AI innovations with real-world enterprise needs, keeping LexBolt cutting-edge and practical.",
-    //   cardBg: "bg-[#F354184D]",
-    //   href: "#",
-    // },
-    // {
-    //   image: "/img/placeholder.svg",
-    //   role: "Automobile Regulation Expert",
-    //   name: ".",
-    //   desc: "Brings deep knowledge of global automotive standards and homologation, ensuring LexBolt’s outputs are accurate and industry-relevant.",
-    //   cardBg: "bg-[#F354184D]",
-    //   href: "#",
-    // },
+    },    
   ];
 
   
