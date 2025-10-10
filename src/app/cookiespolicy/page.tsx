@@ -8,8 +8,8 @@ export default function cookiePolicy() {
       <h2 className="text-xl font-semibold mt-6 mb-2">Introduction</h2>
       <p>
         This Cookie Policy explains how LEXBOLT AI LTD, (“we,” “us,” or “our”) uses cookie and similar technologies on our website,{" "}
-        <a href="https://www.lexbolt.ai" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">
-          www.lexboltt.ai
+        <a href="https://www.lexboltt.ai" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">
+          www.lexbolt.ai
         </a>{" "}
         (the “Website”). It also explains your choices regarding these technologies. Our registered address is 450 Bath Road, West Drayton, England, UB7 0EB.
       </p>
