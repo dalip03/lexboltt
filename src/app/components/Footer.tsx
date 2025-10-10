@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
                 <Link href="/privacypolicy">Privacy Policy</Link>
               </li>
               <li className="hover:text-gray-300 cursor-pointer">
-                <Link href="/cookiespolicy">Cookies Policy</Link>
+                <Link href="/cookiespolicy">Cookie Policy</Link>
               </li>
             </ul>
           </div>
