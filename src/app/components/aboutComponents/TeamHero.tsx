@@ -55,7 +55,7 @@ export default function TeamHero() {
       image: "/img/ShankerG.jpeg",
       role: "AI & Strategy Advisor",
       name: "Shankar G",
-      desc: "AI Advisor to Lexbolt.AI, brings 29 year's experience in AI and data strategy, guiding enterprises to operationalize responsible AI and delivering multi-million-dollar program outcomes.",
+      desc: "AI Advisor to Lexbolt.AI, brings 29 years experience in AI and data strategy, guiding enterprises to operationalize responsible AI and delivering multi-million-dollar program outcomes.",
       cardBg: "bg-[#F354184D]",
       href: "https://www.linkedin.com/in/shankargsri",
     },    
