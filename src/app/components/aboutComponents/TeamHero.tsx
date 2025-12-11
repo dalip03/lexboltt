@@ -43,14 +43,14 @@ export default function TeamHero() {
       cardBg: "bg-[#F354184D]",
       href: "#",
     },
-    {
-      image: "/img/Siva2.JPG",
-      role: "Product and Growth",
-      name: "Siva",
-      desc: "Experienced in product strategy and digital transformation across FinTech and global media, driving operational efficiency and data-driven growth.",
-      cardBg: "bg-[#F354184D]",
-      href: "https://www.linkedin.com/in/sivaprasadreddy/",
-    },
+    // {
+    //   image: "/img/Siva2.JPG",
+    //   role: "Product and Growth",
+    //   name: "Siva",
+    //   desc: "Experienced in product strategy and digital transformation across FinTech and global media, driving operational efficiency and data-driven growth.",
+    //   cardBg: "bg-[#F354184D]",
+    //   href: "https://www.linkedin.com/in/sivaprasadreddy/",
+    // },
       {
       image: "/img/ShankerG.jpeg",
       role: "AI & Strategy Advisor",
