@@ -16,7 +16,7 @@ type Member = {
 
 export default function TeamHero() {
     const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
-
+    const [activeFadeIndex, setActiveFadeIndex] = useState(0);
   // Example: add href to card objects as needed
   const members: Member[] = [
     {
@@ -101,6 +101,16 @@ export default function TeamHero() {
       window.open(href, "_blank");
     }
   };
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveFadeIndex((prev) =>
+      prev === members.length - 1 ? 0 : prev + 1
+    );
+  }, 2500); // fade duration timing
+
+  return () => clearInterval(interval);
+}, [members.length]);
 
   return (
     <section className="w-full mx-auto pb-20 px-4 relative">

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import RequestDemoModal from "./RequestDemoModal";
 import DemoButton from "./DemoButton";
@@ -14,10 +14,63 @@ const fadeUp = {
 
 export default function HeroSection() {
   const [showModal, setShowModal] = useState(false);
+  const [showFixedButton, setShowFixedButton] = useState(false);
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const heroRect = heroRef.current.getBoundingClientRect();
+        const heroHeight = heroRef.current.offsetHeight;
+        const scrolledPastHero = heroRect.top;
+        
+        // Calculate 20% of hero section height
+        const threshold = heroHeight * 0.2;
+        
+        // Show button when scrolled 20% past the hero section
+        setShowFixedButton(scrolledPastHero < -threshold);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-w-full h-full md:px-4 relative">
-      <section className="min-w-full h-full flex flex-col bg-[#F6F6F6] items-center justify-center rounded-[24px] px-4 mt-4 relative overflow-hidden">
+      {/* Fixed Button - Shows after scrolling 20% of hero section */}
+      <div
+        className={`fixed top-0 left-180 right-0 z-50 flex justify-center pt-4 pb-6 transition-all duration-300 ${
+          showFixedButton ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+        }`}
+      >
+        <div className="relative inline-flex items-center">
+          <motion.button
+            type="button"
+            onClick={() => setShowModal(true)}
+            className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-medium px-1 md:pl-6 py-1 pl-4 rounded-full shadow-lg hover:bg-primary transition relative"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            Book a Demo
+            <span className="ml-2 flex-shrink-0">
+              <Image
+                src="/img/arrowrighticonwhite.svg"
+                alt="Icon"
+                width={36}
+                height={36}
+                className="object-contain"
+              />
+            </span>
+          </motion.button>
+        </div>
+      </div>
+
+      <section
+        ref={heroRef}
+        className="min-w-full h-full flex flex-col bg-[#F6F6F6] items-center justify-center rounded-[24px] px-4 mt-4 relative overflow-hidden"
+      >
         {/* Top-right blur circle */}
         <div
           className="absolute right-[-148px] top-[-148px] bg-[#F35418] rounded-full filter blur-[172px] pointer-events-none z-5 

@@ -27,18 +27,26 @@ const Footer: React.FC = () => {
         transition={fadeUp.transition}
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-6 w-full md:w-auto">
-          {/* Logo */}
-          <Link href="/" className="inline-block">
+         {/* Logo */}
+        <div className="flex items-center flex-shrink-0">
+         <Link href="/" className="inline-block"> <h1
+            className="md:text-2xl text-3xl font-medium text-black"
+            style={{ fontFamily: "Urbane Medium, sans-serif" }}
+          >
+            lexbolt.ai
+          </h1></Link>
+
+          {/* <Link href="/" className="inline-block">
             <Image
               src="/img/lexbolttLogo.svg"
-              alt="Logo"
+              alt="IIPWorks Logo"
               width={200}
               height={80}
               priority
-              className="w-[90px] h-auto"
+              className="w-[100px] h-auto"
             />
-          </Link>
-
+          </Link> */}
+        </div>
           {/* Social images */}
           <div className="flex gap-4 justify-center md:justify-start">
             <Link

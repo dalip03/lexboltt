@@ -58,12 +58,12 @@ const Header = () => {
       <div className="w-full mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
-          <h1
-            className="text-xl font-medium"
+         <Link href="/" className="inline-block"> <h1
+            className="md:text-2xl text-3xl font-medium text-black"
             style={{ fontFamily: "Urbane Medium, sans-serif" }}
           >
             lexbolt.ai
-          </h1>
+          </h1></Link>
 
           {/* <Link href="/" className="inline-block">
             <Image
@@ -87,7 +87,7 @@ const Header = () => {
             >
               <Link
                 href={item.href}
-                className={`px-3 lg:px-4 py-2 rounded-full text-[16px] font-medium transition cursor-pointer ${
+                className={`px-3 lg:px-4 py-2 rounded-full md:text-[16px] font-medium transition cursor-pointer ${
                   pathname === item.href && pathname !== "/contact"
                     ? "bg-primary text-white"
                     : "text-black hover:bg-primary hover:text-white"
@@ -107,7 +107,7 @@ const Header = () => {
         >
           <Link
             href="/contactus"
-            className={`text-[18px] font-semibold pl-4 py-1 px-1 rounded-full transition flex items-center gap-2 shadow ${
+            className={`text-[16px] font-medium pl-4 py-1 px-1 rounded-full transition flex items-center gap-2 shadow ${
               pathname === "/contactus"
                 ? "bg-primary text-white"
                 : "bg-gray-100 text-black"
@@ -117,8 +117,8 @@ const Header = () => {
             <Image
               src="/img/abouticons.svg"
               alt="Arrow"
-              width={48} // w-12 = 48px
-              height={48} // h-12 = 48px
+              width={36} // w-12 = 48px
+              height={36} // h-12 = 48px
               className=" object-contain"
             />
           </Link>
