@@ -68,7 +68,8 @@ export default function CoreCapabilitiesnew() {
     grid-cols-1
     sm:grid-cols-2
     gap-x-12
-    gap-y-14
+    gap-y-8
+    md:gap-y-14
     max-w-7xl
     mx-auto
     place-items-center

@@ -78,7 +78,7 @@ export default function TeamHero() {
         req = requestAnimationFrame(animateScroll);
         return;
       }
-      el.scrollLeft += 0.5; // Adjust speed as needed
+      el.scrollLeft += 1; // Adjust speed as needed
       if (el.scrollLeft > el.scrollWidth / 2) {
         el.scrollLeft = 0;
       }
