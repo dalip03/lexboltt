@@ -49,7 +49,7 @@ const imageFade = {
 
 export default function ProcessStepsSection() {
   return (
-    <section className="w-full mx-auto md:py-10 pt-5 px-4 md:px-8 ">
+    <section className="max-w-7xl mx-auto md:py-10 pt-5 px-4 md:px-8 ">
       {/* Headings */}
       <motion.div
         className="flex flex-col items-center mb-12"

@@ -28,7 +28,7 @@ export default function AboutUsHero() {
   };
 
   return (
-    <section className="w-full mx-auto flex flex-col-reverse md:pl-20 lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 pb-10">
+    <section className="w-full max-w-7xl mx-auto flex flex-col-reverse md:pl-20 lg:flex-row items-center justify-between gap-6 sm:gap-10 pt-8 lg:pt-20 pb-10">
       {/* Left Side - text area */}
       <motion.div
         className="flex-1 lg:flex-[1.8] text-center md:text-start flex flex-col md:items-start justify-center"

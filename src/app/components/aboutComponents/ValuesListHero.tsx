@@ -33,7 +33,7 @@ export default function ValuesListHero() {
   ];
 
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pb-10 px-4 sm:px-20 my-10 overflow-x-hidden">
+    <section className="w-full max-w-7xl mx-auto pb-10 px-4 sm:px-20 my-10 overflow-x-hidden">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

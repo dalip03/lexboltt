@@ -23,25 +23,27 @@ export default function HeroSection() {
         const heroRect = heroRef.current.getBoundingClientRect();
         const heroHeight = heroRef.current.offsetHeight;
         const scrolledPastHero = heroRect.top;
-        
+
         // Calculate 20% of hero section height
         const threshold = heroHeight * 0.2;
-        
+
         // Show button when scrolled 20% past the hero section
         setShowFixedButton(scrolledPastHero < -threshold);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="min-w-full h-full md:px-4 relative">
+    <div className="min-w-7xl h-full md:px-4 relative">
       {/* Fixed Button - Shows after scrolling 20% of hero section */}
       <div
-        className={`fixed top-0 left-180 right-0 z-50 flex justify-center pt-4 pb-6 transition-all duration-300 ${
-          showFixedButton ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+        className={`fixed bottom-0 left-310 right-0 z-50 flex justify-center pt-4 pb-6 transition-all duration-300 ${
+          showFixedButton
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
         <div className="relative inline-flex items-center">
@@ -94,12 +96,12 @@ export default function HeroSection() {
           viewport={fadeUp.viewport}
           transition={fadeUp.transition}
         >
-          <h1 className="font-bold text-black text-2xl sm:text-3xl md:text-[48px] lg:text-[56px] leading-tight mb-6 relative">
+          <h1 className="font-bold text-black  text-xl sm:text-[42px] lg:text-[56px] leading-tight mb-6 relative">
             Rethinking Compliance Intelligence
             <br />
             for the Automotive Industry
           </h1>
-          <p className="text-black text-sm sm:text-base md:text-[16px] mb-4 md:px-28">
+          <p className="text-black text-[12px] sm:text-base lg:text-[16px] mb-4 px-100 sm:px-48 lg:px-28">
             AI-driven insights that decode regulations, accelerate validation,
             and keep your designs compliant from concept to production, and new
             regulations updated for engineering and homologation.
@@ -119,9 +121,18 @@ export default function HeroSection() {
           <Image
             src="/img/homebgnew.svg"
             alt="Dashboard Screenshot"
-            width={900} 
-            height={500} 
-            className="w-full max-w-[900px] object-contain z-20"
+            width={900}
+            height={500}
+            className="
+    w-full
+    max-w-[320px]    
+    sm:max-w-[420px]     
+    md:max-w-[600px]     
+    lg:max-w-[900px]     
+    mx-auto
+    object-contain
+    z-20
+  "
           />
         </motion.div>
 

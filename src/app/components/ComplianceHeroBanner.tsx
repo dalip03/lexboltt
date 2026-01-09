@@ -8,7 +8,7 @@ export default function ComplianceHeroBanner() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="md:w-[95%] relative bg-[#F6F6F6]/60 rounded-[32px] mx-auto mt-14 md:p-6 md:px-12 flex flex-col items-center">
+    <section className="md:w-[95%] max-w-7xl relative bg-[#F6F6F6]/60 rounded-[32px] mx-auto mt-14 md:p-6 md:px-12 flex flex-col items-center">
       <div className="w-full md:max-w-6xl  px-4 py-10 text-center overflow-hidden flex flex-col items-center justify-center more ">
         {/* Top left dots image */}
         <div className="absolute left-0 top-0 pointer-events-none select-none z-10 hidden md:block rounded-[32px] overflow-hidden">

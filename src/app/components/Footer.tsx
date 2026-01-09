@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <footer className="bg-primary text-gray-400 px-6 md:px-10 py-10 border-t border-gray-200">
+    <footer className="bg-primary w-full max-w-8xl text-gray-400 px-6 md:px-10 py-10 border-t border-gray-200">
       {/* Top part */}
       <motion.div
         className="flex flex-col md:flex-row items-center justify-between text-sm font-semibold text-center md:text-left"

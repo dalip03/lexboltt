@@ -54,7 +54,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50">
+    <header className="w-full max-w-8xl bg-white sticky top-0 z-50">
       <div className="w-full mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">

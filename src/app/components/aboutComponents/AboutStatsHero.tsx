@@ -62,7 +62,7 @@ export default function AboutStatsHero() {
   });
 
   return (
-    <section className="w-full max-w-screen-3xl mx-auto pb-10  px-4 sm:px-20 md:my-20 overflow-x-hidden">
+    <section className="w-full max-w-7xl mx-auto pb-10  px-4 sm:px-20 md:my-20 overflow-x-hidden">
       {/* Tag with fade-in */}
      
 

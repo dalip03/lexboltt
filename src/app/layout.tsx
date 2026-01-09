@@ -24,10 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${urbanist.variable} font-sans antialiased`}>
-        <Header />
+      <div className=" flex justify-center"> <Header /></div> 
         {children}
         <Toaster position="top-center" reverseOrder={false} />
-        <Footer />
+        <div className="flex justify-center"><Footer /></div>
+        
       </body>
     </html>
   );

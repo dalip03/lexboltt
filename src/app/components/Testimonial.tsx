@@ -92,10 +92,10 @@ const Testimonial: React.FC = () => {
   /* ---------------- RENDER ---------------- */
 
   return (
-    <section className="md:w-[97%] bg-[#F6F6F6] rounded-[32px] mx-auto md:mt-14 md:py-20 py-6 flex flex-col md:flex-row gap-6">
+    <section className="md:w-[97%] max-w-7xl bg-[#F6F6F6] rounded-[32px] mx-auto md:mt-14 md:py-20 py-6 flex flex-col md:flex-row gap-6">
       {/* LEFT */}
-      <div className="w-full md:w-[45%] px-4 md:px-20">
-        <h2 className="font-bold text-2xl md:text-[56px] text-black leading-tight">
+      <div className="w-full md:w-[45%] px-4 sm:14 lg:px-20">
+        <h2 className="font-bold text-2xl sm:text-[42px] lg:text-[56px]  text-black leading-tight">
           What Do Our Clients Say
         </h2>
       </div>

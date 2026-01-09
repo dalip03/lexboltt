@@ -27,7 +27,7 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-16 px-4">
+    <section className="w-full max-w-7xl py-16 px-4">
       <div className="w-full mx-auto flex flex-col items-center md:px-20">
       
         <motion.h2

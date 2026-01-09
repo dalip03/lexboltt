@@ -21,7 +21,7 @@ export default function FeaturesScrollableRow() {
   const MOVE_X = images.length * (ITEM_WIDTH + ITEM_GAP);
 
   return (
-    <div className="w-full  mx-auto px-4 py-6 bg-white overflow-x-auto hide-scrollbar">
+    <div className="w-full max-w-7xl mx-auto px-4 py-6 bg-white overflow-x-auto hide-scrollbar">
       <motion.div
         className="flex gap-6 w-max"
         animate={{ x: [0, -MOVE_X] }}

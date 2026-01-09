@@ -19,7 +19,7 @@ export default function ProductTalkUs() {
 
   return (
     <motion.section
-      className="md:w-[95%] relative bg-[#F6F6F6]/60 rounded-[32px] mx-auto mt-14 md:p-6 md:px-12 flex flex-col items-center"
+      className="md:w-[95%] max-w-7xl relative bg-[#F6F6F6]/60 rounded-[32px] mx-auto mt-14 md:p-6 md:px-12 flex flex-col items-center"
       initial={fadeUp.initial}
       whileInView={fadeUp.whileInView}
       viewport={fadeUp.viewport}

@@ -1,9 +1,8 @@
-// ContactUsPage.js (React/Next.js - Tailwind CSS Example)
 import React from "react";
 
 export default function page() {
   return (
-    <div className="min-h-screen text-black flex flex-col lg:flex-row items-stretch md:px-10 px-6 py-12">
+<div className="min-h-screen max-w-7xl mx-auto w-full text-black flex flex-col lg:flex-row items-center md:px-10 px-6 py-12 gap-12">
       {/* Left Info Section */}
       <div className="flex-1 flex flex-col justify-center pr-0 md:pr-6 ">
         <div className="mb-8">
@@ -35,7 +34,7 @@ export default function page() {
         </div>
       </div>
       {/* Right Form Section */}
-      <div className="flex-1 flex items-center mt-1">
+      <div className="flex-1 flex items-center mt-1 ">
        <form className="w-full bg-gray-200/20 rounded-xl border border-gray-200 md:p-8 p-4 flex flex-col gap-6">
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div>
