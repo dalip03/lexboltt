@@ -40,33 +40,34 @@ export default function HeroSection() {
     <div className="min-w-7xl h-full md:px-4 relative">
       {/* Fixed Button - Shows after scrolling 20% of hero section */}
       <div
-        className={`fixed bottom-0 left-310 right-0 z-50 flex justify-center pt-4 pb-6 transition-all duration-300 ${
-          showFixedButton
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full pointer-events-none"
-        }`}
+        className={`fixed bottom-0 right-0 z-50
+    flex items-center justify-center
+    p-4
+    transition-opacity duration-300
+    ${
+      showFixedButton
+        ? "opacity-100 pointer-events-auto"
+        : "opacity-0 pointer-events-none"
+    }
+  `}
       >
-        <div className="relative inline-flex items-center">
-          <motion.button
-            type="button"
-            onClick={() => setShowModal(true)}
-            className="flex items-center text-sm cursor-pointer gap-2 bg-primary text-white font-medium px-1 md:pl-6 py-1 pl-4 rounded-full shadow-lg hover:bg-primary transition relative"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Book a Demo
-            <span className="ml-2 flex-shrink-0">
-              <Image
-                src="/img/arrowrighticonwhite.svg"
-                alt="Icon"
-                width={36}
-                height={36}
-                className="object-contain"
-              />
-            </span>
-          </motion.button>
-        </div>
+        <motion.button
+          type="button"
+          onClick={() => setShowModal(true)}
+          className="flex items-center gap-2 bg-primary text-white font-medium px-4 py-2 rounded-full shadow-lg hover:bg-primary/90"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          Book a Demo
+          <Image
+            src="/img/arrowrighticonwhite.svg"
+            alt="Icon"
+            width={36}
+            height={36}
+            className="object-contain"
+          />
+        </motion.button>
       </div>
 
       <section
