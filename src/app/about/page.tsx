@@ -1,6 +1,5 @@
 import React from 'react'
 import AboutUsHero from '../components/aboutComponents/AboutUsHero';
-import AboutSubHero from '../components/aboutComponents/AboutSubHero';
 import FeaturesScrollableRow from '../components/aboutComponents/FeaturesScrollableRow';
 import AboutStatsHero from '../components/aboutComponents/AboutStatsHero';
 import ValuesListHero from '../components/aboutComponents/ValuesListHero';
@@ -12,7 +11,6 @@ function AboutUs() {
     <div>
       <AboutUsHero/>
       <FeaturesScrollableRow/>
-      <AboutSubHero/>
       <OurJourneynew/>
       <AboutStatsHero/>
       <ValuesListHero/>
