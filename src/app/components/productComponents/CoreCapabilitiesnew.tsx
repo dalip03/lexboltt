@@ -17,7 +17,6 @@ import {
 const capabilities = [
   { title: "AI-Powered Regulations Analyser", icon: Brain },
   { title: "Semantic Insights Hub", icon: Layers },
-  { title: "Component Validation Engine", icon: CheckCircle },
   { title: "Comparative Intelligence", icon: GitCompare },
   { title: "Visual Interpretation", icon: Eye },
   { title: "Dynamic Q&A", icon: MessageSquare },

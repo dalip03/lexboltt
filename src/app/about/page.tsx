@@ -5,6 +5,7 @@ import FeaturesScrollableRow from '../components/aboutComponents/FeaturesScrolla
 import AboutStatsHero from '../components/aboutComponents/AboutStatsHero';
 import ValuesListHero from '../components/aboutComponents/ValuesListHero';
 import TeamHero from '../components/aboutComponents/TeamHero';
+import OurJourneynew from '../components/OurJourneynew';
 
 function AboutUs() {
   return (
@@ -12,6 +13,7 @@ function AboutUs() {
       <AboutUsHero/>
       <FeaturesScrollableRow/>
       <AboutSubHero/>
+      <OurJourneynew/>
       <AboutStatsHero/>
       <ValuesListHero/>
       <TeamHero/>

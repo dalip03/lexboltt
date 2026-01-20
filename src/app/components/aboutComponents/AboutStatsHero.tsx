@@ -107,8 +107,8 @@ export default function AboutStatsHero() {
       <div className="flex  justify-between items-center gap-6 sm:gap-0 md:pt-12 max-w-full">
         {[ 
           { ref: refClients, label: "OEMs Consulted" },
-          { ref: refDocs, label: "Documents Processed" },
-          { ref: refBiz, label: "Industries Served" }
+          { ref: refDocs, label: "Documents Trained" },
+          { ref: refBiz, label: "Companies Served" }
         ].map(({ ref, label }, idx) => (
           <motion.div
             key={idx}

@@ -42,7 +42,14 @@ const testimonials = [
 const Stars = ({ count }: { count: number }) => (
   <span className="inline-flex">
     {Array.from({ length: count }).map((_, i) => (
-      <Image key={i} src="/img/rating.svg" alt="star" width={20} height={20} className="mr-1" />
+      <Image
+        key={i}
+        src="/img/rating.svg"
+        alt="star"
+        width={20}
+        height={20}
+        className="mr-1"
+      />
     ))}
   </span>
 );
@@ -116,18 +123,19 @@ const Testimonial: React.FC = () => {
               key={i}
               className="
                 flex-shrink-0
-                w-[92%]
-                sm:w-[80%]
-                md:w-[620px]
+               w-[88vw]
+max-w-[360px]
+md:w-[620px]
                 rounded-[24px]
                 p-4 sm:p-6
                 scroll-snap-align-center
                 bg-gradient-to-b from-black/10 to-transparent
               "
             >
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row ">
                 {/* LEFT */}
-                <div className="flex flex-row sm:flex-col gap-3 sm:gap-12 shrink-0">
+               <div className="flex flex-row items-center gap-3 sm:flex-col sm:items-start sm:gap-12 shrink-0">
+
                   <div>
                     <Image src={t.avatar} alt="" width={32} height={32} />
                     <div className="text-xs font-medium">{t.name}</div>
@@ -136,20 +144,32 @@ const Testimonial: React.FC = () => {
 
                   {t.verified && (
                     <div className="flex items-center text-xs gap-1">
-                      <Image src="/img/verify.svg" alt="" width={14} height={14} />
+                      <Image
+                        src="/img/verify.svg"
+                        alt=""
+                        width={14}
+                        height={14}
+                      />
                       Verified
                     </div>
                   )}
                 </div>
 
                 {/* RIGHT */}
-                <div className="p-4 rounded-[20px] flex-1 bg-gradient-to-b from-black/10 to-transparent">
+                <div className="p-4 sm:p-5 rounded-[20px] flex-1 bg-gradient-to-b from-black/10 to-transparent">
+
                   <Stars count={t.rating} />
                   <p className="text-[15px] sm:text-[16px] text-black mt-3">
                     {t.text}
                   </p>
-                  <div className="flex items-center gap-1 mt-3">
-                    <Image src="/img/location.svg" alt="" width={14} height={14} />
+                  <div className="flex flex-col sm:flex-row items-center justify-between mt-4 px-4 gap-4">
+
+                    <Image
+                      src="/img/location.svg"
+                      alt=""
+                      width={14}
+                      height={14}
+                    />
                     <span className="text-sm">{t.location}</span>
                   </div>
                 </div>
@@ -164,7 +184,9 @@ const Testimonial: React.FC = () => {
           <div className="flex gap-2">
             <button
               onClick={() =>
-                goToSlide(activeIndex === 0 ? testimonials.length - 1 : activeIndex - 1)
+                goToSlide(
+                  activeIndex === 0 ? testimonials.length - 1 : activeIndex - 1,
+                )
               }
               className="p-2 rounded-full bg-white shadow"
             >

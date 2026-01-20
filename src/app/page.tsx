@@ -7,13 +7,13 @@ import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
-<div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden mb-10 w-full px-4 mx-auto">
-    <HeroSection/>
-    <ProcessStepsSection/>
-    {/* <TestimonialSection/> */}
-    <Testimonial/>
-    <ComplianceHeroBanner/>
+    <div className="flex flex-col items-center min-h-screen bg-white overflow-x-hidden overflow-y-hidden mb-10 w-full px-4 mx-auto">
+      <HeroSection />
+      <ProcessStepsSection />
+     
+      <Testimonial />
+      <ComplianceHeroBanner />
       <CookieConsent />
-   </div>
+    </div>
   );
 }
