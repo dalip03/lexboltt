@@ -46,3 +46,8 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+.scroll-snap-align-center {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}

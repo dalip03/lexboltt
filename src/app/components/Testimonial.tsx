@@ -83,16 +83,24 @@ const Testimonial: React.FC = () => {
 
   const goToSlide = (index: number) => {
     if (!scrollRef.current) return;
+
+    const containerWidth = scrollRef.current.offsetWidth;
+
     scrollRef.current.scrollTo({
-      left: getCardWidth() * index,
+      left: containerWidth * index,
       behavior: "smooth",
     });
+
     setActiveIndex(index);
   };
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
-    const index = Math.round(scrollRef.current.scrollLeft / getCardWidth());
+
+    const scrollLeft = scrollRef.current.scrollLeft;
+    const containerWidth = scrollRef.current.offsetWidth;
+
+    const index = Math.round(scrollLeft / containerWidth);
     setActiveIndex(index);
   };
 
@@ -113,6 +121,8 @@ const Testimonial: React.FC = () => {
         <div
           ref={scrollRef}
           onScroll={handleScroll}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           className="flex gap-4 md:gap-6 overflow-x-auto pb-4 py-4 no-scrollbar"
@@ -122,20 +132,20 @@ const Testimonial: React.FC = () => {
             <motion.div
               key={i}
               className="
-                flex-shrink-0
-               w-[88vw]
-max-w-[360px]
-md:w-[620px]
-                rounded-[24px]
-                p-4 sm:p-6
-                scroll-snap-align-center
-                bg-gradient-to-b from-black/10 to-transparent
-              "
+  flex-shrink-0
+  w-full
+  sm:w-[88vw]
+  max-w-[360px]
+  md:w-[620px]
+  rounded-[24px]
+  p-4 sm:p-6
+  scroll-snap-align-center
+  bg-gradient-to-b from-black/10 to-transparent
+"
             >
               <div className="flex flex-col gap-4 sm:flex-row ">
                 {/* LEFT */}
-               <div className="flex flex-row items-center gap-3 sm:flex-col sm:items-start sm:gap-12 shrink-0">
-
+                <div className="flex flex-row items-center gap-3 sm:flex-col sm:items-start sm:gap-12 shrink-0">
                   <div>
                     <Image src={t.avatar} alt="" width={32} height={32} />
                     <div className="text-xs font-medium">{t.name}</div>
@@ -157,13 +167,11 @@ md:w-[620px]
 
                 {/* RIGHT */}
                 <div className="p-4 sm:p-5 rounded-[20px] flex-1 bg-gradient-to-b from-black/10 to-transparent">
-
                   <Stars count={t.rating} />
                   <p className="text-[15px] sm:text-[16px] text-black mt-3">
                     {t.text}
                   </p>
                   <div className="flex flex-col sm:flex-row items-center justify-between mt-4 px-4 gap-4">
-
                     <Image
                       src="/img/location.svg"
                       alt=""

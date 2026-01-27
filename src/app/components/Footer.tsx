@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right hidden md:block">
-          ©2025 Lexbolt. All Rights Reserved. Company Number 16632579
+          ©2026 Lexbolt. All Rights Reserved. Company Number 16632579
         </div>
       </motion.div>
 
@@ -166,7 +166,7 @@ const Footer: React.FC = () => {
 
         </div>
         <div className="text-white text-xs mt-4 md:mt-0 w-full md:w-auto text-center md:text-right md:hidden">
-          ©2025 Lexbolt. All Rights Reserved.
+          ©2026 Lexbolt. All Rights Reserved.
         </div>
       </motion.div>
 

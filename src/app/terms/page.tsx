@@ -6,7 +6,7 @@ export default function page() {
   return (
     <section className="max-w-4xl mx-auto py-8 px-4 text-sm sm:text-base text-gray-800">
       <h1 className="text-2xl md:text-[48px] font-bold mb-4">Terms and Conditions</h1>
-      <p className="text-xs text-gray-400 mb-8">© 2025 LEXBOLT AI LTD – Company Number 16632579</p>
+      <p className="text-xs text-gray-400 mb-8">© 2026 LEXBOLT AI LTD – Company Number 16632579</p>
       <h2 className="font-semibold mt-6 mb-2">Acceptance of Terms</h2>
       <p>
         By using our website, you agree to comply with these Terms of Use.

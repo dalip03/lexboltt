@@ -41,8 +41,7 @@ const steps = [
   {
     title: "Operational Adoption",
     icon: ShieldCheck,
-    description:
-      "Compliance became embedded into daily engineering workflows.",
+    description: "Compliance became embedded into daily engineering workflows.",
     insight: "Adoption defines success.",
   },
 ];
@@ -74,39 +73,57 @@ export default function OurJourney() {
         {steps.map((step, index) => {
           const Icon = step.icon;
           const isActive = active === index;
+          const isCompleted = index < active;
 
           return (
-            <button
+            <div
               key={index}
-              onClick={() => setActive(index)}
-              className="
-                flex flex-col items-center
-                min-w-[140px] md:min-w-0
-                snap-center cursor-pointer
-              "
+              className="relative flex flex-col items-center min-w-[140px] md:min-w-0 snap-center"
             >
-              <div
-                className={`w-14 h-14 rounded-full flex items-center justify-center transition
-                  ${
-                    isActive
-                      ? "bg-orange-500 text-white"
-                      : "bg-gray-100 text-gray-400"
-                  }
-                `}
-              >
-                <Icon className="w-6 h-6" />
-              </div>
+              {/* Connector Line (NOT for last item) */}
+              {index !== steps.length - 1 && (
+                <span
+                  className={`
+            absolute
+            top-7
+            left-1/2
+            hidden md:block
+            w-full
+            h-[2px]
+            ${isCompleted ? "bg-orange-500" : "bg-gray-200"}
+          `}
+                  style={{ transform: "translateX(50%)" }}
+                />
+              )}
 
-              <p
-                className={`mt-3 text-sm font-medium text-center
-                  ${
-                    isActive ? "text-black" : "text-gray-400"
-                  }
-                `}
+              {/* Button */}
+              <button
+                onClick={() => setActive(index)}
+                className="flex flex-col items-center cursor-pointer z-10"
               >
-                {step.title}
-              </p>
-            </button>
+                {/* Icon */}
+                <div
+                  className={`w-14 h-14 rounded-full flex items-center justify-center transition
+            ${
+              isActive || isCompleted
+                ? "bg-orange-500 text-white"
+                : "bg-gray-100 text-gray-400"
+            }
+          `}
+                >
+                  <Icon className="w-6 h-6" />
+                </div>
+
+                {/* Title */}
+                <p
+                  className={`mt-3 text-sm font-medium text-center
+            ${isActive ? "text-black" : "text-gray-400"}
+          `}
+                >
+                  {step.title}
+                </p>
+              </button>
+            </div>
           );
         })}
       </div>
@@ -129,9 +146,7 @@ export default function OurJourney() {
             <p className="text-xs font-semibold text-orange-600 mb-2">
               KEY INSIGHT
             </p>
-            <p className="text-gray-800 font-medium">
-              {steps[active].insight}
-            </p>
+            <p className="text-gray-800 font-medium">{steps[active].insight}</p>
           </div>
         </div>
 
@@ -146,11 +161,7 @@ export default function OurJourney() {
               <span
                 key={i}
                 className={`h-2 rounded-full transition-all
-                  ${
-                    active === i
-                      ? "w-8 bg-orange-500"
-                      : "w-2 bg-gray-300"
-                  }
+                  ${active === i ? "w-8 bg-orange-500" : "w-2 bg-gray-300"}
                 `}
               />
             ))}
