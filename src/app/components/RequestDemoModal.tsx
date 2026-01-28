@@ -17,6 +17,7 @@ export default function RequestDemoModal({ onClose }: RequestDemoModalProps) {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -26,22 +27,54 @@ export default function RequestDemoModal({ onClose }: RequestDemoModalProps) {
     else if (!/\S+@\S+\.\S+/.test(form.email))
       newErrors.email = "Enter a valid email";
     if (!form.org.trim()) newErrors.org = "Organization is required";
-    if (!form.employees.trim()) newErrors.employees = "Number of employees is required";
+    if (!form.employees.trim())
+      newErrors.employees = "Number of employees is required";
 
     return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const validationErrors = validateForm();
 
+    const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    toast.success("Thanks for reaching us! We'll contact you soon ");
-    onClose();
+    setLoading(true);
+    setErrors({});
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: form.name,
+          lastName: "",
+          email: form.email,
+          phone: "",
+          subject: "Demo Request",
+          message: `
+Demo Request Details:
+
+Name: ${form.name}
+Email: ${form.email}
+Organization: ${form.org}
+Employees: ${form.employees}
+          `,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      toast.success("Thanks for reaching us! We'll contact you soon 🚀");
+      onClose();
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -65,7 +98,7 @@ export default function RequestDemoModal({ onClose }: RequestDemoModalProps) {
           Demo Request Form
         </h1>
         <p className="text-gray-600 text-center text-base mb-8">
-          Get Demo access in your email inbox by just filling out this form.
+          Get demo access in your email inbox by filling out this form.
         </p>
 
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
@@ -79,9 +112,11 @@ export default function RequestDemoModal({ onClose }: RequestDemoModalProps) {
               placeholder="Enter Your Name"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full border border-gray-200 rounded-sm px-4 py-2 font-normal text-base outline-none focus:border-[#ff6600] transition"
+              className="w-full border border-gray-200 rounded-sm px-4 py-2 outline-none focus:border-[#ff6600]"
             />
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+            )}
           </div>
 
           {/* Email */}
@@ -94,9 +129,11 @@ export default function RequestDemoModal({ onClose }: RequestDemoModalProps) {
               placeholder="Enter Your Email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full border border-gray-200 rounded-sm px-4 py-2 font-normal text-base outline-none focus:border-[#ff6600] transition"
+              className="w-full border border-gray-200 rounded-sm px-4 py-2 outline-none focus:border-[#ff6600]"
             />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+            )}
           </div>
 
           {/* Organization */}
@@ -109,9 +146,11 @@ export default function RequestDemoModal({ onClose }: RequestDemoModalProps) {
               placeholder="Enter Your Company Name"
               value={form.org}
               onChange={(e) => setForm({ ...form, org: e.target.value })}
-              className="w-full border border-gray-200 rounded-sm px-4 py-2 font-normal text-base outline-none focus:border-[#ff6600] transition"
+              className="w-full border border-gray-200 rounded-sm px-4 py-2 outline-none focus:border-[#ff6600]"
             />
-            {errors.org && <p className="text-red-500 text-sm mt-1">{errors.org}</p>}
+            {errors.org && (
+              <p className="text-red-500 text-sm mt-1">{errors.org}</p>
+            )}
           </div>
 
           {/* Employees */}
@@ -123,19 +162,24 @@ export default function RequestDemoModal({ onClose }: RequestDemoModalProps) {
               type="text"
               placeholder="100-200"
               value={form.employees}
-              onChange={(e) => setForm({ ...form, employees: e.target.value })}
-              className="w-full border border-gray-200 rounded-sm px-4 py-2 font-normal text-base outline-none focus:border-[#ff6600] transition"
+              onChange={(e) =>
+                setForm({ ...form, employees: e.target.value })
+              }
+              className="w-full border border-gray-200 rounded-sm px-4 py-2 outline-none focus:border-[#ff6600]"
             />
             {errors.employees && (
-              <p className="text-red-500 text-sm mt-1">{errors.employees}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.employees}
+              </p>
             )}
           </div>
 
           <button
             type="submit"
-            className="w-full mt-3 bg-primary text-white rounded-full px-4 py-2 font-bold text-lg shadow hover:bg-[#fa5d1a] transition"
+            disabled={loading}
+            className="w-full mt-3 bg-primary text-white rounded-full px-4 py-2 font-bold text-lg shadow transition disabled:opacity-60"
           >
-           Submit
+            {loading ? "Submitting..." : "Submit"}
           </button>
         </form>
       </div>
