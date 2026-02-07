@@ -69,6 +69,7 @@ export default function Page() {
         <div>
           <h4 className="uppercase text-[18px] mb-1">GET IN TOUCH</h4>
           <div className="text-[16px]">hello@lexbolt.ai</div>
+          <div className="text-[16px]">+44 20 8757 5700</div>
         </div>
       </div>
 
